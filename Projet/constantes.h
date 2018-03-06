@@ -4,8 +4,7 @@
 #include "tolerance.h"
 
 #define DELTA_T				0.25
-#define VTRAN_MAX			0.75
-#define VROT_MAX			0.5
+
 #define DELTA_VROT			0.125
 #define DELTA_VTRAN			0.25
 #define DMAX 				20
