@@ -18,4 +18,16 @@
 #define DECOMPOSITION_RATE	0.025
 #define MAX_LINE 			120
 
+
+
+SAD
+FE
+FEWF
+WEF
+fDS
+FSDfsD
+SDF
+sddsf
+SDF
+
 #endif
