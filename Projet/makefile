@@ -39,5 +39,5 @@ clean:
 #
 # -- Regles de dependances generees automatiquement
 #
-# DO NOT DELETE THIS LINE
+
 utilitaire.o: utilitaire.c tolerance.h
