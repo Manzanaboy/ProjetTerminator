@@ -19,7 +19,7 @@ test.x: test.o
 	  
 
 programme.x: $(OFILES)
-	$(CC) $(OFILES) -lm -o programme.x
+	$(CC) $(OFILES) -lm -o test.x
 
 # Definitions de cibles particulieres
 
