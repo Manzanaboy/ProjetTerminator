@@ -18,8 +18,8 @@ test.x: test.o
 	gcc test.o -lm -o test.x
 	  
 
-programme.x: $(OFILES)
-	$(CC) $(OFILES) -lm -o programme.x
+#testeur.x: $(OFILES)
+#	$(CC) $(OFILES) -lm -o testeur.x
 
 # Definitions de cibles particulieres
 
