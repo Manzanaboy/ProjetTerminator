@@ -1,6 +1,8 @@
 #include <math.h>
 #include <stdio.h>
+//#include <stdbool.h>
 #include "tolerance.h"
+#include "constantes.h"
 
 
 #define carre 2
@@ -26,6 +28,9 @@ _Bool   util_point_dehors(S2D a, double max);
 _Bool 	util_alpha_dehors(double alpha);
 _Bool util_point_dans_cercle(S2D b, C2D c);
 _Bool 	util_collision_cercle(C2D a, C2D b, double * p_dist);
+S2D		util_deplacement(S2D p, double alpha, double dist);
+_Bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle);
+_Bool 	util_alignement(S2D a, double alpha, S2D b);
 
 int main(void)
 {
@@ -35,6 +40,8 @@ int main(void)
 	S2D b = {3,5};
 	C2D c ={a,2};
 	C2D d = {b,2};
+	S2D e = {3+EPSIL_ZERO,6};
+	S2D f = {3,6};
 	double distance;
 	double *p_dist;
 	p_dist = &distance;
@@ -47,12 +54,21 @@ int main(void)
 		printf("\nangle plus grand");
 		}
 	if(util_point_dans_cercle(b,c)){
-		printf("\npoint dans cercle");
+		printf("\npoint dans cercle\n");
 		}
 	if(util_collision_cercle(c, d, p_dist)){
-		printf("le cercle sont en collision en la distance entre les 2 centre est %f \n",distance);
+		printf("le cercle sont en collision \nen la distance entre les 2 centre est %f \n",distance);
 		}
-
+		
+	
+	printf("\na est en x=%f y=%3f", a.x, a.y);
+	double alpha=0;
+	double longueur=5;
+	a=util_deplacement(a, alpha, longueur);
+	printf("\na est en x=%f y=%3f", a.x, a.y);
+	if(util_ecart_angle(e,0,f, p_dist)){
+		printf("\na et b > eplsilon zero");
+		}
 }
 double 	util_distance(S2D a, S2D b)
 {
@@ -126,3 +142,35 @@ _Bool 	util_collision_cercle(C2D a, C2D b, double * p_dist)
 	}
 	return FAUX;
 }
+
+S2D		util_deplacement(S2D p, double alpha, double dist){
+	
+	p.x = p.x + dist*cosf(alpha);
+	p.y = p.y + dist*sinf(alpha);
+	return p;
+	}
+
+_Bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle){
+	
+	if(util_distance(a, b) > EPSIL_ZERO){
+		*p_ecart_angle = util_angle(a,b) - alpha;
+		util_range_angle(p_ecart_angle);
+		return VRAIE;
+		}
+	else {
+		return FAUX;
+		}
+	}
+	
+_Bool 	util_alignement(S2D a, double alpha, S2D b){
+	double ecart_angle;
+	double * p_ecart_angle = &ecart_angle;
+	if(util_ecart_angle(a,alpha,b,p_ecart_angle)){
+		if(fabs(ecart_angle) < EPSIL_ALIGNEMENT){
+			return VRAIE;
+			}
+		}
+	return FAUX;
+	}
+
+
