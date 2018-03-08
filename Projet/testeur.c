@@ -180,5 +180,24 @@ _Bool 	util_alignement(S2D a, double alpha, S2D b)
 	printf("\n cont align F");
 	return FAUX;
 	}
+bool 	util_inner_triangle(double la, double lb, double lc, double lb_new,
+						    double * p_la_new);
+{
+	if((la>EPSILON_ZERO)&&(lc>EPSILON_ZERO)&&(lb>=0)&&((lb_new>=lb)
+										||(lb_new<=lc)))
+	{
+		if(p_la_new)
+		{
+			double delta;
+			double beta;
+			beta = (pow(la,2)+pow(lc,2)-pow(lb,2))/(2*la*lc);
+			delta = pow(2*lc*cos(beta),2)-4(pow(lc,2)-pow(lb_new,2));
+			*p_la_new = (2*lc*cos(beta)-sqrt(delta))/2;
+		}
+		return true;
+	}
+
+
+}
 
 
