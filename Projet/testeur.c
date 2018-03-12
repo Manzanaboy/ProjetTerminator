@@ -1,12 +1,12 @@
 #include <math.h>
 #include <stdio.h>
-//#include <stdbool.h>
+#include <stdbool.h>
 #include "tolerance.h"
-#include "constantes.h"
+
 
 
 #define carre 2
-enum bool{FAUX,VRAIE};
+//enum bool{false,true};
 
 
 typedef struct S2d S2D;
@@ -24,72 +24,102 @@ struct C2d
 double 	util_distance(S2D a, S2D b);
 void 	util_range_angle(double * p_angle);
 double 	util_angle(S2D a, S2D b);
-_Bool   util_point_dehors(S2D a, double max);
-_Bool 	util_alpha_dehors(double alpha);
-_Bool util_point_dans_cercle(S2D b, C2D c);
-_Bool 	util_collision_cercle(C2D a, C2D b, double * p_dist);
+bool    util_point_dehors(S2D a, double max);
+bool 	util_alpha_dehors(double alpha);
+bool 	util_point_dans_cercle(S2D b, C2D c);
+bool 	util_collision_cercle(C2D a, C2D b, double * p_dist);
 S2D		util_deplacement(S2D p, double alpha, double dist);
-_Bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle);
-_Bool 	util_alignement(S2D a, double alpha, S2D b);
-_Bool 	util_inner_triangle(double la, double lb, double lc, double lb_new,
+bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle);
+bool 	util_alignement(S2D a, double alpha, S2D b);
+bool 	util_inner_triangle(double la, double lb, double lc, double lb_new,
 						    double * p_la_new);
 
 int main(void)
 {
 
-	double angle;
+	
+	//~ double distance;
+	//~ double *p_dist;
+	//~ p_dist = &distance;
+	//~ angle = util_angle(a,b);
+	//~ printf("\nl'angle est %f",angle);
+	//~ if(util_point_dehors(a, 5)){
+		//~ printf("\ntrue");
+		//~ }
+	//~ if(util_alpha_dehors(M_PI/3)){
+		//~ printf("\nangle plus grand");
+		//~ }
+	//~ if(util_point_dans_cercle(b,c)){
+		//~ printf("\npoint dans cercle\n");
+		//~ }
+	//~ if(util_collision_cercle(c, d, p_dist)){
+		//~ printf("le cercle sont en collision \nen la distance entre les 2 centre est %f \n",distance);
+		//~ }
+		
+	//~ double distance;
+	//~ double *p_dist;
+	//~ p_dist = &distance;
+	//~ angle = util_angle(a,b);
+	//~ printf("\nl'angle est %f",angle);
+	//~ if(util_point_dehors(a, 5)){
+		//~ printf("\ntrue");
+		//~ }
+	//~ if(util_alpha_dehors(M_PI/3)){
+		//~ printf("\nangle plus grand");
+		//~ }
+	//~ if(util_point_dans_cercle(b,c)){
+		//~ printf("\npoint dans cercle\n");
+		//~ }
+	//~ if(util_collision_cercle(c, d, p_dist)){
+		//~ printf("le cercle sont en collision \nen la distance entre les 2 centre est %f \n",distance);
+			
+	//~ S2D e = {3+2*EPSIL_ZERO,6};
+	//~ S2D f = {3,6};
+	//~ printf("\na est en x=%f y=%3f", a.x, a.y);
+	//~ double alpha=-M_PI/4;
+	//~ double longueur=5;
+	//~ a=util_deplacement(a, alpha, longueur);
+	//~ printf("\na est en x=%f y=%3f", a.x, a.y);
+	//~ if(util_ecart_angle(e,0,f, p_dist)){
+		//~ printf("\na et b > eplsilon zero");
+		//~ }
+	//~ util_alignement(a,util_angle(a,b)+0.00625,b);
+	
+	
+	//~ double la,lb,lc,lb_new,la_new;
+	//~ double * p_la_new = &la_new;
+	//~ la = 3; //distance de déplacement
+	//~ lc = util_distance(c.centre,d.centre);//distance de centre à centre avant le déplacement
+	//~ printf("\nc est en x=%f y=%3f", c.centre.x, c.centre.y);
+	//~ c.centre = util_deplacement(c.centre,M_PI/2,la);
+	//~ printf("\nc est en x=%f y=%3f", c.centre.x, c.centre.y);
+	//~ lb= util_distance(c.centre,d.centre);//distance de centre a centre après le déplacement
+	//~ lb_new = c.rayon +d.rayon;
+	//~ printf("les valeurs testées sont la(delat) %f lb(D)%f lc(L)%f lb_new(r1+r2)%f \n", la, lb, lc, lb_new);
+	//~ if(util_inner_triangle(la,lb,lc,lb_new, p_la_new))
+	//~ {
+	//~ printf("la nouvelle valeur de la a pu etre calculée et elle est égale à %f",la_new);
+	//~ }
+		
+	double angle= M_PI;
+	double ecart_angle;
 	S2D a = {3,0};
-	S2D b = {3,6};
+	S2D b = {3,-6};
 	C2D c ={a,3};
 	C2D d = {b,2};
-	double distance;
-	double *p_dist;
-	p_dist = &distance;
-	angle = util_angle(a,b);
-	printf("\nl'angle est %f",angle);
-	if(util_point_dehors(a, 5)){
-		printf("\nvraie");
-		}
-	if(util_alpha_dehors(M_PI/3)){
-		printf("\nangle plus grand");
-		}
-	if(util_point_dans_cercle(b,c)){
-		printf("\npoint dans cercle\n");
-		}
-	if(util_collision_cercle(c, d, p_dist)){
-		printf("le cercle sont en collision \nen la distance entre les 2 centre est %f \n",distance);
-		}
-		
-		
-	S2D e = {3+2*EPSIL_ZERO,6};
-	S2D f = {3,6};
-	printf("\na est en x=%f y=%3f", a.x, a.y);
-	double alpha=-M_PI/4;
-	double longueur=5;
-	a=util_deplacement(a, alpha, longueur);
-	printf("\na est en x=%f y=%3f", a.x, a.y);
-	if(util_ecart_angle(e,0,f, p_dist)){
-		printf("\na et b > eplsilon zero");
-		}
-	util_alignement(a,util_angle(a,b)+0.00625,b);
-	
-	
-	double la,lb,lc,lb_new,la_new;
-	double * p_la_new = &la_new;
-	la = 3; //distance de déplacement
-	lc = util_distance(c.centre,d.centre);//distance de centre à centre avant le déplacement
-	printf("\nc est en x=%f y=%3f", c.centre.x, c.centre.y);
-	c.centre = util_deplacement(c.centre,M_PI/2,la);
-	printf("\nc est en x=%f y=%3f", c.centre.x, c.centre.y);
-	lb= util_distance(c.centre,d.centre);//distance de centre a centre après le déplacement
-	lb_new = c.rayon +d.rayon;
-	printf("les valeurs testées sont la(delat) %f lb(D)%f lc(L)%f lb_new(r1+r2)%f \n", la, lb, lc, lb_new);
-	if(util_inner_triangle(la,lb,lc,lb_new, p_la_new))
+	double alpha = -5*M_PI;
+	double * p_angle= &alpha;
+	util_range_angle(p_angle);
+	printf("l'angle rangé est %f", alpha);
+	p_angle = &ecart_angle;
+	if (util_ecart_angle(a,angle,b,p_angle))
 	{
-	printf("la nouvelle valeur de la a pu etre calculée et elle est égale à %f",la_new);
+		printf("l'ecart est de %f", ecart_angle);
 	}
+		
 
 }
+
 double 	util_distance(S2D a, S2D b)
 {
 	double dist, distx, disty;
@@ -111,56 +141,71 @@ double 	util_angle(S2D a, S2D b)
 }
 void 	util_range_angle(double * p_angle)
 {
-	if (util_alpha_dehors(*p_angle))
-	{
-		*p_angle = *p_angle + M_PI;
-	}
-	else
-	{
-		
-		if(*p_angle==(-M_PI))
+	int impair;
+	if(p_angle){
+		if (util_alpha_dehors(*p_angle))
 		{
-			*p_angle = *p_angle + 2* M_PI;
+			if((int)(*p_angle/(M_PI))%2 != 0)
+			{
+				impair= 1;
+			}
+			while (*p_angle <= -M_PI)
+			{
+				*p_angle = *p_angle + M_PI;
+				if ((*p_angle==0)&&impair!=0)
+				{
+					*p_angle = *p_angle + M_PI;
+				}
+			}
+			while (*p_angle > M_PI)
+			{
+				*p_angle = *p_angle - M_PI;
+			}
 		}
+		else if(*p_angle==(-M_PI))
+			{
+				*p_angle = *p_angle + 2* M_PI;
+			}
+		
 	}
 }
 
-_Bool   util_point_dehors(S2D a, double max)
+bool   util_point_dehors(S2D a, double max) 				// Jamais utilisé
 {
-	if(fabs(a.x) > max || fabs(a.y) > max)
+	if(fabs(a.x) > max || fabs(a.y) > max) 
 	{
-		return VRAIE;
+		return true;
 	}
-	return FAUX;
+	return false;
 }
 
-_Bool 	util_alpha_dehors(double alpha)
+bool 	util_alpha_dehors(double alpha)
 {
 	if((alpha < -M_PI) || (alpha > M_PI))
 	{
-		return VRAIE;
+		return true;
 	}
-	return FAUX;
+	return false;
 }
 
-_Bool 	util_point_dans_cercle(S2D a, C2D c)
+bool 	util_point_dans_cercle(S2D a, C2D c)
 {
 	double dist;
 	dist = util_distance(a,c.centre);
 	if(dist < (c.rayon - EPSIL_ZERO))
 	{
-		return VRAIE;
+		return true;
 	}
-	return FAUX;
+	return false;
 }
-_Bool 	util_collision_cercle(C2D a, C2D b, double * p_dist)
+bool 	util_collision_cercle(C2D a, C2D b, double * p_dist)
 {
 	*p_dist = util_distance(a.centre,b.centre);
 	if(*p_dist < ((a.rayon + b.rayon)- EPSIL_ZERO))
 	{
-		return VRAIE;
+		return true;
 	}
-	return FAUX;
+	return false;
 }
 
 S2D		util_deplacement(S2D p, double alpha, double dist)
@@ -171,19 +216,24 @@ S2D		util_deplacement(S2D p, double alpha, double dist)
 	return p;
 	}
 
-_Bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle)
+bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle) 			//Probleme!!!!!!!!!!!!!!!!!!!!!!!
 {
-	if((p_ecart_angle)){
-		if(util_distance(a, b) > EPSIL_ZERO){
+	if(util_distance(a,b)>EPSIL_ZERO)
+	{
+		if((p_ecart_angle))
+		{
+			double *p_alpha = &alpha;
+			util_range_angle(p_alpha);
 			*p_ecart_angle = util_angle(a,b) - alpha;
+			printf("1 ecart avant rang %f\n",*p_ecart_angle);
 			util_range_angle(p_ecart_angle);
-			return VRAIE;
-			}
+			return true;
 		}
-	return FAUX;
 	}
+	return false;
+}
 	
-_Bool 	util_alignement(S2D a, double alpha, S2D b)
+bool 	util_alignement(S2D a, double alpha, S2D b)
 {
 	double ecart_angle;
 	double * p_ecart_angle = &ecart_angle;
@@ -193,13 +243,13 @@ _Bool 	util_alignement(S2D a, double alpha, S2D b)
 		printf("\n 2 ecart=%f",ecart_angle);
 		if(fabs(ecart_angle) < EPSIL_ALIGNEMENT){
 				printf("\n cont align V \n");
-			return VRAIE;
+			return true;
 			}
 		}
 	printf("\n cont align F\n");
-	return FAUX;
+	return false;
 	}
-_Bool	util_inner_triangle(double la, double lb, double lc, double lb_new,
+bool	util_inner_triangle(double la, double lb, double lc, double lb_new,
 						    double * p_la_new)
 {
 	if((la>EPSIL_ZERO)&&(lc>EPSIL_ZERO)&&(lb>=0)&&((lb_new>=lb)
@@ -220,9 +270,9 @@ _Bool	util_inner_triangle(double la, double lb, double lc, double lb_new,
 			printf("\ntest2");
 			
 		}
-		return VRAIE;
+		return true;
 	}
-	return FAUX;
+	return false;
 }
 
 
