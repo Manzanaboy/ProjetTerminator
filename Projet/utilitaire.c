@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "tolerance.h"
-#include "constantes.h"
+
 
 
 #define carre 2
@@ -112,23 +112,29 @@ double 	util_angle(S2D a, S2D b)
 }
 void 	util_range_angle(double * p_angle)
 {
-	if (util_alpha_dehors(*p_angle))
-	{
-		*p_angle = *p_angle + M_PI;
-	}
-	else
-	{
-		
-		if(*p_angle==(-M_PI))
+	if(p_angle){
+		if (util_alpha_dehors(*p_angle))
 		{
-			*p_angle = *p_angle + 2* M_PI;
+			while (*p_angle <= -M_PI)
+			{
+				*p_angle = *p_angle +2* M_PI;
+			}
+			while (*p_angle > M_PI)
+			{
+				*p_angle = *p_angle -2* M_PI;
+			}
 		}
+		else if(*p_angle==-M_PI)
+			{
+				*p_angle = M_PI;
+			}
+		
 	}
 }
 
-bool   util_point_dehors(S2D a, double max)
+bool   util_point_dehors(S2D a, double max) 				// Jamais utilisé
 {
-	if(fabs(a.x) > max || fabs(a.y) > max)
+	if(fabs(a.x) > max || fabs(a.y) > max) 
 	{
 		return true;
 	}
@@ -172,17 +178,21 @@ S2D		util_deplacement(S2D p, double alpha, double dist)
 	return p;
 	}
 
-bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle)
+bool 	util_ecart_angle(S2D a, double alpha, S2D b, double *p_ecart_angle) 			//Probleme!!!!!!!!!!!!!!!!!!!!!!!
 {
-	if((p_ecart_angle)){
-		if(util_distance(a, b) > EPSIL_ZERO){
+	if(util_distance(a,b)>EPSIL_ZERO)
+	{
+		if(p_ecart_angle != NULL)
+		{
 			*p_ecart_angle = util_angle(a,b) - alpha;
-			util_range_angle(p_ecart_angle);
-			return true;
-			}
+			//printf("1 ecart avant rang %f\n",*p_ecart_angle);
+			util_range_angle(p_ecart_angle);	
 		}
-	return false;
+		return true;
 	}
+	
+	return false;
+}
 	
 bool 	util_alignement(S2D a, double alpha, S2D b)
 {
