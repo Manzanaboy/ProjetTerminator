@@ -56,6 +56,7 @@ void lecture_robots(char* nom_fichier)
 			analyse_nbrbot(nbbot_att, nbbot_recu, __LINE__ );	
 		}
 	}
+	fclose(fichier);
 }
 
 ROBOT * liste_ajouter ( ROBOT ** p_tete ) //fonction copié-collé serie17
