@@ -42,18 +42,25 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 	int lg_fin = 9;
 	int compteur=0;
 	float a,b,c;
+	int i;
 	ROBOT* courant=NULL;
 	char tab [80];
+	char tab2 [80];
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
 		while(strncmp("FIN_LISTE",tab,lg_fin)!=0)
 		{
+			i=0;
 			fgets(tab,80,fichier);
 			compteur++;
 			printf("compteur %d \n", compteur);
-		
-			if((tab[0]=='#')||(tab[0]=='\n')||(tab[0]=='\r')||(tab[0]==' ')||(tab[0]=='\t'))
+
+			while((tab[i]==' ' )||tab[i]=='\t')
+			{
+				i++;
+			}
+			if((tab[i]=='#')||(tab[i]=='\n')||(tab[i]=='\r')||(tab[i]==' ')||(tab[i]=='\t'))
 			{
 				continue;
 			}
@@ -61,7 +68,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 			switch (etat)
 			{
 				case NB_R : 
-				printf("\tcompteur switch %d\n",compteur );
+				printf("compteur switch %d\n",compteur );
 					if (sscanf(tab,"%d",&nbbot_att)==1)
 					{
 						etat++;
@@ -78,15 +85,17 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 
 				case RO :
 					printf("je lis les donnees \n" );
-					
-					while (sscanf(tab,"%f %f %f", &a,&b,&c)==3) 	//lire les données et les ranger dans le tas dans une liste chaînée
+					while (sscanf(tab,"%f %f %f %s", &a,&b,&c,tab2)==4)	//lire les données et les ranger dans le tas dans une liste chaînée
 					{
+						printf("a%f b%f c%f\n",a,b,c);
 						analyse_angle_bot (c);
 						courant = liste_ajouter(tete_liste);
 						courant->numero = nbbot_recu++;
 						courant->corps.x = a;
 						courant->corps.y = b;
 						courant->angle = c;
+						strcpy(tab,tab2);
+
 					}
 				break;
 			}
