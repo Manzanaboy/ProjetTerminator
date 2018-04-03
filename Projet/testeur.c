@@ -38,7 +38,7 @@ int main (int argc, char* argv[])
 }
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 {
-	int nbbot_att,nbbot_recu, etat=NB_R;
+	int nbbot_att,nbbot_recu=0, etat=NB_R;
 	int lg_fin = 9;
 	int compteur=0;
 	float a,b,c;
@@ -50,19 +50,12 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
-		while((strncmp("FIN_LISTE",tab,lg_fin))!=0)
+		while((fgets(tab,80,fichier))&&(strncmp("FIN_LISTE",tab,lg_fin))!=0)
 		{
-			i=0;
 			deb = tab;
-			fgets(tab,80,fichier);
 			compteur++;
 			printf("ligne %d \n", compteur);
-			if(compteur ==11)
-			{
-				printf("la valeur de la chaine ligne lu %s",deb);
-				printf("la valeur de strncmp %d",strncmp("FIN_LISTE",tab,lg_fin)); //problème il ne prend pas en compte la condition comme il faut, exemple test E01:
-																						// il lit la ligne 11 alors qu c'est FIN_LISTE
-			}
+			printf("nbr de robots recus %d \n",nbbot_recu);
 
 			while((tab[i]==' ' )||tab[i]=='\t')
 			{
@@ -107,6 +100,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 					}
 				break;
 			}
+			
 		}	
 		analyse_nbrbot(nbbot_att, nbbot_recu, compteur );	
 		
@@ -131,10 +125,11 @@ void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line)
 {
 	if(nbbot_att>nbbot_recu)
 	{
+		line++;
 		error_fin_liste_robots(line);
 		exit(0);
 	}
-	if(nbbot_att<nbbot_recu)
+	else if(nbbot_att<nbbot_recu)
 	{
 		error_missing_fin_liste_robots(line);
 		exit(0);
