@@ -5,6 +5,7 @@
  */
 #include "utilitaire.h"
 #include "error.h"
+#include "robot.h"
 
 
 enum Etat_lecture {NB_R,RO};
@@ -55,7 +56,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 					}
 					break;
 				case RO :
-					while (sscanf(deb,"%f %f %f", &a,&b,&c) ==3)	//lire les données et les ranger dans le tas dans une liste chaînée
+					while (sscanf(deb,"%f %f %f", &a,&b,&c) ==3)
 					{
 						analyse_angle_bot (c);
 						courant = liste_ajouter(tete_liste);
@@ -64,7 +65,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 						courant->corps.y = b;
 						courant->angle = c;
 						strtod(deb, &fin); // fonction du cours fichiers
-						deb = (fin+5); //5 parce qu'on compte aussi les espace
+						deb = (fin+5); //on compte aussi les espaces 
 					}
 				break;
 			}
@@ -112,3 +113,51 @@ void analyse_angle_bot (double alpha)
 	}
 }
 
+ROBOT* bot_creation (void)
+{
+	ROBOT* tete_liste;
+	if (!(tete_liste= (ROBOT*) malloc(sizeof(ROBOT))))
+	 {
+		 printf("problem d0allocation dasn %s\n",__func__);
+		 exit (EXIT_FAILURE);
+	}
+	return tete_liste;
+}
+
+void bot_total_destruction (**ROBOT p_liste)
+{
+	ROBOT *bot = *p_liste;
+	while(bot->suivant != NULL)
+	{
+		liste_retirer (p_liste,bot);
+		bot = *p_liste;
+	}
+	liste_retirer (p_liste,bot);
+}
+
+void bot_destruction ( ELEMENT ** p_tete, ELEMENT *el )
+{
+	ELEMENT *bot = *p_tete;
+	if(p_tete)
+	{
+		if (vbot == el)
+		{
+			*p_tete= bot->suivant;
+			free(bot);
+		}
+		else
+		{
+			ELEMENT *test_bot = *p_tete;
+			while ((test_bot->suivant !=NULL)&&(test_bot->suivant!= el))
+			{
+				test_bot = test_bot->suivant;
+			}
+			if(test_bot->suivant !=NULL)
+			{
+				ELEMENT * bad_bot = test_bot->suivant;
+				test_bot->suivant = ancienne_bot->suivant->suivant;
+				free(bad_bot);
+			}
+		}
+	}
+}
