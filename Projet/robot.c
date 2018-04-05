@@ -6,10 +6,14 @@
 #include "utilitaire.h"
 #include "error.h"
 #include "robot.h"
+#include <math.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 enum Etat_lecture {NB_R,RO};
-typedef struct robot ROBOT;
 struct robot
 {
 	int numero;
@@ -17,7 +21,10 @@ struct robot
 	double angle;
 	ROBOT* suivant;
 };
-
+void test2 (void)
+{
+	printf("problem de pointeur dans la fonction %s", __func__);	
+}
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 {
 	int nbbot_att,nbbot_recu=0, etat=NB_R;
@@ -78,7 +85,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 
 ROBOT * liste_ajouter ( ROBOT ** p_tete ) 
 {
-	 ROBOT *new_bot;
+	 ROBOT *new_bot=NULL;
 	 if (!(new_bot= (ROBOT*) malloc(sizeof(ROBOT))))
 	 {
 		 printf("problem d'allocation dasn %s\n",__func__);
@@ -112,7 +119,6 @@ void analyse_angle_bot (double alpha)
 		exit(0);
 	}
 }
-
 ROBOT* bot_creation (void)
 {
 	ROBOT* tete_liste;
@@ -121,43 +127,74 @@ ROBOT* bot_creation (void)
 		 printf("problem d0allocation dasn %s\n",__func__);
 		 exit (EXIT_FAILURE);
 	}
+	if(!tete_liste)
+	{
+		test2();
+	}
 	return tete_liste;
 }
-
-void bot_total_destruction (**ROBOT p_liste)
+void bot_total_destruction (ROBOT** p_liste)
 {
+	if(!p_liste)
+	{
+		test2();
+	}
 	ROBOT *bot = *p_liste;
 	while(bot->suivant != NULL)
 	{
-		liste_retirer (p_liste,bot);
+		bot_destruction(p_liste,bot);
 		bot = *p_liste;
 	}
-	liste_retirer (p_liste,bot);
+	bot_destruction(p_liste,bot);
 }
 
-void bot_destruction ( ELEMENT ** p_tete, ELEMENT *el )
+void bot_destruction ( ROBOT ** p_tete, ROBOT *el )
 {
-	ELEMENT *bot = *p_tete;
+	ROBOT *bot = *p_tete;
 	if(p_tete)
 	{
-		if (vbot == el)
+		if (bot == el)
 		{
 			*p_tete= bot->suivant;
 			free(bot);
 		}
 		else
 		{
-			ELEMENT *test_bot = *p_tete;
+			ROBOT *test_bot = *p_tete;
 			while ((test_bot->suivant !=NULL)&&(test_bot->suivant!= el))
 			{
 				test_bot = test_bot->suivant;
 			}
 			if(test_bot->suivant !=NULL)
 			{
-				ELEMENT * bad_bot = test_bot->suivant;
-				test_bot->suivant = ancienne_bot->suivant->suivant;
+				ROBOT * bad_bot = test_bot->suivant;
+				test_bot->suivant = test_bot->suivant->suivant;
 				free(bad_bot);
 			}
 		}
 	}
+}
+void liste_afficher ( ROBOT *tete )
+{
+	ROBOT* voiture;
+	voiture = bot_creation();
+	if(tete)
+	{
+		voiture = tete;
+		do
+		{
+			printf("robot %d \n", voiture->numero);
+			printf("%f ", voiture->corps.x);
+			printf("%f \n", voiture->corps.y);
+			printf("%f \n", voiture->angle);
+			voiture = voiture->suivant;
+		}
+		while((voiture)!=NULL);
+	}
+	else 
+	{
+		printf("erreur de tete liste, ja'rrive pas à lire %s", __func__);
+	}
+	free(voiture);
+
 }
