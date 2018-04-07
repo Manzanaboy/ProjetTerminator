@@ -23,7 +23,7 @@ struct robot
 };
 void test2 (void)
 {
-	printf("problem de pointeur dans la fonction %s", __func__);	
+	printf("problem de pointeur dans la fonction %s", __FILE__);	
 }
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 {
@@ -174,27 +174,4 @@ void bot_destruction ( ROBOT ** p_tete, ROBOT *el )
 		}
 	}
 }
-void liste_afficher ( ROBOT *tete )
-{
-	ROBOT* voiture;
-	voiture = bot_creation();
-	if(tete)
-	{
-		voiture = tete;
-		do
-		{
-			printf("robot %d \n", voiture->numero);
-			printf("%f ", voiture->corps.x);
-			printf("%f \n", voiture->corps.y);
-			printf("%f \n", voiture->angle);
-			voiture = voiture->suivant;
-		}
-		while((voiture)!=NULL);
-	}
-	else 
-	{
-		printf("erreur de tete liste, ja'rrive pas à lire %s", __func__);
-	}
-	free(voiture);
 
-}
