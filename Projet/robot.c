@@ -23,7 +23,7 @@ struct robot
 };
 void test2 (void)
 {
-	printf("problem de pointeur dans la fonction %s", __FILE__);	
+	printf("problem de pointeur dans le fichier %s", __FILE__);	
 }
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 {
