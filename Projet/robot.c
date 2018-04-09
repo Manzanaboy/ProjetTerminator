@@ -106,6 +106,7 @@ void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line)
 	}
 	else if(nbbot_att<nbbot_recu)
 	{
+		line++;
 		error_missing_fin_liste_robots(line);
 		exit(0);
 	}
@@ -175,3 +176,26 @@ void bot_destruction ( ROBOT ** p_tete, ROBOT *el )
 	}
 }
 
+void liste_afficher ( ROBOT *tete )
+{
+	ROBOT* voiture;
+	
+	if(tete)
+	{
+		voiture = tete;
+		do
+		{
+			printf("robot %d \n", voiture->numero);
+			printf("%f ", voiture->corps.x);
+			printf("%f \n", voiture->corps.y);
+			printf("%f \n", voiture->angle);
+			voiture = voiture->suivant;
+		}
+		while((voiture)!=NULL);
+	}
+	else 
+	{
+		printf("erreur de tete liste, ja'rrive pas à lire %s", __func__);
+	}
+
+}

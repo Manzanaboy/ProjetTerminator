@@ -7,12 +7,11 @@
 #include "error.h"
 #include "robot.h"
 
-void liste_afficher ( ROBOT *tete );
 int main (int argc, char* argv[])
 {
 	if(argc !=3)
 	{
-		rintf("erreur de lecture, entrées des fichiers \n");
+		printf("erreur de lecture, entrées des fichiers \n");
 		printf("exectubale suivi du mode et enfin le fichier a lire\n");
 		exit(0);
 	}
@@ -24,3 +23,4 @@ int main (int argc, char* argv[])
 	return 0;
 	
 }
+/
