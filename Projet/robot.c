@@ -120,20 +120,7 @@ void analyse_angle_bot (double alpha)
 		exit(0);
 	}
 }
-ROBOT* bot_creation (void)
-{
-	ROBOT* tete_liste;
-	if (!(tete_liste= (ROBOT*) malloc(sizeof(ROBOT))))
-	 {
-		 printf("problem d0allocation dasn %s\n",__func__);
-		 exit (EXIT_FAILURE);
-	}
-	if(!tete_liste)
-	{
-		test2();
-	}
-	return tete_liste;
-}
+
 void bot_total_destruction (ROBOT** p_liste)
 {
 	if(!p_liste)
