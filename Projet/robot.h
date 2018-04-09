@@ -1,7 +1,6 @@
 typedef struct robot ROBOT;
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier);
 ROBOT* bot_creation (void);
-ROBOT* bot_creation (void);
 void bot_destruction ( ROBOT ** p_tete, ROBOT *el);
 void bot_total_destruction (ROBOT** p_liste);
 ROBOT * liste_ajouter ( ROBOT ** p_tete );
