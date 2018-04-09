@@ -30,7 +30,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 	int nbbot_att,nbbot_recu=0, etat=NB_R;
 	int lg_fin = 9;
 	int compteur=0;
-	float a,b,c;
+	float pos_x,pos_y,ang;
 	int i;
 	ROBOT* courant=NULL;
 	char tab [80];
@@ -63,14 +63,14 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 					}
 					break;
 				case RO :
-					while (sscanf(deb,"%f %f %f", &a,&b,&c) ==3)
+					while (sscanf(deb,"%f %f %f",&pos_x,&pos_y,&ang) ==3)
 					{
-						analyse_angle_bot (c);
+						analyse_angle_bot (ang);
 						courant = liste_ajouter(tete_liste);
 						courant->numero = nbbot_recu++;
-						courant->corps.x = a;
-						courant->corps.y = b;
-						courant->angle = c;
+						courant->corps.x = pos_x;
+						courant->corps.y = pos_y;
+						courant->angle = ang;
 						strtod(deb, &fin); // fonction du cours fichiers
 						deb = (fin+5); //on compte aussi les espaces 
 					}
