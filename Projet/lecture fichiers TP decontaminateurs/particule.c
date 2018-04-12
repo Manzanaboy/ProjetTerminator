@@ -246,15 +246,15 @@ void particule_collision_part_part(PARTICULE*tete_liste_part)
 		printf("il n'y pas de collision car pas assez de particules");
 	}
 }
-void particule_collision_bot_part(PARTICULE*courant,double*p_posx,
+void particule_collision_bot_part(PARTICULE**courant,double*p_posx,
 						double*p_posy, double*p_rayon, int*p_num)
 {
 	if(courant)
 	{
-		*p_posx  = courant->corps.x;
-		*p_posy  = courant->corps.y;
-		*p_rayon  = courant->rayon;
-		*p_num = courant->numero;
-		courant=courant->suivant;
+		*p_posx  = (*courant)->corps.x;
+		*p_posy  = (*courant)->corps.y;
+		*p_rayon  = (*courant)->rayon;
+		*p_num = (*courant)->numero;
+		*courant=(*courant)->suivant;
 	}	
 }

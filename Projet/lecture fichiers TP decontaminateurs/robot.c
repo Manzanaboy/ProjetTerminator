@@ -227,7 +227,7 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 	double *p_part_y=&part_y;
 	double *p_part_ray=&part_ray;
 	int *p_part_num=&part_num;
-	if(tete_liste_bot && tete_liste_part) 
+	if(tete_liste_bot && tete_liste_part ) 
 	{
 		ROBOT*courant_bot = tete_liste_bot;
 		PARTICULE*courant_part = tete_liste_part;
@@ -238,17 +238,17 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 			C2D robot1 ={courant_bot->corps,R_ROBOT};
 			while(courant_part)
 			{
-				particule_collision_bot_part(courant_part,p_part_x,
+				particule_collision_bot_part(&courant_part,p_part_x,
 								p_part_y,p_part_ray,p_part_num);
-				S2D part_center ={};
-				C2D particule1 ={*p_part_x,*p_part_y,*p_part_ray};
+				S2D part_center ={*p_part_x,*p_part_y};
+				C2D particule1 ={part_center,*p_part_ray};
 				if(util_collision_cercle(robot1,particule1,p_dist))
 				{
 				error_collision(ROBOT_PARTICULE,courant_bot->numero,
 												       *p_part_num);
 				}
 			}
-			robot1 = robot1->suivant;
+			courant_bot = courant_bot->suivant;
 		}
 	}
 	else
