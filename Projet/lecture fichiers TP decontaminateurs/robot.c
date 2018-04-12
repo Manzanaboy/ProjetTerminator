@@ -6,6 +6,7 @@
 #include "utilitaire.h"
 #include "error.h"
 #include "robot.h"
+#include "constantes.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -185,4 +186,29 @@ void liste_afficher ( ROBOT *tete )
 		printf("erreur de tete liste, ja'rrive pas à lire %s", __func__);
 	}
 
+}
+void robot_collision_bot_bot(ROBOT*tete_liste_bot)
+{
+	int collision=0;
+	int dist =0;
+	if(tete_liste_bot && (tete_liste_bot->suivant))
+	{
+		ROBOT*courant1 = tete_liste_bot;
+		ROBOT*courant2 = courant1->suivant;
+		double* p_dist = NULL;
+		p_dist = &dist;
+		while ((collision==0)&&(courant2!=NULL))
+		{
+			C2D robot1 ={courant1->corps,R_ROBOT};
+			C2D robot2 ={courant2->corps,R_ROBOT};
+			if(util_collision_cercle()) // rentrer les cercles et la distances
+			{
+				//appeler la bonne focntion d'erreur
+			}
+		}
+	}
+	else
+	{
+		printf("il n'y pas de collision car pas assez de bots");
+	}
 }
