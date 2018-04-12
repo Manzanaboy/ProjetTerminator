@@ -93,7 +93,7 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 					{
 						analyse_validite_part(en, ray,pos_x,pos_y);
 						courant = liste_add(tete_liste); 		
-						passage_donnees(nbpart_recu,en,ray,pos_x,pos_y,
+						passage_donnees(en,ray,pos_x,pos_y,
 															courant);
 						strtod(deb, &fin); // fonction du cours fichiers
 						deb = (fin+8); //8 parce qu'on compte aussi 
@@ -208,12 +208,53 @@ void part_total_destruction(PARTICULE**p_liste)
 	}
 	part_destruction(p_liste,part);
 }
-void passage_donnees(int nbpart_recu, double en, double ray,
+void passage_donnees( double en, double ray,
 					double pos_x, double pos_y, PARTICULE*courant)
 {
-	courant->numero = nbpart_recu++;
+	static int compteur_particule=1;
+	courant->numero = compteur_particule++;
 	courant->energie= en;
 	courant->rayon = ray;
 	courant->corps.x = pos_x;
 	courant->corps.y = pos_y;
+}
+void particule_collision_part_part(PARTICULE*tete_liste_part)
+{
+	int collision=0;
+	double dist =0;
+	if(tete_liste_part && (tete_liste_part->suivant))
+	{
+		PARTICULE*courant1 = tete_liste_part;
+		PARTICULE*courant2 = courant1->suivant;
+		double* p_dist = NULL;
+		p_dist = &dist;
+		while ((collision==0)&&(courant2!=NULL))
+		{
+			C2D particule1 ={courant1->corps,courant1->rayon};
+			C2D particule2 ={courant2->corps,courant2->rayon};
+			if(util_collision_cercle(particule1,particule2,p_dist)) // rentrer les cercles et la distances
+			{
+				error_collision(PARTICULE_PARTICULE,courant1->numero,
+													courant2->numero);
+			}
+			courant1 = courant2;
+			courant2 = courant1->suivant;
+		}
+	}
+	else
+	{
+		printf("il n'y pas de collision car pas assez de particules");
+	}
+}
+void particule_collision_bot_part(PARTICULE*courant,double*p_posx,
+						double*p_posy, double*p_rayon, int*p_num)
+{
+	if(courant)
+	{
+		*p_posx  = courant->corps.x;
+		*p_posy  = courant->corps.y;
+		*p_rayon  = courant->rayon;
+		*p_num = courant->numero;
+		courant=courant->suivant;
+	}	
 }
