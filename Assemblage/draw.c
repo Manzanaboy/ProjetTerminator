@@ -4,23 +4,20 @@
 #include  <math.h>
 #include  "draw.h"
 
-void draw(float tableau[3][3])
-{
+//~ void draw(float tableau[3][3])
+//~ {
 
-	glLoadIdentity();
-	glOrtho(-20.,+20.,-20.,+20.,-1.,+1.);
-	glClearColor(1,1,1,1); // selectionne la couleur noire 
-	glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
 
-	for(int i=0; i<3; i++)
-	{
-		draw_robot(tableau[i][0],tableau[i][1],tableau[i][2]);
-	}
+
+	//~ for(int i=0; i<3; i++)
+	//~ {
+		//~ draw_robot(tableau[i][0],tableau[i][1],tableau[i][2]);
+	//~ }
 	
-	//glFlush(); // affichage de la scène
-	glutSwapBuffers();
+	//~ //glFlush(); // affichage de la scène
+	//~ glutSwapBuffers();
 
-}
+//~ }
 
 void draw_robot(double xc, double yc, double angle)
 {

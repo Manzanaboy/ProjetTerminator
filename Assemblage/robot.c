@@ -6,14 +6,14 @@
 #include "utilitaire.h"
 #include "error.h"
 #include "robot.h"
+#include "constantes.h"
+#include "particule.h"
+#include "draw.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include  <GL/glu.h>
-#include  <GL/glut.h>
-#include  "draw.h"
 
 
 enum Etat_lecture {NB_R,RO};
@@ -30,7 +30,7 @@ void test2 (void)
 }
 void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 {
-	int nbbot_att,nbbot_recu=0, etat=NB_R;
+	int nbbot_att,nbbot_recu=0,etat=NB_R, compteur_bot=1;
 	int lg_fin = 9;
 	int compteur=0;
 	float pos_x,pos_y,ang;
@@ -42,7 +42,6 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
-
 		while((fgets(tab,80,fichier))&&
 								(strncmp("FIN_LISTE",tab,lg_fin))!=0)
 		{
@@ -71,17 +70,13 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 					{
 						analyse_angle_bot (ang);
 						courant = liste_ajouter(tete_liste);
-						courant->numero = nbbot_recu++;
+						courant->numero = compteur_bot++;
 						courant->corps.x = pos_x;
 						courant->corps.y = pos_y;
 						courant->angle = ang;
-						
-//						draw_robot(pos_x, pos_y, ang);
-
 						strtod(deb, &fin); // fonction du cours fichiers
 						deb = (fin+5); //on compte aussi les espaces 
-						
-						
+						nbbot_recu++;
 					}
 				break;
 			}
@@ -194,4 +189,100 @@ void liste_afficher ( ROBOT *tete )
 		printf("erreur de tete liste, ja'rrive pas à lire %s", __func__);
 	}
 
+}
+void robot_collision_bot_bot(ROBOT*tete_liste_bot)
+{
+	int collision=0;
+	double dist =0;
+	if(tete_liste_bot && (tete_liste_bot->suivant))
+	{
+		ROBOT*courant1 = tete_liste_bot;
+		ROBOT*courant2 = courant1->suivant;
+		double* p_dist = NULL;
+		p_dist = &dist;
+		while ((collision==0)&&(courant2!=NULL))
+		{
+			C2D robot1 ={courant1->corps,R_ROBOT};
+			C2D robot2 ={courant2->corps,R_ROBOT};
+			if(util_collision_cercle(robot1,robot2,p_dist)) // rentrer les cercles et la distances
+			{
+				error_collision(ROBOT_ROBOT,courant1->numero,
+													courant2->numero);
+			}
+			courant1 = courant2;
+			courant2 = courant1->suivant;
+		}
+	}
+	else
+	{
+		printf("il n'y pas de collision");
+	}
+}
+void robot_collisions_bot_part (ROBOT*tete_liste_bot,
+											PARTICULE* tete_liste_part)
+{
+	double dist =0;
+	double part_x,part_y,part_ray;
+	int part_num;
+	double *p_part_x=&part_x;
+	double *p_part_y=&part_y;
+	double *p_part_ray=&part_ray;
+	int *p_part_num=&part_num;
+	if(tete_liste_bot && tete_liste_part ) 
+	{
+		ROBOT*courant_bot = tete_liste_bot;
+		PARTICULE*courant_part = tete_liste_part;
+		double* p_dist = NULL;
+		p_dist = &dist;
+		while(courant_bot)
+		{
+			C2D robot1 ={courant_bot->corps,R_ROBOT};
+			while(courant_part)
+			{
+				particule_collision_bot_part(&courant_part,p_part_x,
+								p_part_y,p_part_ray,p_part_num);
+				S2D part_center ={*p_part_x,*p_part_y};
+				C2D particule1 ={part_center,*p_part_ray};
+				if(util_collision_cercle(robot1,particule1,p_dist))
+				{
+				error_collision(ROBOT_PARTICULE,courant_bot->numero,
+												       *p_part_num);
+				}
+			}
+			courant_bot = courant_bot->suivant;
+		}
+	}
+	else
+	{
+		printf("il n'y pas de collision");
+	}
+}
+
+void robot_dessin(ROBOT*tete_liste)
+{
+	double bot_x,bot_y,bot_angle;
+	double *p_bot_x=&bot_x;
+	double *p_bot_y=&bot_y;
+	double *p_bot_angle=&bot_angle;
+	if(tete_liste)
+	{
+		ROBOT*courant = tete_liste;
+		while(courant)
+		{
+			robot_get_values(courant,p_bot_x,p_bot_y,p_bot_angle);
+			printf("les valuer des robots lus %f %f %f \n",*p_bot_x,*p_bot_y,*p_bot_angle);
+			draw_robot(*p_bot_x,*p_bot_y,*p_bot_angle);
+			courant=courant->suivant;
+		}
+	}
+}
+void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
+														double*p_angle)
+{
+	if(courant)
+	{
+		*p_pos_x = courant->corps.x;
+		*p_pos_y = courant->corps.y;
+		*p_angle = courant->angle;
+	}
 }
