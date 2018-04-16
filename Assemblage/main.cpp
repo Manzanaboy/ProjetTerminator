@@ -20,14 +20,16 @@ void display();
 void reshape(int w,int h);
 void dessine_tout();
 
-namespace{
-	float tab[3][3];
-	char entrees_command_test[8];
+#define LG_TEST 8
+
+namespace
+	{
+	char entrees_command_test[LG_TEST];
 	ROBOT *tete_liste_bot=NULL;
 	PARTICULE* tete_liste_part=NULL;
-}
-
-
+	GLfloat aspect_ratio;
+	}
+	
 int main(int argc, char* argv[])
 {
 	if(argc !=3)
@@ -41,7 +43,7 @@ int main(int argc, char* argv[])
 		strncpy(entrees_command_test,(argv[2]),8);
 	}
 
-	if (strncmp("ERROR", argv[1],5)==0)
+	if (argv[1][0]=='E')
 	{
 
 	simulation_mode_error(tete_liste_bot, argv[2], tete_liste_part);
@@ -51,24 +53,16 @@ int main(int argc, char* argv[])
 
  	}
 
- 	else if (strncmp("DRAW", argv[1],4)==0)
+ 	else if (argv[1][0]=='D')
  	{
  		
  		printf("DRAW \n");
- 		tab[0][0]=1;
-		tab[0][1]=2;
-		tab[0][2]=3;
-		tab[1][0]=4;
-		tab[1][1]=5;
-		tab[1][2]=6;
-		tab[2][0]=-4;
-		tab[2][1]=-8;
-		tab[2][2]=3;
-
+ 		
 		glutInit(&argc,argv);
 		glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
 		glutInitWindowPosition( 50, 50 );
 		glutInitWindowSize( 400, 400 );
+		aspect_ratio = (GLfloat)400/(GLfloat)400;
 	 
 		glutCreateWindow("Fenetre");
 	 
@@ -81,35 +75,43 @@ int main(int argc, char* argv[])
  	}
  	else
  	{
- 		printf("Problemo\n");
+		//AFFICHAGE initiale
+ 		printf("on doit faire  affichage initale !!! avec amour Jose\n");
 
  	}
 }
 
 void display()
 {
-	//~ draw(tab);
 	dessine_tout();
 	printf("Display");
 
 }
 
-void reshape(int w,int h)
+void reshape(int width,int height)
 {
-	int width = w;
-	int height = h;
-
-  glViewport( 0, 0, width, height);
+	glViewport( 0, 0, width, height);
+	aspect_ratio=(GLfloat)width/(GLfloat)height;
+	glutPostRedisplay();
 }
 void dessine_tout()
 {
-	
+	glClear(GL_COLOR_BUFFER_BIT);
+	GLfloat g=-20,d=20,bas=-20,haut=20;
 	if(entrees_command_test[0]=='D')
 	{
-			glLoadIdentity();
-		glOrtho(-20.,+20.,-20.,+20.,-1.,+1.);
+		glLoadIdentity();
+		if(aspect_ratio<=1)
+		{
+			glOrtho(g,d,bas/aspect_ratio,haut/aspect_ratio,-1.,+1.);
+		}
+		else
+		{
+			glOrtho(g*aspect_ratio,d*aspect_ratio,bas,haut,-1.,+1.);
+		}
+		
+		//~ glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
 		glClearColor(1,1,1,1); // selectionne la couleur noire 
-		glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
 		simulation_mode_draw(tete_liste_bot,entrees_command_test,
 												tete_liste_part);
 		tete_liste_bot =NULL;

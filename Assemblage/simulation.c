@@ -19,8 +19,8 @@ void simulation_mode_error(ROBOT* tete_liste_bot, char* nom_fichier,
 	robot_collision_bot_bot(tete_liste_bot);
 	particule_collision_part_part(tete_liste_part);
 	robot_collisions_bot_part (tete_liste_bot,tete_liste_part);
-	liste_afficher(tete_liste_bot);
-	liste_show(tete_liste_part);
+	//~ liste_afficher(tete_liste_bot);
+	//~ liste_show(tete_liste_part);
 	error_no_error_in_this_file();
 	bot_total_destruction(&tete_liste_bot);
 	part_total_destruction(&tete_liste_part);
@@ -34,8 +34,8 @@ void simulation_mode_draw(ROBOT* tete_liste_bot, char* nom_fichier,
 	particule_collision_part_part(tete_liste_part);
 	robot_collisions_bot_part (tete_liste_bot,tete_liste_part);
 	error_no_error_in_this_file();
-	liste_afficher(tete_liste_bot);
-	liste_show(tete_liste_part);
+	//~ liste_afficher(tete_liste_bot);
+	//~ liste_show(tete_liste_part);
 	
 	//dessin des robots
 	robot_dessin(tete_liste_bot);

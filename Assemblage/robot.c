@@ -270,7 +270,6 @@ void robot_dessin(ROBOT*tete_liste)
 		while(courant)
 		{
 			robot_get_values(courant,p_bot_x,p_bot_y,p_bot_angle);
-			printf("les valuer des robots lus %f %f %f \n",*p_bot_x,*p_bot_y,*p_bot_angle);
 			draw_robot(*p_bot_x,*p_bot_y,*p_bot_angle);
 			courant=courant->suivant;
 		}
