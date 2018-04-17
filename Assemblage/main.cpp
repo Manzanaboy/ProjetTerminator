@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 		aspect_ratio = (GLfloat)400/(GLfloat)400;
 	 
 		glutCreateWindow("Fenetre");
-	 
+		glClearColor(1.0, 1.0, 1.0, 0.0);
 		glutDisplayFunc(display);
 		glutReshapeFunc(reshape);
 	 
@@ -111,7 +111,6 @@ void dessine_tout()
 		}
 		
 		//~ glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
-		glClearColor(1,1,1,1); // selectionne la couleur noire 
 		simulation_mode_draw(tete_liste_bot,entrees_command_test,
 												tete_liste_part);
 		tete_liste_bot =NULL;
