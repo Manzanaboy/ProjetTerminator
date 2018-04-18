@@ -20,11 +20,11 @@ struct particule
 	PARTICULE* suivant;
 };
 
-void test3 (void)
+void particule_test3 (void)
 {
 	printf("problem de pointeur dans le fichier %s", __FILE__);		
 }
-int chercheur_ligne(char* nom_fichier)
+int particule_chercheur_ligne(char* nom_fichier)
 {
 	int line;
 	char tab[80];
@@ -43,12 +43,12 @@ int chercheur_ligne(char* nom_fichier)
 	}
 	else 
 	{
-		test3();
+		particule_test3();
 		fclose(fichier);
 		exit(EXIT_FAILURE);
 	}
 }
-void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
+void particule_lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 {
 	int nbpart_att,nbpart_recu=0, etat=NB_PAR,ligne=0,i=0, ligne_depart; 
 	float en,ray,pos_x,pos_y;
@@ -56,7 +56,7 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 	char tab [80];
 	char* deb = tab; 
 	char*fin = NULL;
-	ligne_depart = chercheur_ligne(nom_fichier);
+	ligne_depart = particule_chercheur_ligne(nom_fichier);
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
@@ -91,9 +91,9 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 					while(sscanf(deb,"%f %f %f %f",&en,&ray,&pos_x,
 															&pos_y)==4)
 					{
-						analyse_validite_part(en, ray,pos_x,pos_y);
-						courant = liste_add(tete_liste); 		
-						passage_donnees(nbpart_recu,en,ray,pos_x,pos_y,
+						particule_analyse_validite_part(en, ray,pos_x,pos_y);
+						courant = particule_liste_add(tete_liste); 		
+						particule_passage_donnees(nbpart_recu,en,ray,pos_x,pos_y,
 															courant);
 						strtod(deb, &fin); // fonction du cours fichiers
 						deb = (fin+8); //8 parce qu'on compte aussi 
@@ -102,11 +102,11 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 				break;
 			}	
 		}	
-		analyse_nbrpart(nbpart_att, nbpart_recu, ligne);
+		particule_analyse_nbrpart(nbpart_att, nbpart_recu, ligne);
 	}
 	fclose(fichier);
 }
-void analyse_validite_part(double energie, double rayon,double pos_x, 
+void particule_analyse_validite_part(double energie, double rayon,double pos_x, 
 														double pos_y)
 {
 	if((fabs(pos_x))>DMAX || (fabs(pos_y))>DMAX || energie<0 ||
@@ -117,7 +117,7 @@ void analyse_validite_part(double energie, double rayon,double pos_x,
 		exit(0);
 	}
 }
-PARTICULE * liste_add ( PARTICULE ** p_tete )
+PARTICULE * particule_liste_add ( PARTICULE ** p_tete )
 {
 	 PARTICULE *new_part;
 	 if (!(new_part= (PARTICULE*) malloc(sizeof(PARTICULE))))
@@ -129,7 +129,7 @@ PARTICULE * liste_add ( PARTICULE ** p_tete )
 	 *p_tete = new_part;
 	 return new_part;
 }
-void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne)
+void particule_analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne)
 {
 	if(nbpart_att>nbpart_recu)
 	{
@@ -144,7 +144,7 @@ void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne)
 		exit(0);
 	}
 }
-void liste_show ( PARTICULE *tete )
+void particule_liste_show ( PARTICULE *tete )
 {
 	PARTICULE* voiture;
 	
@@ -168,7 +168,7 @@ void liste_show ( PARTICULE *tete )
 	}
 
 }
-void part_destruction ( PARTICULE ** p_tete, PARTICULE *el)
+void particule_part_destruction ( PARTICULE ** p_tete, PARTICULE *el)
 {
 	PARTICULE *part = *p_tete;
 	if(p_tete)
@@ -194,7 +194,7 @@ void part_destruction ( PARTICULE ** p_tete, PARTICULE *el)
 		}
 	}
 }
-void part_total_destruction(PARTICULE**p_liste)
+void particule_part_total_destruction(PARTICULE**p_liste)
 {
 	if(!p_liste)
 	{
@@ -203,12 +203,12 @@ void part_total_destruction(PARTICULE**p_liste)
 	PARTICULE *part = *p_liste;
 	while(part->suivant != NULL)
 	{
-		part_destruction(p_liste,part);
+		particule_part_destruction(p_liste,part);
 		part = *p_liste;
 	}
 	part_destruction(p_liste,part);
 }
-void passage_donnees(int nbpart_recu, double en, double ray,
+void particule_passage_donnees(int nbpart_recu, double en, double ray,
 					double pos_x, double pos_y, PARTICULE*courant)
 {
 	courant->numero = nbpart_recu++;
