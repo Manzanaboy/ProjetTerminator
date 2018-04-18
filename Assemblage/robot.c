@@ -222,11 +222,12 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 											PARTICULE* tete_liste_part)
 {
 	double dist =0;
-	double part_x,part_y,part_ray;
+	double part_x,part_y,part_ray,part_en;
 	int part_num;
 	double *p_part_x=&part_x;
 	double *p_part_y=&part_y;
 	double *p_part_ray=&part_ray;
+	double *p_part_en=&part_en;
 	int *p_part_num=&part_num;
 	if(tete_liste_bot && tete_liste_part ) 
 	{
@@ -239,8 +240,8 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 			C2D robot1 ={courant_bot->corps,R_ROBOT};
 			while(courant_part)
 			{
-				particule_collision_bot_part(&courant_part,p_part_x,
-								p_part_y,p_part_ray,p_part_num);
+				particule_acces_donnees(&courant_part,p_part_x,
+							p_part_y,p_part_en,p_part_ray,p_part_num);
 				S2D part_center ={*p_part_x,*p_part_y};
 				C2D particule1 ={part_center,*p_part_ray};
 				if(util_collision_cercle(robot1,particule1,p_dist))
@@ -251,10 +252,6 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 			}
 			courant_bot = courant_bot->suivant;
 		}
-	}
-	else
-	{
-		printf("il n'y pas de collision");
 	}
 }
 
