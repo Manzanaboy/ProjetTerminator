@@ -16,7 +16,7 @@ CFLAGS = -g
 # Librairies a utiliser :
 #########################
 
-LIBS   = -lglut -lGL -lGLU -lm -Llib -L/usr/X11R6/lib -lX11 -lXext -lXmu -lXi -lstdc++
+LIBS   = -lstdc++ -lglut -lGL -lGLU -lm -Llib -lglui -L/usr/X11R6/lib -lX11 -lXext -lXmu -lXi
 
 # Liste de fichiers source (.c) a compiler :
 ############################################
@@ -72,10 +72,12 @@ clean:
 # DO NOT DELETE THIS LINE
 error.o: error.c error.h constantes.h tolerance.h
 simulation.o: simulation.c utilitaire.h tolerance.h error.h constantes.h \
- simulation.h robot.h particule.h
-robot.o: robot.c utilitaire.h tolerance.h error.h robot.h
+ simulation.h robot.h particule.h draw.h
+robot.o: robot.c utilitaire.h tolerance.h error.h robot.h particule.h \
+ constantes.h draw.h
 particule.o: particule.c utilitaire.h tolerance.h error.h particule.h \
  constantes.h
 main.o: main.cpp utilitaire.h tolerance.h error.h constantes.h \
- simulation.h robot.h particule.h
-utilitaire.o: utilitaire.c tolerance.h
+ simulation.h robot.h particule.h draw.h
+utilitaire.o: utilitaire.c utilitaire.h tolerance.h
+draw.o: draw.c draw.h
