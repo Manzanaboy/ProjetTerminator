@@ -217,3 +217,61 @@ void particule_passage_donnees(int nbpart_recu, double en, double ray,
 	courant->corps.x = pos_x;
 	courant->corps.y = pos_y;
 }
+void particule_collision_part_part(PARTICULE*tete_liste_part)
+{
+	int collision=0;
+	double dist =0;
+	if(tete_liste_part && (tete_liste_part->suivant))
+	{
+		PARTICULE*courant1 = tete_liste_part;
+		PARTICULE*courant2 = courant1->suivant;
+		double* p_dist = NULL;
+		p_dist = &dist;
+		while ((collision==0)&&(courant2!=NULL))
+		{
+			C2D particule1 ={courant1->corps,courant1->rayon};
+			C2D particule2 ={courant2->corps,courant2->rayon};
+			if(util_collision_cercle(particule1,particule2,p_dist)) // rentrer les cercles et la distances
+			{
+				error_collision(PARTICULE_PARTICULE,courant1->numero,
+													courant2->numero);
+			}
+			courant1 = courant2;
+			courant2 = courant1->suivant;
+		}
+	}
+}
+void particule_acces_donnees (PARTICULE**courant,double*p_posx,
+			double*p_posy, double*p_energie, double*p_rayon, int*p_num)
+{
+	if(courant)
+	{
+		*p_posx  = (*courant)->corps.x;
+		*p_posy  = (*courant)->corps.y;
+		*p_rayon  = (*courant)->rayon;
+		*p_energie = (*courant)->energie;
+		*p_num = (*courant)->numero;
+		*courant=(*courant)->suivant;
+	}	
+}
+void particule_dessin(PARTICULE*tete_liste)
+{
+	double part_x,part_y,part_en, part_ray;
+	int part_num;
+	double *p_part_x=&part_x;
+	double *p_part_y=&part_y;
+	double *p_part_en=&part_en;
+	double *p_part_ray=&part_ray;
+	int *p_part_num=&part_num;
+	if(tete_liste)
+	{
+		PARTICULE*courant = tete_liste;
+		while(courant)
+		{
+			particule_acces_donnees(&courant,p_part_x,
+							p_part_y,p_part_en,p_part_ray,p_part_num);
+			draw_part(*p_part_x,*p_part_y,*p_part_ray);
+		}
+	}
+}
+
