@@ -14,6 +14,9 @@ void particule_part_total_destruction(PARTICULE**tete_liste);
 void particule_test3 (void); 
 void particule_passage_donnees(int nbpart_recu, double en, double ray,
 					double pos_x, double pos_y, PARTICULE*courant);
+void particule_collision_part_part(PARTICULE*tete_liste_part);
+void particule_acces_donnees (PARTICULE**courant,double*p_posx,
+			double*p_posy, double*p_energie, double*p_rayon, int*p_num);
 
 
 #endif
