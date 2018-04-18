@@ -39,6 +39,7 @@ void simulation_mode_draw(ROBOT* tete_liste_bot, char* nom_fichier,
 	
 	//dessin des robots
 	robot_dessin(tete_liste_bot);
+	particule_dessin(tete_liste_part);
 	
 	robot_bot_total_destruction(&tete_liste_bot);
 	particule_part_total_destruction(&tete_liste_part);
