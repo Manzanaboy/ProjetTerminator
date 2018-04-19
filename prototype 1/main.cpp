@@ -20,12 +20,12 @@ extern "C"
 void display();
 void reshape(int w,int h);
 void dessine_tout();
-void creer_fenetre(int *p_argc, char *argv[],int doc);
+void creer_fenetre(int *p_argc, char *argv[]);
 void control_cb( int control);
 void creer_boite_dialog();
-void dessine_page();
+void update(void);
 
-#define LG_TEST 100
+#define LG_TEST 8
 /* GLUI control callback*/
 #define NO_RETURN_ID 100
 #define EDITTEXTF_ID 101
@@ -35,9 +35,14 @@ void dessine_page();
 #define CHECKREC_ID 105
 #define RADIOBUTTONCONT_ID 106
 
+void prtf(char tab[], int a){
+	for (int i=0;i<a;i++){
+		printf("%c",tab[i]);
+		}
+	}
+
 namespace
 	{
-	int main_window;
 	char entrees_command_test[LG_TEST];
 	char open[LG_TEST];
 	char save[LG_TEST];
@@ -59,12 +64,10 @@ namespace
 	GLUI_StaticText *robtran;
 	
 	FILE *open_file=NULL, *save_file=NULL;
-	int base=0;
 	}
 	
 void sauver(char* fichier_open, char* fichier_save)
 {
-	printf("\nrentrer");
 	char tab[80];
 	if((open_file = fopen(fichier_open, "r")) != NULL)
 	{
@@ -77,14 +80,12 @@ void sauver(char* fichier_open, char* fichier_save)
 		}
 		else
 		{
-			printf("\nerreur save");
-			exit(0);
+			printf("\nerreur de lecture des fichiers");
 		}
 	}
 	else
 	{
-		printf("\nerreur open");
-		exit(0);
+		printf("\nerreur de lecture des fichiers");
 	}
 	fclose(open_file);
 	fclose(save_file);
@@ -97,22 +98,16 @@ void control_cb( int control )
 		case (NO_RETURN_ID):
 			break;
 		case (EDITTEXTF_ID):
-			strncpy(save,(FileText->get_text()),LG_TEST);
-			strncpy(open,(OpenText->get_text()),LG_TEST);
+			strncpy(save,(FileText->get_text()),8);
+			strncpy(open,(OpenText->get_text()),8);
 			printf("save: %s\n", save);
 			sauver(open, save);
 			break;
 			
 		case (EDITTEXTO_ID):
-			if (fopen(OpenText->get_text(),"r") == NULL)
-			{
-				printf("\nfile missing");
-				break;
-			}
-			base = 1;
-			strncpy(open,(OpenText->get_text()),LG_TEST);
+			strncpy(open,(OpenText->get_text()),8);
 			printf("open: %s\n", open);
-			strncpy(entrees_command_test,(open),LG_TEST);
+			strncpy(entrees_command_test,(open),8);
 			glutPostRedisplay();
 			break;
 			
@@ -163,7 +158,7 @@ int main(int argc, char* argv[])
 	}
 	if (argc ==3)
 	{
-		strncpy(entrees_command_test,(argv[2]),LG_TEST);
+		strncpy(entrees_command_test,(argv[2]),8);
 		if (argv[1][0]=='E')
 		{
 	
@@ -176,30 +171,22 @@ int main(int argc, char* argv[])
 	
 	 	else if (argv[1][0]=='D')
 	 	{
-			base=1;
-	 		creer_fenetre(&argc,argv,0);
+	 		creer_fenetre(&argc,argv);
 	
 	 	}
 	}
  	else
  	{
-		base=0;
-		creer_fenetre(&argc,argv,1);
+		creer_fenetre(&argc,argv);
 
  	}
 }
 
 void display()
 {
-	if(base)
-	{
-		dessine_tout();
-	}
-	else
-	{
-		dessine_page();
-	}
-	
+	dessine_tout();
+	printf("Display");
+
 }
 
 void reshape(int width,int height)
@@ -212,8 +199,7 @@ void dessine_tout()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	GLfloat g=-20,d=20,bas=-20,haut=20;
-	FILE *fichier = fopen(entrees_command_test,"r");
-	if(fichier)
+	if(entrees_command_test[0]=='D')
 	{
 		glLoadIdentity();
 		if(aspect_ratio<=1)
@@ -224,6 +210,7 @@ void dessine_tout()
 		{
 			glOrtho(g*aspect_ratio,d*aspect_ratio,bas,haut,-1.,+1.);
 		}
+		
 		//~ glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
 		simulation_mode_draw(tete_liste_bot,entrees_command_test,
 												tete_liste_part);
@@ -231,45 +218,41 @@ void dessine_tout()
 		tete_liste_part=NULL;
 		/* Affiche l'image a l'ecran. */
 		glutSwapBuffers();
-		fclose(fichier);
 	}
+	else
+	{
+		printf("problem de lecture");
+	}
+
 }
-
-void update(void)
+void creer_fenetre(int *p_argc, char *argv[])
 {
-	if (glutGetWindow() != main_window)
-	glutSetWindow(main_window);
-	glutPostRedisplay();
-}
-
-void creer_fenetre(int *p_argc, char *argv[], int doc)
-{
-
+		printf("DRAW \n");
+ 		
 		glutInit(p_argc,argv);
 		glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
 		glutInitWindowPosition( 50, 50 );
 		glutInitWindowSize( 400, 400 );
 		aspect_ratio = (GLfloat)400/(GLfloat)400;
 	 
-		main_window = glutCreateWindow("Fenetre");
+		glutCreateWindow("Fenetre");
 		glClearColor(1.0, 1.0, 1.0, 0.0);
 		glutDisplayFunc(display);
 		glutReshapeFunc(reshape);
 		creer_boite_dialog();
-		glutSwapBuffers();
-	 
+		GLUI_Master.set_glutIdleFunc(update); 	 
 		glutMainLoop();
 }
 void creer_boite_dialog()
 {
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "Terminator kontrol");
-	GLUI_Master.set_glutIdleFunc(update);
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Open");
 	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"ex4", GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
 	glui->add_button_to_panel(open_panel,(char*)"open", EDITTEXTO_ID,control_cb );
+	update();
 	
 	//file
 	GLUI_Panel *file_panel = glui->add_panel((char*) "Saving");
@@ -306,18 +289,7 @@ void creer_boite_dialog()
 	//bouton quitter
 	glui->add_button((char*)"Quit", 0,(GLUI_Update_CB)exit );
 }
-void dessine_page()
+void update()
 {
-	glClear(GL_COLOR_BUFFER_BIT);
-	GLfloat g=-20,d=20,bas=-20,haut=20;
-	glLoadIdentity();
-		if(aspect_ratio<=1)
-		{
-			glOrtho(g,d,bas/aspect_ratio,haut/aspect_ratio,-1.,+1.);
-		}
-		else
-		{
-			glOrtho(g*aspect_ratio,d*aspect_ratio,bas,haut,-1.,+1.);
-		}
-	glutSwapBuffers();
+	glutPostRedisplay();
 }
