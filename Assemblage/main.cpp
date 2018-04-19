@@ -34,14 +34,22 @@ void creer_boite_dialog();
 #define CHECKREC_ID 105
 #define RADIOBUTTONCONT_ID 106
 
+void prtf(char tab[], int a){
+	for (int i=0;i<a;i++){
+		printf("%c",tab[i]);
+		}
+	}
 
 namespace
 	{
 	char entrees_command_test[LG_TEST];
+	char open[LG_TEST];
+	char save[LG_TEST];
 	ROBOT *tete_liste_bot=NULL;
 	PARTICULE* tete_liste_part=NULL;
 	GLfloat aspect_ratio;
-	char texti[20] = "valeur initiale";
+	char textiun[20] = "D02.txt";
+	char textide[20] = "data.txt";
 	int etatsim=0;
 	GLUI_EditText *FileText;
 	GLUI_EditText *OpenText;
@@ -53,7 +61,35 @@ namespace
 	GLUI_Button *buttonstep;
 	GLUI_StaticText *robrot;
 	GLUI_StaticText *robtran;
+	
+	FILE *open_file=NULL, *save_file=NULL;
 	}
+	
+void sauver(char* fichier_open, char* fichier_save)
+{
+	char tab[80];
+	if((open_file = fopen(fichier_open, "r")) != NULL)
+	{
+		if((save_file = fopen(fichier_save, "w")) != NULL)
+		{
+			while((fgets(tab,80,open_file)) != NULL)
+			{
+				fprintf(save_file, "%s",tab);
+			}
+		}
+		else
+		{
+			printf("\nerreur de lecture des fichiers");
+		}
+	}
+	else
+	{
+		printf("\nerreur de lecture des fichiers");
+	}
+	fclose(open_file);
+	fclose(save_file);
+}
+
 void control_cb( int control )
 {
     
@@ -61,11 +97,18 @@ void control_cb( int control )
 		case (NO_RETURN_ID):
 			break;
 		case (EDITTEXTF_ID):
-			printf("save: %s\n", FileText->get_text() );
+			strncpy(save,(FileText->get_text()),8);
+			strncpy(open,(OpenText->get_text()),8);
+			printf("save: %s\n", save);
+			sauver(open, save);
 			break;
+			
 		case (EDITTEXTO_ID):
-			printf("open: %s\n", OpenText->get_text() );
+			strncpy(open,(OpenText->get_text()),8);
+			printf("open: %s\n", open);
+			strncpy(entrees_command_test,(open),8);
 			break;
+			
 		case (SIMSTART_ID):
 			if (etatsim==0)
 			{
@@ -100,12 +143,12 @@ void control_cb( int control )
 			printf("\n Unknown command\n");   
 			break;
 		} 
-
+	
 }
 	
 int main(int argc, char* argv[])
 {
-	if(argc !=3)
+	if(argc !=3 && argc !=1)
 	{
 		printf("erreur de lecture, entrées des fichiers \n");
 		printf("exectubale suivi du mode et enfin le fichier a lire\n");
@@ -133,8 +176,7 @@ int main(int argc, char* argv[])
  	}
  	else
  	{
-		//AFFICHAGE initiale
- 		printf("on doit faire  affichage initale !!! avec amour Jose\n");
+		creer_fenetre(&argc,argv);
 
  	}
 }
@@ -207,16 +249,15 @@ void creer_boite_dialog()
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Open");
-	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"ex4", GLUI_EDITTEXT_TEXT, texti,NO_RETURN_ID, control_cb);
+	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"ex4", GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
 	glui->add_button_to_panel(open_panel,(char*)"open", EDITTEXTO_ID,control_cb );
 	
 	//file
 	GLUI_Panel *file_panel = glui->add_panel((char*) "Saving");
-	FileText = glui->add_edittext_to_panel(file_panel, (char*)"ex5", GLUI_EDITTEXT_TEXT, texti,NO_RETURN_ID, control_cb);
+	FileText = glui->add_edittext_to_panel(file_panel, (char*)"ex5", GLUI_EDITTEXT_TEXT, textide,NO_RETURN_ID, control_cb);
 	glui->add_button_to_panel(file_panel,(char*)"save", EDITTEXTF_ID,control_cb );
 	
 	glui->add_column(true);
-	//glui->add_separator();
 	
 	//simulation
 	GLUI_Panel *simul_panel = glui->add_panel((char*) "Simulation");
