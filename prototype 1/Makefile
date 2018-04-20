@@ -32,7 +32,7 @@ OFILES = $(CFILES:.c=.o)
 # Nom du fichier executable :
 #############################
 
-CIBLE  = test.x 
+CIBLE  = projet.x 
 
 # edition de liens (rassembler tous les objets -> executable)
 #############################################################
