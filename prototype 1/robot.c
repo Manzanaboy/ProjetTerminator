@@ -1,7 +1,17 @@
-/*
- *  Brief: ce module s'accupe de lire les données qui concernent les 
- * dans un fichier fourni. Et d'appeler les bonnes focntions en cas 
- * d'erreur. 
+/*!
+ \file robot.c
+ \brief Module qui gère l'automate de lecture pour lire les robots
+		Il les sauvegarde dasn le tas sous forme de liste chaînée
+		* et les détruit quand on a en a plus besoin.
+		* Pendant la lecture il s'occupe de vérifier chaque type
+		* erreur quand peut avoir.
+		* Il permet aussi de dessiner les robots en décomposant
+		* la strcuture. 
+ \author Jose Antonio Simon Greminger
+		 Damian Perez Grether
+		 Selina Bothner
+ \version 3.01
+ \date 21 avril 2018
  */
 #include "utilitaire.h"
 #include "error.h"
@@ -17,6 +27,15 @@
 
 
 enum Etat_lecture {NB_R,RO};
+
+/**
+	 numero du robot dans l'ordre d'appartion dans le fichier
+	* commence à 1.
+	* Corps de la partciule est la position de son centre.Chaque 
+	* coordonée doit être comprise en -DMAX ET + DMAX.
+	* angle que fait l'axe du robot avec l'horizontale
+	* pointeur sur l'adresse du prochain robot dans la liste
+ */ 
 struct robot
 {
 	int numero;

@@ -1,3 +1,13 @@
+/*!
+ \file draw.c
+ \brief module qui dessine les robots et les particules
+ \author Selina Bothner
+		 Jose Antonio Simon Greminger
+		 Damian Perez Grether
+ \version 3.01
+ \date 21 avril 2018
+ */
+
 #include <stdio.h>
 #include  <GL/glu.h>
 #include  <GL/glut.h>

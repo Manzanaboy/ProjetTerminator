@@ -1,3 +1,19 @@
+/*!
+ \file particule.c
+ \brief Module qui gère l'automate de lecture pour lire les particule
+		Il les sauvegarde dasn le tas sous forme de liste chaînée
+		* et les détruit quand on a en a plus besoin.
+		* Pendant la lecture il s'occupe de vérifier chaque type
+		* erreur quand peut avoir.
+		* Il permet aussi de dessiner les particules en décomposant
+		* la strcuture. 
+ \author Jose Antonio Simon Greminger
+		 Damian Perez Grether
+		 Selina Bothner
+ \version 3.01
+ \date 21 avril 2018
+ */
+
 #include "utilitaire.h"
 #include "error.h"
 #include "particule.h"
@@ -12,6 +28,16 @@
 enum Etat_lecture {NB_PAR,PAR};
 #define LG_FIN_LISTE 9
 
+/**
+	 numero de la particule dans l'ordre d'appartion dans le fichier
+	* commence à 1.
+	* energie de la partcule, doit être inférieur à E_PARTICULE_MAX.
+	* rayon de la particule, doit être compris en R_PARTICULE_MIN
+	* et R_PARTICULE_MAX. 
+	* Corps de la partciule est la position de son centre.Chaque 
+	* coordonée doit être comprise en -DMAX ET + DMAX.
+	* pointeur sur l'adresse de la prochaine particule dans la liste
+ */ 
 struct particule
 {
 	int numero;

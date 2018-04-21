@@ -1,3 +1,13 @@
+/*!
+ \file simulation.c
+ \brief Gère tout le traitement des fichiers, le dessin de l'interface 
+		graphique et la boîte de dialogue. 
+ \author Damian Perez Grether
+		 Jose Antonio Simon Greminger 
+		 Selina Bothner
+ \version 3.01
+ \date 21 avril 2018
+ */
 extern "C"
 {
 	#include "utilitaire.h"

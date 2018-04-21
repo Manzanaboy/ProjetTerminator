@@ -1,3 +1,14 @@
+/*!
+ \file simulation.c
+ \brief Module qui gère le traitement d'un fichier en fonction du mode
+		que l'on veut.
+ \author Jose Antonio Simon Greminger
+		 Damian Perez Grether
+		 Selina Bothner
+ \version 3.01
+ \date 21 avril 2018
+ */
+
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
