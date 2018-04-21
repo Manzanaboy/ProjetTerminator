@@ -1,5 +1,5 @@
 /*!
- \file simulation.c
+ \file main.cpp
  \brief Gère tout le traitement des fichiers, le dessin de l'interface 
 		graphique et la boîte de dialogue. 
  \author Damian Perez Grether
@@ -30,7 +30,7 @@ extern "C"
 void display();
 void reshape(int w,int h);
 void dessine_tout();
-void creer_fenetre(int *p_argc, char *argv[],int doc);
+void creer_fenetre(int *p_argc, char *argv[]);
 void control_cb( int control);
 void creer_boite_dialog();
 void dessine_page_blanche();
@@ -71,7 +71,7 @@ namespace
 	GLUI_StaticText *robtran;
 	
 	FILE *open_file=NULL, *save_file=NULL;
-	int base=PG_BLANCHE;
+	int base=PG_DESSINS;
 	}
 	
 void sauver(char* fichier_open, char* fichier_save)
@@ -177,7 +177,7 @@ int main(int argc, char* argv[])
 		if (!(strncmp("Error",argv[1],5)))
 		{
 	
-		simulation_mode_error(tete_liste_bot, argv[2], tete_liste_part);
+		simulation_mode_error(tete_liste_bot, argv[2],tete_liste_part);
 		tete_liste_bot =NULL;
 		tete_liste_part=NULL;
 		return 0;
@@ -187,26 +187,29 @@ int main(int argc, char* argv[])
 	 	else if (!(strncmp("Draw",argv[1],4)))
 	 	{
 			base=PG_DESSINS;
-	 		creer_fenetre(&argc,argv,0);
+	 		creer_fenetre(&argc,argv);
 	
 	 	}
 	}
  	else
  	{
 		base=PG_BLANCHE;
-		creer_fenetre(&argc,argv,1);
-
+		creer_fenetre(&argc,argv);
  	}
+ 	
 }
 
 void display()
 {
-	if(base)
+	//~ int simulation_ok=simulation_mode_draw(tete_liste_bot,entrees_command_test,
+												//~ tete_liste_part); //tester si la simulation joue.
+	if((base))
 	{
 		dessine_tout();
 	}
 	else
 	{
+		base = PG_BLANCHE;
 		dessine_page_blanche();
 	}
 	
@@ -220,6 +223,7 @@ void reshape(int width,int height)
 }
 void dessine_tout()
 {
+	int* p_base=&base;
 	glClear(GL_COLOR_BUFFER_BIT);
 	GLfloat g=-20,d=20,bas=-20,haut=20;
 	FILE *fichier = fopen(entrees_command_test,"r");
@@ -236,7 +240,7 @@ void dessine_tout()
 		}
 		//~ glClear(GL_COLOR_BUFFER_BIT); // efface le frame buffer
 		simulation_mode_draw(tete_liste_bot,entrees_command_test,
-												tete_liste_part);
+											tete_liste_part, p_base);
 		tete_liste_bot =NULL;
 		tete_liste_part=NULL;
 		/* Affiche l'image a l'ecran. */
@@ -252,7 +256,7 @@ void update(void)
 	glutPostRedisplay();
 }
 
-void creer_fenetre(int *p_argc, char *argv[], int doc)
+void creer_fenetre(int *p_argc, char *argv[])
 {
 
 		glutInit(p_argc,argv);
@@ -278,40 +282,45 @@ void creer_boite_dialog()
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Open");
-	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"ex4", GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
-	glui->add_button_to_panel(open_panel,(char*)"open", EDITTEXTO_ID,control_cb );
+	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"ex4", 
+					GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
+	glui->add_button_to_panel(open_panel,(char*)"open",
+											EDITTEXTO_ID,control_cb );
 	
 	//file
 	GLUI_Panel *file_panel = glui->add_panel((char*) "Saving");
-	FileText = glui->add_edittext_to_panel(file_panel, (char*)"ex5", GLUI_EDITTEXT_TEXT, textide,NO_RETURN_ID, control_cb);
-	glui->add_button_to_panel(file_panel,(char*)"save", EDITTEXTF_ID,control_cb );
+	FileText = glui->add_edittext_to_panel(file_panel, (char*)"ex5",
+				GLUI_EDITTEXT_TEXT, textide,NO_RETURN_ID, control_cb);
+	glui->add_button_to_panel(file_panel,(char*)"save", 
+											EDITTEXTF_ID,control_cb );
 	
 	glui->add_column(true);
-	
 	//simulation
 	GLUI_Panel *simul_panel = glui->add_panel((char*) "Simulation");
-	buttonstart = glui->add_button_to_panel(simul_panel,(char*)"start", SIMSTART_ID,control_cb );
-	buttonstep = glui->add_button_to_panel(simul_panel,(char*)"step", SIMSTEP_ID,control_cb );
-	
-	
+	buttonstart = glui->add_button_to_panel(simul_panel,(char*)"start",
+												SIMSTART_ID,control_cb );
+	buttonstep = glui->add_button_to_panel(simul_panel,(char*)"step", 
+												SIMSTEP_ID,control_cb );
 	//recording
 	GLUI_Panel *record_panel = glui->add_panel((char*) "Recording");
-	reccheck = glui->add_checkbox_to_panel(record_panel,(char*)"record",NULL,CHECKREC_ID, control_cb);
+	reccheck = glui->add_checkbox_to_panel(record_panel,(char*)"record",
+											NULL,CHECKREC_ID, control_cb);
 	RecRate = glui->add_statictext_to_panel(record_panel,"rate off");
 	RecTurn = glui->add_statictext_to_panel(record_panel,"turn off");
-	
 	glui->add_column(true);
-	
 	//control mode
 	GLUI_Panel *control_panel = glui->add_panel((char*) "Control mode");
-	contradio = glui->add_radiogroup_to_panel(control_panel, NULL, RADIOBUTTONCONT_ID,control_cb);
+	contradio = glui->add_radiogroup_to_panel(control_panel, NULL,
+										RADIOBUTTONCONT_ID,control_cb);
 	glui->add_radiobutton_to_group( contradio,(char*)   "Automatic" );  
 	glui->add_radiobutton_to_group( contradio,(char*)   "Manual" );
-	
 	//robot control 
-	GLUI_Panel *r_control_panel = glui->add_panel((char*) "Robot control");
-	robrot = glui->add_statictext_to_panel(r_control_panel,"rotaion : 0.00");
-	robtran = glui->add_statictext_to_panel(r_control_panel,"translation : 0.00");
+	GLUI_Panel *r_control_panel =
+								glui->add_panel((char*)"Robot control");
+	robrot = glui->add_statictext_to_panel(r_control_panel,
+													"rotaion : 0.00");
+	robtran = glui->add_statictext_to_panel(r_control_panel,
+												"translation : 0.00");
 	
 	//bouton quitter
 	glui->add_button((char*)"Quit", 0,(GLUI_Update_CB)exit );

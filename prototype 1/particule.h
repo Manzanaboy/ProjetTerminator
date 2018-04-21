@@ -17,26 +17,37 @@
 	typedef struct particule PARTICULE;
 	
 	/**
-	 * \brief automate de lecture des fichiers
+	 * \brief automate de lecture des fichiers. De plus on va indquer
+	 * si la simulation s'est bien déroulé ou non. 
 	 * \param tete_liste	 L'adresse d'un pointeur de 
 	 * 						type PARTICULE qui pointe sur un pointeur 
 	 * 						tete de liste.
 	 * \param nom_fichier 	 le nom du fichier qu'on veut lire
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */ 
-	void lecture_particules(PARTICULE** tete_liste, char* nom_fichier);
+	void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
+							char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief fonction qui analyse si les différentes charactérisque de
 	 * 		la particule sans compris dans leurs domaines de défintion
+	 * 		Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok.
 	 * \param energie		energie de la particule
 	 * \param rayon 		rayon de la particule
 	 * \param pos_x			coordonnée horizontale du centre de la 
 	 * 						particule
 	 * \param pos_y			coordonnée verticale du centre de la 
 	 * 						particule
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
 	void analyse_validite_part(double energie, double rayon,
-										double pos_x, double pos_y);
+				double pos_x, double pos_y,char*mode_lecture, int*p_ok);
 	/**
 	 * \brief chercher la ligne du premier "FIN_LISTE" du fichier afin 
 	 * 		  commencer à lire après celui-ci
@@ -54,12 +65,18 @@
 	/**
 	 * \brief comparer le nombre de particules qui sont décrites dans
 	 * 		 le fichier au nombre de particules qu'on est censé avoir.
+	 * 		Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok.
 	 * \param nbpart_att	nombre de particules qu'on est censé avoir.
 	 * \param nbpart_recu	nombre de particules décrites.
 	 * \param ligne			numeor de la ligne du "FIN_LISTE".
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
 	void analyse_nbrpart(int nbpart_att,int nbpart_recu,
-												unsigned int ligne);
+						unsigned int ligne,char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief afficher dans le terminal les données des particules.
@@ -104,10 +121,17 @@
 					double pos_x, double pos_y, PARTICULE*courant);
 	/**
 	 * \brief analyse s'il y a eu collision entre les particules
+	 * 			Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok.
 	 * \param tete_liste_part 	adresse du pointeur qui pointeur sur 
 	 * 							le début de la liste
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
-	void particule_collision_part_part(PARTICULE*tete_liste_part);
+	void particule_collision_part_part(PARTICULE*tete_liste_part,
+										char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief retranscrire les données des champs d'une particule dans 
@@ -120,6 +144,7 @@
 	 * \param energie		pointeur sur une variable de l'energie.
 	 * \param rayon 		pointeur sur une variable du rayon.
 	 * \param p_num 		pointeur sur une variable du numero.
+	 * 
 	 */
 	void particule_acces_donnees (PARTICULE**courant,double*p_posx,
 			double*p_posy, double*p_energie, double*p_rayon, int*p_num);

@@ -27,6 +27,7 @@
 
 enum Etat_lecture {NB_PAR,PAR};
 #define LG_FIN_LISTE 9
+#define ESP_PAR_PAR 8
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -75,7 +76,8 @@ int chercheur_ligne(char* nom_fichier)
 		exit(EXIT_FAILURE);
 	}
 }
-void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
+void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
+									char*mode_lecture, int*p_ok)
 {
 	int nbpart_att,nbpart_recu=0, etat=NB_PAR,ligne=0,i=0, ligne_depart; 
 	float en,ray,pos_x,pos_y;
@@ -118,30 +120,39 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier)
 					while(sscanf(deb,"%f %f %f %f",&en,&ray,&pos_x,
 															&pos_y)==4)
 					{
-						analyse_validite_part(en, ray,pos_x,pos_y);
+						analyse_validite_part(en, ray,pos_x,pos_y,
+												mode_lecture,p_ok);
 						courant = liste_add(tete_liste); 		
 						passage_donnees(en,ray,pos_x,pos_y,
 															courant);
 						strtod(deb, &fin); // fonction du cours fichiers
-						deb = (fin+8); //8 parce qu'on compte aussi 
+						deb = (fin+ESP_PAR_PAR);  
 						nbpart_recu++;
 					}
 				break;
 			}	
 		}	
-		analyse_nbrpart(nbpart_att, nbpart_recu, ligne);
+		analyse_nbrpart(nbpart_att, nbpart_recu,
+											ligne,mode_lecture,p_ok);
 	}
 	fclose(fichier);
 }
 void analyse_validite_part(double energie, double rayon,double pos_x, 
-														double pos_y)
+						double pos_y,char*mode_lecture, int*p_ok)
 {
 	if((fabs(pos_x))>DMAX || (fabs(pos_y))>DMAX || energie<0 ||
 	energie > E_PARTICULE_MAX || rayon < R_PARTICULE_MIN ||
 	rayon>R_PARTICULE_MAX)
 	{
 		error_invalid_particule_value(energie,rayon, pos_x, pos_y);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 }
 PARTICULE * liste_add ( PARTICULE ** p_tete )
@@ -156,19 +167,34 @@ PARTICULE * liste_add ( PARTICULE ** p_tete )
 	 *p_tete = new_part;
 	 return new_part;
 }
-void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne)
+void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne,
+					char*mode_lecture, int*p_ok)
 {
 	if(nbpart_att>nbpart_recu)
 	{
 		ligne++;
 		error_fin_liste_particules(ligne);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 	else if(nbpart_att<nbpart_recu)
 	{
 		ligne++;
 		error_missing_fin_liste_particules(ligne);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 }
 void liste_show ( PARTICULE *tete )
@@ -245,7 +271,8 @@ void passage_donnees( double en, double ray,
 	courant->corps.x = pos_x;
 	courant->corps.y = pos_y;
 }
-void particule_collision_part_part(PARTICULE*tete_liste_part)
+void particule_collision_part_part(PARTICULE*tete_liste_part,
+								char*mode_lecture, int*p_ok)
 {
 	int collision=0;
 	double dist =0;
@@ -263,6 +290,14 @@ void particule_collision_part_part(PARTICULE*tete_liste_part)
 			{
 				error_collision(PARTICULE_PARTICULE,courant1->numero,
 													courant2->numero);
+				if(!(strncmp(mode_lecture,"Error",5)))
+				{
+					exit(0);
+				}
+				else
+				{
+					*p_ok=0;
+				}
 			}
 			courant1 = courant2;
 			courant2 = courant1->suivant;

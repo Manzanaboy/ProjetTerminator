@@ -25,7 +25,8 @@
 	 * 						pointe sur un pointeur tete de liste.
 	 * \param nom_fichier 	 le nom du fichier qu'on veut lire
 	 */ 
-	void lecture_robots(ROBOT** tete_liste, char* nom_fichier);
+	void lecture_robots(ROBOT** tete_liste, char* nom_fichier, 
+										char*mode_lecture,int*p_ok);
 	
 	/**
 	 * \brief eliminer un robot de la liste. 
@@ -53,40 +54,66 @@
 	/**
 	 * \brief comparer le nombre de robots qui sont décrits dans
 	 * 		 le fichier au nombre de robot qu'on est censé avoir.
+	 * 		Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok. 
+	 * 		
 	 * \param nbbot_att		nombre de robots qu'on est censé avoir.
 	 * \param nbbot_recu	nombre de robots décrits.
 	 * \param ligne			numeor de la ligne du "FIN_LISTE".
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
 	void analyse_nbrbot (int nbbot_att,int nbbot_recu
-													,unsigned int line);
+						,unsigned int line,char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief analyser si l'angle du robot se trouve dans le bon 
-	 * 		  domaine de définition
+	 * 		  domaine de définition.
+	 * 		  Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok. 
 	 * \param alpha			angle du robot.
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
-	void analyse_angle_bot (double alpha);
+	void analyse_angle_bot (double alpha,char*mode_lecture, int*p_ok);
 	
 	/**
-	 * \brief analyse s'il y a eu collision entre les robots
+	 * \brief analyse s'il y a eu collision entre les robots.
+	 * 			Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		    arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok. 
 	 * \param tete_liste_bot 	adresse du pointeur qui pointeur sur 
 	 * 							le début de la liste des robots.
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
-	void robot_collision_bot_bot(ROBOT*tete_liste_bot);
+	void robot_collision_bot_bot(ROBOT*tete_liste_bot,
+										char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief analyse s'il y a eu collision entre les robots et les 
-	 * 		particules
+	 * 		particules.
+	 * 		Si ça ne joue pas et qu'on est en mode error, il faut 
+	 * 		 	arrêter le programme.Si c'est en mode Draw, il faut 
+	 * 			juste signaler que la simulation n'est pas ok. 
 	 * \param tete_liste_bot 	adresse du pointeur qui pointeur sur 
 	 * 							le début de la liste des robots.
 	 * \param tete_liste_aprt 	adresse du pointeur qui pointeur sur 
 	 * 							le début de la liste des particules.
+	 * \param mode_lecture  mode de lecture error ou draw
+	 * \param p_ok  		pointeur sur la variable qui indique si la
+	 * 						simulation est ok ou ko.
 	 */
 	void robot_collisions_bot_part (ROBOT*tete_liste_bot,
-											PARTICULE* tete_liste_part);
+				PARTICULE* tete_liste_part,char*mode_lecture, int*p_ok);
 	
 	/**
-	 * \brief dessiner toutes les particules
+	 * \brief dessiner toutes les particules. 
 	 * \param tete_liste	adresse du pointeur qui pointer sur 
 	 * 						le début de la liste des robots
 	 */

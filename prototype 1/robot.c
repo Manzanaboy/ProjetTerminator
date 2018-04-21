@@ -27,6 +27,7 @@
 
 
 enum Etat_lecture {NB_R,RO};
+#define ESP_BOT_BOT 5
 
 /**
 	 numero du robot dans l'ordre d'appartion dans le fichier
@@ -47,7 +48,8 @@ void test2 (void)
 {
 	printf("problem de pointeur dans le fichier %s", __FILE__);	
 }
-void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
+void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
+										char*mode_lecture, int* p_ok)
 {
 	int nbbot_att,nbbot_recu=0,etat=NB_R, compteur_bot=1;
 	int lg_fin = 9;
@@ -87,20 +89,21 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier)
 				case RO :
 					while (sscanf(deb,"%f %f %f",&pos_x,&pos_y,&ang) ==3)
 					{
-						analyse_angle_bot (ang);
+						analyse_angle_bot (ang,mode_lecture,p_ok);
 						courant = liste_ajouter(tete_liste);
 						courant->numero = compteur_bot++;
 						courant->corps.x = pos_x;
 						courant->corps.y = pos_y;
 						courant->angle = ang;
 						strtod(deb, &fin); // fonction du cours fichiers
-						deb = (fin+5); //on compte aussi les espaces 
+						deb = (fin+ESP_BOT_BOT);
 						nbbot_recu++;
 					}
 				break;
 			}
 		}	
-		analyse_nbrbot(nbbot_att, nbbot_recu, compteur );		
+		analyse_nbrbot(nbbot_att, nbbot_recu,
+										compteur,mode_lecture,p_ok);		
 	}
 	fclose(fichier);
 }
@@ -119,28 +122,50 @@ ROBOT * liste_ajouter( ROBOT ** p_tete )
 	 return new_bot;
 }
 
-void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line)
+void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line, 
+										char*mode_lecture, int*p_ok)
 {
 	if(nbbot_att>nbbot_recu)
 	{
 		line++;
 		error_fin_liste_robots(line);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 	else if(nbbot_att<nbbot_recu)
 	{
 		line++;
 		error_missing_fin_liste_robots(line);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 }
 
-void analyse_angle_bot (double alpha)
+void analyse_angle_bot (double alpha,char*mode_lecture, int*p_ok)
 {
 	if(util_alpha_dehors(alpha))
 	{
 		error_invalid_robot_angle(alpha);
-		exit(0);
+		if(!(strncmp(mode_lecture,"Error",5)))
+		{
+			exit(0);
+		}
+		else
+		{
+			*p_ok=0;
+		}
 	}
 }
 
@@ -209,7 +234,8 @@ void liste_afficher ( ROBOT *tete )
 	}
 
 }
-void robot_collision_bot_bot(ROBOT*tete_liste_bot)
+void robot_collision_bot_bot(ROBOT*tete_liste_bot,char*mode_lecture, 
+													int*p_ok)
 {
 	int collision=0;
 	double dist =0;
@@ -227,6 +253,14 @@ void robot_collision_bot_bot(ROBOT*tete_liste_bot)
 			{
 				error_collision(ROBOT_ROBOT,courant1->numero,
 													courant2->numero);
+				if(!(strncmp(mode_lecture,"Error",5)))
+				{
+					exit(0);
+				}
+				else
+				{
+					*p_ok=0;
+				}
 			}
 			courant1 = courant2;
 			courant2 = courant1->suivant;
@@ -234,7 +268,7 @@ void robot_collision_bot_bot(ROBOT*tete_liste_bot)
 	}
 }
 void robot_collisions_bot_part (ROBOT*tete_liste_bot,
-											PARTICULE* tete_liste_part)
+				PARTICULE* tete_liste_part,char*mode_lecture, int*p_ok)
 {
 	double dist =0;
 	double part_x,part_y,part_ray,part_en;
@@ -261,8 +295,16 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 				C2D particule1 ={part_center,*p_part_ray};
 				if(util_collision_cercle(robot1,particule1,p_dist))
 				{
-				error_collision(ROBOT_PARTICULE,courant_bot->numero,
+					error_collision(ROBOT_PARTICULE,courant_bot->numero,
 												       *p_part_num);
+					if(!(strncmp(mode_lecture,"Error",5)))
+					{
+						exit(0);
+					}
+					else
+					{
+						*p_ok=0;
+					}
 				}
 			}
 			courant_bot = courant_bot->suivant;
