@@ -1,22 +1,27 @@
+//Modifié
+
 #include <stdio.h>
 #include  <GL/glu.h>
 #include  <GL/glut.h>
 #include  <math.h>
 #include  "draw.h"
 #include "constantes.h"
+#define SIDES 50
+#define PETIT_R 0.1
 
 void draw_robot(double xc, double yc, double angle)
 {
-	const int SIDES = 50;
-	//~ printf("drawing robot\n");
+  int i=0;
+  float x=0,y=0,px=0,py=0, alpha=0;
+  double petit_rayon = PETIT_R;
 
 	glBegin(GL_LINE_LOOP);
 
-	for (int i=0; i < SIDES; i++)
+	for (i=0; i < SIDES; i++)
     {
-      float alpha = i * 2. * 3.14159265 / SIDES;
-      float x = R_ROBOT*cos(alpha);
-      float y = R_ROBOT*sin(alpha);
+      alpha = i * 2. * M_PI / SIDES;
+      x = R_ROBOT*cos(alpha);
+      y = R_ROBOT*sin(alpha);
 
       glColor3f(0,0,0);
       glVertex2f(x+xc,y+yc);
@@ -29,13 +34,13 @@ void draw_robot(double xc, double yc, double angle)
 	glVertex2d(xc+R_ROBOT*cos(angle),yc+R_ROBOT*sin(angle));
 	glEnd();
 
-	double petit_rayon = 0.1;
+
 	glBegin(GL_TRIANGLE_FAN);
 	for (int i=0; i < SIDES; i++)
     {
-      float alpha = i * 2. * 3.14159265 / SIDES;
-      float px = petit_rayon*cos(alpha);
-      float py = petit_rayon*sin(alpha);
+      alpha = i * 2. * M_PI / SIDES;
+      px = petit_rayon*cos(alpha);
+      py = petit_rayon*sin(alpha);
       glColor3f(1,0,0);
       glVertex2f(xc+px,yc+py);
     }
@@ -45,15 +50,16 @@ void draw_robot(double xc, double yc, double angle)
 
 void draw_part(double xc, double yc,double rayon)
 {
-	const int SIDES = 50;
+  int i=0;
+  float x=0,y=0, alpha=0;
 
 	glBegin(GL_TRIANGLE_FAN);
 
-	for (int i=0; i < SIDES; i++)
+	for (i=0; i < SIDES; i++)
     {
-      float alpha = i * 2. * 3.14159265 / SIDES;
-      float x = rayon*cos(alpha);
-      float y = rayon*sin(alpha);
+      alpha = i * 2. * M_PI / SIDES;
+      x = rayon*cos(alpha);
+      y = rayon*sin(alpha);
 
       glColor3f(0.5,0.5,0.5);
       glVertex2f(x+xc,y+yc);
