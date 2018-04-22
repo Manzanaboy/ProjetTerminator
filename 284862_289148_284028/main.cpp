@@ -1,3 +1,5 @@
+//Modifié
+
 /*!
  \file main.cpp
  \brief Gère tout le traitement des fichiers, le dessin de l'interface 
@@ -194,8 +196,7 @@ void control_cb( int control )
 
 void display()
 {
-	//~ int simulation_ok=simulation_mode_draw(tete_liste_bot,entrees_command_test,
-												//~ tete_liste_part); //tester si la simulation joue.
+	
 	if(base)
 		dessine_tout();
 
