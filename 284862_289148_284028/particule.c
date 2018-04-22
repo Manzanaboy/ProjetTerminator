@@ -284,7 +284,7 @@ void particule_collision_part_part(PARTICULE*tete_liste_part,
 		{
 			C2D particule1 ={courant1->corps,courant1->rayon};
 			C2D particule2 ={courant2->corps,courant2->rayon};
-			if(util_collision_cercle(particule1,particule2,p_dist)) // rentrer les cercles et la distances
+			if(util_collision_cercle(particule1,particule2,p_dist)) 
 			{
 				error_collision(PARTICULE_PARTICULE,courant1->numero,
 													courant2->numero);
