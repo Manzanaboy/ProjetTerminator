@@ -27,8 +27,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */ 
-	void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
-							char*mode_lecture, int*p_ok);
+	void lecture_particules(PARTICULE** tete_liste, char* nom_fichier, char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief fonction qui analyse si les différentes charactérisque de
@@ -46,8 +45,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void analyse_validite_part(double energie, double rayon,
-				double pos_x, double pos_y,char*mode_lecture, int*p_ok);
+	void analyse_validite_part(double energie, double rayon, double pos_x, double pos_y,char*mode_lecture, int*p_ok);
 	/**
 	 * \brief chercher la ligne du premier "FIN_LISTE" du fichier afin 
 	 * 		  commencer à lire après celui-ci
@@ -75,8 +73,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void analyse_nbrpart(int nbpart_att,int nbpart_recu,
-						unsigned int ligne,char*mode_lecture, int*p_ok);
+	void analyse_nbrpart(int nbpart_att,int nbpart_recu, unsigned int ligne,char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief afficher dans le terminal les données des particules.
@@ -117,8 +114,7 @@
 	 * 						particule
 	 * \param courant 		adresse la particule en question
 	 */
-	void passage_donnees(double en, double ray,
-					double pos_x, double pos_y, PARTICULE*courant);
+	void passage_donnees(double en, double ray, double pos_x, double pos_y, PARTICULE*courant);
 	/**
 	 * \brief analyse s'il y a eu collision entre les particules
 	 * 			Si ça ne joue pas et qu'on est en mode error, il faut 
@@ -130,8 +126,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void particule_collision_part_part(PARTICULE*tete_liste_part,
-										char*mode_lecture, int*p_ok);
+	void particule_collision_part_part(PARTICULE*tete_liste_part,char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief retranscrire les données des champs d'une particule dans 
@@ -146,8 +141,7 @@
 	 * \param p_num 		pointeur sur une variable du numero.
 	 * 
 	 */
-	void particule_acces_donnees (PARTICULE**courant,double*p_posx,
-			double*p_posy, double*p_energie, double*p_rayon, int*p_num);
+	void particule_acces_donnees (PARTICULE**courant,double*p_posx, double*p_posy, double*p_energie, double*p_rayon, int*p_num);
 	/**
 	 * \brief dessiner toutes les particules
 	 * \param tete_liste	adresse du pointeur qui pointer sur 
