@@ -1,3 +1,5 @@
+//Modifié
+
 /*!
  \file particule.c
  \brief Module qui gère l'automate de lecture pour lire les particule
@@ -60,8 +62,8 @@ int chercheur_ligne(char* nom_fichier)
 	if(fichier)
 	{
 		while((fgets(tab,80,fichier))&&
-								(strncmp("FIN_LISTE",tab,
-													LG_FIN_LISTE))!=0)
+					(strncmp("FIN_LISTE",tab,
+							LG_FIN_LISTE))!=0)
 		{
 			line++;
 		}
@@ -101,47 +103,39 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
 			deb = tab;
 			ligne++;
 			while((tab[i]==' ' )||tab[i]=='\t')
-			{
 				i++;
-			}
 			if((tab[i]=='#')||(tab[i]=='\n')||(tab[i]=='\r')||
 				(tab[i]==' ')||(tab[i]=='\t'))
-			{
 				continue;
-			}
 			switch (etat)
 			{
 				case NB_PAR : 
 					if (sscanf(tab,"%d",&nbpart_att)==1)
-					{
 						etat++;
-					}
 					break;
 				case PAR :
 					while(sscanf(deb,"%f %f %f %f",&en,&ray,&pos_x,
-															&pos_y)==4)
+									&pos_y)==4)
 					{
 						analyse_validite_part(en, ray,pos_x,pos_y,
 												mode_lecture,p_ok);
 						courant = liste_add(tete_liste); 
 						courant->numero = compteur_particule++;		
-						passage_donnees(en,ray,pos_x,pos_y,
-															courant);
-						strtod(deb, &fin); // fonction du cours fichiers
+						passage_donnees(en,ray,pos_x,pos_y,courant);
+						strtod(deb, &fin); 
 						deb = (fin+ESP_PAR_PAR);  
 						nbpart_recu++;
 					}
-				break;
+					break;
 			}	
 		}
 		if(*p_ok)
-		{
-				analyse_nbrpart(nbpart_att, nbpart_recu,
-											ligne,mode_lecture,p_ok);
-		}	
+			analyse_nbrpart(nbpart_att, nbpart_recu,
+									ligne,mode_lecture,p_ok);
 	}
 	fclose(fichier);
 }
+
 void analyse_validite_part(double energie, double rayon,double pos_x, 
 						double pos_y,char*mode_lecture, int*p_ok)
 {
@@ -160,18 +154,20 @@ void analyse_validite_part(double energie, double rayon,double pos_x,
 		}
 	}
 }
+
 PARTICULE * liste_add ( PARTICULE ** p_tete )
 {
-	 PARTICULE *new_part;
-	 if (!(new_part= (PARTICULE*) malloc(sizeof(PARTICULE))))
+	PARTICULE *new_part;
+	if (!(new_part= (PARTICULE*) malloc(sizeof(PARTICULE))))
 	 {
-		 printf("problem d'allocation dasn %s\n",__func__);// fonction erreur à ajouter dans le module error
-		 exit (EXIT_FAILURE);
+		printf("problem d'allocation dasn %s\n",__func__);// fonction erreur à ajouter dans le module error
+		exit (EXIT_FAILURE);
 	}
-	 new_part->suivant = *p_tete;
-	 *p_tete = new_part;
-	 return new_part;
+	new_part->suivant = *p_tete;
+	*p_tete = new_part;
+	return new_part;
 }
+
 void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne,
 					char*mode_lecture, int*p_ok)
 {
