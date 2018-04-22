@@ -52,10 +52,14 @@ void simulation_mode_draw(ROBOT* tete_liste_bot, char* nom_fichier,
 	lecture_robots(&tete_liste_bot, nom_fichier,mode_lecture,p_ok);
 	lecture_particules(&tete_liste_part, nom_fichier,
 												mode_lecture,p_ok);
-	robot_collision_bot_bot(tete_liste_bot,mode_lecture,p_ok);
-	particule_collision_part_part(tete_liste_part,mode_lecture,p_ok);
-	robot_collisions_bot_part (tete_liste_bot,tete_liste_part,
+	if(ok)
+	{
+		robot_collision_bot_bot(tete_liste_bot,mode_lecture,p_ok);
+		particule_collision_part_part(tete_liste_part,mode_lecture,p_ok);
+		robot_collisions_bot_part (tete_liste_bot,tete_liste_part,
 												mode_lecture,p_ok);
+	}
+	
 	//~ liste_afficher(tete_liste_bot);
 	//~ liste_show(tete_liste_part);
 	

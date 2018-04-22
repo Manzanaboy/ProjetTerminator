@@ -131,9 +131,12 @@ void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
 					}
 				break;
 			}	
-		}	
-		analyse_nbrpart(nbpart_att, nbpart_recu,
+		}
+		if(*p_ok)
+		{
+				analyse_nbrpart(nbpart_att, nbpart_recu,
 											ligne,mode_lecture,p_ok);
+		}	
 	}
 	fclose(fichier);
 }
@@ -172,7 +175,6 @@ void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne,
 {
 	if(nbpart_att>nbpart_recu)
 	{
-		ligne++;
 		error_fin_liste_particules(ligne);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{
@@ -185,7 +187,6 @@ void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne,
 	}
 	else if(nbpart_att<nbpart_recu)
 	{
-		ligne++;
 		error_missing_fin_liste_particules(ligne);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{

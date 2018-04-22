@@ -101,9 +101,12 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
 					}
 				break;
 			}
+		}
+		if(*p_ok)
+		{
+				analyse_nbrbot(nbbot_att, nbbot_recu,
+										compteur,mode_lecture,p_ok);
 		}	
-		analyse_nbrbot(nbbot_att, nbbot_recu,
-										compteur,mode_lecture,p_ok);		
 	}
 	fclose(fichier);
 }
@@ -127,7 +130,6 @@ void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line,
 {
 	if(nbbot_att>nbbot_recu)
 	{
-		line++;
 		error_fin_liste_robots(line);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{
@@ -140,7 +142,6 @@ void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line,
 	}
 	else if(nbbot_att<nbbot_recu)
 	{
-		line++;
 		error_missing_fin_liste_robots(line);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{
