@@ -160,7 +160,7 @@ PARTICULE * liste_add ( PARTICULE ** p_tete )
 	PARTICULE *new_part;
 	if (!(new_part= (PARTICULE*) malloc(sizeof(PARTICULE))))
 	 {
-		printf("problem d'allocation dasn %s\n",__func__);// fonction erreur à ajouter dans le module error
+		printf("problem d'allocation dasn %s\n",__func__);
 		exit (EXIT_FAILURE);
 	}
 	new_part->suivant = *p_tete;
