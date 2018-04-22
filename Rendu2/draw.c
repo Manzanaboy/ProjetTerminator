@@ -14,11 +14,13 @@
 #include  <math.h>
 #include  "draw.h"
 #include "constantes.h"
+#define PETIT_RAYON 0.1
+#define SIDES 50
 
 void draw_robot(double xc, double yc, double angle)
 {
-	const int SIDES = 50;
-  double petit_rayon = 0.1;
+
+  double petit_rayon = PETIT_RAYON;
   float x=0,y=0,px=0,py=0, alpha=0;
   int i=0;
 
@@ -53,7 +55,7 @@ void draw_robot(double xc, double yc, double angle)
 
 void draw_part(double xc, double yc,double rayon)
 {
-	const int SIDES = 50;
+
   float x=0,y=0, alpha=0;
   int i=0;
 
