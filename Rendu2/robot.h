@@ -16,7 +16,6 @@
  
 #include "particule.h"
 #ifndef ROBOT_H
-#define ROBOT_H
 
 	typedef struct robot ROBOT;
 	
@@ -27,7 +26,7 @@
 	 * \param nom_fichier 	 le nom du fichier qu'on veut lire
 	 */ 
 	void lecture_robots(ROBOT** tete_liste, char* nom_fichier, 
-							char*mode_lecture,int*p_ok);
+										char*mode_lecture,int*p_ok);
 	
 	/**
 	 * \brief eliminer un robot de la liste. 
@@ -94,7 +93,7 @@
 	 * 						simulation est ok ou ko.
 	 */
 	void robot_collision_bot_bot(ROBOT*tete_liste_bot,
-									char*mode_lecture, int*p_ok);
+										char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief analyse s'il y a eu collision entre les robots et les 
@@ -132,7 +131,7 @@
 	 * \param p_angle 		pointeur sur une variable de l'angle.
 	 */
 	void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
-								double*p_angle);
+														double*p_angle);
 	/**
 	 * \brief afficher dans le terminal les données des robots.
 	 * \param p_tete 	adresse du pointeur qui pointe sur 

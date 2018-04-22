@@ -175,6 +175,7 @@ void analyse_nbrpart(int nbpart_att,int nbpart_recu,unsigned int ligne,
 {
 	if(nbpart_att>nbpart_recu)
 	{
+		ligne++;
 		error_fin_liste_particules(ligne);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{

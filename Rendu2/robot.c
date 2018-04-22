@@ -130,6 +130,7 @@ void analyse_nbrbot (int nbbot_att,int nbbot_recu,unsigned int line,
 {
 	if(nbbot_att>nbbot_recu)
 	{
+		line++;
 		error_fin_liste_robots(line);
 		if(!(strncmp(mode_lecture,"Error",5)))
 		{

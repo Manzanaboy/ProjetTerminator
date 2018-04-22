@@ -11,8 +11,6 @@
 
 #include "robot.h"
 #include "particule.h"
-#ifndef SIMULATION_H
-#define SIMULATION_H
 
 /**
  * \brief  lire le fichier en mode Error
@@ -38,5 +36,3 @@ void simulation_mode_error(ROBOT* tete_liste_bot, char* nom_fichier,
  */
 void simulation_mode_draw(ROBOT* tete_liste_bot, char* nom_fichier,
 					PARTICULE* tete_liste_part, int*p_base);
-
-#endif

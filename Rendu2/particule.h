@@ -14,7 +14,6 @@
  \date 21 avril 2018
  */
 #ifndef PARTICULE_H
-#define PARTICULE_H
 	typedef struct particule PARTICULE;
 	
 	/**
