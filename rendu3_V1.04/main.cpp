@@ -47,6 +47,7 @@ void sauver(char* fichier_open, char* fichier_save);
 #define RADIOBUTTONCONT_ID 106
 
 enum Type_dessin{PG_BLANCHE,PG_DESSINS};
+enum Type_fichier{LU,NON_LU};
 
 namespace
 	{
@@ -54,13 +55,12 @@ namespace
 		char entrees_command_test[LG_TEST];
 		char open[LG_TEST];
 		char save[LG_TEST];
-		ROBOT *tete_liste_bot=NULL;
-		PARTICULE* tete_liste_part=NULL;
 		GLfloat aspect_ratio;
 		char textiun[20] = ".txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
+		int etat_lecture=NON_LU;
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
@@ -92,8 +92,8 @@ int main(int argc, char* argv[])
 		if (!(strncmp("Error",argv[1],5)))
 		{
 			int* p_base=&base;
-			simulation_first_lecture(&tete_liste_bot, argv[2],
-									&tete_liste_part,p_base,argv[1]);
+			simulation_first_lecture(argv[2],p_base,argv[1]);
+			etat_lecture=LU;
 			return 0;
 	 	}
 	
@@ -156,9 +156,10 @@ void control_cb( int control )
 			strncpy(open,(OpenText->get_text()),LG_TEST);
 			strncpy(entrees_command_test,(open),LG_TEST);
 			
-			if(tete_liste_part&&tete_liste_bot)
+			if(etat_lecture==LU)
 			{
-				simulation_detruire(&tete_liste_bot,&tete_liste_part);
+				simulation_detruire();
+				etat_lecture=NON_LU;
 			}
 			glutPostRedisplay();
 			break;	
@@ -235,14 +236,15 @@ void dessine_tout()
 			glOrtho(g,d,bas/aspect_ratio,haut/aspect_ratio,-1.,+1.);
 		else
 			glOrtho(g*aspect_ratio,d*aspect_ratio,bas,haut,-1.,+1.);
-		if(!(tete_liste_bot&&tete_liste_part))
+		if(etat_lecture==NON_LU)
 		{
-			simulation_first_lecture(&tete_liste_bot,
-			entrees_command_test,&tete_liste_part,p_base,mode_lecture);
+			simulation_first_lecture(entrees_command_test,
+												p_base,mode_lecture);
+			etat_lecture=LU;
 		}
 		else
 		{
-			simulation_developpement(&tete_liste_bot,&tete_liste_part);
+			simulation_developpement();
 		}
 		/* Affiche l'image a l'ecran. */
 		glutSwapBuffers();
