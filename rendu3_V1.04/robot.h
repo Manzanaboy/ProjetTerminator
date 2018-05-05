@@ -25,8 +25,7 @@
 	 * 						pointe sur un pointeur tete de liste.
 	 * \param nom_fichier 	 le nom du fichier qu'on veut lire
 	 */ 
-	void lecture_robots(ROBOT** tete_liste, char* nom_fichier, 
-										char*mode_lecture,int*p_ok);
+	void lecture_robots(char* nom_fichier, char*mode_lecture,int*p_ok);
 	
 	/**
 	 * \brief eliminer un robot de la liste. 
@@ -35,21 +34,21 @@
 	 * \param el 		adresse du robot que l'on 
 	 * 					cherche à eliminer.
 	 */
-	void bot_destruction ( ROBOT ** p_tete, ROBOT *el);
+	void bot_destruction ( ROBOT *el);
 	
 	/**
 	 * \brief eliminer la liste de robots. 
 	 * \param tete_liste 	adresse du pointeur qui pointe sur 
 	 * 						le début de la liste
 	 */
-	void bot_total_destruction (ROBOT** p_liste);
+	void bot_total_destruction ();
 	
 	/**
 	 * \brief ajouter un robot dans la liste chaînée
 	 * \param p_tete 	adresse du pointeur qui pointeur sur 
 	 * 					le début de la liste
 	 */
-	ROBOT * liste_ajouter ( ROBOT ** p_tete );
+	ROBOT * liste_ajouter ();
 	
 	/**
 	 * \brief comparer le nombre de robots qui sont décrits dans
@@ -92,8 +91,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void robot_collision_bot_bot(ROBOT*tete_liste_bot,
-										char*mode_lecture, int*p_ok);
+	void robot_collision_bot_bot(char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief analyse s'il y a eu collision entre les robots et les 
@@ -109,15 +107,14 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void robot_collisions_bot_part (ROBOT*tete_liste_bot,
-				PARTICULE* tete_liste_part,char*mode_lecture, int*p_ok);
+	void robot_collisions_bot_part (char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief dessiner toutes les particules. 
 	 * \param tete_liste	adresse du pointeur qui pointer sur 
 	 * 						le début de la liste des robots
 	 */
-	void robot_dessin(ROBOT*tete_liste);
+	void robot_dessin();
 	
 	/**
 	 * \brief retranscrire les données des champs d'un robots dans 
@@ -131,11 +128,11 @@
 	 * \param p_angle 		pointeur sur une variable de l'angle.
 	 */
 	void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
-														double*p_angle);
+							double*p_angle);
 	/**
 	 * \brief afficher dans le terminal les données des robots.
 	 * \param p_tete 	adresse du pointeur qui pointe sur 
 	 * 					le début de la liste des robots.
 	 */
-	void liste_afficher ( ROBOT *tete );
+	void liste_afficher ();
 #endif

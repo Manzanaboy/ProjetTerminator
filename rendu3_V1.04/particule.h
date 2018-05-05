@@ -27,7 +27,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */ 
-	void lecture_particules(PARTICULE** tete_liste, char* nom_fichier,
+	void lecture_particules(char* nom_fichier,
 							char*mode_lecture, int*p_ok);
 	
 	/**
@@ -47,7 +47,8 @@
 	 * 						simulation est ok ou ko.
 	 */
 	void analyse_validite_part(double energie, double rayon,
-				double pos_x, double pos_y,char*mode_lecture, int*p_ok);
+								double pos_x, double pos_y,
+									char*mode_lecture, int*p_ok);
 	/**
 	 * \brief chercher la ligne du premier "FIN_LISTE" du fichier afin 
 	 * 		  commencer à lire après celui-ci
@@ -60,7 +61,7 @@
 	 * \param p_tete 	adresse du pointeur qui pointeur sur 
 	 * 					le début de la liste
 	 */
-	PARTICULE * liste_add ( PARTICULE ** p_tete );
+	PARTICULE * liste_add ();
 	
 	/**
 	 * \brief comparer le nombre de particules qui sont décrites dans
@@ -83,7 +84,7 @@
 	 * \param p_tete 	adresse du pointeur qui pointe sur 
 	 * 					le début de la liste
 	 */
-	void liste_show ( PARTICULE *tete );
+	void liste_show ();
 	
 	/**
 	 * \brief eliminer une particule de la liste. 
@@ -92,19 +93,14 @@
 	 * \param el 		adresse de la particule que l'on 
 	 * 					cherche à eliminer.
 	 */
-	void part_destruction ( PARTICULE ** p_tete, PARTICULE *el);
+	void part_destruction (PARTICULE *el);
 	
 	/**
 	 * \brief eliminer la liste de particules. 
 	 * \param tete_liste 	adresse du pointeur qui pointe sur 
 	 * 					le début de la liste
 	 */
-	void part_total_destruction(PARTICULE**tete_liste);
-	
-	/**
-	 * \brief fonction qui affihce qu'on un problème de pointeur.
-	 */
-	void particule_error_pointeur (void); 
+	void part_total_destruction();
 	
 	/**
 	 * \brief transcrire les données lues dans 
@@ -130,8 +126,7 @@
 	 * \param p_ok  		pointeur sur la variable qui indique si la
 	 * 						simulation est ok ou ko.
 	 */
-	void particule_collision_part_part(PARTICULE*tete_liste_part,
-										char*mode_lecture, int*p_ok);
+	void particule_collision_part_part(char*mode_lecture, int*p_ok);
 	
 	/**
 	 * \brief retranscrire les données des champs d'une particule dans 
@@ -153,5 +148,12 @@
 	 * \param tete_liste	adresse du pointeur qui pointer sur 
 	 * 						le début de la liste des particules
 	 */
-	void particule_dessin(PARTICULE*tete_liste);
+	void particule_dessin();
+	
+	/**
+	 * \brief passer la tete de liste des particule au module robot 
+	 * 		  pour les collisions ROBOT-PART
+	 */
+	PARTICULE* particule_acces_tete();
+	
 #endif

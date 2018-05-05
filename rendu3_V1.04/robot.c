@@ -31,6 +31,8 @@
 enum Etat_lecture {NB_R,RO};
 #define ESP_BOT_BOT 5
 
+static ROBOT* tete_liste_bot=NULL;
+
 /**
 	 numero du robot dans l'ordre d'appartion dans le fichier
 	* commence à 1.
@@ -46,12 +48,8 @@ struct robot
 	double angle;
 	ROBOT* suivant;
 };
-void robot_error_pointeur (void)
-{
-	printf("problem de pointeur dans le fichier %s", __FILE__);	
-}
 
-void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
+void lecture_robots(char* nom_fichier,
 						char*mode_lecture, int* p_ok)
 {
 	int nbbot_att,nbbot_recu=0,etat=NB_R, compteur_bot=1;
@@ -67,7 +65,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
 	if(fichier)
 	{
 		while((fgets(tab,80,fichier))&&
-								(strncmp("FIN_LISTE",tab,lg_fin))!=0)
+				(strncmp("FIN_LISTE",tab,lg_fin))!=0)
 		{
 			deb = tab;
 			compteur++;
@@ -86,10 +84,10 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
 						etat++;
 					break;
 				case RO :
-					while (sscanf(deb,"%f %f %f",&pos_x,&pos_y,&ang) ==3)
+					while (sscanf(deb,"%f %f %f",&pos_x,&pos_y,&ang)==3)
 					{
 						analyse_angle_bot (ang,mode_lecture,p_ok);
-						courant = liste_ajouter(tete_liste);
+						courant = liste_ajouter();
 						courant->numero = compteur_bot++;
 						courant->corps.x = pos_x;
 						courant->corps.y = pos_y;
@@ -111,7 +109,7 @@ void lecture_robots(ROBOT** tete_liste, char* nom_fichier,
 }
 
 
-ROBOT * liste_ajouter( ROBOT ** p_tete ) 
+ROBOT * liste_ajouter() 
 {
 	ROBOT *new_bot=NULL;
 	if (!(new_bot= (ROBOT*) malloc(sizeof(ROBOT))))
@@ -119,8 +117,8 @@ ROBOT * liste_ajouter( ROBOT ** p_tete )
 		printf("problem d'allocation dasn %s\n",__func__);
 		exit (EXIT_FAILURE);
 	}
-	new_bot->suivant = *p_tete;
-	*p_tete = new_bot;
+	new_bot->suivant = tete_liste_bot;
+	tete_liste_bot = new_bot;
 	return new_bot;
 }
 
@@ -170,34 +168,35 @@ void analyse_angle_bot (double alpha,char*mode_lecture, int*p_ok)
 	}
 }
 
-void bot_total_destruction (ROBOT** p_liste)
+void bot_total_destruction ()
 {
-	if(!p_liste)
+	if(!(tete_liste_bot))
 	{
-		robot_error_pointeur();
+		printf("problème pointeur l.%d in file %s",__LINE__,__FILE__);
 	}
-	ROBOT *bot = *p_liste;
+	ROBOT *bot = tete_liste_bot;
 	while(bot->suivant != NULL)
 	{
-		bot_destruction(p_liste,bot);
-		bot = *p_liste;
+		bot_destruction(bot);
+		bot = tete_liste_bot;
 	}
-	bot_destruction(p_liste,bot);
+	bot_destruction(bot);
+	tete_liste_bot= NULL;
 }
 
-void bot_destruction ( ROBOT ** p_tete, ROBOT *el )
+void bot_destruction (ROBOT *el )
 {
-	ROBOT *bot = *p_tete;
-	if(p_tete)
+	ROBOT *bot = tete_liste_bot;
+	if(tete_liste_bot)
 	{
 		if (bot == el)
 		{
-			*p_tete= bot->suivant;
+			tete_liste_bot= bot->suivant;
 			free(bot);
 		}
 		else
 		{
-			ROBOT *test_bot = *p_tete;
+			ROBOT *test_bot = tete_liste_bot;
 			while ((test_bot->suivant !=NULL)&&(test_bot->suivant!= el))
 			{
 				test_bot = test_bot->suivant;
@@ -212,13 +211,13 @@ void bot_destruction ( ROBOT ** p_tete, ROBOT *el )
 	}
 }
 
-void liste_afficher ( ROBOT *tete )
+void liste_afficher ()
 {
 	ROBOT* voiture;
 	
-	if(tete)
+	if(tete_liste_bot)
 	{
-		voiture = tete;
+		voiture = tete_liste_bot;
 		do
 		{
 			printf("robot %d \n", voiture->numero);
@@ -235,7 +234,7 @@ void liste_afficher ( ROBOT *tete )
 	}
 
 }
-void robot_collision_bot_bot(ROBOT*tete_liste_bot,char*mode_lecture, 
+void robot_collision_bot_bot(char*mode_lecture, 
 								int*p_ok)
 {
 	int collision=0;
@@ -268,8 +267,7 @@ void robot_collision_bot_bot(ROBOT*tete_liste_bot,char*mode_lecture,
 		}
 	}
 }
-void robot_collisions_bot_part (ROBOT*tete_liste_bot,
-				PARTICULE* tete_liste_part,char*mode_lecture, int*p_ok)
+void robot_collisions_bot_part (char*mode_lecture, int*p_ok)
 {
 	double dist =0;
 	double part_x,part_y,part_ray,part_en;
@@ -279,7 +277,8 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 	double *p_part_ray=&part_ray;
 	double *p_part_en=&part_en;
 	int *p_part_num=&part_num;
-	if(tete_liste_bot && tete_liste_part ) 
+	PARTICULE *tete_liste_part=particule_acces_tete();
+	if(tete_liste_bot && tete_liste_part) 
 	{
 		ROBOT*courant_bot = tete_liste_bot;
 		PARTICULE*courant_part = tete_liste_part;
@@ -313,15 +312,15 @@ void robot_collisions_bot_part (ROBOT*tete_liste_bot,
 	}
 }
 
-void robot_dessin(ROBOT*tete_liste)
+void robot_dessin()
 {
 	double bot_x,bot_y,bot_angle;
 	double *p_bot_x=&bot_x;
 	double *p_bot_y=&bot_y;
 	double *p_bot_angle=&bot_angle;
-	if(tete_liste)
+	if(tete_liste_bot)
 	{
-		ROBOT*courant = tete_liste;
+		ROBOT*courant = tete_liste_bot;
 		while(courant)
 		{
 			robot_get_values(courant,p_bot_x,p_bot_y,p_bot_angle);
