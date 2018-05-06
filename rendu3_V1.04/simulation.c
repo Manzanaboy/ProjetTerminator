@@ -49,6 +49,7 @@ void simulation_first_lecture(char* nom_fichier,
 	{
 		error_no_error_in_this_file();
 	}
+	robot_assoc_robot_part();
 	
 }
 
@@ -63,7 +64,7 @@ void simulation_developpement(int reload)
 	{
 		if(!(decomposition && collision))
 		{
-		robot_update_rayons_part();
+			robot_assoc_robot_part();
 		}
 		compteur_idiot=0;
 	}
@@ -79,7 +80,7 @@ void simulation_detruire()
 	int destruction=-1;
 	bot_total_destruction();
 	part_total_destruction();
-	particule_recherche(destruction);
+	particule_recherche(destruction,NULL);
 	simulation_developpement(destruction);
 }
 

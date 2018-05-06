@@ -339,15 +339,25 @@ void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
 	}
 }
 
-void robot_update_rayons_part()
+void robot_assoc_robot_part()
 {
 	int nb_particules = 0;
-	nb_particules= nombre_total_particules();
+	nb_particules= particule_nombre_total();
 	int compteur=0;
 	double rayon = 0;
+	PARTICULE ** tab_part_triees = NULL;
 	for(compteur=0;compteur<nb_particules;compteur++)
 	{
-		rayon= particule_recherche(compteur);
+		rayon= particule_recherche(compteur,&tab_part_triees);
 		printf("rayon %f\n",rayon);
+		if(tab_part_triees)
+		{
+			printf("tab part tries est non nul\n");
+		}
+		else
+		{
+			printf("tab_part tries est nul\n");
+		}
+		
 	}
 }

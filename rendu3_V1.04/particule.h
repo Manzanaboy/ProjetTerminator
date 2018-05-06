@@ -157,9 +157,15 @@
 	 */
 	PARTICULE* particule_acces_tete();
 	
-	double particule_recherche(int compteur_deja_lue);
+	double particule_recherche(int compteur_deja_lue,
+								PARTICULE***tab_part_triees);
 	
-	int nombre_total_particules();
+	int particule_nombre_total();
 	
+	void part_copie_tab(PARTICULE***tab_part_triees,
+							PARTICULE**deja_lues,
+								int compteur_deja_lue );
+	
+	void particule_allouer_memoire(PARTICULE***deja_lues);
 	
 #endif

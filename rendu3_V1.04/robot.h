@@ -136,5 +136,5 @@
 	 */
 	void liste_afficher ();
 	
-	void robot_update_rayons_part();
+	void robot_assoc_robot_part();
 #endif

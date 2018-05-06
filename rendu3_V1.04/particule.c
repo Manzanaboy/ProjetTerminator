@@ -351,32 +351,28 @@ PARTICULE* particule_acces_tete()
 	}
 }
 
-double particule_recherche(int compteur_deja_lue)
+double particule_recherche(int compteur_deja_lue,PARTICULE***tab_part_triees)
 {
-	int j=0;
-	
 	double rayon_max=0;
 	int compteur=0;
 	int arret=0;
+	int i=0;
 	PARTICULE*courant = NULL;
 	PARTICULE*max = courant;
-	static PARTICULE* deja_lues[200];
-	int i=0;
+	static PARTICULE**deja_lues=NULL;
+	particule_allouer_memoire(&deja_lues);
 	if(compteur_deja_lue<0)
-	{
-		for(j=0;j<NB_TOT_PART;j++)
-		{
-			deja_lues[j]=NULL;
-		}
+	{	
+		free(deja_lues);
 	}
 	if(tete_liste_part)
 	{
 		courant = tete_liste_part;
 		for(compteur=0;compteur<NB_TOT_PART;compteur++)
 		{
-			for(i=0;i<=(compteur_deja_lue);i++)
+			for(i=0;i<(compteur_deja_lue);i++)
 			{
-				if(courant==deja_lues[i])
+				if(courant==(deja_lues[i]))
 				{
 					if(courant->suivant)
 					{
@@ -401,20 +397,44 @@ double particule_recherche(int compteur_deja_lue)
 			{
 				courant =courant->suivant;
 			}
-			//~ if(compteur>90)
-			//~ {
-			//~ printf("etat de courant %f\n",courant->rayon);
-			//~ }
 		}
 		deja_lues[compteur_deja_lue]=max;
+		part_copie_tab(tab_part_triees,deja_lues,compteur_deja_lue);
 	}
-
-		//~ printf("valuers deja lues %f \n",(deja_lues[0]->rayon));
-
 	return rayon_max;
 }
 
-int nombre_total_particules()
+int particule_nombre_total()
 {
 	return NB_TOT_PART;
+}
+
+void particule_allouer_memoire(PARTICULE***deja_lues)
+{
+	if(!(*deja_lues))
+	{
+		if(!(*(deja_lues)=malloc(NB_TOT_PART*sizeof(PARTICULE*))))
+		{
+			printf("probleme d'alloc %s l.%d",__FILE__,__LINE__);
+		}
+	}
+	
+}
+
+void part_copie_tab(PARTICULE***tab_part_triees,PARTICULE**deja_lues,
+						int compteur_deja_lue )
+{
+	int c=0;
+	if(deja_lues)
+	{
+		if(compteur_deja_lue==(NB_TOT_PART-1))
+		{
+			*tab_part_triees=deja_lues;
+		}
+	}
+	else
+	{
+		printf("problem de pointeur %s l.%d",__FILE__,__LINE__);
+	}
+
 }
