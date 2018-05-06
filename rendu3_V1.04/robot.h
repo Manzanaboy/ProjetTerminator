@@ -135,4 +135,6 @@
 	 * 					le début de la liste des robots.
 	 */
 	void liste_afficher ();
+	
+	void robot_update_rayons_part();
 #endif

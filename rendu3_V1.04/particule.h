@@ -15,6 +15,7 @@
  */
 #ifndef PARTICULE_H
 	typedef struct particule PARTICULE;
+	#define NB_MAX_PART 200
 	
 	/**
 	 * \brief automate de lecture des fichiers. De plus on va indquer
@@ -155,5 +156,10 @@
 	 * 		  pour les collisions ROBOT-PART
 	 */
 	PARTICULE* particule_acces_tete();
+	
+	double particule_recherche(int compteur_deja_lue);
+	
+	int nombre_total_particules();
+	
 	
 #endif

@@ -22,8 +22,6 @@
 #include "particule.h"
 #include "draw.h"
 
-//~ static ROBOT* tete_liste_bot=NULL;
-//~ static PARTICULE* tete_liste_part=NULL;
 
 void simulation_first_lecture(char* nom_fichier,
 									int*p_base,char* mode_lecture)	
@@ -41,8 +39,7 @@ void simulation_first_lecture(char* nom_fichier,
 	}
 	if(!(strncmp(mode_lecture,"Draw",4)))
 	{
-		robot_dessin();
-		particule_dessin();
+		simulation_dessiner();
 		if(!ok)
 		{
 			*p_base=0;
@@ -55,20 +52,40 @@ void simulation_first_lecture(char* nom_fichier,
 	
 }
 
-void simulation_developpement()
+void simulation_developpement(int reload)
 {
+	static int collision =0;
+	static int decomposition =0;
+	// calcul de la decomposition vient avant 
+	// calcul de la collsion vient avant
 	static int compteur_idiot=1;
-	if(compteur_idiot !=0)
+	if(compteur_idiot)
 	{
-		printf("fonction developpement à developper  in File %s avec amour Jose \n",__FILE__);
+		if(!(decomposition && collision))
+		{
+		robot_update_rayons_part();
+		}
 		compteur_idiot=0;
 	}
-	robot_dessin();
-	particule_dessin();
+	simulation_dessiner();
+	if(reload<0)
+	{
+		compteur_idiot =1;
+	}
 }
 
 void simulation_detruire()
 {
+	int destruction=-1;
 	bot_total_destruction();
 	part_total_destruction();
+	particule_recherche(destruction);
+	simulation_developpement(destruction);
+}
+
+void simulation_dessiner()
+{
+	draw_cadre();
+	robot_dessin();
+	particule_dessin();
 }

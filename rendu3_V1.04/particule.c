@@ -31,7 +31,9 @@ enum Etat_lecture {NB_PAR,PAR};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
 
+
 static PARTICULE* tete_liste_part=NULL;
+static int NB_TOT_PART =0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -96,7 +98,6 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 			fgets(tab,80,fichier);
 			ligne++;
 		}
-		printf("salut l.%d\n",ligne);
 		while((fgets(tab,80,fichier))&&(strncmp("FIN_LISTE",tab,
 													LG_FIN_LISTE))!=0)
 		{
@@ -134,6 +135,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 									ligne,mode_lecture,p_ok);
 	}
 	fclose(fichier);
+	NB_TOT_PART= nbpart_att;
 }
 
 void analyse_validite_part(double energie, double rayon,double pos_x, 
@@ -249,9 +251,9 @@ void part_destruction (PARTICULE *el)
 }
 void part_total_destruction()
 {
-	if(tete_liste_part)
+	if(!tete_liste_part)
 	{
-		printf("problème pointeur l.%d in file %s",__LINE__,__FILE__);
+		printf("problème pointeur l.%d in file %s\n",__LINE__,__FILE__);
 	}
 	PARTICULE *part = tete_liste_part;
 	while(part->suivant != NULL)
@@ -347,4 +349,72 @@ PARTICULE* particule_acces_tete()
 		printf("problème accès a la tete des part l.%d \n", __LINE__);
 		return NULL;
 	}
+}
+
+double particule_recherche(int compteur_deja_lue)
+{
+	int j=0;
+	
+	double rayon_max=0;
+	int compteur=0;
+	int arret=0;
+	PARTICULE*courant = NULL;
+	PARTICULE*max = courant;
+	static PARTICULE* deja_lues[200];
+	int i=0;
+	if(compteur_deja_lue<0)
+	{
+		for(j=0;j<NB_TOT_PART;j++)
+		{
+			deja_lues[j]=NULL;
+		}
+	}
+	if(tete_liste_part)
+	{
+		courant = tete_liste_part;
+		for(compteur=0;compteur<NB_TOT_PART;compteur++)
+		{
+			for(i=0;i<=(compteur_deja_lue);i++)
+			{
+				if(courant==deja_lues[i])
+				{
+					if(courant->suivant)
+					{
+						courant=courant->suivant;
+					}
+					else
+					{
+						arret=1;
+					}
+				}
+			}
+			if(arret)
+			{
+				break;
+			}
+			if(rayon_max<(courant->rayon))
+			{
+				rayon_max=courant->rayon;
+				max = courant;
+			}
+			if(courant->suivant)
+			{
+				courant =courant->suivant;
+			}
+			//~ if(compteur>90)
+			//~ {
+			//~ printf("etat de courant %f\n",courant->rayon);
+			//~ }
+		}
+		deja_lues[compteur_deja_lue]=max;
+	}
+
+		//~ printf("valuers deja lues %f \n",(deja_lues[0]->rayon));
+
+	return rayon_max;
+}
+
+int nombre_total_particules()
+{
+	return NB_TOT_PART;
 }

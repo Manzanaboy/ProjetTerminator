@@ -234,8 +234,7 @@ void liste_afficher ()
 	}
 
 }
-void robot_collision_bot_bot(char*mode_lecture, 
-								int*p_ok)
+void robot_collision_bot_bot(char*mode_lecture, int*p_ok)
 {
 	int collision=0;
 	double dist =0;
@@ -337,5 +336,18 @@ void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
 		*p_pos_x = courant->corps.x;
 		*p_pos_y = courant->corps.y;
 		*p_angle = courant->angle;
+	}
+}
+
+void robot_update_rayons_part()
+{
+	int nb_particules = 0;
+	nb_particules= nombre_total_particules();
+	int compteur=0;
+	double rayon = 0;
+	for(compteur=0;compteur<nb_particules;compteur++)
+	{
+		rayon= particule_recherche(compteur);
+		printf("rayon %f\n",rayon);
 	}
 }

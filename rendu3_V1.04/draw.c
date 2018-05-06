@@ -5,8 +5,10 @@
 #include  <math.h>
 #include  "draw.h"
 #include "constantes.h"
+
 #define SIDES 50
 #define PETIT_R 0.1
+#define LARGEUR_CADRE	5
 
 void draw_robot(double xc, double yc, double angle)
 {
@@ -65,4 +67,20 @@ void draw_part(double xc, double yc,double rayon)
       
     }
 	glEnd();
+}
+
+void draw_cadre ()
+
+{ 
+    glBegin (GL_LINE_LOOP);
+
+    glVertex2f (-DMAX,-DMAX);
+    glVertex2f (-DMAX,DMAX);
+    glVertex2f (DMAX,DMAX);
+    glVertex2f (DMAX,-DMAX);
+    
+    glColor3f(0., 0., 0.);
+    glLineWidth(LARGEUR_CADRE);
+
+    glEnd ();
 }

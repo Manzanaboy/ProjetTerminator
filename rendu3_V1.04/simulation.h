@@ -39,9 +39,10 @@ void simulation_detruire();
 
 /**
  * \brief  Se charger du developpement de la simulation
- * \param 	tete_liste_bot		pointeur sur la tete de la liste 
- * 								des robots.
- * \param 	tete_liste_part		pointeur sur la tete de la liste 
- * 								des particules.
  */
 void simulation_developpement();
+
+/**
+ * \brief  Se charger du dessin de la simulation
+ */
+void simulation_dessiner();
