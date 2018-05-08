@@ -447,9 +447,9 @@ void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_par
 {
 	
 	part_change->corps.x= part_decomp->corps.x + 
-					0.5*part_decomp->rayon *cos(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon) *cos(nb_part*M_PI/4);
 	part_change->corps.y= part_decomp->corps.y -
-						0.5*part_decomp->rayon * sin(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)* sin(nb_part*M_PI/4);
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
 	
@@ -469,35 +469,4 @@ void part_decomposition_start()
 	printf("a la fin de  la decom");
 	printf("\n");
 	liste_show();
-}
-
-void particule_sauver(char* fichier_save)
-{	
-	PARTICULE* courant_part=NULL;
-	int ok=1;
-	FILE * p_fichier;
-	if(!(tete_liste_part))
-	{
-		printf("pas de particules a sauver\n");
-		ok = 0;
-	}
-	if(ok)
-	{
-		if(p_fichier = fopen(fichier_save, "a"))
-		{
-			courant_part = tete_liste_part;
-			fprintf(p_fichier, "#liste particules\n%d",NB_TOT_PART);
-			while(courant_part)
-			{
-				fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,courant_part->rayon,courant_part->corps.x,courant_part->corps.y);
-				courant_part = courant_part->suivant;
-			}
-			fprintf(p_fichier, "\nFIN_LISTE\n");
-			fclose(p_fichier);
-		}
-		else
-		{
-			printf("\nerreur du fichier save");
-		}
-	}
 }
