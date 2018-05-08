@@ -145,7 +145,10 @@ void control_cb( int control )
 		case (EDITTEXTF_ID):
 			strncpy(save,(FileText->get_text()),LG_TEST);
 			strncpy(open,(OpenText->get_text()),LG_TEST);
-			sauver(open, save);
+			if(robot_sauver(save))
+			{
+			particule_sauver(save);
+			}
 			break;	
 		case (EDITTEXTO_ID):
 			if (fopen(OpenText->get_text(),"r") == NULL)
