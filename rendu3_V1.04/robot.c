@@ -345,19 +345,16 @@ void robot_assoc_robot_part()
 	nb_particules= particule_nombre_total();
 	int compteur=0;
 	double rayon = 0;
-	PARTICULE ** tab_part_triees = NULL;
+	int tab_part[nb_particules];
 	for(compteur=0;compteur<nb_particules;compteur++)
 	{
-		rayon= particule_recherche(compteur,&tab_part_triees);
-		printf("rayon %f\n",rayon);
-		if(tab_part_triees)
-		{
-			printf("tab part tries est non nul\n");
-		}
-		else
-		{
-			printf("tab_part tries est nul\n");
-		}
-		
+		rayon=particule_tri(compteur,tab_part);
+		printf("rayon est %f",rayon);
+		printf("numero de la prticule %d\n",tab_part[compteur]);
 	}
+}
+
+void robot_nearest(int tab_part[])
+{
+	int compteur=0;
 }

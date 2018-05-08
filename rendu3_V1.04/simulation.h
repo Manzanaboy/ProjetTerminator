@@ -40,7 +40,7 @@ void simulation_detruire();
 /**
  * \brief  Se charger du developpement de la simulation
  */
-void simulation_developpement();
+void simulation_developpement(int reload);
 
 /**
  * \brief  Se charger du dessin de la simulation

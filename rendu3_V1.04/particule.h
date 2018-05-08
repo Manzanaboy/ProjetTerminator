@@ -157,15 +157,18 @@
 	 */
 	PARTICULE* particule_acces_tete();
 	
-	double particule_recherche(int compteur_deja_lue,
-								PARTICULE***tab_part_triees);
+	double particule_tri(int compteur_deja_lue,int deja_lues[]);
 	
 	int particule_nombre_total();
 	
-	void part_copie_tab(PARTICULE***tab_part_triees,
-							PARTICULE**deja_lues,
-								int compteur_deja_lue );
 	
-	void particule_allouer_memoire(PARTICULE***deja_lues);
+	void particule_decomposition(PARTICULE* part);
 	
+	PARTICULE* part_init(int etat);
+	
+	void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_part,int num);
+	
+	void part_decomposition_start();
+	
+	PARTICULE* init(int etat);
 #endif

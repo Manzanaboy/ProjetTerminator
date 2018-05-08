@@ -137,4 +137,6 @@
 	void liste_afficher ();
 	
 	void robot_assoc_robot_part();
+	
+	void robot_nearest(int tab_part[]);
 #endif

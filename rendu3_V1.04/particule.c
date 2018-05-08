@@ -28,6 +28,7 @@
 #include <string.h>
 
 enum Etat_lecture {NB_PAR,PAR};
+enum Etat_Lect {RIEN, VALEURS};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
 
@@ -351,20 +352,15 @@ PARTICULE* particule_acces_tete()
 	}
 }
 
-double particule_recherche(int compteur_deja_lue,PARTICULE***tab_part_triees)
+double particule_tri(int compteur_deja_lue,int deja_lues[])
 {
 	double rayon_max=0;
 	int compteur=0;
 	int arret=0;
-	int i=0;
+	int suite=1;
+	int i=0,j=0,k=0;
 	PARTICULE*courant = NULL;
-	PARTICULE*max = courant;
-	static PARTICULE**deja_lues=NULL;
-	particule_allouer_memoire(&deja_lues);
-	if(compteur_deja_lue<0)
-	{	
-		free(deja_lues);
-	}
+	int max = 0;
 	if(tete_liste_part)
 	{
 		courant = tete_liste_part;
@@ -372,11 +368,12 @@ double particule_recherche(int compteur_deja_lue,PARTICULE***tab_part_triees)
 		{
 			for(i=0;i<(compteur_deja_lue);i++)
 			{
-				if(courant==(deja_lues[i]))
+				if((courant->numero)==(deja_lues[i]))
 				{
 					if(courant->suivant)
 					{
 						courant=courant->suivant;
+						suite=0;
 					}
 					else
 					{
@@ -388,18 +385,28 @@ double particule_recherche(int compteur_deja_lue,PARTICULE***tab_part_triees)
 			{
 				break;
 			}
+			if(!suite)
+			{
+				suite=1;
+				continue;
+			}
 			if(rayon_max<(courant->rayon))
 			{
 				rayon_max=courant->rayon;
-				max = courant;
+				max = courant->numero;
 			}
 			if(courant->suivant)
 			{
 				courant =courant->suivant;
 			}
+			if(max==100)
+			{
+				continue;
+			}
 		}
+		//PRK numero courant n'est jamais égal à 100?
+		
 		deja_lues[compteur_deja_lue]=max;
-		part_copie_tab(tab_part_triees,deja_lues,compteur_deja_lue);
 	}
 	return rayon_max;
 }
@@ -409,32 +416,57 @@ int particule_nombre_total()
 	return NB_TOT_PART;
 }
 
-void particule_allouer_memoire(PARTICULE***deja_lues)
+
+void particule_decomposition(PARTICULE* part)
 {
-	if(!(*deja_lues))
-	{
-		if(!(*(deja_lues)=malloc(NB_TOT_PART*sizeof(PARTICULE*))))
-		{
-			printf("probleme d'alloc %s l.%d",__FILE__,__LINE__);
-		}
-	}
+	int nb=NB_TOT_PART+1;
+	PARTICULE *part1, *part2, *part3, *part4;
+	part1=liste_add();
+	part2=liste_add();
+	part3=liste_add();
+	part4=liste_add();
+
+	int cadran=1;
+	part_change_part(part1, part,cadran,nb);
+	cadran+=2;
+	nb++;
+	part_change_part(part2, part,cadran,nb);
+	cadran+=2;
+	nb++;
+	part_change_part(part3, part,cadran,nb);
+	cadran+=2;
+	nb++;
+	part_change_part(part4, part,cadran,nb);
+	
+	part_destruction(part);
+	
+
+}
+
+void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_part,int num)
+{
+	
+	part_change->corps.x= part_decomp->corps.x + 
+					0.5*part_decomp->rayon *cos(nb_part*M_PI/4);
+	part_change->corps.y= part_decomp->corps.y -
+						0.5*part_decomp->rayon * sin(nb_part*M_PI/4);
+	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
+	part_change->numero=num;
+	
 	
 }
 
-void part_copie_tab(PARTICULE***tab_part_triees,PARTICULE**deja_lues,
-						int compteur_deja_lue )
+void part_decomposition_start()
 {
-	int c=0;
-	if(deja_lues)
+	PARTICULE*courant=NULL;
+	if(tete_liste_part)
 	{
-		if(compteur_deja_lue==(NB_TOT_PART-1))
-		{
-			*tab_part_triees=deja_lues;
-		}
+		courant=tete_liste_part->suivant;
+		particule_decomposition(courant);
 	}
-	else
-	{
-		printf("problem de pointeur %s l.%d",__FILE__,__LINE__);
-	}
-
+	NB_TOT_PART+=3;
+	printf("je fais la decomposition nombre total %d \n",NB_TOT_PART);
+	printf("a la fin de  la decom");
+	printf("\n");
+	liste_show();
 }

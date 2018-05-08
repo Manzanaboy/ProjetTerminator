@@ -48,6 +48,7 @@ void sauver(char* fichier_open, char* fichier_save);
 
 enum Type_dessin{PG_BLANCHE,PG_DESSINS};
 enum Type_fichier{LU,NON_LU};
+enum Acitvite{INACTIF=-1,ACTIF};
 
 namespace
 	{
@@ -244,7 +245,7 @@ void dessine_tout()
 		}
 		else
 		{
-			simulation_developpement();
+			simulation_developpement(ACTIF);
 		}
 		/* Affiche l'image a l'ecran. */
 		glutSwapBuffers();

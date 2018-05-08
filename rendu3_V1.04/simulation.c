@@ -57,31 +57,39 @@ void simulation_developpement(int reload)
 {
 	static int collision =0;
 	static int decomposition =0;
-	// calcul de la decomposition vient avant 
+
 	// calcul de la collsion vient avant
 	static int compteur_idiot=1;
-	if(compteur_idiot)
+	if(reload>=0)
 	{
-		if(!(decomposition && collision))
+		if(compteur_idiot)
 		{
-			robot_assoc_robot_part();
-		}
+			// Decomposition
+			part_decomposition_start();
+			decomposition=1;
+			if(!(decomposition && collision))
+			{
+				robot_assoc_robot_part(); // problem !!!!!!!!
+				printf("salut %s l%d",__FILE__,__LINE__);
+			}
 		compteur_idiot=0;
+		liste_show();
+		}
+		simulation_dessiner();
 	}
-	simulation_dessiner();
-	if(reload<0)
+	else
 	{
-		compteur_idiot =1;
+		compteur_idiot=1;
 	}
 }
 
 void simulation_detruire()
 {
 	int destruction=-1;
+	robot_assoc_robot_part();
+	simulation_developpement(destruction);
 	bot_total_destruction();
 	part_total_destruction();
-	particule_recherche(destruction,NULL);
-	simulation_developpement(destruction);
 }
 
 void simulation_dessiner()
