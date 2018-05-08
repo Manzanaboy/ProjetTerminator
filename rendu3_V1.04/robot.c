@@ -358,3 +358,37 @@ void robot_nearest(int tab_part[])
 {
 	int compteur=0;
 }
+
+int robot_sauver(char* fichier_save)
+{
+	ROBOT *courant_robot=NULL;
+	int i,ok=1;
+	FILE * p_fichier;
+	if(!(tete_liste_bot))
+	{
+		printf("pas de robots a sauver\n");
+		ok = 0;
+		
+	}
+	if(ok)
+	{
+		if(p_fichier = fopen(fichier_save, "w"))
+		{
+			courant_robot = tete_liste_bot;
+			fprintf(p_fichier, "#liste robots\n%d\n",nb_robot);
+			while(courant_robot)
+			{
+				fprintf(p_fichier, "\n%f %f %f",courant_robot->angle,courant_robot->corps.x,courant_robot->corps.y);
+				courant_robot = courant_robot->suivant;
+			}
+			fprintf(p_fichier, "\nFIN_LISTE\n");
+		}
+		else
+		{
+			printf("\nerreur du fichier save");
+			ok =0;
+		}
+		fclose(p_fichier);
+	}
+	return ok;
+}
