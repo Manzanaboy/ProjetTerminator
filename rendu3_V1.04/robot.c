@@ -394,3 +394,31 @@ void robot_nearest(int tab_part[])
 {
 	int compteur=0;
 }
+
+void robot_deplacer()
+{
+	double dist = VTRAN_MAX,ecart_angle=0;
+	ROBOT * courant = NULL;
+	double * p_angle=&ecart_angle;
+	int ok=1;
+	if(!(tete_liste_bot))
+	{
+		printf("pas de robots a sauver\n");
+		ok = 0;
+		
+	}
+	courant = tete_liste_bot;
+	if(ok)
+	{
+		while(courant)
+		{
+			if(util_ecart_angle(courant->corps,courant->angle,courant->cible,p_angle))
+			{
+			
+				courant->angle = courant->angle + *p_angle;
+			}
+			courant->corps = util_deplacement(courant->corps, courant->angle, dist);
+			courant = courant->suivant;
+		}
+	}
+}
