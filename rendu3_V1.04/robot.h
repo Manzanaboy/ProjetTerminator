@@ -141,4 +141,6 @@
 	void robot_nearest(int tab_part[]);
 	
 	int robot_sauver(char* fichier_save);
+	
+	void robot_deplacer();
 #endif
