@@ -141,4 +141,9 @@
 	void robot_nearest(int tab_part[]);
 	
 	int robot_sauver(char* fichier_save);
+	
+	int robot_calcul_temps(double part_x, double part_y,
+							int tab_bot_lus[]);
+	
+	void rbot-ciblage(int num_bot);
 #endif

@@ -30,6 +30,7 @@
 
 enum Etat_lecture {NB_R,RO};
 #define ESP_BOT_BOT 5
+#define TRES_GRAND 100000
 static int NB_TOT_BOT = 0;
 
 static ROBOT* tete_liste_bot=NULL;
@@ -48,6 +49,7 @@ struct robot
 	S2D corps;
 	double angle;
 	ROBOT* suivant;
+	S2D cible;
 };
 
 void lecture_robots(char* nom_fichier,
@@ -388,9 +390,68 @@ void robot_assoc_robot_part()
 		printf("rayon est %f",rayon);
 		printf("numero de la prticule %d\n",tab_part[compteur]);
 	}
+	robot_nearest(tab_part,nb_particules);
 }
 
-void robot_nearest(int tab_part[])
+void robot_nearest(int tab_part[], int nb_part)
 {
 	int compteur=0;
+	int num_bot_associe;
+	double part_x=0;part_y=0;
+	double part_ray=0,part_en=0;
+	int part_num=0;
+	double *p_part_x=&part_x;
+	double *p_part_y=&part_y;
+	double *p_part_ray=&part_ray;
+	double *p_part_en=&part_en;
+	int *p_part_num=&part_num;
+	PARTICULE*courant=NULL;
+	for(compteur=0,compteur<nb_part,compteur++)
+	{
+		courant = particule_correspondante(tab_part[compteur]);
+		particule_acces_donnees(&courant_part,p_part_x,
+							p_part_y,p_part_en,p_part_ray,p_part_num);
+		num_bot_assoscie=robot_calcul_temps(part_x,part_y,tab_bot_lus);
+		
+		robot_ciblage(num_bot_associe);
+	}
+}
+int robot_calcul_temps(double part_x, double part_y,)
+{
+	// mettre dasn un tableau les numeros deja sortis pour ne pas les ressortir par la suite
+	ROBOT*courant = NULL;
+	int compteur=0;
+	double temps_min=TRES_GRAND;
+	double temps_trans,temps_rot,temps_tot;
+	double dist_trans,dist_rot=0;
+	double *p_dist_rot=&dist_rot;
+	S2D part_center = {part_x,part_y};
+	if(tete_liste_bot)
+	{
+		courant=tete_liste_bot;
+		// si le ciblage est lui meme condition initiales , alors on skip la particule
+		while((courant->cible)==(courant->corps))
+		{
+			courant = courant->suivant;
+		}
+		for(compteur=0,compteur<NB_TOT_BOT;compteur++)
+		{
+			dist_trans = util_distance(courant->corps,part_center);
+			dist_rot = util_angle(p_dist_rot);
+			temps_trans = dist_trans / VTRAN_MAX ;
+			temps_rot = dist_rot/VROT_MAX;
+			temps_tot= temps_trans+temps_rot;
+			if(temps_min>temps_tot)
+			{
+				temps_min=temps_tot;
+			}
+		}
+	}
+	return courant->numero;
+}
+	
+void rbot-ciblage(int num_bot)
+{
+	//attention ne pas cibler deux fois le même robot
+	// prendre le deuxime temps le plus grand
 }

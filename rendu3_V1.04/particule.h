@@ -173,4 +173,7 @@
 	PARTICULE* init(int etat);
 	
 	void particule_sauver(char* fichier_save);
+	
+	PARTICULE* particule_correspondante (int num_part);
+	
 #endif

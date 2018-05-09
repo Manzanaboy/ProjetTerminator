@@ -220,7 +220,7 @@ void liste_show ()
 	}
 	else 
 	{
-		printf("erreur de tete liste, ja'rrive pas à lire %s",__func__);
+		printf("erreur de tete liste, ja'rrive pas à lire %s",__FUNC__);
 	}
 
 }
@@ -490,5 +490,27 @@ void particule_sauver(char* fichier_save)
 	else
 	{
 		printf("\nerreur du fichier save");
+	}
+}
+
+PARTICULE* particule_correspondante (int num_part)
+{
+	int compteur=0;
+	PARTICULE* cherchee=NULL;
+	if(tete_liste_part)
+	{
+		cherchee = tete_liste_part;
+		while((cherchee->numero)!= num_part)
+		{
+			cherchee=cherchee->suivant;
+		}
+		return cherchee;
+	}
+	else 
+	{
+		else 
+	{
+		printf("erreur de tete liste, ja'rrive pas à lire %s",__FUNC__);
+	}
 	}
 }

@@ -22,6 +22,7 @@
 #include "particule.h"
 #include "draw.h"
 
+enum Power {DESTROY,CREATE};
 
 void simulation_first_lecture(char* nom_fichier,
 									int*p_base,char* mode_lecture)	
@@ -60,7 +61,7 @@ void simulation_developpement(int reload)
 
 	// calcul de la collsion vient avant
 	static int compteur_idiot=1;
-	if(reload>=0)
+	if(reload)
 	{
 		if(compteur_idiot)
 		{
@@ -73,7 +74,7 @@ void simulation_developpement(int reload)
 				printf("salut %s l%d",__FILE__,__LINE__);
 			}
 		compteur_idiot=0;
-		liste_show();
+		//~ liste_show();
 		}
 		simulation_dessiner();
 	}
@@ -85,9 +86,8 @@ void simulation_developpement(int reload)
 
 void simulation_detruire()
 {
-	int destruction=-1;
 	robot_assoc_robot_part();
-	simulation_developpement(destruction);
+	simulation_developpement(DESTROY);
 	bot_total_destruction();
 	part_total_destruction();
 }
