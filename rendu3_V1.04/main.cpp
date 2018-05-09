@@ -155,6 +155,7 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
+			robot_deplacer();
 			break;
 		case (CHECKREC_ID):
 			printf("rec: %d\n", reccheck->get_int_val() );
@@ -233,6 +234,7 @@ void dessine_tout()
 
 void update(void)
 {
+	if(etatsim)robot_deplacer();
 	if (glutGetWindow() != main_window)
 	glutSetWindow(main_window);
 	glutPostRedisplay();
