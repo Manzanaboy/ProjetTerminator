@@ -171,7 +171,6 @@
 	void part_decomposition_start();
 	
 	PARTICULE* init(int etat);
-
+	
 	void particule_sauver(char* fichier_save);
-
 #endif

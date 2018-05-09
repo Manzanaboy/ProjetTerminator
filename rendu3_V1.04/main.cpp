@@ -111,31 +111,6 @@ int main(int argc, char* argv[])
  	}
 }
 
-void sauver(char* fichier_open, char* fichier_save)
-{
-	char tab[80];
-	if((open_file = fopen(fichier_open, "r")) != NULL)
-	{
-		if((save_file = fopen(fichier_save, "w")) != NULL)
-		{
-			while((fgets(tab,80,open_file)) != NULL)
-				fprintf(save_file, "%s",tab);
-		}
-		else
-		{
-			printf("\nerreur save");
-			exit(0);
-		}
-	}	
-	else
-	{
-		printf("\nerreur open");
-		exit(0);
-	}
-	fclose(open_file);
-	fclose(save_file);
-}
-
 void control_cb( int control )
 {
    	switch (control)
@@ -147,7 +122,7 @@ void control_cb( int control )
 			strncpy(open,(OpenText->get_text()),LG_TEST);
 			if(robot_sauver(save))
 			{
-			particule_sauver(save);
+				particule_sauver(save);
 			}
 			break;	
 		case (EDITTEXTO_ID):

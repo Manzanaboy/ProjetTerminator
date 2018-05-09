@@ -30,6 +30,7 @@
 
 enum Etat_lecture {NB_R,RO};
 #define ESP_BOT_BOT 5
+static int NB_TOT_BOT = 0;
 
 static ROBOT* tete_liste_bot=NULL;
 
@@ -103,6 +104,7 @@ void lecture_robots(char* nom_fichier,
 		{
 			analyse_nbrbot(nbbot_att, nbbot_recu,
 								compteur,mode_lecture,p_ok);
+			NB_TOT_BOT=nbbot_att;
 		}	
 	}
 	fclose(fichier);
@@ -339,6 +341,40 @@ void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
 	}
 }
 
+int robot_sauver(char* fichier_save)
+{
+	ROBOT *courant_robot=NULL;
+	int i=0,ok=1;
+	FILE * p_fichier;
+	if(!(tete_liste_bot))
+	{
+		printf("pas de robots a sauver\n");
+		ok = 0;
+		
+	}
+	if(ok)
+	{
+		if((p_fichier = fopen(fichier_save, "w")))
+		{
+			courant_robot = tete_liste_bot;
+			fprintf(p_fichier, "#liste robots\n%d\n",NB_TOT_BOT);
+			while(courant_robot)
+			{
+				fprintf(p_fichier, "\n%f %f %f",courant_robot->angle,courant_robot->corps.x,courant_robot->corps.y);
+				courant_robot = courant_robot->suivant;
+			}
+			fprintf(p_fichier, "\nFIN_LISTE\n");
+		}
+		else
+		{
+			printf("\nerreur du fichier save");
+			ok =0;
+		}
+		fclose(p_fichier);
+	}
+	return ok;
+}
+
 void robot_assoc_robot_part()
 {
 	int nb_particules = 0;
@@ -357,38 +393,4 @@ void robot_assoc_robot_part()
 void robot_nearest(int tab_part[])
 {
 	int compteur=0;
-}
-
-int robot_sauver(char* fichier_save)
-{
-	ROBOT *courant_robot=NULL;
-	int i,ok=1;
-	FILE * p_fichier;
-	if(!(tete_liste_bot))
-	{
-		printf("pas de robots a sauver\n");
-		ok = 0;
-		
-	}
-	if(ok)
-	{
-		if(p_fichier = fopen(fichier_save, "w"))
-		{
-			courant_robot = tete_liste_bot;
-			fprintf(p_fichier, "#liste robots\n%d\n",nb_robot);
-			while(courant_robot)
-			{
-				fprintf(p_fichier, "\n%f %f %f",courant_robot->angle,courant_robot->corps.x,courant_robot->corps.y);
-				courant_robot = courant_robot->suivant;
-			}
-			fprintf(p_fichier, "\nFIN_LISTE\n");
-		}
-		else
-		{
-			printf("\nerreur du fichier save");
-			ok =0;
-		}
-		fclose(p_fichier);
-	}
-	return ok;
 }
