@@ -33,7 +33,6 @@ enum State{OFF,ON};
 #define ESP_BOT_BOT 5
 #define TRES_GRAND 100000
 static int NB_TOT_BOT = 0;
-static int NB_PART_AVANT =0;
 
 static ROBOT* tete_liste_bot=NULL;
 
@@ -384,7 +383,6 @@ int robot_sauver(char* fichier_save)
 void robot_assoc_robot_part()
 {
 	int nb_particules = 0;
-	NB_PART_AVANT =nb_particules;
 	nb_particules= particule_nombre_total();
 	int compteur=0;
 	double rayon = 0;
@@ -400,8 +398,7 @@ void robot_assoc_robot_part()
 
 void robot_nearest(int tab_part[], int nb_part)
 {
-	int compteur=0;
-	int num_bot_associe;
+	int compteur=0,num_bot_associe;
 	double part_x=0,part_y=0;
 	double part_ray=0,part_en=0;
 	int part_num=0;
@@ -411,12 +408,6 @@ void robot_nearest(int tab_part[], int nb_part)
 	double *p_part_en=&part_en;
 	int *p_part_num=&part_num;
 	PARTICULE*courant=NULL;
-	if(nb_part>NB_PART_AVANT)
-	{
-		printf("modifier la cible du bot\n");
-		//~ robot_chercher_bot();
-		//~ robot_assos_particule_nearest();
-	}
 	for(compteur=0;compteur<nb_part;compteur++)
 	{
 		courant = particule_correspondante(tab_part[compteur]);
@@ -441,6 +432,9 @@ int robot_calcul_temps(double part_x, double part_y)
 	ROBOT*courant = NULL;
 	int bot_proche= 0, compteur=0;
 	int arret=OFF, suite=ON, particule_elimine=OFF;
+	int*p_particule_elimine=&particule_elimine;
+	int*p_arret=&arret;
+	int*p_suite=&suite;
 	double temps_min=TRES_GRAND;
 	double temps_trans,temps_rot,temps_tot;
 	double dist_trans,dist_rot=0;
@@ -452,23 +446,8 @@ int robot_calcul_temps(double part_x, double part_y)
 		// si le ciblage est diffrent des condition initiales , alors on skip la particule
 		for(compteur=0;compteur<NB_TOT_BOT;compteur++)
 		{
-			while((((courant->cible.x)!=(courant->corps.x))&&
-					((courant->cible.y)!=(courant->corps.y)))&&(!arret)
-					&&(!particule_elimine))
-			{
-				if((courant->numero)>=2)
-				{
-					printf("la cible du robot %d est %f %f\n",courant->numero,courant->cible.x,courant->cible.y);
-					courant = courant->suivant;
-					particule_elimine=robot_part_elimine(courant->corps,courant->cible);
-					suite=OFF;
-				}
-				else
-				{
-					suite=ON;
-					arret=ON;
-				}
-			}
+			robot_next_part(&courant,p_particule_elimine,
+								p_arret,p_suite);
 			if(!suite)
 			{
 				suite=ON;
@@ -480,7 +459,8 @@ int robot_calcul_temps(double part_x, double part_y)
 			}
 			dist_trans = util_distance(courant->corps,part_center);
 			dist_rot=robot_calcul_delta_angle(courant->corps,
-										part_center,courant->angle);
+												part_center);
+			dist_rot = fabs(dist_rot-courant->angle);
 			temps_trans = dist_trans / VTRAN_MAX ;
 			temps_rot = dist_rot/VROT_MAX;
 			temps_tot= temps_trans+temps_rot;
@@ -538,10 +518,9 @@ int robot_part_elimine(S2D corps,S2D cible)
 	return 0;
 }
 
-double robot_calcul_delta_angle(S2D corps,S2D cible,double angle_bot)
+double robot_calcul_delta_angle(S2D corps,S2D cible)
 {
 	double angle_alignement=0;
-	double ecart_angulaire=0;
 	double *p_angle_alignement = &angle_alignement;
 	if(cible.x<corps.x)
 	{
@@ -577,6 +556,28 @@ double robot_calcul_delta_angle(S2D corps,S2D cible,double angle_bot)
 		}
 	}
 	util_range_angle(p_angle_alignement);
-	ecart_angulaire = fabs(angle_alignement-angle_bot);
-	return ecart_angulaire;
+	return angle_alignement;
+}
+void robot_next_part(ROBOT**courant,int*p_particule_elimine,
+						int*p_arret,int*p_suite)
+{
+	while((((*courant)->cible.x)!=((*courant)->corps.x))&&
+			((*courant)->cible.y)!=((*courant)->corps.y)
+					&&(!*p_arret)&&(!(*p_particule_elimine)))
+	{
+		if(((*courant)->numero)>=2)
+		{
+			printf("la cible du robot %d est %f %f\n",
+			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
+			*courant = (*courant)->suivant;
+			*p_particule_elimine=robot_part_elimine((*courant)->corps,
+													(*courant)->cible);
+			*p_suite=OFF;
+		}
+		else
+		{
+			*p_suite=ON;
+			*p_arret=ON;
+		}
+	}
 }

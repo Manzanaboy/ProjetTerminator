@@ -148,6 +148,8 @@
 	
 	int robot_part_elimine(S2D corps,S2D cible);
 	
-	double robot_calcul_delta_angle(S2D corps,
-									S2D cible,double angle_bot);
+	double robot_calcul_delta_angle(S2D corps,S2D cible);
+	
+	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
+						int*p_arret,int*p_suite);
 #endif
