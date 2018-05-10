@@ -26,6 +26,7 @@
 #include <stdbool.h> 
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 enum Etat_lecture {NB_PAR,PAR};
 enum Etat_Lect {RIEN, VALEURS};
@@ -358,7 +359,7 @@ double particule_tri(int compteur_deja_lue,int deja_lues[])
 	int compteur=0;
 	int arret=0;
 	int suite=1;
-	int i=0,j=0,k=0;
+	int i=0;
 	PARTICULE*courant = NULL;
 	int max = 0;
 	if(tete_liste_part)
@@ -475,7 +476,7 @@ void particule_sauver(char* fichier_save)
 {	
 	PARTICULE* courant_part=NULL;
 	FILE * p_fichier;
-	if(p_fichier = fopen(fichier_save, "a"))
+	if((p_fichier = fopen(fichier_save, "a")))
 	{
 		courant_part = tete_liste_part;
 		fprintf(p_fichier, "#liste particules\n%d",NB_TOT_PART);
@@ -490,5 +491,49 @@ void particule_sauver(char* fichier_save)
 	else
 	{
 		printf("\nerreur du fichier save");
+	}
+}
+
+PARTICULE* particule_correspondante (int num_part)
+{
+	PARTICULE* cherchee=NULL;
+	if(tete_liste_part)
+	{
+		cherchee = tete_liste_part;
+		while((cherchee->numero)!= num_part)
+		{
+			cherchee=cherchee->suivant;
+		}
+		return cherchee;
+	}
+	else 
+	{
+		printf("erreur de tete liste, ja'rrive pas à lire %s",__func__);
+		return NULL;
+	}
+}
+
+int particule_existe(S2D coord)
+{
+	PARTICULE*courant=NULL;
+	if(tete_liste_part)
+	{
+		courant=tete_liste_part;
+		while(courant)
+		{
+			if((courant->corps.x==coord.x)&&(courant->corps.y==coord.y))
+			{
+				return 1;
+			}
+			if(courant->suivant)
+			{
+				courant=courant->suivant;
+			}
+			else
+			{
+				break;
+			}
+		}
+		return 0;
 	}
 }

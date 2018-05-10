@@ -173,4 +173,9 @@
 	PARTICULE* init(int etat);
 	
 	void particule_sauver(char* fichier_save);
+	
+	PARTICULE* particule_correspondante (int num_part);
+	
+	int particule_existe(S2D coord);
+	
 #endif

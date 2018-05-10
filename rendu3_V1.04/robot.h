@@ -138,9 +138,16 @@
 	
 	void robot_assoc_robot_part();
 	
-	void robot_nearest(int tab_part[]);
+	void robot_nearest(int tab_part[],int nb_part);
 	
 	int robot_sauver(char* fichier_save);
 	
-	void robot_deplacer();
+	int robot_calcul_temps(double part_x, double part_y);
+	
+	void robot_ciblage(int num_bot,double part_x,double part_y);
+	
+	int robot_part_elimine(S2D corps,S2D cible);
+	
+	double robot_calcul_delta_angle(S2D corps,
+									S2D cible,double angle_bot);
 #endif
