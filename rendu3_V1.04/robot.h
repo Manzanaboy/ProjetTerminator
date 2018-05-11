@@ -152,4 +152,6 @@
 	
 	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite);
+
+	void robot_deplacer();
 #endif
