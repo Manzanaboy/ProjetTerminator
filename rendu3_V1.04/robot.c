@@ -365,7 +365,7 @@ int robot_sauver(char* fichier_save)
 			fprintf(p_fichier, "#liste robots\n%d\n",NB_TOT_BOT);
 			while(courant_robot)
 			{
-				fprintf(p_fichier, "\n%f %f %f",courant_robot->angle,courant_robot->corps.x,courant_robot->corps.y);
+				fprintf(p_fichier, "\n%f %f %f",courant_robot->corps.x,courant_robot->corps.y,courant_robot->angle);
 				courant_robot = courant_robot->suivant;
 			}
 			fprintf(p_fichier, "\nFIN_LISTE\n");
