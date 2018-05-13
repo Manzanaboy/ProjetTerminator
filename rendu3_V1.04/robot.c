@@ -365,7 +365,8 @@ int robot_sauver(char* fichier_save)
 			fprintf(p_fichier, "#liste robots\n%d\n",NB_TOT_BOT);
 			while(courant_robot)
 			{
-				fprintf(p_fichier, "\n%f %f %f",courant_robot->corps.x,courant_robot->corps.y,courant_robot->angle);
+				fprintf(p_fichier, "\n%f %f %f",courant_robot->corps.x,
+						courant_robot->corps.y,courant_robot->angle);
 				courant_robot = courant_robot->suivant;
 			}
 			fprintf(p_fichier, "\nFIN_LISTE\n");
@@ -400,23 +401,23 @@ void robot_nearest(int tab_part[], int nb_part)
 {
 	int compteur=0,num_bot_associe;
 	double part_x=0,part_y=0;
-	double part_ray=0,part_en=0;
-	int part_num=0;
 	double *p_part_x=&part_x;
 	double *p_part_y=&part_y;
-	double *p_part_ray=&part_ray;
-	double *p_part_en=&part_en;
-	int *p_part_num=&part_num;
 	PARTICULE*courant=NULL;
+	int max_robot_part =0;
 	for(compteur=0;compteur<nb_part;compteur++)
 	{
 		courant = particule_correspondante(tab_part[compteur]);
-		particule_acces_donnees(&courant,p_part_x,
-							p_part_y,p_part_en,p_part_ray,p_part_num);
+		max_robot_part= particule_verify_nb_bot(courant);
+		if(max_robot_part)
+		{
+			continue;
+		}
+		particule_reach(courant,p_part_x,p_part_y);
 		num_bot_associe=robot_calcul_temps(part_x,part_y);
 		if(num_bot_associe)
 		{
-			robot_ciblage(num_bot_associe,part_x,part_y);
+			robot_ciblage(num_bot_associe,part_x,part_y,courant);
 			printf("les nouvelles assos sont \n");
 			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
 		}
@@ -442,8 +443,8 @@ int robot_calcul_temps(double part_x, double part_y)
 	if(tete_liste_bot)
 	{
 		courant=tete_liste_bot;
-		particule_elimine=robot_part_elimine(courant->corps,courant->cible);
-		// si le ciblage est diffrent des condition initiales , alors on skip la particule
+		particule_elimine=
+					robot_part_elimine(courant->corps,courant->cible);
 		for(compteur=0;compteur<NB_TOT_BOT;compteur++)
 		{
 			robot_next_part(&courant,p_particule_elimine,
@@ -482,7 +483,8 @@ int robot_calcul_temps(double part_x, double part_y)
 	return bot_proche;
 }
 	
-void robot_ciblage(int num_bot,double part_x,double part_y)
+void robot_ciblage(int num_bot,double part_x,double part_y,
+					PARTICULE*courant)
 {
 	ROBOT* cherchee=NULL;
 	if(tete_liste_bot)
@@ -494,6 +496,7 @@ void robot_ciblage(int num_bot,double part_x,double part_y)
 		}
 		cherchee->cible.x=part_x;
 		cherchee->cible.y=part_y;
+		particule_ajout_robot(courant);
 	}
 	else 
 	{
@@ -563,7 +566,7 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 {
 	while((((*courant)->cible.x)!=((*courant)->corps.x))&&
 			((*courant)->cible.y)!=((*courant)->corps.y)
-					&&(!*p_arret)&&(!(*p_particule_elimine)))
+			&&(!*p_arret)&&(!(*p_particule_elimine)))
 	{
 		if(((*courant)->numero)>=2)
 		{

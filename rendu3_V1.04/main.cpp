@@ -48,7 +48,7 @@ void sauver(char* fichier_open, char* fichier_save);
 
 enum Type_dessin{PG_BLANCHE,PG_DESSINS};
 enum Type_fichier{LU,NON_LU};
-enum Acitvite{INACTIF=-1,ACTIF};
+enum Acitvite{INACTIF,ACTIF};
 
 namespace
 	{
@@ -156,6 +156,7 @@ void control_cb( int control )
 			break;
 		case (SIMSTEP_ID):
 			robot_deplacer();
+			simulation_decomposition();
 			break;
 		case (CHECKREC_ID):
 			printf("rec: %d\n", reccheck->get_int_val() );
@@ -224,7 +225,7 @@ void dessine_tout()
 		}
 		else
 		{
-			simulation_developpement(ACTIF);
+			simulation_dessiner();
 		}
 		/* Affiche l'image a l'ecran. */
 		glutSwapBuffers();
@@ -234,7 +235,11 @@ void dessine_tout()
 
 void update(void)
 {
-	if(etatsim)robot_deplacer();
+	if(etatsim)
+	{
+		simulation_decomposition();
+		robot_deplacer();
+	}
 	if (glutGetWindow() != main_window)
 	glutSetWindow(main_window);
 	glutPostRedisplay();

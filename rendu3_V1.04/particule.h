@@ -16,7 +16,6 @@
 #ifndef PARTICULE_H
 	typedef struct particule PARTICULE;
 	#define NB_MAX_PART 200
-	
 	/**
 	 * \brief automate de lecture des fichiers. De plus on va indquer
 	 * si la simulation s'est bien déroulé ou non. 
@@ -166,9 +165,10 @@
 	
 	PARTICULE* part_init(int etat);
 	
-	void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_part,int num);
+	void part_change_part(PARTICULE* part_change,
+						PARTICULE* part_decomp, int nb_part,int num);
 	
-	void part_decomposition_start();
+	int part_decomposition_start();
 	
 	PARTICULE* init(int etat);
 	
@@ -177,5 +177,11 @@
 	PARTICULE* particule_correspondante (int num_part);
 	
 	int particule_existe(S2D coord);
+	
+	int particule_verify_nb_bot(PARTICULE*courant);
+	
+	void particule_ajout_robot(PARTICULE*courant);
+	
+	void particule_reach(PARTICULE*courant,double*p_posx,double*p_posy);
 	
 #endif

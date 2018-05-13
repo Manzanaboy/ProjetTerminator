@@ -40,9 +40,14 @@ void simulation_detruire();
 /**
  * \brief  Se charger du developpement de la simulation
  */
-void simulation_developpement(int reload);
+void simulation_mja();
 
 /**
  * \brief  Se charger du dessin de la simulation
  */
 void simulation_dessiner();
+
+/**
+ * \brief  Se charger de la decompostion des particules
+ */
+void simulation_decomposition();

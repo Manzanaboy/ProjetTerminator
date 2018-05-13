@@ -22,11 +22,12 @@
 #include "particule.h"
 #include "draw.h"
 
+enum Power {DESTROY,CREATE};
 
 void simulation_first_lecture(char* nom_fichier,
 									int*p_base,char* mode_lecture)	
 {
-	int ok=1;
+	int ok=CREATE;
 	int *p_ok=&ok;
 	lecture_robots(nom_fichier,mode_lecture,p_ok);
 	lecture_particules(nom_fichier,mode_lecture,p_ok);
@@ -42,7 +43,7 @@ void simulation_first_lecture(char* nom_fichier,
 		simulation_dessiner();
 		if(!ok)
 		{
-			*p_base=0;
+			*p_base=DESTROY;
 		}
 	}
 	else if(!(strncmp(mode_lecture,"Error",5)))
@@ -53,41 +54,16 @@ void simulation_first_lecture(char* nom_fichier,
 	
 }
 
-void simulation_developpement(int reload)
+void simulation_mja()
 {
-	static int collision =0;
-	static int decomposition =0;
-
-	// calcul de la collsion vient avant
-	static int compteur_idiot=1;
-	if(reload>=0)
-	{
-		if(compteur_idiot)
-		{
-			// Decomposition
-			part_decomposition_start();
-			decomposition=1;
-			if(!(decomposition && collision))
-			{
-				robot_assoc_robot_part(); // problem !!!!!!!!
-				printf("salut %s l%d",__FILE__,__LINE__);
-			}
-		compteur_idiot=0;
-		liste_show();
-		}
-		simulation_dessiner();
-	}
-	else
-	{
-		compteur_idiot=1;
-	}
+	robot_assoc_robot_part();
+	simulation_dessiner();
 }
 
 void simulation_detruire()
 {
-	int destruction=-1;
 	robot_assoc_robot_part();
-	simulation_developpement(destruction);
+	simulation_mja();
 	bot_total_destruction();
 	part_total_destruction();
 }
@@ -97,4 +73,15 @@ void simulation_dessiner()
 	draw_cadre();
 	robot_dessin();
 	particule_dessin();
+}
+
+void simulation_decomposition()
+{
+	int decomposition =0;
+	decomposition = part_decomposition_start();
+	printf("decompositioon est %d\n",decomposition);
+	if(decomposition)
+	{
+		simulation_mja();
+	}
 }

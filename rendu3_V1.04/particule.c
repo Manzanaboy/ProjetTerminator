@@ -32,6 +32,7 @@ enum Etat_lecture {NB_PAR,PAR};
 enum Etat_Lect {RIEN, VALEURS};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
+#define MAX_ROBOT_PART 2
 
 
 static PARTICULE* tete_liste_part=NULL;
@@ -54,6 +55,7 @@ struct particule
 	double rayon;
 	S2D corps;
 	PARTICULE* suivant;
+	int nb_bot_part;
 };
 
 
@@ -273,6 +275,7 @@ void passage_donnees( double en, double ray,
 	courant->rayon = ray;
 	courant->corps.x = pos_x;
 	courant->corps.y = pos_y;
+	courant->nb_bot_part =0;
 }
 void particule_collision_part_part(char*mode_lecture, int*p_ok)
 {
@@ -317,7 +320,13 @@ void particule_acces_donnees (PARTICULE**courant,double*p_posx,
 		*p_energie = (*courant)->energie;
 		*p_num = (*courant)->numero;
 		*courant=(*courant)->suivant;
-	}	
+		
+	}
+	else
+	{
+		printf("problème de pointeur %s l.%d",__func__,__LINE__);
+		exit(0);
+	}
 }
 void particule_dessin()
 {
@@ -405,7 +414,6 @@ double particule_tri(int compteur_deja_lue,int deja_lues[])
 				continue;
 			}
 		}
-		//PRK numero courant n'est jamais égal à 100?
 		
 		deja_lues[compteur_deja_lue]=max;
 	}
@@ -453,23 +461,52 @@ void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_par
 				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)* sin(nb_part*M_PI/4);
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
+	part_change->energie= part_decomp->energie*E_PARTICULE_FACTOR;
 	
 	
 }
 
-void part_decomposition_start()
+int part_decomposition_start()
 {
 	PARTICULE*courant=NULL;
+	int nb_decomp=0;
+	float proba=0;
+	int compteur=0;
+	int sucess=0;
+	printf("salut");
 	if(tete_liste_part)
 	{
-		courant=tete_liste_part->suivant;
-		particule_decomposition(courant);
+		courant=tete_liste_part;
+		while(compteur<NB_TOT_PART)
+		{
+			proba=(float)rand()/(float)RAND_MAX;
+			printf("proba est de %f l.%d\n ",proba,__LINE__);
+			if((proba<=DECOMPOSITION_RATE)&&
+								(courant->rayon>R_PARTICULE_MIN))
+			{
+				particule_decomposition(courant);
+				nb_decomp++;
+				sucess=1;
+				printf("courant energie est %f l.%d \n ",courant->energie,__LINE__);
+		
+			}
+			if(courant->suivant)
+			{
+				courant=courant->suivant;
+				compteur++;
+			}
+			else
+			{
+				courant=NULL;
+				compteur=NB_TOT_PART;
+			}
+		}
 	}
-	NB_TOT_PART+=3;
-	printf("je fais la decomposition nombre total %d \n",NB_TOT_PART);
-	printf("a la fin de  la decom");
-	printf("\n");
+	NB_TOT_PART = NB_TOT_PART + nb_decomp*3;
+	printf("je fais la decomposition nombre total %d l.%d \n",NB_TOT_PART,__LINE__);
+	printf("affichage de la liste des part %s l.%d",__func__,__LINE__);
 	liste_show();
+	return sucess;
 }
 
 void particule_sauver(char* fichier_save)
@@ -535,5 +572,64 @@ int particule_existe(S2D coord)
 			}
 		}
 		return 0;
+	}
+	else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
+		exit(0);
+	}
+}
+
+void particule_ajout_robot(PARTICULE*courant)
+{
+	if(courant)
+	{
+		if((courant->nb_bot_part)<MAX_ROBOT_PART)
+		{
+			courant->nb_bot_part++;
+		}
+		else
+		{
+			printf("max de robto par part atteint\n");
+		}
+	}
+	else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
+	}
+}
+
+int particule_verify_nb_bot(PARTICULE*courant)
+{
+	if(courant)
+	{
+		if((courant->nb_bot_part)>=MAX_ROBOT_PART)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
+		exit(0);
+	}
+	
+}
+
+void particule_reach (PARTICULE*courant,double*p_posx,double*p_posy)
+{
+	if(courant)
+	{
+		*p_posx  = courant->corps.x;
+		*p_posy  = courant->corps.y;		
+	}
+		else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
+		exit(0);
 	}
 }

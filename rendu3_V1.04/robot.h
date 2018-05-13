@@ -144,7 +144,8 @@
 	
 	int robot_calcul_temps(double part_x, double part_y);
 	
-	void robot_ciblage(int num_bot,double part_x,double part_y);
+	void robot_ciblage(int num_bot,double part_x,double part_y,
+							PARTICULE*courant);
 	
 	int robot_part_elimine(S2D corps,S2D cible);
 	
