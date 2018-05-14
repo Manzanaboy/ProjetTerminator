@@ -78,7 +78,17 @@ namespace
 	}
 	
 
-	
+void record()
+{
+	if (etat_lecture == LU)
+			{
+				rec_turn++;
+				sprintf(turn_text,"turn %d",rec_turn);
+				RecTurn->set_text(turn_text);
+			}
+}
+
+
 int main(int argc, char* argv[])
 {
 	if(argc !=3 && argc !=1)
@@ -140,6 +150,8 @@ void control_cb( int control )
 				simulation_detruire();
 				etat_lecture=NON_LU;
 			}
+			rec_turn = 0;
+			RecTurn->set_text("turn 0");
 			glutPostRedisplay();
 			break;	
 		case (SIMSTART_ID):
@@ -155,20 +167,21 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
-			robot_deplacer();
-			simulation_decomposition();
+			if(!(etatsim))
+			{
+				record();
+				robot_deplacer();
+			}
 			break;
 		case (CHECKREC_ID):
 			printf("rec: %d\n", reccheck->get_int_val() );
 			if(reccheck->get_int_val())
 			{
 				RecRate->set_text("rate on");
-				RecTurn->set_text("turn on");
 			}
 			else
 			{
 				RecRate->set_text("rate off");
-				RecTurn->set_text("turn off");
 			}
 			break;
 		case (RADIOBUTTONCONT_ID):
@@ -178,6 +191,20 @@ void control_cb( int control )
 			printf("\n Unknown command\n");   
 			break;
 		}
+}
+void clavier(key)
+{
+	switch (key)
+	{
+		case (GLUT_KEY_LEFT):
+			printf("left");
+		case (GLUT_KEY_right):
+			printf("right");
+		case (GLUT_KEY_up):
+			printf("up");
+		case (GLUT_KEY_down):
+			printf("down");
+	}
 }
 
 void display()
@@ -237,8 +264,9 @@ void update(void)
 {
 	if(etatsim)
 	{
-		simulation_decomposition();
 		robot_deplacer();
+		simulation_decomposition();
+		record();
 	}
 	if (glutGetWindow() != main_window)
 	glutSetWindow(main_window);
@@ -268,6 +296,8 @@ void creer_boite_dialog()
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "decontaminators - control");
 	GLUI_Master.set_glutIdleFunc(update);
+	//GLUI_MASTER.set_glutMouseFunc(manuel);
+	//GLUI_Master.set_glutSpecialFunc(clavier);
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Opening");
