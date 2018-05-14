@@ -56,12 +56,14 @@ namespace
 		char entrees_command_test[LG_TEST];
 		char open[LG_TEST];
 		char save[LG_TEST];
+		char turn_text[10];
 		GLfloat aspect_ratio;
 		char textiun[20] = ".txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
+		int rec_turn;
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
