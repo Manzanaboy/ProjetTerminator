@@ -36,6 +36,7 @@ void control_cb( int control);
 void creer_boite_dialog();
 void dessine_page_blanche();
 void sauver(char* fichier_open, char* fichier_save);
+void clavier(int key,int x,int y);
 
 #define LG_TEST 100
 #define NO_RETURN_ID 100
@@ -56,13 +57,16 @@ namespace
 		char entrees_command_test[LG_TEST];
 		char open[LG_TEST];
 		char save[LG_TEST];
+		char turn_text[10], controt[LG_TEST], conttran[LG_TEST];
 		GLfloat aspect_ratio;
 		char textiun[20] = ".txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
-	
+		int rec_turn;
+		float vittran=0, vitrot=0;
+		
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
 		GLUI_Checkbox *reccheck;
@@ -77,16 +81,18 @@ namespace
 		FILE *open_file=NULL, *save_file=NULL;
 	}
 	
+
 void record()
 {
 	if (etat_lecture == LU)
-	{
-		rec_turn++;
-		sprintf(turn_text,"turn %d",rec_turn);
-		RecTurn->set_text(turn_text);
-	}
+			{
+				rec_turn++;
+				sprintf(turn_text,"turn %d",rec_turn);
+				RecTurn->set_text(turn_text);
+			}
 }
-	
+
+
 int main(int argc, char* argv[])
 {
 	if(argc !=3 && argc !=1)
@@ -165,8 +171,6 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
-			robot_deplacer();
-			simulation_decomposition();
 			if(!(etatsim))
 			{
 				record();
@@ -178,12 +182,10 @@ void control_cb( int control )
 			if(reccheck->get_int_val())
 			{
 				RecRate->set_text("rate on");
-				RecTurn->set_text("turn on");
 			}
 			else
 			{
 				RecRate->set_text("rate off");
-				RecTurn->set_text("turn off");
 			}
 			break;
 		case (RADIOBUTTONCONT_ID):
@@ -194,19 +196,46 @@ void control_cb( int control )
 			break;
 		}
 }
-void clavier(key)
+
+void clavier(int key,int x,int y)
 {
 	switch (key)
 	{
 		case (GLUT_KEY_LEFT):
-			printf("left");
-		case (GLUT_KEY_right):
-			printf("right");
-		case (GLUT_KEY_up):
-			printf("up");
-		case (GLUT_KEY_down):
-			printf("down");
+			if (vitrot < 0.75)
+			{
+				vitrot+=0.25;
+			}
+			sprintf(controt,"rotation : %.3f",vitrot);
+			robrot->set_text(controt);
+			break;
+		case (GLUT_KEY_RIGHT):
+			if (vitrot > -0.75)
+			{
+				vitrot-=0.25;
+			}
+			sprintf(controt,"rotation : %.3f",vitrot);
+			robrot->set_text(controt);
+			break;
+		case (GLUT_KEY_UP):
+		if (vittran < 0.75)
+			{
+				vittran+=0.25;
+			}
+			sprintf(conttran,"translation : %.3f",vittran);
+			robtran->set_text(conttran);
+			break;
+		case (GLUT_KEY_DOWN):
+		if (vittran > -0.75)
+			{
+				vittran-=0.25;
+			}
+			sprintf(conttran,"translation : %.3f",vittran);
+			robtran->set_text(conttran);
+			break;
 	}
+	
+
 }
 
 void display()
@@ -266,7 +295,6 @@ void update(void)
 {
 	if(etatsim)
 	{
-		simulation_decomposition();
 		robot_deplacer();
 		simulation_decomposition();
 		record();
@@ -299,6 +327,8 @@ void creer_boite_dialog()
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "decontaminators - control");
 	GLUI_Master.set_glutIdleFunc(update);
+	//GLUI_MASTER.set_glutMouseFunc(manuel);
+	GLUI_Master.set_glutSpecialFunc(clavier);
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Opening");
