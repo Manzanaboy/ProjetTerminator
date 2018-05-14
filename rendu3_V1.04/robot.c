@@ -638,17 +638,20 @@ void robot_deplacer()
 */		
 //			printf("dist: %lf, dist_contact %lf, diff: %lf \n \n", dist, dist_contact,dist-dist_contact);
 	
-			if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
-			{	
-				if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
-					v_translation=(dist-dist_contact)/DELTA_T;
+			if(alpha > -M_PI/4 && alpha < M_PI /4 )
+			{
+				if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
+				{	
+					if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
+						v_translation=(dist-dist_contact)/DELTA_T;
 
-				else
-					v_translation=VTRAN_MAX;
+					else
+						v_translation=VTRAN_MAX;
 
-//				printf("v_translation= %lf \n ", v_translation);
-				courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
-		
+//					printf("v_translation= %lf \n ", v_translation);
+					courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+			
+				}
 			}
 			courant = courant->suivant;
 		}
