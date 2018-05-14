@@ -650,12 +650,6 @@ void robot_deplacer()
 				courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
 		
 			}
-//			else
-//			{
-//			printf("dist2: %lf, dist_contact2 %lf, diff2: %lf \n \n", dist, dist_contact, dist-dist_contact);
-				//printf("STOPPED\n");
-				//exit(EXIT_FAILURE);
-//			}
 			courant = courant->suivant;
 		}
 	}

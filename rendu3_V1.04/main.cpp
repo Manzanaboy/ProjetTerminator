@@ -56,14 +56,12 @@ namespace
 		char entrees_command_test[LG_TEST];
 		char open[LG_TEST];
 		char save[LG_TEST];
-		char turn_text[10];
 		GLfloat aspect_ratio;
 		char textiun[20] = ".txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
-		int rec_turn;
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
@@ -79,18 +77,16 @@ namespace
 		FILE *open_file=NULL, *save_file=NULL;
 	}
 	
-
 void record()
 {
 	if (etat_lecture == LU)
-			{
-				rec_turn++;
-				sprintf(turn_text,"turn %d",rec_turn);
-				RecTurn->set_text(turn_text);
-			}
+	{
+		rec_turn++;
+		sprintf(turn_text,"turn %d",rec_turn);
+		RecTurn->set_text(turn_text);
+	}
 }
-
-
+	
 int main(int argc, char* argv[])
 {
 	if(argc !=3 && argc !=1)
@@ -169,6 +165,8 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
+			robot_deplacer();
+			simulation_decomposition();
 			if(!(etatsim))
 			{
 				record();
@@ -180,10 +178,12 @@ void control_cb( int control )
 			if(reccheck->get_int_val())
 			{
 				RecRate->set_text("rate on");
+				RecTurn->set_text("turn on");
 			}
 			else
 			{
 				RecRate->set_text("rate off");
+				RecTurn->set_text("turn off");
 			}
 			break;
 		case (RADIOBUTTONCONT_ID):
@@ -266,6 +266,7 @@ void update(void)
 {
 	if(etatsim)
 	{
+		simulation_decomposition();
 		robot_deplacer();
 		simulation_decomposition();
 		record();
@@ -298,8 +299,6 @@ void creer_boite_dialog()
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "decontaminators - control");
 	GLUI_Master.set_glutIdleFunc(update);
-	//GLUI_MASTER.set_glutMouseFunc(manuel);
-	//GLUI_Master.set_glutSpecialFunc(clavier);
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Opening");

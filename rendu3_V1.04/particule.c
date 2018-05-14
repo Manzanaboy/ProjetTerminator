@@ -32,7 +32,7 @@ enum Etat_lecture {NB_PAR,PAR};
 enum Etat_Lect {RIEN, VALEURS};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
-#define MAX_ROBOT_PART 2
+#define MAX_ROBOT_PART 1
 
 
 static PARTICULE* tete_liste_part=NULL;
@@ -473,7 +473,6 @@ int part_decomposition_start()
 	float proba=0;
 	int compteur=0;
 	int sucess=0;
-	printf("salut");
 	if(tete_liste_part)
 	{
 		courant=tete_liste_part;
@@ -487,7 +486,6 @@ int part_decomposition_start()
 				particule_decomposition(courant);
 				nb_decomp++;
 				sucess=1;
-				printf("courant energie est %f l.%d \n ",courant->energie,__LINE__);
 		
 			}
 			if(courant->suivant)
