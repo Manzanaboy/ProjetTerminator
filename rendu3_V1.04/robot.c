@@ -638,7 +638,7 @@ void robot_deplacer()
 */		
 //			printf("dist: %lf, dist_contact %lf, diff: %lf \n \n", dist, dist_contact,dist-dist_contact);
 	
-			if(alpha > -M_PI/4 && alpha < M_PI /4 )
+			if(alpha > -M_PI/4 && alpha < M_PI /4 ) //tourne avant de bouger
 			{
 				if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
 				{	
