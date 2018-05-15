@@ -155,4 +155,9 @@
 						int*p_arret,int*p_suite);
 
 	void robot_deplacer();
+	
+	int robot_selection(float x, float y);
+
+	void robot_deselection();
+
 #endif
