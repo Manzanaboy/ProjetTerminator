@@ -361,7 +361,7 @@ void creer_boite_dialog()
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "decontaminators - control");
 	GLUI_Master.set_glutIdleFunc(update);
-	GLUI_Master.set_glutIdleFunc(update);
+	GLUI_Master.set_glutSpecialFunc(clavier);
 	GLUI_Master.set_glutMouseFunc(manuel);
 	
 	//open 
