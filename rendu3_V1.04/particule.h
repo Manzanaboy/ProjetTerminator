@@ -184,4 +184,6 @@
 	
 	void particule_reach(PARTICULE*courant,double*p_posx,double*p_posy);
 	
+	float particule_energie();
+	
 #endif
