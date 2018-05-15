@@ -37,6 +37,7 @@ enum Etat_Lect {RIEN, VALEURS};
 
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
+static float energie_initiale=0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
