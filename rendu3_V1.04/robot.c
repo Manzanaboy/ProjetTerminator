@@ -51,6 +51,7 @@ struct robot
 	double angle;
 	ROBOT* suivant;
 	S2D cible;
+	int select;
 };
 
 void lecture_robots(char* nom_fichier,
@@ -98,6 +99,7 @@ void lecture_robots(char* nom_fichier,
 						courant->cible.x = pos_x;
 						courant->cible.y = pos_y;
 						courant->angle = ang;
+						courant->select=0;
 						strtod(deb, &fin); // fonction du cours fichiers
 						deb = (fin+ESP_BOT_BOT);
 						nbbot_recu++;
@@ -330,7 +332,15 @@ void robot_dessin()
 		while(courant)
 		{
 			robot_get_values(courant,p_bot_x,p_bot_y,p_bot_angle);
-			draw_robot(*p_bot_x,*p_bot_y,*p_bot_angle);
+			/**moi**/
+			if (!(courant->select))
+			{
+				draw_robot(*p_bot_x,*p_bot_y,*p_bot_angle);
+			}
+			else
+			{
+				draw_red(*p_bot_x,*p_bot_y,*p_bot_angle);
+			}
 			courant=courant->suivant;
 		}
 	}
@@ -653,6 +663,48 @@ void robot_deplacer()
 			
 				}
 			}
+			courant = courant->suivant;
+		}
+	}
+}
+
+int robot_selection(float x, float y)
+{
+	ROBOT * courant =NULL;
+	int ok=1;
+	C2D rob;
+	rob.rayon = R_ROBOT;
+	S2D point = {x,y};
+	robot_deselection();
+	if(!(tete_liste_bot)) ok = 0;
+	if(ok)
+	{
+		courant = tete_liste_bot;
+		while (courant)
+		{
+			rob.centre = courant->corps;
+			if (util_point_dans_cercle(point, rob)) 
+			{
+				courant->select =1;
+				return courant->numero;
+			}
+			courant = courant->suivant;
+		}
+	}
+	return 0;
+}
+
+void robot_deselection()
+{
+	int ok=1;
+	ROBOT * courant=NULL;
+	if(!(tete_liste_bot)) ok = 0;
+	if(ok)
+	{
+		courant = tete_liste_bot;
+		while(courant)
+		{
+			courant->select=0;
 			courant = courant->suivant;
 		}
 	}
