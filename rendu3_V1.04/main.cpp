@@ -71,6 +71,7 @@ namespace
 		float largeur, haut, Xm, Ym;
 		double taux_decontamination=0;
 		double energie_initiale=0;
+		char taux_text[LG_TEST];
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
@@ -182,10 +183,11 @@ void control_cb( int control )
 			}
 			break;
 		case (CHECKREC_ID):
-			printf("rec: %d\n", reccheck->get_int_val() );
+//			printf("rec: %d\n", reccheck->get_int_val() );
 			if(reccheck->get_int_val())
 			{
-				RecRate->set_text("rate on");
+				sprintf(taux_text,"Rate %.4f",energie_initiale);
+				RecRate->set_text(taux_text);
 			}
 			else
 			{
@@ -429,7 +431,7 @@ void dessine_page_blanche()
 
 void record_fichier()
 {
-
+	
 	printf("Recording in record_fichier\n");
 
 	taux_decontamination=particule_energie();
