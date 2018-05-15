@@ -67,7 +67,6 @@ namespace
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
 		int rec_turn, cont_mode;
-		char turn_text[10];
 		float vittran=0, vitrot=0;
 		float largeur, haut, Xm, Ym;
 		double taux_decontamination=0;
