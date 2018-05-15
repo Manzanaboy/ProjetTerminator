@@ -36,6 +36,8 @@ void control_cb( int control);
 void creer_boite_dialog();
 void dessine_page_blanche();
 void sauver(char* fichier_open, char* fichier_save);
+void clavier(int key,int x,int y);
+void manuel(int bouton, int etat, int x, int y);
 
 #define LG_TEST 100
 #define NO_RETURN_ID 100
@@ -56,12 +58,16 @@ namespace
 		char entrees_command_test[LG_TEST];
 		char open[LG_TEST];
 		char save[LG_TEST];
+		char turn_text[10], controt[LG_TEST], conttran[LG_TEST];
 		GLfloat aspect_ratio;
 		char textiun[20] = ".txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
+		int rec_turn, cont_mode;
+		float vittran=0, vitrot=0;
+		float largeur, haut, Xm, Ym;
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
@@ -165,8 +171,6 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
-			robot_deplacer();
-			simulation_decomposition();
 			if(!(etatsim))
 			{
 				record();
@@ -178,34 +182,73 @@ void control_cb( int control )
 			if(reccheck->get_int_val())
 			{
 				RecRate->set_text("rate on");
-				RecTurn->set_text("turn on");
 			}
 			else
 			{
 				RecRate->set_text("rate off");
-				RecTurn->set_text("turn off");
 			}
 			break;
 		case (RADIOBUTTONCONT_ID):
-			printf("mode: %d\n", contradio->get_int_val() );
+			if(contradio->get_int_val())
+			{
+				robtran->enable();
+				robrot->enable();
+				cont_mode = 1;
+				
+			}
+			else
+			{
+				robtran->disable();
+				robrot->disable();
+				cont_mode = 0;
+				robot_deselection();
+			}
 			break;
 		default: 
 			printf("\n Unknown command\n");   
 			break;
 		}
 }
-void clavier(key)
+
+void clavier(int key,int x,int y)
 {
-	switch (key)
+	if (cont_mode)
 	{
-		case (GLUT_KEY_LEFT):
-			printf("left");
-		case (GLUT_KEY_right):
-			printf("right");
-		case (GLUT_KEY_up):
-			printf("up");
-		case (GLUT_KEY_down):
-			printf("down");
+		switch (key)
+		{
+			case (GLUT_KEY_LEFT):
+				if (vitrot < 0.75)
+				{
+					vitrot+=0.25;
+				}
+				sprintf(controt,"rotation : %.3f",vitrot);
+				robrot->set_text(controt);
+				break;
+			case (GLUT_KEY_RIGHT):
+				if (vitrot > -0.75)
+				{
+					vitrot-=0.25;
+				}
+				sprintf(controt,"rotation : %.3f",vitrot);
+				robrot->set_text(controt);
+				break;
+			case (GLUT_KEY_UP):
+				if (vittran < 0.75)
+				{
+					vittran+=0.25;
+				}
+				sprintf(conttran,"translation : %.3f",vittran);
+				robtran->set_text(conttran);
+				break;
+			case (GLUT_KEY_DOWN):
+				if (vittran > -0.75)
+				{
+					vittran-=0.25;
+				}
+				sprintf(conttran,"translation : %.3f",vittran);
+				robtran->set_text(conttran);
+				break;
+		}
 	}
 }
 
@@ -226,6 +269,8 @@ void display()
 
 void reshape(int width,int height)
 {
+	largeur = width;
+	haut = height;
 	glViewport( 0, 0, width, height);
 	aspect_ratio=(GLfloat)width/(GLfloat)height;
 	glutPostRedisplay();
@@ -268,12 +313,25 @@ void update(void)
 	{
 		simulation_decomposition();
 		robot_deplacer();
-		simulation_decomposition();
 		record();
 	}
 	if (glutGetWindow() != main_window)
 	glutSetWindow(main_window);
 	glutPostRedisplay();
+}
+
+void manuel(int bouton, int etat, int x, int y)
+{
+	if (cont_mode && !(etatsim))
+	{
+		Xm = (20+20)*(x/largeur) -20;
+		Ym = 20 - (20+20)*(y/haut);
+		if (!(etat) && bouton ==  GLUT_LEFT_BUTTON) 
+		{
+			//printf("\nx=%f y=%f", Xm, Ym);
+			robot_selection(Xm, Ym);
+		}
+	}
 }
 
 void creer_fenetre(int *p_argc, char *argv[])
@@ -299,6 +357,8 @@ void creer_boite_dialog()
 	//initialisation de la fenetre
 	GLUI *glui = GLUI_Master.create_glui( "decontaminators - control");
 	GLUI_Master.set_glutIdleFunc(update);
+	GLUI_Master.set_glutIdleFunc(update);
+	GLUI_Master.set_glutMouseFunc(manuel);
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Opening");
@@ -341,7 +401,8 @@ void creer_boite_dialog()
 												"rotaion : 0.00");
 	robtran = glui->add_statictext_to_panel(r_control_panel,
 												"translation : 0.00");
-	
+	robtran->disable();
+	robrot->disable();
 	//bouton quitter
 	glui->add_button((char*)"Exit", 0,(GLUI_Update_CB)exit );
 }
