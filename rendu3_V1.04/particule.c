@@ -631,3 +631,21 @@ void particule_reach (PARTICULE*courant,double*p_posx,double*p_posy)
 		exit(0);
 	}
 }
+
+float particule_energie_initiale()
+{
+	float energie_particule=0;	
+	PARTICULE* courant_part=NULL;
+	courant_part = tete_liste_part;
+	
+	while(courant_part)
+	{
+			energie_particule += tete_liste_part->energie;
+			printf("----------- Energie part: %f -----------\n", tete_liste_part->energie);
+			courant_part = courant_part->suivant;
+	}
+
+	printf("------------------ ENERGIE TOTALE INITIALE %f ------------------\n ------------------ ENERGIE ACTUEL %f ------------------\n", energie_initiale, (energie_initiale-energie_particule)/energie_initiale *100 );
+
+	return (energie_initiale-energie_particule)/energie_initiale *100;
+}
