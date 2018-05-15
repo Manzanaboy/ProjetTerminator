@@ -632,7 +632,7 @@ void particule_reach (PARTICULE*courant,double*p_posx,double*p_posy)
 	}
 }
 
-float particule_energie_initiale()
+float particule_energie()
 {
 	float energie_particule=0;	
 	PARTICULE* courant_part=NULL;
