@@ -433,7 +433,7 @@ void record_fichier()
 
 	printf("Recording in record_fichier\n");
 
-	taux_decontamination=particule_energie_initiale();
+	taux_decontamination=particule_energie();
 
 	printf("taux_decontamination2 %lf\n", taux_decontamination);
 
