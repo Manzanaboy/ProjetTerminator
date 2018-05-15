@@ -38,6 +38,7 @@ void dessine_page_blanche();
 void sauver(char* fichier_open, char* fichier_save);
 void clavier(int key,int x,int y);
 void manuel(int bouton, int etat, int x, int y);
+void record_fichier();
 
 #define LG_TEST 100
 #define NO_RETURN_ID 100
@@ -66,8 +67,11 @@ namespace
 		int base=PG_DESSINS;
 		int etat_lecture=NON_LU;
 		int rec_turn, cont_mode;
+		char turn_text[10];
 		float vittran=0, vitrot=0;
 		float largeur, haut, Xm, Ym;
+		double taux_decontamination=0;
+		double energie_initiale=0;
 	
 		GLUI_EditText *FileText;
 		GLUI_EditText *OpenText;
@@ -80,7 +84,7 @@ namespace
 		GLUI_StaticText *robrot;
 		GLUI_StaticText *robtran;
 		
-		FILE *open_file=NULL, *save_file=NULL;
+		FILE *open_file=NULL, *save_file=NULL, *record_file=NULL;
 	}
 	
 void record()
@@ -140,6 +144,7 @@ void control_cb( int control )
 			}
 			break;	
 		case (EDITTEXTO_ID):
+			remove("out.dat");
 			if (fopen(OpenText->get_text(),"r") == NULL)
 			{
 				error_file_missing(OpenText->get_text());
@@ -421,4 +426,25 @@ void dessine_page_blanche()
 		glOrtho(g*aspect_ratio,d*aspect_ratio,bas,haut,-1.,+1.);
 	
 	glutSwapBuffers();
+}
+
+void record_fichier()
+{
+
+	printf("Recording in record_fichier\n");
+
+	taux_decontamination=particule_energie_initiale();
+
+	printf("taux_decontamination2 %lf\n", taux_decontamination);
+
+	if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+	{
+		printf("Creation fichier out.dat\n");
+		record_file=fopen("out.dat", "a");
+	}
+	printf("taux_decontamination1 %lf\n", taux_decontamination);
+	fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
+
+	fclose(record_file);
+
 }
