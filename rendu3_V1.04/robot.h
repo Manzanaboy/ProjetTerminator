@@ -160,4 +160,6 @@
 
 	void robot_deselection();
 
+	void robot_vitesses(float rot, float tran);
+
 #endif
