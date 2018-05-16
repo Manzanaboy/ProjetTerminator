@@ -598,9 +598,7 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 
 void robot_deplacer()
 {
-	//double dist = VTRAN_MAX,ecart_angle=0;
 	ROBOT * courant = NULL;
-	//double * p_angle=&ecart_angle;
 	int ok=1;
 	if(!(tete_liste_bot))
 	{
@@ -613,55 +611,54 @@ void robot_deplacer()
 	{
 		while(courant)
 		{
-			double alpha=0, dist=0, v_rotation=0, v_translation=0;
-			double dist_contact=R_ROBOT;//=R_ROBOT + part->rayon;
-			dist=util_distance(courant->corps, courant->cible);
-
-			if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+			if(courant->select) // Si un robot est selectionné
 			{
-				//ca tourne si pas aligné
-
-				if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
-				{
-						if(fabs(alpha/DELTA_T)<VROT_MAX) 
-							v_rotation=alpha/DELTA_T;
-						else
-							v_rotation=VROT_MAX; 
-
-			//printf("vRot = %lf\n", v_rotation);
-
-						if(alpha > 0) 
-							courant->angle+= v_rotation*DELTA_T;
-						else 
-							courant->angle-= v_rotation*DELTA_T; 
-				}
-
-		//printf("Not aligned\n");
-		//printf("rob part angle = %lf\n", util_angle(rob->corps, part->corps));
-		//printf("Robot angle %lf\n", rob->angle);
+				courant->angle += vit_rot * DELTA_T;					//tourne angle fournit par utilisateur
+				courant->corps=util_deplacement(courant->corps, courant->angle, vit_tran*DELTA_T);
 			}
-	
-/*	else 
-	{
-		//printf("no rotation, aligned\n");
-		//printf("Rob anbgle: %lf, part rob angle: %lf\n", rob->angle, util_angle(rob->corps, part->corps));
-	}
-*/		
-//			printf("dist: %lf, dist_contact %lf, diff: %lf \n \n", dist, dist_contact,dist-dist_contact);
-	
-			if(alpha > -M_PI/4 && alpha < M_PI /4 ) //tourne avant de bouger
+
+			else
 			{
-				if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
-				{	
-					if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
-						v_translation=(dist-dist_contact)/DELTA_T;
+				double alpha=0, dist=0, v_rotation=0, v_translation=0;
+				double dist_contact=R_ROBOT;//=R_ROBOT + part->rayon;
+				dist=util_distance(courant->corps, courant->cible);
 
-					else
-						v_translation=VTRAN_MAX;
+				if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+				{
+					//ca tourne si pas aligné
 
-//					printf("v_translation= %lf \n ", v_translation);
-					courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
-			
+					if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
+					{
+							if(fabs(alpha/DELTA_T)<VROT_MAX) 
+								v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+
+							else
+								v_rotation=VROT_MAX; 				//tourne dist max
+								
+								if(alpha > 0) 
+									courant->angle+= v_rotation*DELTA_T;
+								else 
+									courant->angle-= v_rotation*DELTA_T; 
+
+					}
+				}
+		
+				if(alpha > -M_PI/4 && alpha < M_PI /4 ) //tourne avant de bouger
+				{
+					if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
+					{	
+						if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
+							v_translation=(dist-dist_contact)/DELTA_T;
+
+						else if(courant->select)
+							v_translation=vit_tran;
+						
+						else
+							v_translation=VTRAN_MAX;
+
+						courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+				
+					}
 				}
 			}
 			courant = courant->suivant;
