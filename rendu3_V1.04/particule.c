@@ -650,3 +650,37 @@ float particule_energie()
 
 	return (energie_initiale-energie_particule)/energie_initiale *100;
 }
+
+int particule_collision(C2D rob,double *p_dist, double *p_rayon)
+ {
+	PARTICULE* courant=NULL;
+	C2D part;
+	if((tete_liste_part)) return -1;
+	courant = tete_liste_part;
+	while(courant)
+	{
+		part.centre = courant->corps;
+		part.rayon = courant->rayon;
+		if (util_collision_cercle(rob, part, p_dist))
+		{
+			*p_rayon = courant->rayon;
+			return courant->numero;
+		}
+		courant = courant->suivant;
+	}
+	return 0;
+}
+void test_colision();
+{
+	int ok=1;
+	double *p_dist, *p_rayon;
+	if(!(tete_liste_bot)) ok = 0;
+	if(ok)
+	{
+		C2D bobot= {tete_liste_bot->corps, R_ROBOT};
+		if(particule_collision(bobot, p_dist,p_rayon))
+		{
+			printf("particule touchee");
+		}
+	}
+}
