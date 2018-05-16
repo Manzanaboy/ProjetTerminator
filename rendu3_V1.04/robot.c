@@ -33,6 +33,7 @@ enum State{OFF,ON};
 #define ESP_BOT_BOT 5
 #define TRES_GRAND 100000
 static int NB_TOT_BOT = 0;
+static float vit_rot, vit_tran;
 
 static ROBOT* tete_liste_bot=NULL;
 
@@ -708,4 +709,10 @@ void robot_deselection()
 			courant = courant->suivant;
 		}
 	}
+}
+
+void robot_vitesses(float rot, float tran)
+{
+	vit_rot = rot;
+	vit_tran = tran;
 }
