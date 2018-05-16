@@ -255,6 +255,7 @@ void clavier(int key,int x,int y)
 				robtran->set_text(conttran);
 				break;
 		}
+		robot_vitesses( vitrot, vittran);
 	}
 }
 
@@ -334,7 +335,6 @@ void manuel(int bouton, int etat, int x, int y)
 		Ym = 20 - (20+20)*(y/haut);
 		if (!(etat) && bouton ==  GLUT_LEFT_BUTTON) 
 		{
-			//printf("\nx=%f y=%f", Xm, Ym);
 			robot_selection(Xm, Ym);
 		}
 	}
