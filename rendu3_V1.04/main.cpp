@@ -286,7 +286,7 @@ void reshape(int width,int height)
 void dessine_tout()
 {
 	int* p_base=&base;
-	char* mode_lecture = "Draw";
+	char mode_lecture[4] = {'D','R','A','W'};
 	glClear(GL_COLOR_BUFFER_BIT);
 	GLfloat g=-20,d=20,bas=-20,haut=20;
 	FILE *fichier = fopen(entrees_command_test,"r");
