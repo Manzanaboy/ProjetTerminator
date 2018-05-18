@@ -152,7 +152,7 @@
 	void robot_nearest(int tab_part[],int nb_part);
 	
 	/**
-	 * \brief sauvegarder l'état acutel de la simulation
+	 * \brief sauvegarder l'état acutel des robots de la simulation
 	 * \param fichier save		adresse d'un fichier, dans lequel on va
 	 * 							écrire
 	 */

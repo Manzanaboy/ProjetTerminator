@@ -454,13 +454,16 @@ void particule_decomposition(PARTICULE* part)
 
 }
 
-void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_part,int num)
+void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
+					  int nb_part,int num)
 {
 	
 	part_change->corps.x= part_decomp->corps.x + 
-				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon) *cos(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)*
+				cos(nb_part*M_PI/4);
 	part_change->corps.y= part_decomp->corps.y -
-				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)* sin(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)*
+				sin(nb_part*M_PI/4);
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
 	part_change->energie= part_decomp->energie*E_PARTICULE_FACTOR;
@@ -503,8 +506,6 @@ int part_decomposition_start()
 		}
 	}
 	NB_TOT_PART = NB_TOT_PART + nb_decomp*4;
-	printf("je fais la decomposition nombre total %d l.%d \n",NB_TOT_PART,__LINE__);
-	printf("affichage de la liste des part %s l.%d",__func__,__LINE__);
 	liste_show();
 	return sucess;
 }
@@ -519,7 +520,9 @@ void particule_sauver(char* fichier_save)
 		fprintf(p_fichier, "#liste particules\n%d",NB_TOT_PART);
 		while(courant_part)
 		{
-			fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,courant_part->rayon,courant_part->corps.x,courant_part->corps.y);
+			fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,
+					courant_part->rayon,courant_part->corps.x,
+					courant_part->corps.y);
 			courant_part = courant_part->suivant;
 		}
 		fprintf(p_fichier, "\nFIN_LISTE\n");
