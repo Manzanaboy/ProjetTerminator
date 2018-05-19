@@ -286,7 +286,7 @@ void reshape(int width,int height)
 void dessine_tout()
 {
 	int* p_base=&base;
-	char* mode_lecture = "Draw";
+	char mode_lecture[4] = {'D','R','A','W'};
 	glClear(GL_COLOR_BUFFER_BIT);
 	GLfloat g=-20,d=20,bas=-20,haut=20;
 	FILE *fichier = fopen(entrees_command_test,"r");
@@ -331,11 +331,15 @@ void manuel(int bouton, int etat, int x, int y)
 {
 	if (cont_mode && !(etatsim))
 	{
+		
 		Xm = (20+20)*(x/largeur) -20;
 		Ym = 20 - (20+20)*(y/haut);
 		if (!(etat) && bouton ==  GLUT_LEFT_BUTTON) 
 		{
-			
+			if(aspect_ratio<=1)
+				Ym /= aspect_ratio;
+			else
+				Xm *=aspect_ratio;
 			robot_selection(Xm, Ym);
 		}
 	}

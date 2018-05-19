@@ -15,6 +15,7 @@
  \version 3.01
  \date 21 avril 2018
  */
+ 
 #include "utilitaire.h"
 #include "error.h"
 #include "robot.h"
@@ -362,7 +363,7 @@ void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
 int robot_sauver(char* fichier_save)
 {
 	ROBOT *courant_robot=NULL;
-	int i=0,ok=1;
+	int ok=1;
 	FILE * p_fichier;
 	if(!(tete_liste_bot))
 	{
@@ -599,15 +600,19 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	}
 }
 
-void robot_deplacer()
+int robot_deplacer()
 {
-	ROBOT * courant = NULL;
-	int ok=1;
+	ROBOT *courant = NULL;
+	C2D holo;
+	S2D part;
+	int ok=1, num_part, reponse=0;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new;
+	double *p_ecart = &ecart, *p_rayon=&rayon, *p_la_new =&la_new;
+	bool decalage;
 	if(!(tete_liste_bot))
 	{
 		printf("pas de robots a sauver\n");
 		ok = 0;
-		
 	}
 	courant = tete_liste_bot;
 	if(ok)
@@ -618,55 +623,90 @@ void robot_deplacer()
 			{
 				courant->angle += vit_rot * DELTA_T;					//tourne angle fournit par utilisateur
 				courant->corps=util_deplacement(courant->corps, courant->angle, vit_tran*DELTA_T);
-				test_colision();
+				//~ test_colision();
 			}
-
 			else
 			{
-				double alpha=0, dist=0, v_rotation=0, v_translation=0;
-				double dist_contact=R_ROBOT;//=R_ROBOT + part->rayon;
-				dist=util_distance(courant->corps, courant->cible);
-
-				if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
-				{
-					//ca tourne si pas aligné
-					if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
-					{
-							if(fabs(alpha/DELTA_T)<VROT_MAX) 
-								v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
-
-							else
-								v_rotation=VROT_MAX; 				//tourne dist max
-								
-								if(alpha > 0) 
-									courant->angle+= v_rotation*DELTA_T;
-								else 
-									courant->angle-= v_rotation*DELTA_T; 
-
-					}
-				}
-		
+				double alpha=0, dist=0, v_translation=0;
+				double dist_contact=R_ROBOT; //=R_ROBOT + part->rayon
+				decalage = util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha);
+				//ca tourne si pas aligné
+				alpha = robot_rotaion(courant);
 				if(alpha > -M_PI/4 && alpha < M_PI /4) //tourne avant de bouger
 				{
-					if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
-					{	
-						if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
-							v_translation=(dist-dist_contact)/DELTA_T;
-
-						else if(courant->select)
-							v_translation=vit_tran;
-						
-						else
-							v_translation=VTRAN_MAX;
-
-						courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+					if (courant->select)
+					{
+						v_translation=vit_tran;
 					}
+					else 
+					{
+						v_translation=VTRAN_MAX;
+					}
+					
+					// test de la position
+					holo.rayon = R_ROBOT;
+					holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+					num_part = particule_collision(holo, p_ecart, p_rayon);
+					printf("\nnumero part %d distance %lf\nrayon part %lf deux rayons %lf", num_part, dist, rayon, rayon + R_ROBOT);
+					while (num_part > 0)
+					{
+						//test_colision();
+						la = v_translation;
+						lb = ecart;
+						lc = dist;
+						lb_new = R_ROBOT + rayon;
+
+						if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+						{
+							v_translation = la_new;
+							printf("lanew %lf", la_new);
+						}
+						else
+						{
+							v_translation = 0;
+						}
+						holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+						num_part = particule_collision(holo, p_ecart, p_rayon);
+						printf("\ntest corrige");
+					}
+					//on le deplace de la distance nécessaire
+					courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+					if(!(alpha))
+						{
+							printf("\ntest elimine");
+							holo.centre = util_deplacement(courant->corps, courant->angle, EPSIL_ZERO);
+							num_part = particule_collision(holo, p_ecart, p_rayon);
+							if (num_part)
+							{
+								part = particule_cible(num_part, courant->cible);
+								if (part.x == courant->cible.x && part.y == courant->cible.y)
+								{
+									reponse = 1;
+								}
+								else
+									courant->cible = part;
+							}
+						}
+					//~ if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
+					//~ {	
+						//~ if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
+							//~ v_translation=(dist-dist_contact)/DELTA_T;
+
+						//~ else if(courant->select)
+							//~ v_translation=vit_tran;
+						
+						//~ else
+							//~ v_translation=VTRAN_MAX;
+
+						//~ courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+					//~ }
 				}
 			}
-			test_colision();
+			//test_colision();
 			courant = courant->suivant;
 		}
 	}
+	return reponse;
 }
 
 int robot_selection(float x, float y)
@@ -720,16 +760,48 @@ void robot_vitesse(float rot, float tran)
 void test_colision()
 {
 	int ok=1;
+	ROBOT * courant=NULL;
 	double valeur,val;
 	double *p_dist=&val, *p_rayon=&valeur;
 
 	if(!(tete_liste_bot)) ok = 0;
 	if(ok)
 	{
-		C2D bobot= {tete_liste_bot->corps, R_ROBOT};
-		if(particule_collision(bobot, p_dist,p_rayon))
+		courant = tete_liste_bot;
+		while (courant)
 		{
-			printf("particule touchee\ndist %lf",*p_dist);
+			C2D bobot= {courant->corps, R_ROBOT};
+			ok = particule_collision(bobot, p_dist,p_rayon);
+			if(ok)
+			{
+				printf("rob %d touche part %d",courant->numero, ok);
+			}
+			courant = courant->suivant;
 		}
 	}
+}
+
+double robot_rotaion(ROBOT *courant)
+{
+	double alpha = 0, v_rotation;
+	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+	{
+		//ca tourne si pas aligné
+		if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
+		{
+				if(fabs(alpha/DELTA_T)<VROT_MAX) 
+					v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+
+				else
+					v_rotation=VROT_MAX; 				//tourne dist max
+					
+				if(alpha > 0) 
+					courant->angle+= v_rotation*DELTA_T;
+				else 
+					courant->angle-= v_rotation*DELTA_T; 
+
+		}
+	}
+	return alpha;
+
 }
