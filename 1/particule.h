@@ -188,5 +188,8 @@
 
 	int particule_collision(C2D rob,double *p_dist, double *p_rayon);
 
+	S2D particule_cible(int num, S2D cible);
+	
+	//S2D particule_nouv_cible(int num);
 	
 #endif

@@ -250,6 +250,7 @@ void part_destruction (PARTICULE *el)
 				PARTICULE * bad_part = test_part->suivant;
 				test_part->suivant = test_part->suivant->suivant;
 				free(bad_part);
+				NB_TOT_PART--;
 			}
 		}
 	}
@@ -482,7 +483,7 @@ int part_decomposition_start()
 			proba=(float)rand()/(float)RAND_MAX;
 //			printf("proba est de %f l.%d\n ",proba,__LINE__);
 			if((proba<=DECOMPOSITION_RATE)&&
-								(courant->rayon>R_PARTICULE_MIN))
+								((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
 			{
 				particule_decomposition(courant);
 				nb_decomp++;
@@ -502,9 +503,7 @@ int part_decomposition_start()
 		}
 	}
 	NB_TOT_PART = NB_TOT_PART + nb_decomp*3;
-//	printf("je fais la decomposition nombre total %d l.%d \n",NB_TOT_PART,__LINE__);
-//	printf("affichage de la liste des part %s l.%d",__func__,__LINE__);
-//	liste_show();
+	//liste_show();
 	return sucess;
 }
 
@@ -659,18 +658,71 @@ int particule_collision(C2D rob,double *p_dist, double *p_rayon)
 	courant = tete_liste_part;
 	while(courant)
 	{
-	//	printf("Test1 \n");
 		part.centre = courant->corps;
 		part.rayon = courant->rayon;
-	//	printf("Test2 \n");
 		if (util_collision_cercle(rob, part, p_dist))
 		{
-	//		printf("\nrayon %lf ", courant->rayon);
 			*p_rayon = courant->rayon;
-	//		printf("Test1 \n");
+			printf("\n rayon %lf p_dist %lf dist %lf",courant->rayon, *p_dist, util_distance(courant->corps, rob.centre));
 			return courant->numero;
 		}
+		//~ printf("\n touche pas part %d",courant->numero);
 		courant = courant->suivant;
 	}
 	return 0;
+}
+
+//~ int particule_cible(S2D cible)
+//~ {
+	//~ printf("\ntest cible");
+	//~ PARTICULE *courant;
+	//~ if (!(tete_liste_part)) return 0;
+	//~ courant = tete_liste_part;
+	//~ while (courant->corps.x != cible.x && courant->corps.y != cible.y)
+	//~ {
+		//~ courant = courant->suivant;
+	//~ }
+	//~ return courant->numero;
+//~ }
+
+//~ S2D particule_nouv_cible(int num)
+//~ {
+	//~ printf("\ntest nouv");
+	//~ PARTICULE *courant;
+	//~ if (tete_liste_part)
+	//~ {
+		//~ courant = tete_liste_part;
+		//~ while (courant)
+		//~ {
+			//~ if (courant->numero == num) return courant->corps;
+			//~ courant = courant->suivant;
+		//~ }
+	//~ }
+//~ }
+
+S2D particule_cible(int num, S2D cible)
+{
+	PARTICULE *courant;
+	if (tete_liste_part) 
+	{
+		printf("probleme avec list part");
+		exit(0);
+	}
+	courant = tete_liste_part;
+	while (courant)
+	{
+		if (courant->numero == num)
+		{
+			printf("\ntest cible trouve");
+			if (courant->corps.x == cible.x && courant->corps.y == cible.y)
+			{
+				part_destruction(courant);
+				return cible;
+			}
+			else
+				return courant->corps;
+		}
+		else
+			courant = courant->suivant;
+	}
 }

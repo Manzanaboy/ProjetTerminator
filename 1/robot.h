@@ -154,7 +154,7 @@
 	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite);
 
-	void robot_deplacer();
+	int robot_deplacer();
 	
 	int robot_selection(float x, float y);
 
@@ -162,5 +162,6 @@
 
 	void robot_vitesse(float rot, float tran);
 	void test_colision();
+	double robot_rotaion(ROBOT *courant);
 
 #endif
