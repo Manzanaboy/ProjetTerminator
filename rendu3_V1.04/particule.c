@@ -241,7 +241,7 @@ void part_destruction (PARTICULE *el)
 		else
 		{
 			PARTICULE *test_part = tete_liste_part;
-			while ((test_part->suivant !=NULL)&&(test_part->suivant!= el))
+			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
 				test_part = test_part->suivant;
 			}
@@ -250,6 +250,7 @@ void part_destruction (PARTICULE *el)
 				PARTICULE * bad_part = test_part->suivant;
 				test_part->suivant = test_part->suivant->suivant;
 				free(bad_part);
+				NB_TOT_PART--;
 			}
 		}
 	}
@@ -501,7 +502,7 @@ int part_decomposition_start()
 			}
 		}
 	}
-	NB_TOT_PART = NB_TOT_PART + nb_decomp*3;
+	NB_TOT_PART = NB_TOT_PART + nb_decomp*4;
 	printf("je fais la decomposition nombre total %d l.%d \n",NB_TOT_PART,__LINE__);
 	printf("affichage de la liste des part %s l.%d",__func__,__LINE__);
 	liste_show();
@@ -670,7 +671,7 @@ int particule_collision(C2D rob,double *p_dist, double *p_rayon)
 	}
 	return 0;
 }
-void test_colision();
+void test_colision()
 {
 	int ok=1;
 	double *p_dist, *p_rayon;
