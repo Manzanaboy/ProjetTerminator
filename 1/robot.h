@@ -155,12 +155,20 @@
 						int*p_arret,int*p_suite);
 
 	void robot_deplacer();
+	/**
+	 * \brief gere le deplacement des robots et renvoie si il y a eu elimination de particule(s)
+	 */
 	
 	int robot_selection(float x, float y);
 
 	void robot_deselection();
 
 	void robot_vitesse(float rot, float tran);
-	void test_colision();
+	
+	double robot_rotaion(ROBOT *courant);
+
+	int robot_translation(ROBOT *courant,double *tran);
+
+	double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher);
 
 #endif
