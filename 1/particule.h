@@ -172,8 +172,6 @@
 	
 	PARTICULE* init(int etat);
 	
-	void particule_sauver(char* fichier_save);
-	
 	PARTICULE* particule_correspondante (int num_part);
 	
 	int particule_existe(S2D coord);
@@ -186,8 +184,33 @@
 	
 	float particule_energie();
 
+	/**
+	 * \brief sauver les informations des particules dans le fichier 
+	 * 		donné en argument
+	 * \param fichier_save	nom du fichier ou l'on sauve les 
+	 * 		  informations
+	 */
+	void particule_sauver(char* fichier_save);
+	/**
+	 * \brief	verifie si le robot touche une particule dans son
+	 * 		deplacement et renvoie le numero de cette particule.
+	 * \param rob	cercle representant le robot
+	 * \param p_dist	permet de renvoier la distance entre les centres
+	 * 		du robot et de la particule touchée
+	 * \param p_rayon	permet de renvoyer le rayon de la particule 
+	 * 		touchée
+	 * \param corps_part	permet de renvoyer le centre de la particule
+	 * 		touchée
+	 */
 	int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part);
 
+	/**
+	 * \brief	compare le numero de la particule et le corps de la 
+	 * 		cible, s'il correspondent à la même particule elle est 
+	 * 		éliminée, sinon le centre de la particule num est renvoyé
+	 * \param num	numéro de la particule touchée
+	 * \param cible	coordonnées de la cible du robot
+	 */
 	S2D particule_cible(int num, S2D cible);
 
 	
