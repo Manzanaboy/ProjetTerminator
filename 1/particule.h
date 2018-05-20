@@ -186,7 +186,9 @@
 	
 	float particule_energie();
 
-	int particule_collision(C2D rob,double *p_dist, double *p_rayon);
+	int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part);
+
+	S2D particule_cible(int num, S2D cible);
 
 	
 #endif
