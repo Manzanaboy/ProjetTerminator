@@ -154,7 +154,7 @@
 	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite);
 
-	void robot_deplacer();
+	int robot_deplacer();
 	/**
 	 * \brief gere le deplacement des robots et renvoie si il y a eu elimination de particule(s)
 	 */
