@@ -599,76 +599,6 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	}
 }
 
-void robot_deplacer()
-{
-	ROBOT * courant = NULL;
-	int ok=1;
-	if(!(tete_liste_bot))
-	{
-		printf("pas de robots a sauver\n");
-		ok = 0;
-		
-	}
-	courant = tete_liste_bot;
-	if(ok)
-	{
-		while(courant)
-		{
-			if(courant->select)
-			{
-				courant->angle += vit_rot * DELTA_T;					//tourne angle fournit par utilisateur
-				courant->corps=util_deplacement(courant->corps, courant->angle, vit_tran*DELTA_T);
-				test_colision();
-			}
-
-			else
-			{
-				double alpha=0, dist=0, v_rotation=0, v_translation=0;
-				double dist_contact=R_ROBOT;//=R_ROBOT + part->rayon;
-				dist=util_distance(courant->corps, courant->cible);
-
-				if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
-				{
-					//ca tourne si pas aligné
-					if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
-					{
-							if(fabs(alpha/DELTA_T)<VROT_MAX) 
-								v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
-
-							else
-								v_rotation=VROT_MAX; 				//tourne dist max
-								
-								if(alpha > 0) 
-									courant->angle+= v_rotation*DELTA_T;
-								else 
-									courant->angle-= v_rotation*DELTA_T; 
-
-					}
-				}
-		
-				if(alpha > -M_PI/4 && alpha < M_PI /4) //tourne avant de bouger
-				{
-					if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
-					{	
-						if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
-							v_translation=(dist-dist_contact)/DELTA_T;
-
-						else if(courant->select)
-							v_translation=vit_tran;
-						
-						else
-							v_translation=VTRAN_MAX;
-
-						courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
-					}
-				}
-			}
-			test_colision();
-			courant = courant->suivant;
-		}
-	}
-}
-
 int robot_selection(float x, float y)
 {
 	ROBOT * courant =NULL;
@@ -717,19 +647,151 @@ void robot_vitesse(float rot, float tran)
 	vit_tran=tran;
 }
 
-void test_colision()
+int robot_deplacer()
 {
-	int ok=1;
-	double valeur,val;
-	double *p_dist=&val, *p_rayon=&valeur;
-
-	if(!(tete_liste_bot)) ok = 0;
+	ROBOT *courant = NULL;
+	S2D part;
+	int ok=1, num_part, reponse=0;
+	double deplacement, *p_dep = &deplacement;
+	bool decalage;
+	if(!(tete_liste_bot))
+	{
+		printf("pas de robots a sauver\n");
+		ok = 0;
+	}
+	courant = tete_liste_bot;
 	if(ok)
 	{
-		C2D bobot= {tete_liste_bot->corps, R_ROBOT};
-		if(particule_collision(bobot, p_dist,p_rayon))
+		while(courant)
 		{
-			printf("particule touchee\ndist %lf",*p_dist);
+				double alpha=0;
+				alpha = robot_rotaion(courant);
+				if(alpha > -M_PI/4 && alpha < M_PI /4) //tourne avant de bouger
+				{
+					num_part = robot_translation(courant, p_dep);
+					if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
+					{
+						part = particule_cible(num_part,courant->cible);
+						if (part.x == courant->cible.x && part.y == courant->cible.y)
+							reponse = 1;
+						else
+							courant->cible = part;
+					}
+				}
+			courant = courant->suivant;
 		}
 	}
+	return reponse;
+}
+
+double robot_rotaion(ROBOT *courant)
+{
+	double alpha = 0, v_rotation;
+	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+	{
+		//ca tourne si pas aligné
+		util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha); //inutile car tjrs vrai
+		if (courant->select)
+		{
+			v_rotation = vit_rot;
+		}
+		else 
+		{
+			if(fabs(alpha/DELTA_T)<VROT_MAX) 
+				v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+	
+			else
+				v_rotation=VROT_MAX; 				//tourne dist max
+		}	
+		if(alpha > 0) 
+			courant->angle+= v_rotation*DELTA_T;
+		else 
+			courant->angle-= v_rotation*DELTA_T; 
+
+	}
+	return alpha;
+
+}
+
+int robot_translation(ROBOT *courant, double *tran)
+{
+	C2D holo;
+	S2D c_part, *p_c_part=&c_part;
+	int part, collision=0, test=0, *p_test = &test;
+	double alpha=0, v_translation=0;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new;
+	double *p_ecart = &ecart, *p_rayon=&rayon, *p_la_new =&la_new;
+	if (courant->select)
+	{
+		v_translation=vit_tran;
+	}
+	else 
+	{
+		v_translation=VTRAN_MAX;
+	}
+	holo.rayon = R_ROBOT;
+	holo.centre = courant->corps;
+	v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+	if (test)
+	{
+		v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+	}
+
+	holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+	part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
+	while (part > 0 )
+	{
+		collision = part;
+		la = v_translation;
+		lb = ecart;
+		lc = util_distance(courant->corps, c_part);
+		lb_new = rayon + R_ROBOT;
+		if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+			v_translation = la_new;
+		else
+			v_translation = 0;
+		holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+		part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
+	}
+	courant->corps = courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+	*tran = v_translation*DELTA_T;
+	return collision;
+}
+
+double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher)
+{
+	ROBOT *courant;
+	C2D rob, ref;
+	rob.rayon = R_ROBOT;
+	ref.rayon = R_ROBOT;
+	ref.centre = holo.centre;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new, v_translation = v_tran;
+	double *p_ecart = &ecart, *p_la_new =&la_new;
+	if(!(tete_liste_bot))
+		return 0;
+	courant = tete_liste_bot;
+	while (courant)
+	{
+		if(num != courant->numero)
+		{
+			ref.centre = util_deplacement(holo.centre, alpha, v_translation);
+			rob.centre = courant->corps;
+			if(util_collision_cercle(ref,rob, p_ecart))
+			{
+				*toucher = 1;
+				la = v_translation;
+				lb = ecart;
+				lc = util_distance(courant->corps, rob.centre);
+				lb_new = 2*R_ROBOT;
+				if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+					v_translation = la_new;
+				else
+					v_translation = 0;
+				ref.centre = util_deplacement(holo.centre, alpha, v_translation);
+			}
+			
+		}
+		courant = courant->suivant;
+	}
+	return v_translation;
 }
