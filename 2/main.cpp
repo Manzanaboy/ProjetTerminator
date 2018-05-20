@@ -94,6 +94,9 @@ void record()
 		rec_turn++;
 		sprintf(turn_text,"turn %d",rec_turn);
 		RecTurn->set_text(turn_text);
+		sprintf(taux_text, "Rate %.4lf", taux_decontamination);
+		RecRate->set_text(taux_text);
+		record_fichier();
 	}
 }
 	
@@ -438,18 +441,18 @@ void dessine_page_blanche()
 void record_fichier()
 {
 	
-	printf("Recording in record_fichier\n");
+//	printf("Recording in record_fichier\n");
 
 	taux_decontamination=particule_energie();
 
-	printf("taux_decontamination2 %lf\n", taux_decontamination);
+//	printf("taux_decontamination2 %lf\n", taux_decontamination);
 
 	if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
 	{
-		printf("Creation fichier out.dat\n");
+		//printf("Creation fichier out.dat\n");
 		record_file=fopen("out.dat", "a");
 	}
-	printf("taux_decontamination1 %lf\n", taux_decontamination);
+//	printf("taux_decontamination1 %lf\n", taux_decontamination);
 	fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
 
 	fclose(record_file);
