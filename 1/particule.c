@@ -651,7 +651,7 @@ float particule_energie()
 	return (energie_initiale-energie_particule)/energie_initiale *100;
 }
 
-int particule_collision(C2D rob,double *p_dist, double *p_rayon)
+int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part)
 {
 	PARTICULE* courant=NULL;
 	C2D part;
@@ -659,18 +659,43 @@ int particule_collision(C2D rob,double *p_dist, double *p_rayon)
 	courant = tete_liste_part;
 	while(courant)
 	{
-	//	printf("Test1 \n");
 		part.centre = courant->corps;
 		part.rayon = courant->rayon;
-	//	printf("Test2 \n");
 		if (util_collision_cercle(rob, part, p_dist))
 		{
-	//		printf("\nrayon %lf ", courant->rayon);
 			*p_rayon = courant->rayon;
-	//		printf("Test1 \n");
+			*corps_part = courant->corps;
+			//~ printf("\n part %d",courant->numero);
 			return courant->numero;
 		}
+		//~ printf("\n touche pas part %d",courant->numero);
 		courant = courant->suivant;
 	}
 	return 0;
+}
+
+S2D particule_cible(int num, S2D cible)
+{
+	PARTICULE *courant;
+	if (!(tete_liste_part)) 
+	{
+		exit(0);
+	}
+	courant = tete_liste_part;
+	while (courant)
+	{
+		if (courant->numero == num)
+		{
+			if (courant->corps.x == cible.x && courant->corps.y == cible.y)
+			{
+				printf("\nparticule %d eliminee\n",courant->numero);
+				part_destruction(courant);
+				return cible;
+			}
+			else
+				return courant->corps;
+		}
+		else
+			courant = courant->suivant;
+	}
 }
