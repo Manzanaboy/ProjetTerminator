@@ -38,6 +38,8 @@ enum Etat_Lect {RIEN, VALEURS};
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
 static float energie_initiale=0;
+static float energie_initiale=0;
+static float energie_decontamine=0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -96,6 +98,8 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	char*fin = NULL;
 	ligne_depart = chercheur_ligne(nom_fichier);
 	FILE * fichier =fopen(nom_fichier,"r");
+	energie_initiale=0;
+	energie_decontamine=0;
 	if(fichier)
 	{
 		while(ligne!=ligne_depart)
@@ -126,6 +130,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 						analyse_validite_part(en, ray,pos_x,pos_y,
 												mode_lecture,p_ok);
 						courant = liste_add(); 
+						energie_initiale+= en;
 						courant->numero = compteur_particule++;		
 						passage_donnees(en,ray,pos_x,pos_y,courant);
 						strtod(deb, &fin); 
@@ -638,16 +643,7 @@ float particule_energie()
 	PARTICULE* courant_part=NULL;
 	courant_part = tete_liste_part;
 	
-	while(courant_part)
-	{
-			energie_particule += tete_liste_part->energie;
-//			printf("----------- Energie part: %f -----------\n", tete_liste_part->energie);
-			courant_part = courant_part->suivant;
-	}
-
-//	printf("------------------ ENERGIE TOTALE INITIALE %f ------------------\n ------------------ ENERGIE ACTUEL %f ------------------\n", energie_initiale, (energie_initiale-energie_particule)/energie_initiale *100 );
-
-	return (energie_initiale-energie_particule)/energie_initiale *100;
+	return energie_decontamine/energie_initiale *100;
 }
 
 int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part)
