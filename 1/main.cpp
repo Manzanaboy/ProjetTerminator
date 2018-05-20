@@ -179,7 +179,8 @@ void control_cb( int control )
 			if(!(etatsim))
 			{
 				record();
-				robot_deplacer();
+				if (robot_deplacer())
+					simulation_mja();
 			}
 			break;
 		case (CHECKREC_ID):
@@ -319,7 +320,8 @@ void update(void)
 	if(etatsim)
 	{
 		simulation_decomposition();
-		robot_deplacer();
+		if (robot_deplacer())
+			simulation_mja();
 		record();
 	}
 	if (glutGetWindow() != main_window)
@@ -331,11 +333,15 @@ void manuel(int bouton, int etat, int x, int y)
 {
 	if (cont_mode && !(etatsim))
 	{
+		
 		Xm = (20+20)*(x/largeur) -20;
 		Ym = 20 - (20+20)*(y/haut);
 		if (!(etat) && bouton ==  GLUT_LEFT_BUTTON) 
 		{
-			
+			if(aspect_ratio<=1)
+				Ym /= aspect_ratio;
+			else
+				Xm *=aspect_ratio;
 			robot_selection(Xm, Ym);
 		}
 	}
