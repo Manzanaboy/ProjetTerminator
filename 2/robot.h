@@ -162,16 +162,61 @@
 	 * \brief 
 	 */
 
+	/**
+	 * \brief gere le deplacment des robots et l'elimination des 
+	 * 		particules. Renvoie vraie s'il y a eu elimination.
+	 */
+
 	int robot_deplacer();
 	
+	/**
+	 * \brief 	verifie si la position de la souris touche un robot
+	 * 		et selectionne ce robot.
+	 * \param x La position selon x de la souris
+	 * \param y La position selon y de la souris
+	 */
 	int robot_selection(float x, float y);
 
+	/**
+	 * \brief	verifie que tous les robots soient deselectionnés
+	 * 		et les deselectionne dans le cas contraire.
+	 */
 	void robot_deselection();
-
+/**
+	 * \brief 	permet de passer les vitesses donnés en mode manuel
+	 * 		pour les fonctions de deplacement des robots.
+	 * \param rot	vit de rotation donnée
+	 * \param tran	vit de translation donnée
+	 */
 	void robot_vitesse(float rot, float tran);
 
+	/**
+	 * \brief 	assure la rotation du robot donné en argument
+	 * \param courant	L'addresse du robot
+	 */
 	double robot_rotaion(ROBOT *courant);
+	
+	/**
+	 * \brief 	assure la translation d'un robot en verifiant les
+	 * 		collisions avec les autres robots et particules. Renvoie 
+	 * 		le numero de la particule touchee s'il y a eu collision.
+	 * \param courant	l'addresse du robot
+	 * \param tran		la distance du deplacement pour pouvoir verifier
+	 * 		si le robot est en contacte avec une particule.
+	 */
 	int robot_translation(ROBOT *courant,double *tran);
+	
+	/**
+	 * \brief Verifie si le deplacement souhaité du robot ne provoque 
+	 * 		pas de collision avec d'autres robots. Si c'est le cas
+	 * 		renvoie la distance de deplacement maximum autorisée.
+	 * \param holo	le cercle représentant le robot à déplacer
+	 * \param alpha	l'angle du robot à déplacer
+	 * \param num	le numero du robot à déplacer pour na pas considérer
+	 * 		le cas de collision contre lui-même
+	 * \param v_tran vitesse de translation souhaité
+	 * \param toucher	int pour verifier s'il y a eu collision
+	 */
 	double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher);
 
 #endif
