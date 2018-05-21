@@ -731,10 +731,6 @@ S2D particule_cible(int num, S2D cible)
 		{
 			if(courant->corps.x==cible.x && courant->corps.y == cible.y)
 			{
-				//~ if(courant==tete_liste_part && tete_liste_part->suivant)
-				//~ {
-					//~ tete_liste_part = tete_liste_part->suivant;
-				//~ }
 				printf("\nparticule %d eliminee\n",courant->numero);
 				energie_decontamine += courant->energie;
 				part_destruction(courant);
