@@ -174,6 +174,7 @@ void control_cb( int control )
 			if(!(etatsim))
 			{
 				record();
+				simulation_decomposition();
 				if (robot_deplacer())
 					simulation_mja();
 			}
@@ -218,33 +219,33 @@ void clavier(int key,int x,int y)
 		switch (key)
 		{
 			case (GLUT_KEY_LEFT):
-				if (vitrot < 0.5)
+				if (vitrot < VROT_MAX)
 				{
-					vitrot+=0.125;
+					vitrot+=DELTA_VROT;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
 				break;
 			case (GLUT_KEY_RIGHT):
-				if (vitrot > -0.5)
+				if (vitrot > -VROT_MAX)
 				{
-					vitrot-=0.125;
+					vitrot-=DELTA_VROT;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
 				break;
 			case (GLUT_KEY_UP):
-				if (vittran < 0.75)
+				if (vittran < VTRAN_MAX)
 				{
-					vittran+=0.25;
+					vittran+=DELTA_VTRAN;
 				}
 				sprintf(conttran,"translation : %.3f",vittran);
 				robtran->set_text(conttran);
 				break;
 			case (GLUT_KEY_DOWN):
-				if (vittran > -0.75)
+				if (vittran > -VTRAN_MAX)
 				{
-					vittran-=0.25;
+					vittran-=DELTA_VTRAN;
 				}
 				sprintf(conttran,"translation : %.3f",vittran);
 				robtran->set_text(conttran);
