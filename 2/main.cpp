@@ -218,17 +218,17 @@ void clavier(int key,int x,int y)
 		switch (key)
 		{
 			case (GLUT_KEY_LEFT):
-				if (vitrot < 0.75)
+				if (vitrot < 0.5)
 				{
-					vitrot+=0.25;
+					vitrot+=0.125;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
 				break;
 			case (GLUT_KEY_RIGHT):
-				if (vitrot > -0.75)
+				if (vitrot > -0.5)
 				{
-					vitrot-=0.25;
+					vitrot-=0.125;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
