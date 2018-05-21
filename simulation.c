@@ -62,7 +62,8 @@ void simulation_mja()
 
 void simulation_detruire()
 {
-	//~ simulation_mja();
+	robot_assoc_robot_part();
+	simulation_mja();
 	bot_total_destruction();
 	part_total_destruction();
 }
@@ -78,23 +79,9 @@ void simulation_decomposition()
 {
 	int decomposition =0;
 	decomposition = part_decomposition_start();
-	//~ printf("decompositioon est %d f.%s\n",decomposition,__func__);
+	printf("decompositioon est %d\n",decomposition);
 	if(decomposition)
 	{
 		simulation_mja();
-	}
-}
-
-int simulation_particules()
-{
-	PARTICULE*courant=NULL;
-	courant=particule_acces_tete();
-	if(courant)
-	{
-		return 1;
-	}
-	else 
-	{
-		return 0;
 	}
 }
