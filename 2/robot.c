@@ -689,27 +689,25 @@ void robot_vitesse(float rot, float tran)
 double robot_rotaion(ROBOT *courant)
 {
 	double alpha = 0, v_rotation;
+	if (courant->select)
+		{
+			v_rotation = vit_rot;
+			courant->angle+= v_rotation*DELTA_T;
+			alpha=1;
+			return alpha;
+		}
 	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
 	{
 		//ca tourne si pas aligné
 		util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha); //inutile car tjrs vrai
-		if (courant->select)
-		{
-			v_rotation = vit_rot;
-		}
-		else 
-		{
-			if(fabs(alpha/DELTA_T)<VROT_MAX) 
-				v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
-	
-			else
-				v_rotation=VROT_MAX; 				//tourne dist max
-		}	
+		if(fabs(alpha/DELTA_T)<VROT_MAX) 
+			v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+		else
+			v_rotation=VROT_MAX; 				//tourne dist max
 		if(alpha > 0) 
 			courant->angle+= v_rotation*DELTA_T;
 		else 
 			courant->angle-= v_rotation*DELTA_T; 
-
 	}
 	return alpha;
 
