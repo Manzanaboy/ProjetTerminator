@@ -123,6 +123,31 @@ int main(int argc, char* argv[])
  	}
 }
 
+void open_fonction(int control)
+{
+	remove("out.dat");
+	taux_decontamination=0;
+	if (fopen(OpenText->get_text(),"r") == NULL)
+	{
+		error_file_missing(OpenText->get_text());
+	
+	}
+	else
+	{
+		base = PG_DESSINS;
+		strncpy(open,(OpenText->get_text()),LG_TEST);
+		strncpy(entrees_command_test,(open),LG_TEST);
+		
+		if(etat_lecture==LU)
+		{
+			simulation_detruire();
+			etat_lecture=NON_LU;
+		}
+		rec_turn = 0;
+		RecTurn->set_text("turn 0");
+		glutPostRedisplay();
+	}
+}
 void control_cb( int control )
 {
    	switch (control)
@@ -136,30 +161,11 @@ void control_cb( int control )
 			{
 				particule_sauver(save);
 			}
-			break;	
-		case (EDITTEXTO_ID):
-			remove("out.dat");
-			taux_decontamination=0;
-			if (fopen(OpenText->get_text(),"r") == NULL)
-			{
-				error_file_missing(OpenText->get_text());
-				break;
-			}
-			base = PG_DESSINS;
-			strncpy(open,(OpenText->get_text()),LG_TEST);
-			strncpy(entrees_command_test,(open),LG_TEST);
-			
-			if(etat_lecture==LU)
-			{
-				simulation_detruire();
-				etat_lecture=NON_LU;
-			}
-			rec_turn = 0;
-			RecTurn->set_text("turn 0");
-			glutPostRedisplay();
-			break;	
+			break;
 		case (SIMSTART_ID):
-			if (etatsim==0&&(simulation_particules()))
+			if(!(etat_lecture==LU) || !(simulation_particules()))
+				break;
+			if (etatsim==0&&(simulation_particules))
 			{
 				buttonstart->set_name("Stop");
 				etatsim = 1;
@@ -305,6 +311,8 @@ void update(void)
 			simulation_mja();
 		record();
 	}
+	if (!(simulation_particules))
+		etatsim=0;
 	if (glutGetWindow() != main_window)
 	glutSetWindow(main_window);
 	glutPostRedisplay();
@@ -312,7 +320,7 @@ void update(void)
 
 void manuel(int bouton, int etat, int x, int y)
 {
-	if (cont_mode && !(etatsim))
+	if (cont_mode)
 	{
 		
 		Xm = (20+20)*(x/largeur) -20;
