@@ -367,7 +367,7 @@ void creer_boite_dialog()
 	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"File name:", 
 					GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
 	glui->add_button_to_panel(open_panel,(char*)"open",
-								EDITTEXTO_ID,control_cb );
+								EDITTEXTO_ID,open_fonction );
 	
 	//file
 	GLUI_Panel *file_panel = glui->add_panel((char*) "Saving");
