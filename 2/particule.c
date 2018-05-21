@@ -38,6 +38,7 @@ enum Etat_Lect {RIEN, VALEURS};
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
 static float energie_decontamine=0;
+static float energie_initiale =0;
 static int last_numero_part=0;
 
 /**
@@ -97,6 +98,8 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	char*fin = NULL;
 	ligne_depart = chercheur_ligne(nom_fichier);
 	FILE * fichier =fopen(nom_fichier,"r");
+	energie_initiale=0;
+	energie_decontamine =0;
 	if(fichier)
 	{
 		energie_decontamine=0;
@@ -128,6 +131,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 						analyse_validite_part(en, ray,pos_x,pos_y,
 												mode_lecture,p_ok);
 						courant = liste_add(); 
+						energie_initiale += en;
 						courant->numero = compteur_particule++;		
 						passage_donnees(en,ray,pos_x,pos_y,courant);
 						strtod(deb, &fin); 
@@ -732,6 +736,7 @@ S2D particule_cible(int num, S2D cible)
 					//~ tete_liste_part = tete_liste_part->suivant;
 				//~ }
 				printf("\nparticule %d eliminee\n",courant->numero);
+				energie_decontamine += courant->en;
 				part_destruction(courant);
 				return cible;
 			}
