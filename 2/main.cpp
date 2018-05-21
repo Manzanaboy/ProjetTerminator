@@ -326,7 +326,7 @@ void update(void)
 
 void manuel(int bouton, int etat, int x, int y)
 {
-	if (cont_mode && !(etatsim))
+	if (cont_mode)
 	{
 		
 		Xm = (20+20)*(x/largeur) -20;
