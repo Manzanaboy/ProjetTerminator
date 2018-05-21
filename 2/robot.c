@@ -645,6 +645,7 @@ void robot_deselection()
 
 int robot_deplacer()
 {
+	printf("entrer deplacer\n");
 	ROBOT *courant = NULL;
 	S2D part;
 	int ok=1, num_part, reponse=0;
@@ -662,14 +663,21 @@ int robot_deplacer()
 		{
 				double alpha=0;
 				alpha = robot_rotaion(courant);
+				if (courant->select)
+					robot_translation(courant, p_dep);
 				if(alpha > -M_PI/4 && alpha < M_PI /4) //tourne avant de bouger
 				{
+					printf("\n test alpha dans 45");
 					num_part = robot_translation(courant, p_dep);
 					if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
 					{
+						printf("\n dans deplacement");
 						part = particule_cible(num_part,courant->cible);
 						if (part.x == courant->cible.x && part.y == courant->cible.y)
+						{
 							reponse = 1;
+							courant->cible = courant->corps;
+						}
 						else
 							courant->cible = part;
 					}
@@ -677,6 +685,7 @@ int robot_deplacer()
 			courant = courant->suivant;
 		}
 	}
+	printf("sortit deplacer\n");
 	return reponse;
 }
 
@@ -688,12 +697,13 @@ void robot_vitesse(float rot, float tran)
 
 double robot_rotaion(ROBOT *courant)
 {
+	printf("entrer rotation\n");
 	double alpha = 0, v_rotation;
 	if (courant->select)
 		{
 			v_rotation = vit_rot;
 			courant->angle+= v_rotation*DELTA_T;
-			alpha=1;
+			util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha);
 			return alpha;
 		}
 	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
@@ -709,12 +719,13 @@ double robot_rotaion(ROBOT *courant)
 		else 
 			courant->angle-= v_rotation*DELTA_T; 
 	}
+	printf("sortit rotation\n");
 	return alpha;
-
 }
 
 int robot_translation(ROBOT *courant, double *tran)
 {
+	printf("entrer translation\n");
 	C2D holo;
 	S2D c_part, *p_c_part=&c_part;
 	int part, collision=0, test=0, *p_test = &test;
@@ -746,20 +757,31 @@ int robot_translation(ROBOT *courant, double *tran)
 		lb = ecart;
 		lc = util_distance(courant->corps, c_part);
 		lb_new = rayon + R_ROBOT;
-		if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
-			v_translation = la_new;
+		if (util_alignement(courant->corps, courant->angle, c_part))
+		{
+			v_translation = lc-lb_new;
+		}
 		else
-			v_translation = 0;
+		{
+			if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+				v_translation = la_new;
+			else
+				v_translation = 0;
+		}
 		holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
 		part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
 	}
 	courant->corps = courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+	//~ lc = util_distance(courant->corps, c_part);
+	//~ printf("\n v_tran %lf,lc %lf, la %lf, la_new %lf, lb_new %lf",v_translation, lc, la, la_new, lb_new);
 	*tran = v_translation*DELTA_T;
+	printf("sortit translation\n");
 	return collision;
 }
 
 double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher)
 {
+	printf("entrer collision\n");
 	ROBOT *courant;
 	C2D rob, ref;
 	rob.rayon = R_ROBOT;
@@ -793,5 +815,7 @@ double robot_collision(C2D holo, double alpha, int num, double v_tran, int *touc
 		}
 		courant = courant->suivant;
 	}
+	printf("sortit collision\n");
 	return v_translation;
+	
 }
