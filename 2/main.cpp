@@ -1,4 +1,3 @@
-
 /*!
  \file main.cpp
  \brief Gère tout le traitement des fichiers, le dessin de l'interface 
@@ -364,14 +363,17 @@ void creer_boite_dialog()
 	
 	//open 
 	GLUI_Panel *open_panel = glui->add_panel((char*) "Opening");
-	OpenText = glui->add_edittext_to_panel(open_panel, (char*)"File name:", 
-					GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, control_cb);
+	OpenText = glui->add_edittext_to_panel(open_panel, 
+					(char*)"File name:", 
+					GLUI_EDITTEXT_TEXT, textiun,NO_RETURN_ID, 
+					control_cb);
 	glui->add_button_to_panel(open_panel,(char*)"open",
 								EDITTEXTO_ID,open_fonction );
 	
 	//file
 	GLUI_Panel *file_panel = glui->add_panel((char*) "Saving");
-	FileText = glui->add_edittext_to_panel(file_panel, (char*)"File name:",
+	FileText = glui->add_edittext_to_panel(file_panel, 
+				(char*)"File name:",
 				GLUI_EDITTEXT_TEXT, textide,NO_RETURN_ID, control_cb);
 	glui->add_button_to_panel(file_panel,(char*)"save", 
 								EDITTEXTF_ID,control_cb );
@@ -385,8 +387,9 @@ void creer_boite_dialog()
 											SIMSTEP_ID,control_cb );
 	//recording
 	GLUI_Panel *record_panel = glui->add_panel((char*) "Recording");
-	reccheck = glui->add_checkbox_to_panel(record_panel,(char*)"record",
-											NULL,CHECKREC_ID, control_cb);
+	reccheck = glui->add_checkbox_to_panel(record_panel,
+										(char*)"record",
+										NULL,CHECKREC_ID, control_cb);
 	RecRate = glui->add_statictext_to_panel(record_panel,"rate 0");
 	RecTurn = glui->add_statictext_to_panel(record_panel,"turn 0");
 	glui->add_column(true);
@@ -430,11 +433,12 @@ void record_fichier()
 	taux_decontamination=particule_energie();
 	if(reccheck->get_int_val())
 	{
-		if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+		if((record_file=fopen("out.dat", "a"))==NULL)
 		{
 			record_file=fopen("out.dat", "a");
 		}
-		fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
+		fprintf(record_file, "%d %lf \n", rec_turn, 
+				taux_decontamination );
 
 		fclose(record_file);
 	}
