@@ -52,4 +52,8 @@ void simulation_dessiner();
  */
 void simulation_decomposition();
 
+/**
+* \brief renvoie une valeur dépendant de si toutes 
+* 	les particules ont étés détruites où non
+*/
 int simulation_particules();
