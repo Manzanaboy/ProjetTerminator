@@ -179,17 +179,6 @@ void control_cb( int control )
 					simulation_mja();
 			}
 			break;
-// 		case (CHECKREC_ID):
-// 			if(reccheck->get_int_val())
-// 			{
-// 				sprintf(taux_text,"Rate %.4f",energie_initiale);
-// 				RecRate->set_text(taux_text);
-// 			}
-// 			else
-// 			{
-// 				RecRate->set_text("rate off");
-// 			}
-// 			break;
 		case (RADIOBUTTONCONT_ID):
 			if(contradio->get_int_val())
 			{
@@ -205,9 +194,6 @@ void control_cb( int control )
 				cont_mode = 0;
 				robot_deselection();
 			}
-			break;
-		default: 
-			printf("\n Unknown command\n");   
 			break;
 		}
 }
