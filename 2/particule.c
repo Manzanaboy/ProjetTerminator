@@ -38,7 +38,7 @@ enum Etat_Lect {RIEN, VALEURS};
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
 static float energie_initiale=0;
-static float energie_decontamine=0;
+static last_numero_part=0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -97,8 +97,6 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	char*fin = NULL;
 	ligne_depart = chercheur_ligne(nom_fichier);
 	FILE * fichier =fopen(nom_fichier,"r");
-	energie_initiale=0;
-	energie_decontamine=0;
 	if(fichier)
 	{
 		while(ligne!=ligne_depart)
@@ -129,7 +127,6 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 						analyse_validite_part(en, ray,pos_x,pos_y,
 												mode_lecture,p_ok);
 						courant = liste_add(); 
-						energie_initiale+= en;
 						courant->numero = compteur_particule++;		
 						passage_donnees(en,ray,pos_x,pos_y,courant);
 						strtod(deb, &fin); 
@@ -145,6 +142,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	}
 	fclose(fichier);
 	NB_TOT_PART= nbpart_att;
+	last_numero_part=tete_liste_part->numero;
 }
 
 void analyse_validite_part(double energie, double rayon,double pos_x, 
@@ -245,7 +243,7 @@ void part_destruction (PARTICULE *el)
 		else
 		{
 			PARTICULE *test_part = tete_liste_part;
-			while ((test_part->suivant !=NULL)&&(test_part->suivant!= el))
+			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
 				test_part = test_part->suivant;
 			}
@@ -265,14 +263,18 @@ void part_total_destruction()
 	{
 		printf("problème pointeur l.%d in file %s\n",__LINE__,__FILE__);
 	}
-	PARTICULE *part = tete_liste_part;
-	while(part->suivant != NULL)
+	else
 	{
+		PARTICULE *part = tete_liste_part;
+		while(part->suivant != NULL)
+		{
+			part_destruction(part);
+			part =tete_liste_part;
+		}
 		part_destruction(part);
-		part =tete_liste_part;
+		tete_liste_part=NULL;
 	}
-	part_destruction(part);
-	tete_liste_part=NULL;
+	
 }
 void passage_donnees( double en, double ray,
 					double pos_x, double pos_y, PARTICULE*courant)
@@ -434,7 +436,7 @@ int particule_nombre_total()
 
 void particule_decomposition(PARTICULE* part)
 {
-	int nb=NB_TOT_PART+1;
+	int nb = last_numero_part;
 	PARTICULE *part1, *part2, *part3, *part4;
 	part1=liste_add();
 	part2=liste_add();
@@ -442,6 +444,7 @@ void particule_decomposition(PARTICULE* part)
 	part4=liste_add();
 
 	int cadran=1;
+	nb++;
 	part_change_part(part1, part,cadran,nb);
 	cadran+=2;
 	nb++;
@@ -453,18 +456,22 @@ void particule_decomposition(PARTICULE* part)
 	nb++;
 	part_change_part(part4, part,cadran,nb);
 	
+	last_numero_part+=4;
 	part_destruction(part);
 	
 
 }
 
-void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp, int nb_part,int num)
+void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
+						int nb_part,int num)
 {
 	
 	part_change->corps.x= part_decomp->corps.x + 
-				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon) *cos(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon) *
+				cos(nb_part*M_PI/4);
 	part_change->corps.y= part_decomp->corps.y -
-				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)* sin(nb_part*M_PI/4);
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)*
+				sin(nb_part*M_PI/4);
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
 	part_change->energie= part_decomp->energie*E_PARTICULE_FACTOR;
@@ -487,9 +494,10 @@ int part_decomposition_start()
 			proba=(float)rand()/(float)RAND_MAX;
 //			printf("proba est de %f l.%d\n ",proba,__LINE__);
 			if((proba<=DECOMPOSITION_RATE)&&
-								((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
+				((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
 			{
 				particule_decomposition(courant);
+				printf("decompositojn start \n");
 				nb_decomp++;
 				sucess=1;
 		
@@ -502,12 +510,26 @@ int part_decomposition_start()
 			else
 			{
 				courant=NULL;
-				compteur=NB_TOT_PART;
+				break;
 			}
 		}
 	}
-	NB_TOT_PART = NB_TOT_PART + nb_decomp*3;
+	NB_TOT_PART=NB_TOT_PART+ nb_decomp*4;
 	//liste_show();
+	int j=0;
+	courant = tete_liste_part;
+	for(j=0;j<NB_TOT_PART;j++)
+	{
+		printf("numerla de la particule %d fonc %s\n",courant->numero,__func__);
+		if(courant->suivant)
+		{
+			courant = courant->suivant;
+		}
+		else
+		{
+			break;
+		}
+	}
 	return sucess;
 }
 
@@ -521,7 +543,9 @@ void particule_sauver(char* fichier_save)
 		fprintf(p_fichier, "#liste particules\n%d",NB_TOT_PART);
 		while(courant_part)
 		{
-			fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,courant_part->rayon,courant_part->corps.x,courant_part->corps.y);
+			fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,
+						courant_part->rayon,courant_part->corps.x,
+							courant_part->corps.y);
 			courant_part = courant_part->suivant;
 		}
 		fprintf(p_fichier, "\nFIN_LISTE\n");
@@ -577,7 +601,7 @@ int particule_existe(S2D coord)
 	}
 	else
 	{
-		printf("problème d'association %s l.%d",__func__,__LINE__);
+		printf("problème d'association f.%s l.%d",__func__,__LINE__);
 		exit(0);
 	}
 }
@@ -642,10 +666,20 @@ float particule_energie()
 	PARTICULE* courant_part=NULL;
 	courant_part = tete_liste_part;
 	
-	return energie_decontamine/energie_initiale *100;
+	while(courant_part)
+	{
+			energie_particule += tete_liste_part->energie;
+//			printf("----------- Energie part: %f -----------\n", tete_liste_part->energie);
+			courant_part = courant_part->suivant;
+	}
+
+//	printf("------------------ ENERGIE TOTALE INITIALE %f ------------------\n ------------------ ENERGIE ACTUEL %f ------------------\n", energie_initiale, (energie_initiale-energie_particule)/energie_initiale *100 );
+
+	return (energie_initiale-energie_particule)/energie_initiale *100;
 }
 
-int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part)
+int particule_collision(C2D rob,double *p_dist,
+						double *p_rayon, S2D *corps_part)
 {
 	PARTICULE* courant=NULL;
 	C2D part;
@@ -671,6 +705,7 @@ int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part
 S2D particule_cible(int num, S2D cible)
 {
 	PARTICULE *courant;
+	int j=0;
 	if (!(tete_liste_part)) 
 	{
 		exit(0);
