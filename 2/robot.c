@@ -237,6 +237,9 @@ void liste_afficher ()
 			printf("%f ", voiture->corps.x);
 			printf("%f \n", voiture->corps.y);
 			printf("%f \n", voiture->angle);
+			printf("cible est :");
+			printf("%f ", voiture->cible.x);
+			printf("%f \n", voiture->cible.y);
 			voiture = voiture->suivant;
 		}
 		while((voiture)!=NULL);
@@ -432,8 +435,8 @@ void robot_nearest(int tab_part[], int nb_part)
 		if(num_bot_associe)
 		{
 			robot_ciblage(num_bot_associe,part_x,part_y,courant);
-//			printf("les nouvelles assos sont \n");
-//			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
+			printf("les nouvelles assos sont \n");
+			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
 		}
 		if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
 		{
@@ -525,11 +528,15 @@ int robot_part_elimine(S2D corps,S2D cible)
 	{
 		if(particule_existe(cible))
 		{
+			printf("ta cible n'existe plus\n");
 			return 0;
+			
 		}
 		else
 		{
+			printf("ta cible existe \n");
 			return 1;
+			
 		}
 	}
 	return 0;
@@ -585,8 +592,8 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	{
 		if(((*courant)->numero)>=2)
 		{
-//			printf("la cible du robot %d est %f %f\n",
-//			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
+			printf("la cible du robot %d est %f %f\n",
+			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
 			*courant = (*courant)->suivant;
 			*p_particule_elimine=robot_part_elimine((*courant)->corps,
 													(*courant)->cible);
@@ -645,8 +652,8 @@ void robot_deselection()
 
 int robot_deplacer()
 {
-	printf("entrer deplacer\n");
 	ROBOT *courant = NULL;
+	PARTICULE * old_part = NULL;
 	S2D part;
 	int ok=1, num_part, reponse=0;
 	double deplacement, *p_dep = &deplacement;
@@ -661,31 +668,44 @@ int robot_deplacer()
 	{
 		while(courant)
 		{
-				double alpha=0;
-				alpha = robot_rotaion(courant);
-				if (courant->select)
-					robot_translation(courant, p_dep);
-				if(alpha > -M_PI/4 && alpha < M_PI /4) //tourne avant de bouger
+			double alpha=0;
+			alpha = robot_rotaion(courant);
+			if (courant->select)
++					robot_translation(courant, p_dep);
+			if(alpha > (-M_PI/4) && alpha < (M_PI/4)) //tourne avant de bouger
+			{
+				num_part = robot_translation(courant, p_dep);
+				if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
 				{
-					printf("\n test alpha dans 45");
-					num_part = robot_translation(courant, p_dep);
-					if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
-					{
-						printf("\n dans deplacement");
-						part = particule_cible(num_part,courant->cible);
-						if (part.x == courant->cible.x && part.y == courant->cible.y)
+					part = particule_cible(num_part,courant->cible);
+					if (part.x == courant->cible.x && 
+								part.y == courant->cible.y)
 						{
 							reponse = 1;
 							courant->cible = courant->corps;
+							robot_assoc_robot_part();
 						}
-						else
-							courant->cible = part;
-					}
+					else
+						old_part = 
+						particule_donner_acces(courant->cible);
+						if(old_part)
+						{
+							particule_less_robot(old_part);
+						}
+						courant->cible = part;
 				}
-			courant = courant->suivant;
+			}
+			if(courant->suivant)
+			{
+				courant = courant->suivant;
+			}
+			else
+			{
+				break;
+			}
+			printf("testt%s\n",__func__);
 		}
 	}
-	printf("sortit deplacer\n");
 	return reponse;
 }
 
@@ -697,13 +717,13 @@ void robot_vitesse(float rot, float tran)
 
 double robot_rotaion(ROBOT *courant)
 {
-	printf("entrer rotation\n");
 	double alpha = 0, v_rotation;
 	if (courant->select)
 		{
 			v_rotation = vit_rot;
 			courant->angle+= v_rotation*DELTA_T;
-			util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha);
+			util_ecart_angle(courant->corps, courant->angle,
+							courant->cible, &alpha);
 			return alpha;
 		}
 	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
@@ -719,13 +739,12 @@ double robot_rotaion(ROBOT *courant)
 		else 
 			courant->angle-= v_rotation*DELTA_T; 
 	}
-	printf("sortit rotation\n");
 	return alpha;
+
 }
 
 int robot_translation(ROBOT *courant, double *tran)
 {
-	printf("entrer translation\n");
 	C2D holo;
 	S2D c_part, *p_c_part=&c_part;
 	int part, collision=0, test=0, *p_test = &test;
@@ -772,16 +791,12 @@ int robot_translation(ROBOT *courant, double *tran)
 		part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
 	}
 	courant->corps = courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
-	//~ lc = util_distance(courant->corps, c_part);
-	//~ printf("\n v_tran %lf,lc %lf, la %lf, la_new %lf, lb_new %lf",v_translation, lc, la, la_new, lb_new);
 	*tran = v_translation*DELTA_T;
-	printf("sortit translation\n");
 	return collision;
 }
 
 double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher)
 {
-	printf("entrer collision\n");
 	ROBOT *courant;
 	C2D rob, ref;
 	rob.rayon = R_ROBOT;
@@ -815,7 +830,5 @@ double robot_collision(C2D holo, double alpha, int num, double v_tran, int *touc
 		}
 		courant = courant->suivant;
 	}
-	printf("sortit collision\n");
 	return v_translation;
-	
 }

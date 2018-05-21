@@ -32,7 +32,7 @@ enum Etat_lecture {NB_PAR,PAR};
 enum Etat_Lect {RIEN, VALEURS};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
-#define MAX_ROBOT_PART 1
+#define MAX_ROBOT_PART 5
 
 
 static PARTICULE* tete_liste_part=NULL;
@@ -98,10 +98,9 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	char*fin = NULL;
 	ligne_depart = chercheur_ligne(nom_fichier);
 	FILE * fichier =fopen(nom_fichier,"r");
-	energie_initiale=0;
-	energie_decontamine =0;
 	if(fichier)
 	{
+		energie_initiale=0;
 		energie_decontamine=0;
 		while(ligne!=ligne_depart)
 		{
@@ -225,6 +224,7 @@ void liste_show ()
 			printf("%f \n", voiture->corps.y);
 			printf("%f \n", voiture->energie);
 			printf("%f \n", voiture->rayon);
+			printf("le robots sur elle %d\n",voiture->nb_bot_part);
 			voiture = voiture->suivant;
 		}
 		while((voiture)!=NULL);
@@ -251,7 +251,7 @@ void part_destruction (PARTICULE *el)
 			else
 			{
 				tete_liste_part=NULL;
-				printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
+				printf("la dernière sur pied %s l.%d\n",__func__,__LINE__);
 				NB_TOT_PART--;
 			}
 			free(part);
@@ -473,10 +473,9 @@ void particule_decomposition(PARTICULE* part)
 	nb++;
 	part_change_part(part4, part,cadran,nb);
 	
-	last_numero_part+=3;
+	last_numero_part+=4;
 	part_destruction(part);
 	
-
 }
 
 void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
@@ -492,6 +491,7 @@ void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
 	part_change->energie= part_decomp->energie*E_PARTICULE_FACTOR;
+	part_change->nb_bot_part =0;
 	
 	
 }
@@ -509,7 +509,7 @@ int part_decomposition_start()
 		while(compteur<NB_TOT_PART)
 		{
 			proba=(float)rand()/(float)RAND_MAX;
-//			printf("proba est de %f l.%d\n ",proba,__LINE__);
+			printf("proba est de %f l.%d\n ",proba,__LINE__);
 			if((proba<=DECOMPOSITION_RATE)&&
 				((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
 			{
@@ -533,21 +533,8 @@ int part_decomposition_start()
 	}
 	NB_TOT_PART=NB_TOT_PART+ nb_decomp*4;
 	liste_show();
-	//~ int j=0;
-	//~ courant = tete_liste_part;
-	//~ for(j=0;j<NB_TOT_PART;j++)
-	//~ {
-		//~ printf("numerla de la particule %d fonc %s\n",courant->numero,__func__);
-		//~ if(courant->suivant)
-		//~ {
-			//~ courant = courant->suivant;
-		//~ }
-		//~ else
-		//~ {
-			//~ break;
-		//~ }
-	//~ }
-	printf("\n");
+	printf("non de part totale est %d\n", NB_TOT_PART);
+	printf("last numero part est %d\n",last_numero_part);
 	return sucess;
 }
 
@@ -583,9 +570,9 @@ PARTICULE* particule_correspondante (int num_part)
 		cherchee = tete_liste_part;
 		while((cherchee->numero)!= num_part)
 		{
-			if(cherchee->suivant == NULL)
+			if(cherchee->suivant==NULL)
 			{
-				printf("particule non trouvée \n\n"); // return NULL si pas trouvé particule
+				printf("particule non trouvé\n");
 				break;
 			}
 			cherchee=cherchee->suivant;
@@ -719,7 +706,6 @@ int particule_collision(C2D rob,double *p_dist,
 S2D particule_cible(int num, S2D cible)
 {
 	PARTICULE *courant;
-	int j=0;
 	if (!(tete_liste_part)) 
 	{
 		exit(0);
@@ -741,5 +727,47 @@ S2D particule_cible(int num, S2D cible)
 		}
 		else
 			courant = courant->suivant;
+	}
+}
+
+PARTICULE* particule_donner_acces(S2D coord)
+{
+	PARTICULE*courant=NULL;
+	if(tete_liste_part)
+	{
+		courant=tete_liste_part;
+		while(courant)
+		{
+			if((courant->corps.x==coord.x)&&(courant->corps.y==coord.y))
+			{
+				return courant;
+			}
+			if(courant->suivant)
+			{
+				courant=courant->suivant;
+			}
+			else
+			{
+				break;
+			}
+		}
+		return NULL;
+	}
+	else
+	{
+		printf("problème d'association f.%s l.%d",__func__,__LINE__);
+		exit(0);
+	}
+}
+
+void particule_less_robot(PARTICULE*courant)
+{
+	if(courant)
+	{
+		(courant->nb_bot_part)-1;
+	}
+	else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
 	}
 }
