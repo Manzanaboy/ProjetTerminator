@@ -219,6 +219,7 @@
 
 	double robot_rotaion(ROBOT *courant);
 	int robot_translation(ROBOT *courant,double *tran);
-	double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher);
+	double robot_collision(C2D holo, double alpha, int num, 
+			       double v_tran, int *toucher);
 
 #endif
