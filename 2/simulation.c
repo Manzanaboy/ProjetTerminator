@@ -59,7 +59,6 @@ void simulation_mja()
 	
 	robot_assoc_robot_part();
 	simulation_dessiner();
-	printf("mise à jour !!!!! %s\n",__FILE__);
 }
 
 void simulation_detruire()
@@ -83,7 +82,6 @@ void simulation_decomposition()
 	{
 		simulation_mja();
 	}
-	//~ liste_afficher();
 }
 
 int simulation_particules()
