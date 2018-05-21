@@ -245,20 +245,16 @@ void part_destruction (PARTICULE *el)
 			if(part->suivant)
 			{
 				tete_liste_part= part->suivant;
-				printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
 				NB_TOT_PART--;
 			}
 			else
 			{
 				tete_liste_part=NULL;
-				printf("la dernière sur pied %s l.%d\n",__func__,__LINE__);
 				NB_TOT_PART--;
 			}
 			free(part);
 		}
 		else
-		{
-			printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
 			PARTICULE *test_part = tete_liste_part;
 			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
@@ -508,12 +504,10 @@ int part_decomposition_start()
 		while(compteur<NB_TOT_PART)
 		{
 			proba=(float)rand()/(float)RAND_MAX;
-			printf("proba est de %f l.%d\n ",proba,__LINE__);
 			if((proba<=DECOMPOSITION_RATE)&&
 				((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
 			{
 				particule_decomposition(courant);
-				printf("decompositojn start \n");
 				nb_decomp++;
 				sucess=1;
 		
@@ -716,7 +710,6 @@ S2D particule_cible(int num, S2D cible)
 		{
 			if(courant->corps.x==cible.x && courant->corps.y == cible.y)
 			{
-				printf("\nparticule %d eliminee\n",courant->numero);
 				energie_decontamine += courant->energie;
 				part_destruction(courant);
 				return cible;
