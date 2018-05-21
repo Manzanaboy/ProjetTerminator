@@ -703,7 +703,6 @@ int robot_deplacer()
 			{
 				break;
 			}
-			printf("testt%s\n",__func__);
 		}
 	}
 	return reponse;
