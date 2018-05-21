@@ -181,7 +181,10 @@
 	void particule_ajout_robot(PARTICULE*courant);
 	
 	void particule_reach(PARTICULE*courant,double*p_posx,double*p_posy);
-	
+	/** brief calcul et renvoie le taux de décontamination en 
+	*		fonction des variables statics energie_decontamine
+	*		et energie_initiale
+	**/
 	float particule_energie();
 /**
 	 * \brief sauver les informations des particules dans le fichier 
