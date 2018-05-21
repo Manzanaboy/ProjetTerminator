@@ -681,11 +681,11 @@ void particule_reach (PARTICULE*courant,double*p_posx,double*p_posy)
 
 float particule_energie()
 {
-	//~ float energie_particule=0;	
-	//~ PARTICULE* courant_part=NULL;
-	//~ courant_part = tete_liste_part;
+	float energie_particule=0;	
+	PARTICULE* courant_part=NULL;
+	courant_part = tete_liste_part;
 	
-	//~ return energie_decontamine/energie_initiale *100;
+	return energie_decontamine/energie_initiale *100;
 }
 
 int particule_collision(C2D rob,double *p_dist,
