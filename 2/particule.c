@@ -273,11 +273,7 @@ void part_destruction (PARTICULE *el)
 }
 void part_total_destruction()
 {
-	if(!tete_liste_part)
-	{
-		printf("problème pointeur l.%d in file %s\n",__LINE__,__FILE__);
-	}
-	else
+	if(tete_liste_part)
 	{
 		PARTICULE *part = tete_liste_part;
 		while(part->suivant != NULL)
