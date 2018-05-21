@@ -736,7 +736,7 @@ S2D particule_cible(int num, S2D cible)
 					//~ tete_liste_part = tete_liste_part->suivant;
 				//~ }
 				printf("\nparticule %d eliminee\n",courant->numero);
-				energie_decontamine += courant->en;
+				energie_decontamine += courant->energie;
 				part_destruction(courant);
 				return cible;
 			}
