@@ -435,8 +435,6 @@ void robot_nearest(int tab_part[], int nb_part)
 		if(num_bot_associe)
 		{
 			robot_ciblage(num_bot_associe,part_x,part_y,courant);
-			printf("les nouvelles assos sont \n");
-			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
 		}
 		if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
 		{
@@ -593,8 +591,6 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	{
 		if(((*courant)->numero)>=2)
 		{
-			printf("la cible du robot %d est %f %f\n",
-			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
 			*courant = (*courant)->suivant;
 			*p_particule_elimine=robot_part_elimine((*courant)->corps,
 													(*courant)->cible);
@@ -704,7 +700,6 @@ int robot_deplacer()
 			{
 				break;
 			}
-			printf("testt%s\n",__func__);
 		}
 	}
 	return reponse;

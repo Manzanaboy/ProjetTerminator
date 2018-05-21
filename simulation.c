@@ -59,7 +59,6 @@ void simulation_mja()
 	
 	robot_assoc_robot_part();
 	simulation_dessiner();
-	printf("mise à jour !!!!! %s\n",__FILE__);
 }
 
 void simulation_detruire()
