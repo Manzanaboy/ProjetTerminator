@@ -82,6 +82,7 @@ void simulation_decomposition()
 	{
 		simulation_mja();
 	}
+	//~ liste_afficher();
 }
 
 int simulation_particules()
