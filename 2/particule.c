@@ -37,8 +37,8 @@ enum Etat_Lect {RIEN, VALEURS};
 
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
-static float energie_initiale=0;
-static last_numero_part=0;
+static float energie_decontamine=0;
+static int last_numero_part=0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -99,6 +99,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
+		energie_decontamine=0;
 		while(ligne!=ligne_depart)
 		{
 			fgets(tab,80,fichier);
@@ -237,11 +238,23 @@ void part_destruction (PARTICULE *el)
 	{
 		if (part == el)
 		{
-			tete_liste_part= part->suivant;
+			if(part->suivant)
+			{
+				tete_liste_part= part->suivant;
+				printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
+				NB_TOT_PART--;
+			}
+			else
+			{
+				tete_liste_part=NULL;
+				printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
+				NB_TOT_PART--;
+			}
 			free(part);
 		}
 		else
 		{
+			printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
 			PARTICULE *test_part = tete_liste_part;
 			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
@@ -456,7 +469,7 @@ void particule_decomposition(PARTICULE* part)
 	nb++;
 	part_change_part(part4, part,cadran,nb);
 	
-	last_numero_part+=4;
+	last_numero_part+=3;
 	part_destruction(part);
 	
 
@@ -515,21 +528,22 @@ int part_decomposition_start()
 		}
 	}
 	NB_TOT_PART=NB_TOT_PART+ nb_decomp*4;
-	//liste_show();
-	int j=0;
-	courant = tete_liste_part;
-	for(j=0;j<NB_TOT_PART;j++)
-	{
-		printf("numerla de la particule %d fonc %s\n",courant->numero,__func__);
-		if(courant->suivant)
-		{
-			courant = courant->suivant;
-		}
-		else
-		{
-			break;
-		}
-	}
+	liste_show();
+	//~ int j=0;
+	//~ courant = tete_liste_part;
+	//~ for(j=0;j<NB_TOT_PART;j++)
+	//~ {
+		//~ printf("numerla de la particule %d fonc %s\n",courant->numero,__func__);
+		//~ if(courant->suivant)
+		//~ {
+			//~ courant = courant->suivant;
+		//~ }
+		//~ else
+		//~ {
+			//~ break;
+		//~ }
+	//~ }
+	printf("\n");
 	return sucess;
 }
 
@@ -662,20 +676,11 @@ void particule_reach (PARTICULE*courant,double*p_posx,double*p_posy)
 
 float particule_energie()
 {
-	float energie_particule=0;	
-	PARTICULE* courant_part=NULL;
-	courant_part = tete_liste_part;
+	//~ float energie_particule=0;	
+	//~ PARTICULE* courant_part=NULL;
+	//~ courant_part = tete_liste_part;
 	
-	while(courant_part)
-	{
-			energie_particule += tete_liste_part->energie;
-//			printf("----------- Energie part: %f -----------\n", tete_liste_part->energie);
-			courant_part = courant_part->suivant;
-	}
-
-//	printf("------------------ ENERGIE TOTALE INITIALE %f ------------------\n ------------------ ENERGIE ACTUEL %f ------------------\n", energie_initiale, (energie_initiale-energie_particule)/energie_initiale *100 );
-
-	return (energie_initiale-energie_particule)/energie_initiale *100;
+	//~ return energie_decontamine/energie_initiale *100;
 }
 
 int particule_collision(C2D rob,double *p_dist,
@@ -715,12 +720,12 @@ S2D particule_cible(int num, S2D cible)
 	{
 		if (courant->numero == num)
 		{
-			if (courant->corps.x == cible.x && courant->corps.y == cible.y)
+			if(courant->corps.x==cible.x && courant->corps.y == cible.y)
 			{
-				if (courant == tete_liste_part && tete_liste_part->suivant)
-				{
-					tete_liste_part = tete_liste_part->suivant;
-				}
+				//~ if(courant==tete_liste_part && tete_liste_part->suivant)
+				//~ {
+					//~ tete_liste_part = tete_liste_part->suivant;
+				//~ }
 				printf("\nparticule %d eliminee\n",courant->numero);
 				part_destruction(courant);
 				return cible;
