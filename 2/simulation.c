@@ -85,3 +85,17 @@ void simulation_decomposition()
 		simulation_mja();
 	}
 }
+
+int simulation_particules()
+{
+	PARTICULE*courant=NULL;
+	courant=particule_acces_tete();
+	if(courant)
+	{
+		return 1;
+	}
+	else 
+	{
+		return 0;
+	}
+}
