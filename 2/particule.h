@@ -186,7 +186,7 @@
 	*		et energie_initiale
 	**/
 	float particule_energie();
-/**
+	/**
 	 * \brief sauver les informations des particules dans le fichier 
 	 * 		donné en argument
 	 * \param fichier_save	nom du fichier ou l'on sauve les 
