@@ -156,37 +156,75 @@
 	 */
 	PARTICULE* particule_acces_tete();
 	
+	/**
+	 * \brief trier un tableau avec les numéros des particules, selon 
+	 * 			leur rayon dans l'ordre décroissant
+	 * \param compteur_deja-lue	 numero de particule dans
+	 * 							 le tableau une fois trié
+	 * \param deja_lues 	tableau contenant tous les numéros des
+	 * 						particules triéesselon leur rayon
+	 */
 	double particule_tri(int compteur_deja_lue,int deja_lues[]);
 	
+	/**
+	 * \brief renvoie le nombre total de particules
+	 */
 	int particule_nombre_total();
 	
-	
+	/**
+	 * \brief décompose une particule en 4
+	 * \param part	 adresse de la particule à decomposer
+	 */
 	void particule_decomposition(PARTICULE* part);
 	
 	PARTICULE* part_init(int etat);
 	
+	/**
+	 * \brief Créer une nouvelle particule à partir de la 
+	 * 			décomposition d'une particule
+	 * \param part_change	adresse de l'ancienne particule
+	 * \param part_decomp	adresse de la nouvelle particule
+	 * \param nb_part 		indique de quelle nouvelle particule 
+	 * 						on traite : 1ère, 2ème,..
+	 * \param num			numéro de la nouvelle particule
+	 */
 	void part_change_part(PARTICULE* part_change,
 						PARTICULE* part_decomp, int nb_part,int num);
-	
+	/**
+	 * \brief Lancer boucle de décomposition, si la condition est 
+	 * 		  remplie, décomposer la particule en question
+	 */
 	int part_decomposition_start();
 	
 	PARTICULE* init(int etat);
-	
+	/**
+	 * \brief trouver la particule correspondante à un numéro donnée
+	 * \param num_part	numéro de la paricule qu'on cherche
+	 */
 	PARTICULE* particule_correspondante (int num_part);
 	
+	/**
+	 * \brief indique si la paricule existe encore
+	 * \param coord		coordonnées du centre d'une particule
+	 */
 	int particule_existe(S2D coord);
 	
+	/**
+	 * \brief indique si la paricule a atteint le nombre de robots 
+	 * 		  maximum qui peuvent aller vers elle
+	 * \param courant	adresse de la particule
+	 */
 	int particule_verify_nb_bot(PARTICULE*courant);
 	
 	void particule_ajout_robot(PARTICULE*courant);
 	
 	void particule_reach(PARTICULE*courant,double*p_posx,double*p_posy);
-	/** brief calcul et renvoie le taux de décontamination en 
+	/** \brief calcul et renvoie le taux de décontamination en 
 	*		fonction des variables statics energie_decontamine
 	*		et energie_initiale
 	**/
 	float particule_energie();
-	/**
+/**
 	 * \brief sauver les informations des particules dans le fichier 
 	 * 		donné en argument
 	 * \param fichier_save	nom du fichier ou l'on sauve les 
@@ -204,7 +242,8 @@
 	 * \param corps_part	permet de renvoyer le centre de la particule
 	 * 		touchée
 	 */
-	int particule_collision(C2D rob,double *p_dist, double *p_rayon, S2D *corps_part);
+	int particule_collision(C2D rob,double *p_dist, double *p_rayon,
+							S2D *corps_part);
 
 	/**
 	 * \brief	compare le numero de la particule et le corps de la 
@@ -214,5 +253,9 @@
 	 * \param cible	coordonnées de la cible du robot
 	 */
 	S2D particule_cible(int num, S2D cible);
+	
+	PARTICULE* particule_donner_acces(S2D coord);
+	
+	void particule_less_robot(PARTICULE*courant);
 	
 #endif

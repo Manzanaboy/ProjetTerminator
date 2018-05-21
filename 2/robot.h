@@ -136,8 +136,16 @@
 	 */
 	void liste_afficher ();
 	
+	/**
+	 * \brief Se charge de l'algorithme de coordination
+	 */
 	void robot_assoc_robot_part();
 	
+	/**
+	 * \brief sauvegarder l'état acutel des robots de la simulation
+	 * \param fichier save		adresse d'un fichier, dans lequel on va
+	 * 							écrire
+	 */
 	void robot_nearest(int tab_part[],int nb_part);
 	/**
 	 * \brief sauvegarde les données des robots dans le fichier 
@@ -147,76 +155,70 @@
 	 */
 	int robot_sauver(char* fichier_save);
 	
+	/**
+	 * \brief Pour une particule données, calcule le temps de trajet 
+	 * 		  minimum pour que chaque robot atteignent cette particule,
+	 * 		  et renvoi le numéro du robot qui l'atteint pour un temps 
+	 * 		  minimal.
+	 * \param part_x	coordonées selon X du centre la particule
+	 *  \param part_y	coordonées selon Y du centre la particule
+	 */
 	int robot_calcul_temps(double part_x, double part_y);
 	
+	/**
+	 * \brief	Donner une particule comme cible d'un robot
+	 * \param num_bot	numéro de robot auquel on associe la particule
+	 * \param part_x	coordonées selon X du centre la particule
+	 * \param part_y	coordonées selon Y du centre la particule
+	 * \param courant	adresse de la particule que l'on donne comme 
+	 * 					cible. 
+	 */
 	void robot_ciblage(int num_bot,double part_x,double part_y,
 							PARTICULE*courant);
 	
+	/**
+	 * \brief	Vérifier si la particule cilbe
+	 * 			 d'un robot existe toujours
+	 * \param corps		centre du robot
+	 * \param cible		centre de la particule
+	 */
 	int robot_part_elimine(S2D corps,S2D cible);
 	
+	/**
+	 * \brief	calculer l'écart angulaire 
+	 * 			entre le robot et la particule
+	 * \param corps		centre du robot
+	 * \param cible		centre de la particule
+	 */
 	double robot_calcul_delta_angle(S2D corps,S2D cible);
 	
+	/**
+	 * \brief	lors de la coordination, cete fonction sert à ignorer
+	 * 			certains robots, selon certains critères
+	 * \param courant	adresse d'un pointeur sur le robot courant
+	 * \param p_particule_elimine	pointeur sur l'état qui évalue si la 
+	 * 								la particule a étée élminée	
+	 * \param p_arret	pointeur sur l'état qui évalue s'il faut arrêter
+	 * 					la recherche.
+	 * \param p_suite	pointeur sur l'état qui évalue s'il faut passer 
+	 * 					au robot suivant. 
+	 */
 	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite);
 	/**
 	 * \brief 
 	 */
 
-	/**
-	 * \brief gere le deplacment des robots et l'elimination des 
-	 * 		particules. Renvoie vraie s'il y a eu elimination.
-	 */
-
 	int robot_deplacer();
 	
-	/**
-	 * \brief 	verifie si la position de la souris touche un robot
-	 * 		et selectionne ce robot.
-	 * \param x La position selon x de la souris
-	 * \param y La position selon y de la souris
-	 */
 	int robot_selection(float x, float y);
 
-	/**
-	 * \brief	verifie que tous les robots soient deselectionnés
-	 * 		et les deselectionne dans le cas contraire.
-	 */
 	void robot_deselection();
-/**
-	 * \brief 	permet de passer les vitesses donnés en mode manuel
-	 * 		pour les fonctions de deplacement des robots.
-	 * \param rot	vit de rotation donnée
-	 * \param tran	vit de translation donnée
-	 */
+
 	void robot_vitesse(float rot, float tran);
 
-	/**
-	 * \brief 	assure la rotation du robot donné en argument
-	 * \param courant	L'addresse du robot
-	 */
 	double robot_rotaion(ROBOT *courant);
-	
-	/**
-	 * \brief 	assure la translation d'un robot en verifiant les
-	 * 		collisions avec les autres robots et particules. Renvoie 
-	 * 		le numero de la particule touchee s'il y a eu collision.
-	 * \param courant	l'addresse du robot
-	 * \param tran		la distance du deplacement pour pouvoir verifier
-	 * 		si le robot est en contacte avec une particule.
-	 */
 	int robot_translation(ROBOT *courant,double *tran);
-	
-	/**
-	 * \brief Verifie si le deplacement souhaité du robot ne provoque 
-	 * 		pas de collision avec d'autres robots. Si c'est le cas
-	 * 		renvoie la distance de deplacement maximum autorisée.
-	 * \param holo	le cercle représentant le robot à déplacer
-	 * \param alpha	l'angle du robot à déplacer
-	 * \param num	le numero du robot à déplacer pour na pas considérer
-	 * 		le cas de collision contre lui-même
-	 * \param v_tran vitesse de translation souhaité
-	 * \param toucher	int pour verifier s'il y a eu collision
-	 */
 	double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher);
 
 #endif
