@@ -255,6 +255,7 @@ void part_destruction (PARTICULE *el)
 			free(part);
 		}
 		else
+			{
 			PARTICULE *test_part = tete_liste_part;
 			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
