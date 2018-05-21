@@ -409,6 +409,21 @@ void robot_assoc_robot_part()
 //		printf("numero de la prticule %d\n",tab_part[compteur]);
 	}
 	robot_nearest(tab_part,nb_particules);
+	
+	int i=0;
+	ROBOT*courant=tete_liste_bot;
+	for(i=1;i<=NB_TOT_BOT;i++)
+	{
+		printf("les cibles de chaque robots sont %f %f\n",courant->cible.x,courant->cible.y);
+		if(courant->suivant)
+		{
+			courant =courant->suivant;
+		}
+		else
+		{
+			break;
+		}
+	}
 }
 
 void robot_nearest(int tab_part[], int nb_part)
@@ -422,7 +437,9 @@ void robot_nearest(int tab_part[], int nb_part)
 	for(compteur=0;compteur<nb_part;compteur++)
 	{
 		courant = particule_correspondante(tab_part[compteur]);
-		max_robot_part= particule_verify_nb_bot(courant);
+		if(courant)
+		{
+			max_robot_part= particule_verify_nb_bot(courant);
 		if(max_robot_part)
 		{
 			continue;
@@ -432,13 +449,15 @@ void robot_nearest(int tab_part[], int nb_part)
 		if(num_bot_associe)
 		{
 			robot_ciblage(num_bot_associe,part_x,part_y,courant);
-//			printf("les nouvelles assos sont \n");
-//			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
+		//~ printf("les nouvelles assos sont \n");
+		//~ printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
 		}
 		if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
 		{
 			break;
 		}
+		}
+		
 	}
 }
 int robot_calcul_temps(double part_x, double part_y)
@@ -585,8 +604,8 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	{
 		if(((*courant)->numero)>=2)
 		{
-//			printf("la cible du robot %d est %f %f\n",
-//			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
+			printf("la cible du robot %d est %f %f\n",
+			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
 			*courant = (*courant)->suivant;
 			*p_particule_elimine=robot_part_elimine((*courant)->corps,
 													(*courant)->cible);
@@ -655,7 +674,10 @@ int robot_deplacer()
 		printf("pas de robots a sauver\n");
 		ok = 0;
 	}
-	courant = tete_liste_bot;
+	else
+	{
+		courant = tete_liste_bot;
+	}
 	if(ok)
 	{
 		while(courant)
@@ -677,6 +699,7 @@ int robot_deplacer()
 			courant = courant->suivant;
 		}
 	}
+	printf("reponse est %d dans f.%s\n",reponse,__func__);
 	return reponse;
 }
 
