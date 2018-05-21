@@ -62,8 +62,7 @@ void simulation_mja()
 
 void simulation_detruire()
 {
-	robot_assoc_robot_part();
-	simulation_mja();
+	//~ simulation_mja();
 	bot_total_destruction();
 	part_total_destruction();
 }
