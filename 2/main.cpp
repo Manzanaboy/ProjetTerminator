@@ -159,7 +159,7 @@ void control_cb( int control )
 			glutPostRedisplay();
 			break;	
 		case (SIMSTART_ID):
-			if (etatsim==0)
+			if (etatsim==0&&(simulation_particules))
 			{
 				buttonstart->set_name("Stop");
 				etatsim = 1;
@@ -171,7 +171,7 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
-			if(!(etatsim))
+			if((!(etatsim))&&(simulation_particules()))
 			{
 				record();
 				simulation_decomposition();
@@ -312,7 +312,7 @@ void dessine_tout()
 
 void update(void)
 {
-	if(etatsim)
+	if(etatsim&&(simulation_particules()))
 	{
 		simulation_decomposition();
 		if (robot_deplacer())
