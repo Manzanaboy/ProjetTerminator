@@ -591,8 +591,6 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	{
 		if(((*courant)->numero)>=2)
 		{
-			printf("la cible du robot %d est %f %f\n",
-			(*courant)->numero,(*courant)->cible.x,(*courant)->cible.y);
 			*courant = (*courant)->suivant;
 			*p_particule_elimine=robot_part_elimine((*courant)->corps,
 													(*courant)->cible);
