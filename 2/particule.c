@@ -579,6 +579,11 @@ PARTICULE* particule_correspondante (int num_part)
 		cherchee = tete_liste_part;
 		while((cherchee->numero)!= num_part)
 		{
+			if(cherchee->suivant == NULL)
+			{
+				printf("particule non trouvée \n\n"); // return NULL si pas trouvé particule
+				break;
+			}
 			cherchee=cherchee->suivant;
 		}
 		return cherchee;
