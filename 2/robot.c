@@ -466,6 +466,7 @@ int robot_calcul_temps(double part_x, double part_y)
 		{
 			robot_next_part(&courant,p_particule_elimine,
 								p_arret,p_suite);
+			//~ printf("arret est %d\n", arret);
 			if(!suite)
 			{
 				suite=ON;
@@ -528,13 +529,13 @@ int robot_part_elimine(S2D corps,S2D cible)
 	{
 		if(particule_existe(cible))
 		{
-			printf("ta cible n'existe plus\n");
+			//~ printf("ta cible n'existe plus\n");
 			return 0;
 			
 		}
 		else
 		{
-			printf("ta cible existe \n");
+			//~ printf("ta cible existe \n");
 			return 1;
 			
 		}

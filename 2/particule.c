@@ -382,7 +382,6 @@ PARTICULE* particule_acces_tete()
 	}
 	else
 	{
-		printf("problème accès a la tete des part l.%d \n", __LINE__);
 		return NULL;
 	}
 }
@@ -532,9 +531,9 @@ int part_decomposition_start()
 		}
 	}
 	NB_TOT_PART=NB_TOT_PART+ nb_decomp*4;
-	liste_show();
-	printf("non de part totale est %d\n", NB_TOT_PART);
-	printf("last numero part est %d\n",last_numero_part);
+	//~ liste_show();
+	//~ printf("non de part totale est %d\n", NB_TOT_PART);
+	//~ printf("last numero part est %d\n",last_numero_part);
 	return sucess;
 }
 
