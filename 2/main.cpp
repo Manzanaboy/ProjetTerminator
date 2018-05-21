@@ -39,6 +39,8 @@ void sauver(char* fichier_open, char* fichier_save);
 void clavier(int key,int x,int y);
 void manuel(int bouton, int etat, int x, int y);
 void record_fichier();
+void record();
+
 
 #define LG_TEST 100
 #define NO_RETURN_ID 100
@@ -87,18 +89,7 @@ namespace
 		FILE *open_file=NULL, *save_file=NULL, *record_file=NULL;
 	}
 	
-void record()
-{
-	if (etat_lecture == LU)
-	{
-		rec_turn++;
-		sprintf(turn_text,"turn %d",rec_turn);
-		RecTurn->set_text(turn_text);
-		sprintf(taux_text, "Rate %.4lf", taux_decontamination);
-		RecRate->set_text(taux_text);
-		record_fichier();
-	}
-}
+
 	
 int main(int argc, char* argv[])
 {
@@ -148,6 +139,7 @@ void control_cb( int control )
 			break;	
 		case (EDITTEXTO_ID):
 			remove("out.dat");
+			taux_decontamination=0;
 			if (fopen(OpenText->get_text(),"r") == NULL)
 			{
 				error_file_missing(OpenText->get_text());
@@ -186,17 +178,17 @@ void control_cb( int control )
 					simulation_mja();
 			}
 			break;
-		case (CHECKREC_ID):
-			if(reccheck->get_int_val())
-			{
-				sprintf(taux_text,"Rate %.4f",energie_initiale);
-				RecRate->set_text(taux_text);
-			}
-			else
-			{
-				RecRate->set_text("rate off");
-			}
-			break;
+// 		case (CHECKREC_ID):
+// 			if(reccheck->get_int_val())
+// 			{
+// 				sprintf(taux_text,"Rate %.4f",energie_initiale);
+// 				RecRate->set_text(taux_text);
+// 			}
+// 			else
+// 			{
+// 				RecRate->set_text("rate off");
+// 			}
+// 			break;
 		case (RADIOBUTTONCONT_ID):
 			if(contradio->get_int_val())
 			{
@@ -400,8 +392,8 @@ void creer_boite_dialog()
 	GLUI_Panel *record_panel = glui->add_panel((char*) "Recording");
 	reccheck = glui->add_checkbox_to_panel(record_panel,(char*)"record",
 											NULL,CHECKREC_ID, control_cb);
-	RecRate = glui->add_statictext_to_panel(record_panel,"rate off");
-	RecTurn = glui->add_statictext_to_panel(record_panel,"turn off");
+	RecRate = glui->add_statictext_to_panel(record_panel,"rate 0");
+	RecTurn = glui->add_statictext_to_panel(record_panel,"turn 0");
 	glui->add_column(true);
 	//control mode
 	GLUI_Panel *control_panel = glui->add_panel((char*) "Control mode");
@@ -440,21 +432,29 @@ void dessine_page_blanche()
 
 void record_fichier()
 {
-	
-//	printf("Recording in record_fichier\n");
-
 	taux_decontamination=particule_energie();
-
-//	printf("taux_decontamination2 %lf\n", taux_decontamination);
-
-	if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+	if(reccheck->get_int_val())
 	{
-		//printf("Creation fichier out.dat\n");
-		record_file=fopen("out.dat", "a");
+		if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+		{
+			record_file=fopen("out.dat", "a");
+		}
+		fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
+
+		fclose(record_file);
 	}
-//	printf("taux_decontamination1 %lf\n", taux_decontamination);
-	fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
 
-	fclose(record_file);
+}
 
+void record()
+{
+	if (etat_lecture == LU)
+	{
+		rec_turn++;
+		sprintf(turn_text,"turn %d",rec_turn);
+		RecTurn->set_text(turn_text);
+		sprintf(taux_text, "Rate %.3lf", taux_decontamination);
+		RecRate->set_text(taux_text);
+		record_fichier();
+	}
 }
