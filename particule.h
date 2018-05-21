@@ -78,6 +78,7 @@
 	 */
 	void analyse_nbrpart(int nbpart_att,int nbpart_recu,
 						unsigned int ligne,char*mode_lecture, int*p_ok);
+	
 	/**
 	 * \brief afficher dans le terminal les données des particules.
 	 * \param p_tete 	adresse du pointeur qui pointe sur 
@@ -176,6 +177,8 @@
 	 */
 	void particule_decomposition(PARTICULE* part);
 	
+	PARTICULE* part_init(int etat);
+	
 	/**
 	 * \brief Créer une nouvelle particule à partir de la 
 	 * 			décomposition d'une particule
@@ -187,7 +190,6 @@
 	 */
 	void part_change_part(PARTICULE* part_change,
 						PARTICULE* part_decomp, int nb_part,int num);
-	
 	/**
 	 * \brief Lancer boucle de décomposition, si la condition est 
 	 * 		  remplie, décomposer la particule en question
@@ -195,14 +197,6 @@
 	int part_decomposition_start();
 	
 	PARTICULE* init(int etat);
-	
-	/**
-	 * \brief sauvegarder l'état acutel des particules de la simulation
-	 * \param fichier save		adresse d'un fichier, dans lequel on va
-	 * 							écrire
-	 */
-	void particule_sauver(char* fichier_save);
-	
 	/**
 	 * \brief trouver la particule correspondante à un numéro donnée
 	 * \param num_part	numéro de la paricule qu'on cherche
@@ -222,23 +216,46 @@
 	 */
 	int particule_verify_nb_bot(PARTICULE*courant);
 	
-	/**
-	 * \brief	augmenter le nombre de robots qui pointent vers une
-	 * 			partciule
-	 * \param courant	adresse de la particule
-	 */
 	void particule_ajout_robot(PARTICULE*courant);
 	
-	/**
-	 * \brief	avoir accès aux positions X et Y d'une particule
-	 * \param courant	adresse de la particule
-	 * \param p_posx 	pointeur qui sert à avoir accès à la position
-	 * 					selon l'axe X du centre de la particule
-	 * \param p_posy 	pointeur qui sert à avoir accès à la position
-	 * 					selon l'axe Y du centre de la particule
-	 */
 	void particule_reach(PARTICULE*courant,double*p_posx,double*p_posy);
-	
+	/** \brief calcul et renvoie le taux de décontamination en 
+	*		fonction des variables statics energie_decontamine
+	*		et energie_initiale
+	**/
 	float particule_energie();
+/**
+	 * \brief sauver les informations des particules dans le fichier 
+	 * 		donné en argument
+	 * \param fichier_save	nom du fichier ou l'on sauve les 
+	 * 		  informations
+	 */
+	void particule_sauver(char* fichier_save);
+	/**
+	 * \brief	verifie si le robot touche une particule dans son
+	 * 		deplacement et renvoie le numero de cette particule.
+	 * \param rob	cercle representant le robot
+	 * \param p_dist	permet de renvoier la distance entre les centres
+	 * 		du robot et de la particule touchée
+	 * \param p_rayon	permet de renvoyer le rayon de la particule 
+	 * 		touchée
+	 * \param corps_part	permet de renvoyer le centre de la particule
+	 * 		touchée
+	 */
+	int particule_collision(C2D rob,double *p_dist, double *p_rayon,
+							S2D *corps_part);
+
+	/**
+	 * \brief	compare le numero de la particule et le corps de la 
+	 * 		cible, s'il correspondent à la même particule elle est 
+	 * 		éliminée, sinon le centre de la particule num est renvoyé
+	 * \param num	numéro de la particule touchée
+	 * \param cible	coordonnées de la cible du robot
+	 */
+	S2D particule_cible(int num, S2D cible);
+	
+	PARTICULE* particule_donner_acces(S2D coord);
+	
+	void particule_less_robot(PARTICULE*courant);
 	
 #endif

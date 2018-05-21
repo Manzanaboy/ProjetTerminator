@@ -141,20 +141,17 @@
 	 */
 	void robot_assoc_robot_part();
 	
-	
-	/**
-	 * \brief recherche le robot le plus proche pour 
-	 * 			une particule donnée
-	 * \param tab_part 	tableau avec les numéros des particules, 
-	 * 			classées dans l'ordre décroissant, selon leur rayon
-	 * \param nombre de particules total
-	 */
-	void robot_nearest(int tab_part[],int nb_part);
-	
 	/**
 	 * \brief sauvegarder l'état acutel des robots de la simulation
 	 * \param fichier save		adresse d'un fichier, dans lequel on va
 	 * 							écrire
+	 */
+	void robot_nearest(int tab_part[],int nb_part);
+	/**
+	 * \brief sauvegarde les données des robots dans le fichier 
+	 * 		indiqué en parametre.
+	 * \param fichier_save	le nom du fichier ou l'on sauvegarde les
+	 * 			donnes.
 	 */
 	int robot_sauver(char* fichier_save);
 	
@@ -208,13 +205,20 @@
 	 */
 	void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite);
+	/**
+	 * \brief 
+	 */
 
-	void robot_deplacer();
+	int robot_deplacer();
 	
 	int robot_selection(float x, float y);
 
 	void robot_deselection();
 
-	void robot_vitesses(float rot, float tran);
+	void robot_vitesse(float rot, float tran);
+
+	double robot_rotaion(ROBOT *courant);
+	int robot_translation(ROBOT *courant,double *tran);
+	double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher);
 
 #endif

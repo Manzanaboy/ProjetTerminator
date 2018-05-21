@@ -51,3 +51,5 @@ void simulation_dessiner();
  * \brief  Se charger de la decompostion des particules
  */
 void simulation_decomposition();
+
+int simulation_particules();

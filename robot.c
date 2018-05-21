@@ -15,6 +15,7 @@
  \version 3.01
  \date 21 avril 2018
  */
+ 
 #include "utilitaire.h"
 #include "error.h"
 #include "robot.h"
@@ -33,7 +34,8 @@ enum State{OFF,ON};
 #define ESP_BOT_BOT 5
 #define TRES_GRAND 100000
 static int NB_TOT_BOT = 0;
-static float vit_rot, vit_tran;
+static float vit_rot=0;
+static float vit_tran=0;
 
 static ROBOT* tete_liste_bot=NULL;
 
@@ -45,6 +47,7 @@ static ROBOT* tete_liste_bot=NULL;
 	* angle que fait l'axe du robot avec l'horizontale
 	* pointeur sur l'adresse du prochain robot dans la liste
  */ 
+
 struct robot
 {
 	int numero;
@@ -234,6 +237,9 @@ void liste_afficher ()
 			printf("%f ", voiture->corps.x);
 			printf("%f \n", voiture->corps.y);
 			printf("%f \n", voiture->angle);
+			printf("cible est :");
+			printf("%f ", voiture->cible.x);
+			printf("%f \n", voiture->cible.y);
 			voiture = voiture->suivant;
 		}
 		while((voiture)!=NULL);
@@ -360,7 +366,7 @@ void robot_get_values(ROBOT*courant,double*p_pos_x,double*p_pos_y,
 int robot_sauver(char* fichier_save)
 {
 	ROBOT *courant_robot=NULL;
-	int i=0,ok=1;
+	int ok=1;
 	FILE * p_fichier;
 	if(!(tete_liste_bot))
 	{
@@ -402,8 +408,8 @@ void robot_assoc_robot_part()
 	for(compteur=0;compteur<nb_particules;compteur++)
 	{
 		rayon=particule_tri(compteur,tab_part);
-		printf("rayon est %f",rayon);
-		printf("numero de la prticule %d\n",tab_part[compteur]);
+//		printf("rayon est %f",rayon);
+//		printf("numero de la prticule %d\n",tab_part[compteur]);
 	}
 	robot_nearest(tab_part,nb_particules);
 }
@@ -419,25 +425,22 @@ void robot_nearest(int tab_part[], int nb_part)
 	for(compteur=0;compteur<nb_part;compteur++)
 	{
 		courant = particule_correspondante(tab_part[compteur]);
-		if(courant)
+		max_robot_part= particule_verify_nb_bot(courant);
+		if(max_robot_part)
 		{
-			max_robot_part= particule_verify_nb_bot(courant);
-			if(max_robot_part)
-			{
-				continue;
-			}
-			particule_reach(courant,p_part_x,p_part_y);
-			num_bot_associe=robot_calcul_temps(part_x,part_y);
-			if(num_bot_associe)
-			{
-				robot_ciblage(num_bot_associe,part_x,part_y,courant);
-				printf("les nouvelles assos sont \n");
-				printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
-			}
-			if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
-			{
-				break;
-			}
+			continue;
+		}
+		particule_reach(courant,p_part_x,p_part_y);
+		num_bot_associe=robot_calcul_temps(part_x,part_y);
+		if(num_bot_associe)
+		{
+			robot_ciblage(num_bot_associe,part_x,part_y,courant);
+			printf("les nouvelles assos sont \n");
+			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
+		}
+		if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
+		{
+			break;
 		}
 	}
 }
@@ -463,6 +466,7 @@ int robot_calcul_temps(double part_x, double part_y)
 		{
 			robot_next_part(&courant,p_particule_elimine,
 								p_arret,p_suite);
+			//~ printf("arret est %d\n", arret);
 			if(!suite)
 			{
 				suite=ON;
@@ -525,11 +529,15 @@ int robot_part_elimine(S2D corps,S2D cible)
 	{
 		if(particule_existe(cible))
 		{
+			//~ printf("ta cible n'existe plus\n");
 			return 0;
+			
 		}
 		else
 		{
+			//~ printf("ta cible existe \n");
 			return 1;
+			
 		}
 	}
 	return 0;
@@ -575,6 +583,7 @@ double robot_calcul_delta_angle(S2D corps,S2D cible)
 	util_range_angle(p_angle_alignement);
 	return angle_alignement;
 }
+
 void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 						int*p_arret,int*p_suite)
 {
@@ -599,75 +608,6 @@ void robot_next_part(ROBOT**courant,int*p_particule_elimine,
 	}
 }
 
-void robot_deplacer()
-{
-	ROBOT * courant = NULL;
-	int ok=1;
-	if(!(tete_liste_bot))
-	{
-		printf("pas de robots a sauver\n");
-		ok = 0;
-		
-	}
-	courant = tete_liste_bot;
-	if(ok)
-	{
-		while(courant)
-		{
-			if(courant->select) // Si un robot est selectionné
-			{
-				courant->angle += vit_rot * DELTA_T;					//tourne angle fournit par utilisateur
-				courant->corps=util_deplacement(courant->corps, courant->angle, vit_tran*DELTA_T);
-			}
-
-			else
-			{
-				double alpha=0, dist=0, v_rotation=0, v_translation=0;
-				double dist_contact=R_ROBOT;//=R_ROBOT + part->rayon;
-				dist=util_distance(courant->corps, courant->cible);
-
-				if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
-				{
-					//ca tourne si pas aligné
-
-					if( util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha) ) //inutile car tjrs vrai
-					{
-							if(fabs(alpha/DELTA_T)<VROT_MAX) 
-								v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
-
-							else
-								v_rotation=VROT_MAX; 				//tourne dist max
-								
-								if(alpha > 0) 
-									courant->angle+= v_rotation*DELTA_T;
-								else 
-									courant->angle-= v_rotation*DELTA_T; 
-
-					}
-				}
-		
-				if(alpha > -M_PI/4 && alpha < M_PI /4 ) //tourne avant de bouger
-				{
-					if(fabs(dist) > dist_contact+EPSIL_ZERO) // avance // ??? Tolérance?? 
-					{	
-						if(fabs(dist-dist_contact)/DELTA_T < VTRAN_MAX)
-							v_translation=(dist-dist_contact)/DELTA_T;
-
-						else if(courant->select)
-							v_translation=vit_tran;
-						
-						else
-							v_translation=VTRAN_MAX;
-
-						courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
-				
-					}
-				}
-			}
-			courant = courant->suivant;
-		}
-	}
-}
 
 int robot_selection(float x, float y)
 {
@@ -711,8 +651,185 @@ void robot_deselection()
 	}
 }
 
-void robot_vitesses(float rot, float tran)
+int robot_deplacer()
 {
-	vit_rot = rot;
-	vit_tran = tran;
+	ROBOT *courant = NULL;
+	PARTICULE * old_part = NULL;
+	S2D part;
+	int ok=1, num_part, reponse=0;
+	double deplacement, *p_dep = &deplacement;
+	bool decalage;
+	if(!(tete_liste_bot))
+	{
+		printf("pas de robots a sauver\n");
+		ok = 0;
+	}
+	courant = tete_liste_bot;
+	if(ok)
+	{
+		while(courant)
+		{
+			double alpha=0;
+			alpha = robot_rotaion(courant);
+			if (courant->select)
++					robot_translation(courant, p_dep);
+			if(alpha > (-M_PI/4) && alpha < (M_PI/4)) //tourne avant de bouger
+			{
+				num_part = robot_translation(courant, p_dep);
+				if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
+				{
+					part = particule_cible(num_part,courant->cible);
+					if (part.x == courant->cible.x && 
+								part.y == courant->cible.y)
+						{
+							reponse = 1;
+							courant->cible = courant->corps;
+							robot_assoc_robot_part();
+						}
+					else
+						old_part = 
+						particule_donner_acces(courant->cible);
+						if(old_part)
+						{
+							particule_less_robot(old_part);
+						}
+						courant->cible = part;
+				}
+			}
+			if(courant->suivant)
+			{
+				courant = courant->suivant;
+			}
+			else
+			{
+				break;
+			}
+			printf("testt%s\n",__func__);
+		}
+	}
+	return reponse;
+}
+
+void robot_vitesse(float rot, float tran)
+{
+	vit_rot=rot;
+	vit_tran=tran;
+}
+
+double robot_rotaion(ROBOT *courant)
+{
+	double alpha = 0, v_rotation;
+	if (courant->select)
+		{
+			v_rotation = vit_rot;
+			courant->angle+= v_rotation*DELTA_T;
+			util_ecart_angle(courant->corps, courant->angle,
+							courant->cible, &alpha);
+			return alpha;
+		}
+	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+	{
+		//ca tourne si pas aligné
+		util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha); //inutile car tjrs vrai
+		if(fabs(alpha/DELTA_T)<VROT_MAX) 
+			v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+		else
+			v_rotation=VROT_MAX; 				//tourne dist max
+		if(alpha > 0) 
+			courant->angle+= v_rotation*DELTA_T;
+		else 
+			courant->angle-= v_rotation*DELTA_T; 
+	}
+	return alpha;
+
+}
+
+int robot_translation(ROBOT *courant, double *tran)
+{
+	C2D holo;
+	S2D c_part, *p_c_part=&c_part;
+	int part, collision=0, test=0, *p_test = &test;
+	double alpha=0, v_translation=0;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new;
+	double *p_ecart = &ecart, *p_rayon=&rayon, *p_la_new =&la_new;
+	if (courant->select)
+	{
+		v_translation=vit_tran;
+	}
+	else 
+	{
+		v_translation=VTRAN_MAX;
+	}
+	holo.rayon = R_ROBOT;
+	holo.centre = courant->corps;
+	v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+	if (test)
+	{
+		v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+	}
+
+	holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+	part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
+	while (part > 0 )
+	{
+		collision = part;
+		la = v_translation;
+		lb = ecart;
+		lc = util_distance(courant->corps, c_part);
+		lb_new = rayon + R_ROBOT;
+		if (util_alignement(courant->corps, courant->angle, c_part))
+		{
+			v_translation = lc-lb_new;
+		}
+		else
+		{
+			if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+				v_translation = la_new;
+			else
+				v_translation = 0;
+		}
+		holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+		part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
+	}
+	courant->corps = courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+	*tran = v_translation*DELTA_T;
+	return collision;
+}
+
+double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher)
+{
+	ROBOT *courant;
+	C2D rob, ref;
+	rob.rayon = R_ROBOT;
+	ref.rayon = R_ROBOT;
+	ref.centre = holo.centre;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new, v_translation = v_tran;
+	double *p_ecart = &ecart, *p_la_new =&la_new;
+	if(!(tete_liste_bot))
+		return 0;
+	courant = tete_liste_bot;
+	while (courant)
+	{
+		if(num != courant->numero)
+		{
+			ref.centre = util_deplacement(holo.centre, alpha, v_translation);
+			rob.centre = courant->corps;
+			if(util_collision_cercle(ref,rob, p_ecart))
+			{
+				*toucher = 1;
+				la = v_translation;
+				lb = ecart;
+				lc = util_distance(courant->corps, rob.centre);
+				lb_new = 2*R_ROBOT;
+				if (util_inner_triangle(la, lb, lc, lb_new, p_la_new))
+					v_translation = la_new;
+				else
+					v_translation = 0;
+				ref.centre = util_deplacement(holo.centre, alpha, v_translation);
+			}
+			
+		}
+		courant = courant->suivant;
+	}
+	return v_translation;
 }

@@ -32,12 +32,14 @@ enum Etat_lecture {NB_PAR,PAR};
 enum Etat_Lect {RIEN, VALEURS};
 #define LG_FIN_LISTE 9
 #define ESP_PAR_PAR 8
-#define MAX_ROBOT_PART 1
+#define MAX_ROBOT_PART 5
 
 
 static PARTICULE* tete_liste_part=NULL;
 static int NB_TOT_PART =0;
-static float energie_initiale=0;
+static float energie_decontamine=0;
+static float energie_initiale =0;
+static int last_numero_part=0;
 
 /**
 	 numero de la particule dans l'ordre d'appartion dans le fichier
@@ -79,7 +81,7 @@ int chercheur_ligne(char* nom_fichier)
 	}
 	else 
 	{
-		printf("problème pointeur l.%d in file %s",__LINE__,__FILE__);
+	//	printf("problème pointeur l.%d in file %s",__LINE__,__FILE__);
 		fclose(fichier);
 		exit(EXIT_FAILURE);
 	}
@@ -98,6 +100,8 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	FILE * fichier =fopen(nom_fichier,"r");
 	if(fichier)
 	{
+		energie_initiale=0;
+		energie_decontamine=0;
 		while(ligne!=ligne_depart)
 		{
 			fgets(tab,80,fichier);
@@ -126,6 +130,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 						analyse_validite_part(en, ray,pos_x,pos_y,
 												mode_lecture,p_ok);
 						courant = liste_add(); 
+						energie_initiale += en;
 						courant->numero = compteur_particule++;		
 						passage_donnees(en,ray,pos_x,pos_y,courant);
 						strtod(deb, &fin); 
@@ -141,6 +146,7 @@ void lecture_particules(char* nom_fichier,char*mode_lecture,int*p_ok)
 	}
 	fclose(fichier);
 	NB_TOT_PART= nbpart_att;
+	last_numero_part=tete_liste_part->numero;
 }
 
 void analyse_validite_part(double energie, double rayon,double pos_x, 
@@ -167,7 +173,7 @@ PARTICULE * liste_add ()
 	PARTICULE *new_part=NULL;
 	if (!(new_part= (PARTICULE*) malloc(sizeof(PARTICULE))))
 	 {
-		printf("problem d'allocation dasn %s\n",__func__);
+		printf("problem d'allocation dans %s\n",__func__);
 		exit (EXIT_FAILURE);
 	}
 	new_part->suivant = tete_liste_part;
@@ -218,6 +224,7 @@ void liste_show ()
 			printf("%f \n", voiture->corps.y);
 			printf("%f \n", voiture->energie);
 			printf("%f \n", voiture->rayon);
+			printf("le robots sur elle %d\n",voiture->nb_bot_part);
 			voiture = voiture->suivant;
 		}
 		while((voiture)!=NULL);
@@ -235,11 +242,23 @@ void part_destruction (PARTICULE *el)
 	{
 		if (part == el)
 		{
-			tete_liste_part= part->suivant;
+			if(part->suivant)
+			{
+				tete_liste_part= part->suivant;
+				printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
+				NB_TOT_PART--;
+			}
+			else
+			{
+				tete_liste_part=NULL;
+				printf("la dernière sur pied %s l.%d\n",__func__,__LINE__);
+				NB_TOT_PART--;
+			}
 			free(part);
 		}
 		else
 		{
+			printf("mes boules boulic %s l.%d\n",__func__,__LINE__);
 			PARTICULE *test_part = tete_liste_part;
 			while ((test_part->suivant!=NULL)&&(test_part->suivant!= el))
 			{
@@ -261,14 +280,18 @@ void part_total_destruction()
 	{
 		printf("problème pointeur l.%d in file %s\n",__LINE__,__FILE__);
 	}
-	PARTICULE *part = tete_liste_part;
-	while(part->suivant != NULL)
+	else
 	{
+		PARTICULE *part = tete_liste_part;
+		while(part->suivant != NULL)
+		{
+			part_destruction(part);
+			part =tete_liste_part;
+		}
 		part_destruction(part);
-		part =tete_liste_part;
+		tete_liste_part=NULL;
 	}
-	part_destruction(part);
-	tete_liste_part=NULL;
+	
 }
 void passage_donnees( double en, double ray,
 					double pos_x, double pos_y, PARTICULE*courant)
@@ -327,6 +350,7 @@ void particule_acces_donnees (PARTICULE**courant,double*p_posx,
 	else
 	{
 		printf("problème de pointeur %s l.%d",__func__,__LINE__);
+		exit(0);
 	}
 }
 void particule_dessin()
@@ -429,7 +453,7 @@ int particule_nombre_total()
 
 void particule_decomposition(PARTICULE* part)
 {
-	int nb=NB_TOT_PART+1;
+	int nb = last_numero_part;
 	PARTICULE *part1, *part2, *part3, *part4;
 	part1=liste_add();
 	part2=liste_add();
@@ -437,6 +461,7 @@ void particule_decomposition(PARTICULE* part)
 	part4=liste_add();
 
 	int cadran=1;
+	nb++;
 	part_change_part(part1, part,cadran,nb);
 	cadran+=2;
 	nb++;
@@ -448,17 +473,17 @@ void particule_decomposition(PARTICULE* part)
 	nb++;
 	part_change_part(part4, part,cadran,nb);
 	
+	last_numero_part+=4;
 	part_destruction(part);
 	
-
 }
 
 void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
-					  int nb_part,int num)
+						int nb_part,int num)
 {
 	
 	part_change->corps.x= part_decomp->corps.x + 
-				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)*
+				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon) *
 				cos(nb_part*M_PI/4);
 	part_change->corps.y= part_decomp->corps.y -
 				sqrt(2)*(R_PARTICULE_FACTOR*part_decomp->rayon)*
@@ -466,6 +491,7 @@ void part_change_part(PARTICULE* part_change, PARTICULE* part_decomp,
 	part_change->rayon= part_decomp->rayon*R_PARTICULE_FACTOR;
 	part_change->numero=num;
 	part_change->energie= part_decomp->energie*E_PARTICULE_FACTOR;
+	part_change->nb_bot_part =0;
 	
 	
 }
@@ -485,9 +511,10 @@ int part_decomposition_start()
 			proba=(float)rand()/(float)RAND_MAX;
 			printf("proba est de %f l.%d\n ",proba,__LINE__);
 			if((proba<=DECOMPOSITION_RATE)&&
-								(courant->rayon>R_PARTICULE_MIN))
+				((courant->rayon)*R_PARTICULE_FACTOR >R_PARTICULE_MIN))
 			{
 				particule_decomposition(courant);
+				printf("decompositojn start \n");
 				nb_decomp++;
 				sucess=1;
 		
@@ -500,12 +527,14 @@ int part_decomposition_start()
 			else
 			{
 				courant=NULL;
-				compteur=NB_TOT_PART;
+				break;
 			}
 		}
 	}
-	NB_TOT_PART = NB_TOT_PART + nb_decomp*4;
-	liste_show();
+	NB_TOT_PART=NB_TOT_PART+ nb_decomp*4;
+	//~ liste_show();
+	//~ printf("non de part totale est %d\n", NB_TOT_PART);
+	//~ printf("last numero part est %d\n",last_numero_part);
 	return sucess;
 }
 
@@ -520,8 +549,8 @@ void particule_sauver(char* fichier_save)
 		while(courant_part)
 		{
 			fprintf(p_fichier, "\n%f %f %f %f",courant_part->energie,
-					courant_part->rayon,courant_part->corps.x,
-					courant_part->corps.y);
+						courant_part->rayon,courant_part->corps.x,
+							courant_part->corps.y);
 			courant_part = courant_part->suivant;
 		}
 		fprintf(p_fichier, "\nFIN_LISTE\n");
@@ -541,6 +570,11 @@ PARTICULE* particule_correspondante (int num_part)
 		cherchee = tete_liste_part;
 		while((cherchee->numero)!= num_part)
 		{
+			if(cherchee->suivant==NULL)
+			{
+				printf("particule non trouvé\n");
+				break;
+			}
 			cherchee=cherchee->suivant;
 		}
 		return cherchee;
@@ -577,7 +611,8 @@ int particule_existe(S2D coord)
 	}
 	else
 	{
-		printf("problème d'association %s l.%d\n",__func__,__LINE__);
+		printf("problème d'association f.%s l.%d",__func__,__LINE__);
+		exit(0);
 	}
 }
 
@@ -616,7 +651,7 @@ int particule_verify_nb_bot(PARTICULE*courant)
 	else
 	{
 		printf("problème d'association %s l.%d",__func__,__LINE__);
-
+		exit(0);
 	}
 	
 }
@@ -641,23 +676,15 @@ float particule_energie()
 	PARTICULE* courant_part=NULL;
 	courant_part = tete_liste_part;
 	
-	while(courant_part)
-	{
-			energie_particule += tete_liste_part->energie;
-			printf("----------- Energie part: %f -----------\n", tete_liste_part->energie);
-			courant_part = courant_part->suivant;
-	}
-
-	printf("------------------ ENERGIE TOTALE INITIALE %f ------------------\n ------------------ ENERGIE ACTUEL %f ------------------\n", energie_initiale, (energie_initiale-energie_particule)/energie_initiale *100 );
-
-	return (energie_initiale-energie_particule)/energie_initiale *100;
+	return energie_decontamine/energie_initiale *100;
 }
 
-int particule_collision(C2D rob,double *p_dist, double *p_rayon)
- {
+int particule_collision(C2D rob,double *p_dist,
+						double *p_rayon, S2D *corps_part)
+{
 	PARTICULE* courant=NULL;
 	C2D part;
-	if((tete_liste_part)) return -1;
+	if(!(tete_liste_part)) return -1;
 	courant = tete_liste_part;
 	while(courant)
 	{
@@ -666,23 +693,81 @@ int particule_collision(C2D rob,double *p_dist, double *p_rayon)
 		if (util_collision_cercle(rob, part, p_dist))
 		{
 			*p_rayon = courant->rayon;
+			*corps_part = courant->corps;
+			//~ printf("\n part %d",courant->numero);
 			return courant->numero;
 		}
+		//~ printf("\n touche pas part %d",courant->numero);
 		courant = courant->suivant;
 	}
 	return 0;
 }
-void test_colision()
+
+S2D particule_cible(int num, S2D cible)
 {
-	int ok=1;
-	double *p_dist, *p_rayon;
-	if(!(tete_liste_bot)) ok = 0;
-	if(ok)
+	PARTICULE *courant;
+	if (!(tete_liste_part)) 
 	{
-		C2D bobot= {tete_liste_bot->corps, R_ROBOT};
-		if(particule_collision(bobot, p_dist,p_rayon))
+		exit(0);
+	}
+	courant = tete_liste_part;
+	while (courant)
+	{
+		if (courant->numero == num)
 		{
-			printf("particule touchee");
+			if(courant->corps.x==cible.x && courant->corps.y == cible.y)
+			{
+				printf("\nparticule %d eliminee\n",courant->numero);
+				energie_decontamine += courant->energie;
+				part_destruction(courant);
+				return cible;
+			}
+			else
+				return courant->corps;
 		}
+		else
+			courant = courant->suivant;
+	}
+}
+
+PARTICULE* particule_donner_acces(S2D coord)
+{
+	PARTICULE*courant=NULL;
+	if(tete_liste_part)
+	{
+		courant=tete_liste_part;
+		while(courant)
+		{
+			if((courant->corps.x==coord.x)&&(courant->corps.y==coord.y))
+			{
+				return courant;
+			}
+			if(courant->suivant)
+			{
+				courant=courant->suivant;
+			}
+			else
+			{
+				break;
+			}
+		}
+		return NULL;
+	}
+	else
+	{
+		printf("problème d'association f.%s l.%d",__func__,__LINE__);
+		exit(0);
+	}
+}
+
+void particule_less_robot(PARTICULE*courant)
+{
+	if(courant)
+	{
+		(courant->nb_bot_part)-1;
+	}
+	else
+	{
+		printf("problème d'association %s l.%d",__func__,__LINE__);
 	}
 }

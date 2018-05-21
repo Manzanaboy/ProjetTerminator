@@ -39,6 +39,8 @@ void sauver(char* fichier_open, char* fichier_save);
 void clavier(int key,int x,int y);
 void manuel(int bouton, int etat, int x, int y);
 void record_fichier();
+void record();
+
 
 #define LG_TEST 100
 #define NO_RETURN_ID 100
@@ -61,7 +63,7 @@ namespace
 		char save[LG_TEST];
 		char turn_text[10], controt[LG_TEST], conttran[LG_TEST];
 		GLfloat aspect_ratio;
-		char textiun[20] = ".txt";
+		char textiun[20] = "D04.txt";
 		char textide[20] = "data.txt";
 		int etatsim=0;
 		int base=PG_DESSINS;
@@ -87,15 +89,7 @@ namespace
 		FILE *open_file=NULL, *save_file=NULL, *record_file=NULL;
 	}
 	
-void record()
-{
-	if (etat_lecture == LU)
-	{
-		rec_turn++;
-		sprintf(turn_text,"turn %d",rec_turn);
-		RecTurn->set_text(turn_text);
-	}
-}
+
 	
 int main(int argc, char* argv[])
 {
@@ -145,6 +139,7 @@ void control_cb( int control )
 			break;	
 		case (EDITTEXTO_ID):
 			remove("out.dat");
+			taux_decontamination=0;
 			if (fopen(OpenText->get_text(),"r") == NULL)
 			{
 				error_file_missing(OpenText->get_text());
@@ -164,7 +159,7 @@ void control_cb( int control )
 			glutPostRedisplay();
 			break;	
 		case (SIMSTART_ID):
-			if (etatsim==0)
+			if (etatsim==0&&(simulation_particules()))
 			{
 				buttonstart->set_name("Stop");
 				etatsim = 1;
@@ -176,22 +171,12 @@ void control_cb( int control )
 			}
 			break;
 		case (SIMSTEP_ID):
-			if(!(etatsim))
+			if((!(etatsim))&&(simulation_particules()))
 			{
 				record();
-				robot_deplacer();
-			}
-			break;
-		case (CHECKREC_ID):
-//			printf("rec: %d\n", reccheck->get_int_val() );
-			if(reccheck->get_int_val())
-			{
-				sprintf(taux_text,"Rate %.4f",energie_initiale);
-				RecRate->set_text(taux_text);
-			}
-			else
-			{
-				RecRate->set_text("rate off");
+				simulation_decomposition();
+				if (robot_deplacer())
+					simulation_mja();
 			}
 			break;
 		case (RADIOBUTTONCONT_ID):
@@ -210,9 +195,6 @@ void control_cb( int control )
 				robot_deselection();
 			}
 			break;
-		default: 
-			printf("\n Unknown command\n");   
-			break;
 		}
 }
 
@@ -223,39 +205,39 @@ void clavier(int key,int x,int y)
 		switch (key)
 		{
 			case (GLUT_KEY_LEFT):
-				if (vitrot < 0.75)
+				if (vitrot < VROT_MAX)
 				{
-					vitrot+=0.25;
+					vitrot+=DELTA_VROT;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
 				break;
 			case (GLUT_KEY_RIGHT):
-				if (vitrot > -0.75)
+				if (vitrot > -VROT_MAX)
 				{
-					vitrot-=0.25;
+					vitrot-=DELTA_VROT;
 				}
 				sprintf(controt,"rotation : %.3f",vitrot);
 				robrot->set_text(controt);
 				break;
 			case (GLUT_KEY_UP):
-				if (vittran < 0.75)
+				if (vittran < VTRAN_MAX)
 				{
-					vittran+=0.25;
+					vittran+=DELTA_VTRAN;
 				}
 				sprintf(conttran,"translation : %.3f",vittran);
 				robtran->set_text(conttran);
 				break;
 			case (GLUT_KEY_DOWN):
-				if (vittran > -0.75)
+				if (vittran > -VTRAN_MAX)
 				{
-					vittran-=0.25;
+					vittran-=DELTA_VTRAN;
 				}
 				sprintf(conttran,"translation : %.3f",vittran);
 				robtran->set_text(conttran);
 				break;
 		}
-		robot_vitesses( vitrot, vittran);
+		robot_vitesse(vitrot, vittran);
 	}
 }
 
@@ -316,10 +298,11 @@ void dessine_tout()
 
 void update(void)
 {
-	if(etatsim)
+	if(etatsim&&(simulation_particules()))
 	{
 		simulation_decomposition();
-		robot_deplacer();
+		if (robot_deplacer())
+			simulation_mja();
 		record();
 	}
 	if (glutGetWindow() != main_window)
@@ -331,10 +314,15 @@ void manuel(int bouton, int etat, int x, int y)
 {
 	if (cont_mode && !(etatsim))
 	{
+		
 		Xm = (20+20)*(x/largeur) -20;
 		Ym = 20 - (20+20)*(y/haut);
 		if (!(etat) && bouton ==  GLUT_LEFT_BUTTON) 
 		{
+			if(aspect_ratio<=1)
+				Ym /= aspect_ratio;
+			else
+				Xm *=aspect_ratio;
 			robot_selection(Xm, Ym);
 		}
 	}
@@ -391,8 +379,8 @@ void creer_boite_dialog()
 	GLUI_Panel *record_panel = glui->add_panel((char*) "Recording");
 	reccheck = glui->add_checkbox_to_panel(record_panel,(char*)"record",
 											NULL,CHECKREC_ID, control_cb);
-	RecRate = glui->add_statictext_to_panel(record_panel,"rate off");
-	RecTurn = glui->add_statictext_to_panel(record_panel,"turn off");
+	RecRate = glui->add_statictext_to_panel(record_panel,"rate 0");
+	RecTurn = glui->add_statictext_to_panel(record_panel,"turn 0");
 	glui->add_column(true);
 	//control mode
 	GLUI_Panel *control_panel = glui->add_panel((char*) "Control mode");
@@ -431,21 +419,29 @@ void dessine_page_blanche()
 
 void record_fichier()
 {
-	
-	printf("Recording in record_fichier\n");
-
 	taux_decontamination=particule_energie();
-
-	printf("taux_decontamination2 %lf\n", taux_decontamination);
-
-	if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+	if(reccheck->get_int_val())
 	{
-		printf("Creation fichier out.dat\n");
-		record_file=fopen("out.dat", "a");
+		if((record_file=fopen("out.dat", "a"))==NULL) //Si record_file==NULL fichier n'exisite pas, il faut le créer
+		{
+			record_file=fopen("out.dat", "a");
+		}
+		fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
+
+		fclose(record_file);
 	}
-	printf("taux_decontamination1 %lf\n", taux_decontamination);
-	fprintf(record_file, "%d %lf \n", rec_turn, taux_decontamination );
 
-	fclose(record_file);
+}
 
+void record()
+{
+	if (etat_lecture == LU)
+	{
+		rec_turn++;
+		sprintf(turn_text,"turn %d",rec_turn);
+		RecTurn->set_text(turn_text);
+		sprintf(taux_text, "Rate %.3lf", taux_decontamination);
+		RecRate->set_text(taux_text);
+		record_fichier();
+	}
 }
