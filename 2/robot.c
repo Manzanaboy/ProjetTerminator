@@ -435,8 +435,6 @@ void robot_nearest(int tab_part[], int nb_part)
 		if(num_bot_associe)
 		{
 			robot_ciblage(num_bot_associe,part_x,part_y,courant);
-			printf("les nouvelles assos sont \n");
-			printf("le robot numero %d a comme cible la particule triee %d, au coordonnes %f %f\n",num_bot_associe,compteur,part_x,part_y);
 		}
 		if((compteur>=NB_TOT_BOT)||(!num_bot_associe))
 		{
@@ -446,7 +444,8 @@ void robot_nearest(int tab_part[], int nb_part)
 }
 int robot_calcul_temps(double part_x, double part_y)
 {
-	// mettre dasn un tableau les numeros deja sortis pour ne pas les ressortir par la suite
+	// mettre dasn un tableau les numeros deja
+	//sortis pour ne pas les ressortir par la suite
 	ROBOT*courant = NULL;
 	int bot_proche= 0, compteur=0;
 	int arret=OFF, suite=ON, particule_elimine=OFF;
@@ -488,8 +487,7 @@ int robot_calcul_temps(double part_x, double part_y)
 				temps_min=temps_tot;
 				bot_proche = courant->numero;
 			}
-			//~ printf("la vvaraible bot proche est %d\n",bot_proche);
-			//~ printf("la vvaraible temp tot est %f du robot %d\n",temps_tot,courant->numero);
+		
 			if(courant->suivant)
 			{
 				courant=courant->suivant;
@@ -673,7 +671,8 @@ int robot_deplacer()
 			alpha = robot_rotaion(courant);
 			if (courant->select)
 +					robot_translation(courant, p_dep);
-			if(alpha > (-M_PI/4) && alpha < (M_PI/4)) //tourne avant de bouger
+			if(alpha > (-M_PI/4) && alpha < (M_PI/4)) 
+				//tourne avant de bouger
 			{
 				num_part = robot_translation(courant, p_dep);
 				if(num_part && alpha ==0 && deplacement <= EPSIL_ZERO)
@@ -727,14 +726,18 @@ double robot_rotaion(ROBOT *courant)
 							courant->cible, &alpha);
 			return alpha;
 		}
-	if( ! (util_alignement(courant->corps, courant->angle, courant->cible)) ) //ROTATION
+	if(!(util_alignement(courant->corps,courant->angle,courant->cible)))
+		//ROTATION
 	{
 		//ca tourne si pas aligné
-		util_ecart_angle(courant->corps, courant->angle, courant->cible, &alpha); //inutile car tjrs vrai
+		util_ecart_angle(courant->corps, courant->angle, 
+				 courant->cible, &alpha);
 		if(fabs(alpha/DELTA_T)<VROT_MAX) 
-			v_rotation=alpha/DELTA_T;			//tourne juste de la distance qui reste
+			v_rotation=alpha/DELTA_T;			
+		//tourne juste de la distance qui reste
 		else
-			v_rotation=VROT_MAX; 				//tourne dist max
+			v_rotation=VROT_MAX; 				
+		//tourne dist max
 		if(alpha > 0) 
 			courant->angle+= v_rotation*DELTA_T;
 		else 
@@ -762,13 +765,16 @@ int robot_translation(ROBOT *courant, double *tran)
 	}
 	holo.rayon = R_ROBOT;
 	holo.centre = courant->corps;
-	v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+	v_translation = robot_collision(holo, courant->angle, 
+					courant->numero, v_translation, p_test);
 	if (test)
 	{
-		v_translation = robot_collision(holo, courant->angle, courant->numero, v_translation, p_test);
+		v_translation = robot_collision(holo, courant->angle, 
+						courant->numero, v_translation, p_test);
 	}
 
-	holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
+	holo.centre = util_deplacement(courant->corps, courant->angle, 
+				       v_translation);
 	part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
 	while (part > 0 )
 	{
@@ -791,19 +797,22 @@ int robot_translation(ROBOT *courant, double *tran)
 		holo.centre = util_deplacement(courant->corps, courant->angle, v_translation);
 		part = particule_collision(holo, p_ecart, p_rayon, p_c_part);
 	}
-	courant->corps = courant->corps=util_deplacement(courant->corps, courant->angle, v_translation*DELTA_T);
+	courant->corps = courant->corps=util_deplacement(courant->corps,
+							 courant->angle, v_translation*DELTA_T);
 	*tran = v_translation*DELTA_T;
 	return collision;
 }
 
-double robot_collision(C2D holo, double alpha, int num, double v_tran, int *toucher)
+double robot_collision(C2D holo, double alpha, int num, 
+		       double v_tran, int *toucher)
 {
 	ROBOT *courant;
 	C2D rob, ref;
 	rob.rayon = R_ROBOT;
 	ref.rayon = R_ROBOT;
 	ref.centre = holo.centre;
-	double rayon, ecart, la, lb, lc ,la_new, lb_new, v_translation = v_tran;
+	double rayon, ecart, la, lb, lc ,la_new, lb_new;
+	double v_translation = v_tran;
 	double *p_ecart = &ecart, *p_la_new =&la_new;
 	if(!(tete_liste_bot))
 		return 0;
@@ -812,7 +821,8 @@ double robot_collision(C2D holo, double alpha, int num, double v_tran, int *touc
 	{
 		if(num != courant->numero)
 		{
-			ref.centre = util_deplacement(holo.centre, alpha, v_translation);
+			ref.centre = util_deplacement(holo.centre, alpha, 
+						      v_translation);
 			rob.centre = courant->corps;
 			if(util_collision_cercle(ref,rob, p_ecart))
 			{
