@@ -1,0 +1,8523 @@
+
+particule 7 eliminee
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerles cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacer
+particule 5 eliminee
+reponse est dans f.robot_deplacerles cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont -1.171523 0.485277
+reponse est dans f.robot_deplacerreponse est dans f.robot_deplacerles cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerles cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerreponse est dans f.robot_deplacerles cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 5 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.828400 0.828400
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont -1.171523 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 7 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont -0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 4 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont -0.485277 0.485277
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est 1.171523 1.171523
+les cibles de chaque robots sont 1.171523 1.171523
+les cibles de chaque robots sont 1.171523 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 7 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont 1.171523 1.171523
+les cibles de chaque robots sont 0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 6 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont 1.171523 1.171523
+les cibles de chaque robots sont 0.485277 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est -0.485277 -0.485277
+les cibles de chaque robots sont -0.485277 -0.485277
+les cibles de chaque robots sont 0.485277 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 4 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -0.485277 -0.485277
+les cibles de chaque robots sont -0.485277 -0.485277
+les cibles de chaque robots sont -1.171523 -0.485277
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 5 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 0.828400
+la cible du robot 2 est -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+la cible du robot 2 est -0.828400 -0.828400
+la cible du robot 2 est -0.828400 -0.828400
+les cibles de chaque robots sont -0.828400 -0.828400
+les cibles de chaque robots sont -0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 7 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 -0.828400
+la cible du robot 2 est -0.828400 -0.828400
+les cibles de chaque robots sont -0.828400 -0.828400
+les cibles de chaque robots sont 0.828400 -0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est -0.485277 -0.485277
+les cibles de chaque robots sont -0.485277 -0.485277
+les cibles de chaque robots sont 0.828400 -0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 7 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -1.171523 -0.485277
+les cibles de chaque robots sont -1.171523 -0.485277
+les cibles de chaque robots sont 0.828400 -0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 2 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -1.171523 -0.485277
+les cibles de chaque robots sont -1.171523 -0.485277
+les cibles de chaque robots sont -0.485277 -1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplaceles cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 7 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.485277 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+les cibles de chaque robots sont -1.171523 1.171523
+les cibles de chaque robots sont 0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 6 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -1.171523 1.171523
+les cibles de chaque robots sont -0.485277 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 6 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -1.171523 1.171523
+les cibles de chaque robots sont 0.485277 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 4 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -1.171523 1.171523
+les cibles de chaque robots sont 1.171523 0.485277
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse estles cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont 0.828400 0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 5 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 0.828400
+les cibles de chaque robots sont -0.828400 -0.828400
+la cible du robot 2 est -0.485277 1.171523
+les cibles de chaque robots sont -0.485277 1.171523
+les cibles de chaque robots sont -0.828400 -0.828400
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 2 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 2 est -0.828400 -0.828400
+les cibles de chaque robots sont -0.828400 -0.828400
+les cibles de chaque robots sont -1.171523 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 3 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -0.828400 -0.828400
+les cibles de chaque robots sont -1.171523 1.171523
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 4 eliminee
+reponse est 1 dans f.robot_deplacer
+les cibles de chaque robots sont -0.828400 -0.828400
+les cibles de chaque robots sont -0.485277 0.485277
+reponseles cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+les cibles de chaque robots sont -5.000000 -5.000000
+les cibles de chaque robots sont 0.000000 0.000000
+la cible du robot 4 est 19.190517 -5.632408
+la cible du robot 4 est 19.190517 -5.632408
+la cible du robot 2 est 13.998806 -14.284028
+la cible du robot 4 est 19.190517 -5.632408
+la cible du robot 3 est 5.244243 -19.300205
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont 19.190517 -5.632408
+les cibles de chaque robots sont 5.244243 -19.300205
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont 19.498034 4.452721
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 1 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 4 est 19.190517 -5.632408
+la cible du robot 3 est 5.244243 -19.300205
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont 19.190517 -5.632408
+les cibles de chaque robots sont 5.244243 -19.300205
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont -4.845036 -19.404268
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 10 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 4 est 2.830260 -2.256996
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont 2.830260 -2.256996
+les cibles de chaque robots sont -13.701201 -14.569732
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont -4.845036 -19.404268
+
+particule 12 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 3 est -13.701201 -14.569732
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont -19.070259 -6.027039
+les cibles de chaque robots sont -13.701201 -14.569732
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont -4.845036 -19.404268
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 22 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 4 est -1.749577 -2.387589
+la cible du robot 3 est -13.701201 -14.569732
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont -1.749577 -2.387589
+les cibles de chaque robots sont -13.701201 -14.569732
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont -19.585728 4.049602
+
+particule 9 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 3 est -13.701201 -14.569732
+la cible du robot 2 est 13.998806 -14.284028
+les cibles de chaque robots sont -15.116413 13.095574
+les cibles de chaque robots sont -13.701201 -14.569732
+les cibles de chaque robots sont 13.998806 -14.284028
+les cibles de chaque robots sont -19.585728 4.049602
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+reponse est 0 dans f.robot_deplacer
+
+particule 24 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 4 est -15.116413 13.095574
+la cible du robot 3 est -6.376512 -9.085709
+les cibles de chaque robots sont -15.116413 13.095574
+les cibles de chaque robots sont -6.376512 -9.085709
+les cibles de chaque robots sont -6.799805 18.808578
+les cibles de chaque robots sont -19.585728 4.049602
+
+particule 46 eliminee
+reponse est 1 dans f.robot_deplacer
+la cible du robot 4 est -15.116413 13.095574
+la cible du robot 2 est -6.799805 18.808578
+les cibles de chaque robots sont -15.116413 13.095574
+les cibles de chaque robots sont 3.247428 19.734594
+les cibles de chaque robots sont -6.799805 18.808578
+les cibles de chaque robots sont -19.585728 4.049602
+proba est de 0.840188 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-5.000000 -5.000000 
+0.000000 
+cible est :-5.000000 -5.000000 
+robot 1 
+5.000000 5.000000 
+3.141592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.394383 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.000000 
+cible est :-5.000000 -5.000000 
+robot 1 
+5.000000 5.000000 
+3.266592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.783099 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.125000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.818329 4.953612 
+3.391592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.798440 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.250000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.643859 4.884936 
+3.516592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.911647 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.375000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.479312 4.795044 
+3.641592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.197551 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.500000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.327256 4.685338 
+3.766592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.335223 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.625000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.190064 4.557531 
+3.891592 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.768230 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.750000 
+cible est :-5.000000 -5.000000 
+robot 1 
+4.063163 4.419501 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.277775 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+0.875000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.936262 4.281470 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.553970 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.000000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.809361 4.143440 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.477397 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.125000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.682460 4.005410 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.628871 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.250000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.555559 3.867379 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.364784 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.375000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.428658 3.729349 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.513401 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.500000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.301757 3.591319 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.952230 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.625000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.174856 3.453289 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.916195 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.750000 
+cible est :-5.000000 -5.000000 
+robot 1 
+3.047954 3.315258 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.635712 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+1.875000 
+cible est :-5.000000 -5.000000 
+robot 1 
+2.921053 3.177228 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.717297 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+2.000000 
+cible est :-5.000000 -5.000000 
+robot 1 
+2.794152 3.039198 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.141603 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+2.125000 
+cible est :-5.000000 -5.000000 
+robot 1 
+2.667251 2.901168 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.606969 l.507
+ particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+non de part totale est 1
+last numero part est 1
+robot 2 
+-4.812500 -5.000000 
+2.250000 
+cible est :-5.000000 -5.000000 
+robot 1 
+2.540350 2.763137 
+3.968974 
+cible est :0.000000 0.000000 
+testtrobot_deplacer
+proba est de 0.016301 l.507
+ mes boules boulic part_destruction l.257
+decompositojn start 
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+robot 2 
+-4.812500 -5.000000 
+2.375000 
+cible est :-0.828400 0.828400 
+robot 1 
+2.413449 2.625107 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.242887 l.507
+ proba est de 0.137232 l.507
+ proba est de 0.804177 l.507
+ proba est de 0.156679 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.812500 -5.000000 
+2.250000 
+cible est :-0.828400 0.828400 
+robot 1 
+2.286548 2.487077 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.400944 l.507
+ proba est de 0.129790 l.507
+ proba est de 0.108809 l.507
+ proba est de 0.998924 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.812500 -5.000000 
+2.125000 
+cible est :-0.828400 0.828400 
+robot 1 
+2.159647 2.349046 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.218257 l.507
+ proba est de 0.512932 l.507
+ proba est de 0.839112 l.507
+ proba est de 0.612640 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.812500 -5.000000 
+2.000000 
+cible est :-0.828400 0.828400 
+robot 1 
+2.042399 2.221516 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.296032 l.507
+ proba est de 0.637552 l.507
+ proba est de 0.524287 l.507
+ proba est de 0.493583 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.812500 -5.000000 
+1.875000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.954463 2.125868 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.972775 l.507
+ proba est de 0.292517 l.507
+ proba est de 0.771358 l.507
+ proba est de 0.526745 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.812500 -5.000000 
+1.750000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.888511 2.054133 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.769914 l.507
+ proba est de 0.400229 l.507
+ proba est de 0.891529 l.507
+ proba est de 0.283315 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.822658 -4.812775 
+1.625000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.839047 2.000331 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.352458 l.507
+ proba est de 0.807725 l.507
+ proba est de 0.919026 l.507
+ proba est de 0.069755 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.809395 -4.625745 
+1.500000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.801950 1.959980 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.949327 l.507
+ proba est de 0.525995 l.507
+ proba est de 0.086056 l.507
+ proba est de 0.192214 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.772917 -4.441828 
+1.375000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.774126 1.929716 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.663227 l.507
+ proba est de 0.890233 l.507
+ proba est de 0.348893 l.507
+ proba est de 0.064171 l.507
+ particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 4
+last numero part est 5
+robot 2 
+-4.713794 -4.263893 
+1.250000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.753259 1.907018 
+3.968974 
+cible est :0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.020023 l.507
+ mes boules boulic part_destruction l.257
+decompositojn start 
+proba est de 0.457702 l.507
+ proba est de 0.063096 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+robot 2 
+-4.632949 -4.094718 
+1.125000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.737608 1.889995 
+3.968974 
+cible est :0.828400 -0.828400 
+testtrobot_deplacer
+proba est de 0.238280 l.507
+ proba est de 0.970634 l.507
+ proba est de 0.902208 l.507
+ proba est de 0.850920 l.507
+ proba est de 0.266666 l.507
+ proba est de 0.539760 l.507
+ proba est de 0.375207 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.531642 -3.936942 
+1.000000 
+cible est :-0.828400 0.828400 
+robot 1 
+1.727222 1.875399 
+4.093974 
+cible est :0.828400 -0.828400 
+testtrobot_deplacer
+proba est de 0.760249 l.507
+ proba est de 0.512535 l.507
+ proba est de 0.667724 l.507
+ proba est de 0.531606 l.507
+ proba est de 0.039280 l.507
+ proba est de 0.437638 l.507
+ proba est de 0.931835 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.444899 -3.770714 
+1.089837 
+cible est :-0.828400 0.828400 
+robot 1 
+1.720762 1.863386 
+4.218974 
+cible est :0.828400 -0.828400 
+testtrobot_deplacer
+proba est de 0.930810 l.507
+ proba est de 0.720952 l.507
+ proba est de 0.284293 l.507
+ proba est de 0.738534 l.507
+ proba est de 0.639979 l.507
+ proba est de 0.354049 l.507
+ proba est de 0.687861 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.338108 -3.616597 
+0.964837 
+cible est :-0.828400 0.828400 
+robot 1 
+1.716957 1.853531 
+4.343974 
+cible est :0.828400 -0.828400 
+testtrobot_deplacer
+proba est de 0.165974 l.507
+ proba est de 0.440105 l.507
+ proba est de 0.880075 l.507
+ proba est de 0.829201 l.507
+ proba est de 0.330337 l.507
+ proba est de 0.228968 l.507
+ proba est de 0.893372 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.231317 -3.462480 
+0.964837 
+cible est :-0.828400 0.828400 
+robot 1 
+1.714104 1.846139 
+4.343974 
+cible est :1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.350360 l.507
+ proba est de 0.686670 l.507
+ proba est de 0.956468 l.507
+ proba est de 0.588640 l.507
+ proba est de 0.657304 l.507
+ proba est de 0.858676 l.507
+ proba est de 0.439560 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.134688 -3.301797 
+1.029371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.711379 1.841072 
+4.218974 
+cible est :1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.923970 l.507
+ proba est de 0.398437 l.507
+ proba est de 0.814767 l.507
+ proba est de 0.684219 l.507
+ proba est de 0.910972 l.507
+ proba est de 0.482491 l.507
+ proba est de 0.215825 l.507
+ particule 9 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 9
+robot 2 
+-4.018779 -3.154415 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.708917 1.837611 
+4.093974 
+cible est :1.171523 1.171523 
+testtrobot_deplacer
+
+particule 9 eliminee
+mes boules boulic part_destruction l.244
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+proba est de 0.950252 l.507
+ proba est de 0.920128 l.507
+ proba est de 0.147660 l.507
+ proba est de 0.881062 l.507
+ proba est de 0.641081 l.507
+ proba est de 0.431953 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.902870 -3.007034 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.707070 1.835016 
+4.093974 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.619596 l.507
+ proba est de 0.281059 l.507
+ proba est de 0.786002 l.507
+ proba est de 0.307458 l.507
+ proba est de 0.447034 l.507
+ proba est de 0.226107 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.786961 -2.859652 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.632951 1.699711 
+4.211243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.187533 l.507
+ proba est de 0.276235 l.507
+ proba est de 0.556444 l.507
+ proba est de 0.416501 l.507
+ proba est de 0.169607 l.507
+ proba est de 0.906804 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.671053 -2.712270 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.562341 1.602079 
+4.086243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.103171 l.507
+ proba est de 0.126075 l.507
+ proba est de 0.495444 l.507
+ proba est de 0.760475 l.507
+ proba est de 0.984752 l.507
+ proba est de 0.935004 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.555144 -2.564888 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.499880 1.535185 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.684445 l.507
+ proba est de 0.383188 l.507
+ proba est de 0.749771 l.507
+ proba est de 0.368664 l.507
+ proba est de 0.294160 l.507
+ proba est de 0.232262 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.439235 -2.417506 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.453034 1.485015 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.584489 l.507
+ proba est de 0.244413 l.507
+ proba est de 0.152390 l.507
+ proba est de 0.732149 l.507
+ proba est de 0.125475 l.507
+ proba est de 0.793470 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.323326 -2.270124 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.417900 1.447388 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.164102 l.507
+ proba est de 0.745071 l.507
+ proba est de 0.074530 l.507
+ proba est de 0.950104 l.507
+ proba est de 0.052529 l.507
+ proba est de 0.521563 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.207417 -2.122743 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.391549 1.419167 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.176211 l.507
+ proba est de 0.240062 l.507
+ proba est de 0.797798 l.507
+ proba est de 0.732654 l.507
+ proba est de 0.656564 l.507
+ proba est de 0.967405 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-3.091509 -1.975361 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.371786 1.398002 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.639458 l.507
+ proba est de 0.759735 l.507
+ proba est de 0.093480 l.507
+ proba est de 0.134902 l.507
+ proba est de 0.520210 l.507
+ proba est de 0.078232 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-2.975600 -1.827979 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.356964 1.382128 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.069906 l.507
+ proba est de 0.204655 l.507
+ proba est de 0.461420 l.507
+ proba est de 0.819677 l.507
+ proba est de 0.573319 l.507
+ proba est de 0.755581 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-2.859691 -1.680597 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.345847 1.370222 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.051939 l.507
+ proba est de 0.157807 l.507
+ proba est de 0.999994 l.507
+ proba est de 0.204329 l.507
+ proba est de 0.889956 l.507
+ proba est de 0.125468 l.507
+ particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 9
+robot 2 
+-2.743782 -1.533215 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.337510 1.361293 
+3.961243 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.997799 l.507
+ proba est de 0.054058 l.507
+ proba est de 0.870540 l.507
+ proba est de 0.072329 l.507
+ proba est de 0.004162 l.507
+ mes boules boulic part_destruction l.257
+decompositojn start 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+robot 2 
+-2.627874 -1.385833 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.331257 1.354596 
+3.961243 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.923069 l.507
+ proba est de 0.593892 l.507
+ proba est de 0.180372 l.507
+ proba est de 0.163132 l.507
+ proba est de 0.391690 l.507
+ proba est de 0.913027 l.507
+ proba est de 0.819695 l.507
+ proba est de 0.359095 l.507
+ proba est de 0.552485 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.511965 -1.238452 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.326376 1.350530 
+3.836243 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.579430 l.507
+ proba est de 0.452576 l.507
+ proba est de 0.687387 l.507
+ proba est de 0.099640 l.507
+ proba est de 0.530808 l.507
+ proba est de 0.757294 l.507
+ proba est de 0.304295 l.507
+ proba est de 0.992228 l.507
+ proba est de 0.576971 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.396056 -1.091070 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.322589 1.348104 
+3.711243 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.877614 l.507
+ proba est de 0.747809 l.507
+ proba est de 0.628910 l.507
+ proba est de 0.035421 l.507
+ proba est de 0.747803 l.507
+ proba est de 0.833239 l.507
+ proba est de 0.925377 l.507
+ proba est de 0.873271 l.507
+ proba est de 0.831038 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.298855 -0.967476 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.319661 1.346709 
+3.586243 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.979434 l.507
+ proba est de 0.743811 l.507
+ proba est de 0.903366 l.507
+ proba est de 0.983596 l.507
+ proba est de 0.666880 l.507
+ proba est de 0.497259 l.507
+ proba est de 0.163968 l.507
+ proba est de 0.830012 l.507
+ proba est de 0.888949 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.225954 -0.874780 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.317403 1.345962 
+3.461243 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.076995 l.507
+ proba est de 0.649707 l.507
+ proba est de 0.248044 l.507
+ proba est de 0.629480 l.507
+ proba est de 0.229137 l.507
+ proba est de 0.700620 l.507
+ proba est de 0.316867 l.507
+ proba est de 0.328777 l.507
+ proba est de 0.231428 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.171279 -0.805258 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.315751 1.345199 
+3.574256 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.074161 l.507
+ proba est de 0.633072 l.507
+ proba est de 0.223656 l.507
+ proba est de 0.651132 l.507
+ proba est de 0.510686 l.507
+ proba est de 0.971466 l.507
+ proba est de 0.280042 l.507
+ proba est de 0.546107 l.507
+ proba est de 0.719269 l.507
+ particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 13
+robot 2 
+-2.130272 -0.753117 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.314478 1.344794 
+3.449256 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.113281 l.507
+ proba est de 0.471483 l.507
+ proba est de 0.592540 l.507
+ proba est de 0.944318 l.507
+ proba est de 0.450918 l.507
+ proba est de 0.336351 l.507
+ proba est de 0.847684 l.507
+ proba est de 0.434513 l.507
+ proba est de 0.003231 l.507
+ mes boules boulic part_destruction l.257
+decompositojn start 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 12
+last numero part est 17
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+robot 2 
+-2.099517 -0.714011 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.313544 1.344389 
+3.550922 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.344943 l.507
+ proba est de 0.598481 l.507
+ proba est de 0.833243 l.507
+ proba est de 0.233892 l.507
+ proba est de 0.675476 l.507
+ proba est de 0.482950 l.507
+ proba est de 0.481936 l.507
+ proba est de 0.304956 l.507
+ proba est de 0.712087 l.507
+ proba est de 0.182556 l.507
+ proba est de 0.621823 l.507
+ proba est de 0.040864 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 12
+last numero part est 17
+robot 2 
+-2.076451 -0.684682 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.312824 1.344179 
+3.425922 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.413984 l.507
+ proba est de 0.695984 l.507
+ proba est de 0.673936 l.507
+ proba est de 0.637640 l.507
+ proba est de 0.347116 l.507
+ proba est de 0.184622 l.507
+ proba est de 0.609106 l.507
+ proba est de 0.627158 l.507
+ proba est de 0.730729 l.507
+ proba est de 0.328374 l.507
+ proba est de 0.740438 l.507
+ proba est de 0.202213 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 12
+last numero part est 17
+robot 2 
+-2.059151 -0.662684 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.312293 1.343977 
+3.504567 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.920914 l.507
+ proba est de 0.684757 l.507
+ proba est de 0.653130 l.507
+ proba est de 0.257265 l.507
+ proba est de 0.532441 l.507
+ proba est de 0.087644 l.507
+ proba est de 0.260497 l.507
+ proba est de 0.877384 l.507
+ proba est de 0.686125 l.507
+ proba est de 0.093740 l.507
+ proba est de 0.111276 l.507
+ proba est de 0.361601 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 8 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 12
+last numero part est 17
+robot 2 
+-2.046177 -0.646187 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.311884 1.343878 
+3.379567 
+cible est :0.485277 1.171523 
+testtrobot_deplacer
+
+particule 8 eliminee
+mes boules boulic part_destruction l.257
+la cible du robot 2 est -0.828400 0.828400
+mise à jour !!!!! simulation.c
+proba est de 0.576690 l.507
+ proba est de 0.593211 l.507
+ proba est de 0.666557 l.507
+ proba est de 0.288778 l.507
+ proba est de 0.775767 l.507
+ proba est de 0.288379 l.507
+ proba est de 0.329642 l.507
+ proba est de 0.189751 l.507
+ proba est de 0.984363 l.507
+ proba est de 0.003579 l.507
+ proba est de 0.827391 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.036446 -0.633813 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.311577 1.343803 
+3.379567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.331479 l.507
+ proba est de 0.188201 l.507
+ proba est de 0.436497 l.507
+ proba est de 0.958637 l.507
+ proba est de 0.918930 l.507
+ proba est de 0.764871 l.507
+ proba est de 0.699075 l.507
+ proba est de 0.121143 l.507
+ proba est de 0.685786 l.507
+ proba est de 0.383832 l.507
+ proba est de 0.774274 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.029147 -0.624533 
+0.904371 
+cible est :-0.828400 0.828400 
+robot 1 
+1.311577 1.343803 
+3.504567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.943051 l.507
+ proba est de 0.916273 l.507
+ proba est de 0.861917 l.507
+ proba est de 0.203548 l.507
+ proba est de 0.793657 l.507
+ proba est de 0.548042 l.507
+ proba est de 0.297288 l.507
+ proba est de 0.904932 l.507
+ proba est de 0.909643 l.507
+ proba est de 0.873979 l.507
+ proba est de 0.498144 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.023674 -0.617573 
+0.904371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.301528 1.338469 
+3.629567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.576200 l.507
+ proba est de 0.162757 l.507
+ proba est de 0.273911 l.507
+ proba est de 0.864579 l.507
+ proba est de 0.492399 l.507
+ proba est de 0.463662 l.507
+ proba est de 0.848942 l.507
+ proba est de 0.495977 l.507
+ proba est de 0.291053 l.507
+ proba est de 0.180421 l.507
+ proba est de 0.684178 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.019429 -0.613379 
+0.779371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.295564 1.334275 
+3.754567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.727550 l.507
+ proba est de 0.139058 l.507
+ proba est de 0.603109 l.507
+ proba est de 0.492422 l.507
+ proba est de 0.838134 l.507
+ proba est de 0.724252 l.507
+ proba est de 0.178208 l.507
+ proba est de 0.221966 l.507
+ proba est de 0.498525 l.507
+ proba est de 0.121259 l.507
+ proba est de 0.138238 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.016157 -0.610869 
+0.654371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.291979 1.331014 
+3.879567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.360443 l.507
+ proba est de 0.324807 l.507
+ proba est de 0.931895 l.507
+ proba est de 0.908485 l.507
+ proba est de 0.622095 l.507
+ proba est de 0.836828 l.507
+ proba est de 0.818128 l.507
+ proba est de 0.496074 l.507
+ proba est de 0.334972 l.507
+ proba est de 0.394327 l.507
+ proba est de 0.658831 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.013644 -0.609399 
+0.529371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.289825 1.328498 
+4.004567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.608883 l.507
+ proba est de 0.258906 l.507
+ proba est de 0.151230 l.507
+ proba est de 0.072545 l.507
+ proba est de 0.107848 l.507
+ proba est de 0.647207 l.507
+ proba est de 0.363598 l.507
+ proba est de 0.288270 l.507
+ proba est de 0.331386 l.507
+ proba est de 0.091149 l.507
+ proba est de 0.427328 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.011719 -0.608575 
+0.404371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.288551 1.326565 
+4.129567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.934495 l.507
+ proba est de 0.583570 l.507
+ proba est de 0.265461 l.507
+ proba est de 0.658747 l.507
+ proba est de 0.761778 l.507
+ proba est de 0.487427 l.507
+ proba est de 0.157272 l.507
+ proba est de 0.883037 l.507
+ proba est de 0.625665 l.507
+ proba est de 0.517715 l.507
+ proba est de 0.207844 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.010247 -0.608153 
+0.279371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.287822 1.325084 
+4.254567 
+cible est :0.485277 -0.485277 
+testtrobot_deplacer
+proba est de 0.557561 l.507
+ proba est de 0.426199 l.507
+ proba est de 0.829939 l.507
+ proba est de 0.394388 l.507
+ proba est de 0.244327 l.507
+ proba est de 0.326013 l.507
+ proba est de 0.729360 l.507
+ proba est de 0.638654 l.507
+ proba est de 0.984845 l.507
+ proba est de 0.338243 l.507
+ proba est de 0.897560 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 12 
+-1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 11
+last numero part est 17
+robot 2 
+-2.009122 -0.607978 
+0.154371 
+cible est :-1.171523 -0.485277 
+robot 1 
+1.287274 1.323974 
+4.254567 
+cible est :1.171523 0.485277 
+
+particule 12 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.136075 l.507
+ proba est de 0.410788 l.507
+ proba est de 0.005409 l.507
+ proba est de 0.783282 l.507
+ proba est de 0.774386 l.507
+ proba est de 0.293678 l.507
+ proba est de 0.114668 l.507
+ proba est de 0.865535 l.507
+ proba est de 0.721006 l.507
+ proba est de 0.049162 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 10
+last numero part est 17
+robot 2 
+-2.008278 -0.607846 
+0.154371 
+cible est :1.171523 -1.171523 
+robot 1 
+1.286981 1.323125 
+4.379567 
+cible est :1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.449105 l.507
+ proba est de 0.986467 l.507
+ proba est de 0.707909 l.507
+ proba est de 0.210883 l.507
+ proba est de 0.473894 l.507
+ proba est de 0.865181 l.507
+ proba est de 0.093920 l.507
+ proba est de 0.099559 l.507
+ proba est de 0.382896 l.507
+ proba est de 0.301763 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 10
+last numero part est 17
+robot 2 
+-1.954401 -0.606263 
+0.029371 
+cible est :1.171523 -1.171523 
+robot 1 
+1.286844 1.322477 
+4.504567 
+cible est :1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.657120 l.507
+ proba est de 0.809095 l.507
+ proba est de 0.131702 l.507
+ proba est de 0.051508 l.507
+ proba est de 0.053422 l.507
+ proba est de 0.457716 l.507
+ proba est de 0.780868 l.507
+ proba est de 0.692076 l.507
+ proba est de 0.442560 l.507
+ proba est de 0.119111 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 6 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 10
+last numero part est 17
+robot 2 
+-1.918148 -0.609741 
+-0.095629 
+cible est :1.171523 -1.171523 
+robot 1 
+1.286777 1.321986 
+4.575504 
+cible est :1.171523 0.485277 
+testtrobot_deplacer
+
+particule 6 eliminee
+mes boules boulic part_destruction l.257
+la cible du robot 2 est 1.171523 -1.171523
+mise à jour !!!!! simulation.c
+proba est de 0.589637 l.507
+ proba est de 0.578635 l.507
+ proba est de 0.529899 l.507
+ proba est de 0.595045 l.507
+ proba est de 0.361917 l.507
+ proba est de 0.304285 l.507
+ proba est de 0.888723 l.507
+ proba est de 0.476585 l.507
+ proba est de 0.169820 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.888962 -0.610074 
+-0.011397 
+cible est :1.171523 -1.171523 
+robot 1 
+1.286726 1.321618 
+4.575504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.609729 l.507
+ proba est de 0.525747 l.507
+ proba est de 0.618925 l.507
+ proba est de 0.596196 l.507
+ proba est de 0.233656 l.507
+ proba est de 0.829808 l.507
+ proba est de 0.070090 l.507
+ proba est de 0.098837 l.507
+ proba est de 0.923728 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.869227 -0.612782 
+-0.136397 
+cible est :1.171523 -1.171523 
+robot 1 
+1.261942 1.229155 
+4.450504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.169649 l.507
+ proba est de 0.481733 l.507
+ proba est de 0.225491 l.507
+ proba est de 0.826769 l.507
+ proba est de 0.290829 l.507
+ proba est de 0.357193 l.507
+ proba est de 0.878278 l.507
+ proba est de 0.344251 l.507
+ proba est de 0.814909 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.854425 -0.614814 
+-0.136397 
+cible est :1.171523 -1.171523 
+robot 1 
+1.237241 1.168526 
+4.325504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.659146 l.507
+ proba est de 0.036327 l.507
+ proba est de 0.257469 l.507
+ proba est de 0.778257 l.507
+ proba est de 0.625964 l.507
+ proba est de 0.836104 l.507
+ proba est de 0.308157 l.507
+ proba est de 0.221009 l.507
+ proba est de 0.198021 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.843324 -0.616337 
+-0.136397 
+cible est :1.171523 -1.171523 
+robot 1 
+1.214668 1.128348 
+4.200504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.612442 l.507
+ proba est de 0.109733 l.507
+ proba est de 0.674605 l.507
+ proba est de 0.782262 l.507
+ proba est de 0.719462 l.507
+ proba est de 0.200352 l.507
+ proba est de 0.401188 l.507
+ proba est de 0.315658 l.507
+ proba est de 0.434009 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.834999 -0.617480 
+-0.136397 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.194941 1.101681 
+4.075504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.230996 l.507
+ proba est de 0.385748 l.507
+ proba est de 0.532846 l.507
+ proba est de 0.154724 l.507
+ proba est de 0.555398 l.507
+ proba est de 0.014579 l.507
+ proba est de 0.380215 l.507
+ proba est de 0.382167 l.507
+ proba est de 0.305408 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.829322 -0.618999 
+-0.261397 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.178143 1.084073 
+3.950504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.737408 l.507
+ proba est de 0.260445 l.507
+ proba est de 0.649659 l.507
+ proba est de 0.552316 l.507
+ proba est de 0.919591 l.507
+ proba est de 0.685986 l.507
+ proba est de 0.809785 l.507
+ proba est de 0.697848 l.507
+ proba est de 0.311950 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.825441 -0.620578 
+-0.386397 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.165544 1.070867 
+3.950504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.645889 l.507
+ proba est de 0.006005 l.507
+ proba est de 0.532960 l.507
+ proba est de 0.843910 l.507
+ proba est de 0.618447 l.507
+ proba est de 0.642693 l.507
+ proba est de 0.518515 l.507
+ proba est de 0.400709 l.507
+ proba est de 0.362154 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.822788 -0.622067 
+-0.511397 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.156095 1.060963 
+3.950504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.718867 l.507
+ proba est de 0.801897 l.507
+ proba est de 0.677812 l.507
+ proba est de 0.152876 l.507
+ proba est de 0.032893 l.507
+ proba est de 0.063561 l.507
+ proba est de 0.685722 l.507
+ proba est de 0.187616 l.507
+ proba est de 0.618958 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.820982 -0.623401 
+-0.636397 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.149008 1.053535 
+3.950504 
+cible est :-1.171523 -1.171523 
+testtrobot_deplacer
+proba est de 0.700301 l.507
+ proba est de 0.567831 l.507
+ proba est de 0.001125 l.507
+ proba est de 0.005709 l.507
+ proba est de 0.305239 l.507
+ proba est de 0.261570 l.507
+ proba est de 0.655368 l.507
+ proba est de 0.857555 l.507
+ proba est de 0.181161 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.819557 -0.624318 
+-0.571812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.143693 1.047964 
+3.950504 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.341354 l.507
+ proba est de 0.667341 l.507
+ proba est de 0.879009 l.507
+ proba est de 0.653305 l.507
+ proba est de 0.313230 l.507
+ proba est de 0.885014 l.507
+ proba est de 0.186265 l.507
+ proba est de 0.157139 l.507
+ proba est de 0.503461 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 11 
+-1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 9
+last numero part est 17
+robot 2 
+-1.818591 -0.625127 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.140094 1.043328 
+4.052253 
+cible est :0.485277 0.485277 
+
+particule 11 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.828957 l.507
+ proba est de 0.675654 l.507
+ proba est de 0.904170 l.507
+ proba est de 0.191112 l.507
+ proba est de 0.394521 l.507
+ proba est de 0.706067 l.507
+ proba est de 0.868924 l.507
+ proba est de 0.547397 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 8
+last numero part est 17
+robot 2 
+-1.817866 -0.625733 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.137039 1.040272 
+3.927253 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.738959 l.507
+ proba est de 0.932485 l.507
+ proba est de 0.233119 l.507
+ proba est de 0.926576 l.507
+ proba est de 0.551443 l.507
+ proba est de 0.933420 l.507
+ proba est de 0.494407 l.507
+ proba est de 0.552568 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 8
+last numero part est 17
+robot 2 
+-1.693056 -0.730181 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.134919 1.037778 
+4.007533 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.939129 l.507
+ proba est de 0.799646 l.507
+ proba est de 0.814139 l.507
+ proba est de 0.594497 l.507
+ proba est de 0.657201 l.507
+ proba est de 0.995300 l.507
+ proba est de 0.935852 l.507
+ proba est de 0.324541 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 8
+last numero part est 17
+robot 2 
+-1.599449 -0.808516 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.133130 1.036142 
+3.882533 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+
+particule 7 eliminee
+mes boules boulic part_destruction l.257
+mise à jour !!!!! simulation.c
+proba est de 0.874309 l.507
+ proba est de 0.589157 l.507
+ proba est de 0.637771 l.507
+ proba est de 0.759324 l.507
+ proba est de 0.775421 l.507
+ proba est de 0.794910 l.507
+ proba est de 0.262785 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.529244 -0.867268 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+1.131788 1.034915 
+3.882533 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.604379 l.507
+ proba est de 0.470564 l.507
+ proba est de 0.166955 l.507
+ proba est de 0.795490 l.507
+ proba est de 0.865085 l.507
+ proba est de 0.873021 l.507
+ proba est de 0.664414 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.476589 -0.911332 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.993444 0.908355 
+3.882533 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.412483 l.507
+ proba est de 0.611981 l.507
+ proba est de 0.596899 l.507
+ proba est de 0.645602 l.507
+ proba est de 0.538557 l.507
+ proba est de 0.148342 l.507
+ proba est de 0.579022 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.437099 -0.944380 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.855100 0.781796 
+3.882533 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.032963 l.507
+ proba est de 0.700910 l.507
+ proba est de 0.518151 l.507
+ proba est de 0.832609 l.507
+ proba est de 0.515049 l.507
+ proba est de 0.112648 l.507
+ proba est de 0.489810 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.407481 -0.969166 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.753200 0.675597 
+3.947644 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.510349 l.507
+ proba est de 0.048500 l.507
+ proba est de 0.814351 l.507
+ proba est de 0.384658 l.507
+ proba est de 0.637656 l.507
+ proba est de 0.452122 l.507
+ proba est de 0.143982 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.385267 -0.987755 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.673625 0.611110 
+3.822644 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.413078 l.507
+ proba est de 0.247033 l.507
+ proba est de 0.406767 l.507
+ proba est de 0.017457 l.507
+ proba est de 0.717597 l.507
+ proba est de 0.573721 l.507
+ proba est de 0.812947 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.368607 -1.001697 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.607887 0.546967 
+3.914709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.582682 l.507
+ proba est de 0.446743 l.507
+ proba est de 0.477361 l.507
+ proba est de 0.995165 l.507
+ proba est de 0.058723 l.507
+ proba est de 0.074260 l.507
+ proba est de 0.640766 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.356112 -1.012154 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.564460 0.514082 
+3.789709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.597280 l.507
+ proba est de 0.222602 l.507
+ proba est de 0.219788 l.507
+ proba est de 0.630243 l.507
+ proba est de 0.923513 l.507
+ proba est de 0.737939 l.507
+ proba est de 0.462852 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.346741 -1.019996 
+-0.696812 
+cible est :-1.171523 -1.171523 
+robot 1 
+0.534149 0.496602 
+3.664709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.438562 l.507
+ proba est de 0.850586 l.507
+ proba est de 0.952662 l.507
+ proba est de 0.948911 l.507
+ proba est de 0.899086 l.507
+ proba est de 0.767014 l.507
+ proba est de 0.333569 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.339713 -1.025878 
+-0.696812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.512612 0.487544 
+3.539709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.536743 l.507
+ proba est de 0.219136 l.507
+ proba est de 0.477551 l.507
+ proba est de 0.949820 l.507
+ proba est de 0.466169 l.507
+ proba est de 0.884318 l.507
+ proba est de 0.967277 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.334297 -1.029363 
+-0.571812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.497160 0.483215 
+3.414709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.183765 l.507
+ proba est de 0.458039 l.507
+ proba est de 0.780224 l.507
+ proba est de 0.766448 l.507
+ proba est de 0.904782 l.507
+ proba est de 0.257585 l.507
+ proba est de 0.761612 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.330136 -1.031357 
+-0.446812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.486009 0.481552 
+3.289709 
+cible est :0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.963505 l.507
+ proba est de 0.331846 l.507
+ proba est de 0.402379 l.507
+ proba est de 0.560785 l.507
+ proba est de 0.554448 l.507
+ proba est de 0.622167 l.507
+ proba est de 0.191028 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.326945 -1.032420 
+-0.321812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.477647 0.480304 
+3.289709 
+cible est :-0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.477961 l.507
+ proba est de 0.360105 l.507
+ proba est de 0.653880 l.507
+ proba est de 0.916523 l.507
+ proba est de 0.210692 l.507
+ proba est de 0.606542 l.507
+ proba est de 0.865434 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 10 
+-0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 7
+last numero part est 17
+robot 2 
+-1.324501 -1.032908 
+-0.196812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.471592 0.480164 
+3.164709 
+cible est :-0.828400 0.828400 
+
+particule 10 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.109778 l.507
+ proba est de 0.373556 l.507
+ proba est de 0.199003 l.507
+ proba est de 0.646520 l.507
+ proba est de 0.592692 l.507
+ proba est de 0.676554 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+non de part totale est 6
+last numero part est 17
+robot 2 
+-1.322668 -1.033273 
+-0.196812 
+cible est :-0.485277 -1.171523 
+robot 1 
+0.467202 0.480613 
+3.039709 
+cible est :-0.828400 0.828400 
+testtrobot_deplacer
+proba est de 0.596341 l.507
+ proba est de 0.058860 l.507
+ proba est de 0.560872 l.507
+ proba est de 0.563617 l.507
+ proba est de 0.242626 l.507
+ proba est de 0.018911 l.507
+ mes boules boulic part_destruction l.257
+decompositojn start 
+particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+la cible du robot 2 est -1.171523 1.171523
+mise à jour !!!!! simulation.c
+robot 2 
+-1.262392 -1.045292 
+-0.196812 
+cible est :-1.171523 1.171523 
+robot 1 
+0.464016 0.481348 
+2.914709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.343841 l.507
+ proba est de 0.009073 l.507
+ proba est de 0.923692 l.507
+ proba est de 0.601427 l.507
+ proba est de 0.770686 l.507
+ proba est de 0.887197 l.507
+ proba est de 0.933273 l.507
+ proba est de 0.173065 l.507
+ proba est de 0.447982 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+-0.071812 
+cible est :-1.171523 1.171523 
+robot 1 
+0.437289 0.491162 
+2.789709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.487721 l.507
+ proba est de 0.795231 l.507
+ proba est de 0.639009 l.507
+ proba est de 0.965682 l.507
+ proba est de 0.155336 l.507
+ proba est de 0.292889 l.507
+ proba est de 0.882204 l.507
+ proba est de 0.366028 l.507
+ proba est de 0.899431 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.053188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.417092 0.501597 
+2.664709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.747638 l.507
+ proba est de 0.475806 l.507
+ proba est de 0.272987 l.507
+ proba est de 0.946640 l.507
+ proba est de 0.122326 l.507
+ proba est de 0.865679 l.507
+ proba est de 0.623194 l.507
+ proba est de 0.718666 l.507
+ proba est de 0.924540 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.178188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.401774 0.512118 
+2.539709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.184066 l.507
+ proba est de 0.282284 l.507
+ proba est de 0.167165 l.507
+ proba est de 0.202977 l.507
+ proba est de 0.626125 l.507
+ proba est de 0.176239 l.507
+ proba est de 0.126669 l.507
+ proba est de 0.227552 l.507
+ proba est de 0.946925 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.303188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.390286 0.520010 
+2.539709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.013866 l.507
+ proba est de 0.160824 l.507
+ proba est de 0.119989 l.507
+ proba est de 0.461848 l.507
+ proba est de 0.648545 l.507
+ proba est de 0.915221 l.507
+ proba est de 0.100857 l.507
+ proba est de 0.614227 l.507
+ proba est de 0.070557 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.428188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.381670 0.525928 
+2.539709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.393746 l.507
+ proba est de 0.496431 l.507
+ proba est de 0.436585 l.507
+ proba est de 0.293177 l.507
+ proba est de 0.244069 l.507
+ proba est de 0.912391 l.507
+ proba est de 0.566164 l.507
+ proba est de 0.190709 l.507
+ proba est de 0.034716 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.553188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.375207 0.530367 
+2.539709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.431844 l.507
+ proba est de 0.813904 l.507
+ proba est de 0.753383 l.507
+ proba est de 0.356383 l.507
+ proba est de 0.997970 l.507
+ proba est de 0.035666 l.507
+ proba est de 0.523548 l.507
+ proba est de 0.200947 l.507
+ proba est de 0.661792 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.678188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.370418 0.532841 
+2.664709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.699787 l.507
+ proba est de 0.327616 l.507
+ proba est de 0.889343 l.507
+ proba est de 0.646712 l.507
+ proba est de 0.341482 l.507
+ proba est de 0.050168 l.507
+ proba est de 0.766701 l.507
+ proba est de 0.803330 l.507
+ proba est de 0.698713 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.262392 -1.045292 
+0.803188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.366862 0.534147 
+2.789709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.681922 l.507
+ proba est de 0.904187 l.507
+ proba est de 0.312940 l.507
+ proba est de 0.752479 l.507
+ proba est de 0.297933 l.507
+ proba est de 0.809371 l.507
+ proba est de 0.189064 l.507
+ proba est de 0.591111 l.507
+ proba est de 0.053439 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.244252 -1.021061 
+0.928188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.364217 0.534758 
+2.914709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.101454 l.507
+ proba est de 0.157275 l.507
+ proba est de 0.244149 l.507
+ proba est de 0.136171 l.507
+ proba est de 0.589119 l.507
+ proba est de 0.058052 l.507
+ proba est de 0.889553 l.507
+ proba est de 0.945502 l.507
+ proba est de 0.056022 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.232380 -1.000210 
+1.053188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.362249 0.534959 
+3.039709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+proba est de 0.925220 l.507
+ proba est de 0.469050 l.507
+ proba est de 0.256969 l.507
+ proba est de 0.587011 l.507
+ proba est de 0.168837 l.507
+ proba est de 0.584585 l.507
+ proba est de 0.476355 l.507
+ proba est de 0.815549 l.507
+ proba est de 0.926068 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 18 
+-0.485277 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 9
+last numero part est 21
+robot 2 
+-1.224937 -0.982238 
+1.178188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.360784 0.534925 
+3.164709 
+cible est :-0.485277 0.485277 
+testtrobot_deplacer
+
+particule 18 eliminee
+mes boules boulic part_destruction l.257
+la cible du robot 2 est -1.171523 1.171523
+mise à jour !!!!! simulation.c
+proba est de 0.526523 l.507
+ proba est de 0.582250 l.507
+ proba est de 0.729398 l.507
+ proba est de 0.225236 l.507
+ proba est de 0.264172 l.507
+ proba est de 0.633585 l.507
+ proba est de 0.538175 l.507
+ proba est de 0.016651 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.220657 -0.966624 
+1.303188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.359686 0.534899 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.931518 l.507
+ proba est de 0.347546 l.507
+ proba est de 0.205714 l.507
+ proba est de 0.522629 l.507
+ proba est de 0.400985 l.507
+ proba est de 0.307168 l.507
+ proba est de 0.679904 l.507
+ proba est de 0.645134 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.218677 -0.952840 
+1.428188 
+cible est :-1.171523 1.171523 
+robot 1 
+0.284616 0.533164 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.443339 l.507
+ proba est de 0.269022 l.507
+ proba est de 0.703186 l.507
+ proba est de 0.332892 l.507
+ proba est de 0.214524 l.507
+ proba est de 0.759208 l.507
+ proba est de 0.258112 l.507
+ proba est de 0.683574 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.218401 -0.940411 
+1.548603 
+cible est :-1.171523 1.171523 
+robot 1 
+0.228313 0.531862 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.016177 l.507
+ proba est de 0.845123 l.507
+ proba est de 0.852411 l.507
+ proba est de 0.600763 l.507
+ proba est de 0.321478 l.507
+ proba est de 0.667960 l.507
+ proba est de 0.526830 l.507
+ proba est de 0.848000 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.218195 -0.931090 
+1.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.186086 0.530886 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.250210 l.507
+ proba est de 0.256228 l.507
+ proba est de 0.073236 l.507
+ proba est de 0.514382 l.507
+ proba est de 0.889813 l.507
+ proba est de 0.611411 l.507
+ proba est de 0.531033 l.507
+ proba est de 0.821331 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.218195 -0.931090 
+1.423603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.154416 0.530153 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.958957 l.507
+ proba est de 0.736747 l.507
+ proba est de 0.343959 l.507
+ proba est de 0.359942 l.507
+ proba est de 0.043915 l.507
+ proba est de 0.023863 l.507
+ proba est de 0.005076 l.507
+ proba est de 0.487254 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.218195 -0.931090 
+1.298603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.130664 0.529604 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.292886 l.507
+ proba est de 0.708262 l.507
+ proba est de 0.820146 l.507
+ proba est de 0.507410 l.507
+ proba est de 0.467471 l.507
+ proba est de 0.078258 l.507
+ proba est de 0.190984 l.507
+ proba est de 0.483648 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.216427 -0.926876 
+1.173603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.112849 0.529192 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.923381 l.507
+ proba est de 0.043395 l.507
+ proba est de 0.084411 l.507
+ proba est de 0.244858 l.507
+ proba est de 0.711355 l.507
+ proba est de 0.611241 l.507
+ proba est de 0.092858 l.507
+ proba est de 0.961565 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.214851 -0.924137 
+1.048603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.099488 0.528884 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.867469 l.507
+ proba est de 0.166094 l.507
+ proba est de 0.475947 l.507
+ proba est de 0.757282 l.507
+ proba est de 0.777505 l.507
+ proba est de 0.006980 l.507
+ proba est de 0.578613 l.507
+ proba est de 0.736462 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.213506 -0.922357 
+0.923603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.089468 0.528652 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.743727 l.507
+ proba est de 0.922572 l.507
+ proba est de 0.096404 l.507
+ proba est de 0.787642 l.507
+ proba est de 0.946435 l.507
+ proba est de 0.101480 l.507
+ proba est de 0.274897 l.507
+ proba est de 0.239321 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.212386 -0.921208 
+0.798603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.081952 0.528478 
+3.164709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.809743 l.507
+ proba est de 0.095043 l.507
+ proba est de 0.746730 l.507
+ proba est de 0.277214 l.507
+ proba est de 0.173301 l.507
+ proba est de 0.937714 l.507
+ proba est de 0.760862 l.507
+ proba est de 0.096681 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.211469 -0.920476 
+0.673603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.081952 0.528478 
+3.039709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.981109 l.507
+ proba est de 0.845273 l.507
+ proba est de 0.341540 l.507
+ proba est de 0.692463 l.507
+ proba est de 0.456514 l.507
+ proba est de 0.434398 l.507
+ proba est de 0.654029 l.507
+ proba est de 0.323983 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+particule 13 
+-0.485277 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 8
+last numero part est 21
+robot 2 
+-1.210724 -0.920021 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.077636 0.529475 
+2.914709 
+cible est :-0.485277 1.171523 
+
+particule 13 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.600492 l.507
+ proba est de 0.129976 l.507
+ proba est de 0.081265 l.507
+ proba est de 0.377997 l.507
+ proba est de 0.136956 l.507
+ proba est de 0.659878 l.507
+ proba est de 0.114459 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 7
+last numero part est 21
+robot 2 
+-1.210166 -0.919680 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.074757 0.530531 
+2.789709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.880683 l.507
+ proba est de 0.582450 l.507
+ proba est de 0.210863 l.507
+ proba est de 0.668326 l.507
+ proba est de 0.528885 l.507
+ proba est de 0.312343 l.507
+ proba est de 0.943222 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 7
+last numero part est 21
+robot 2 
+-1.050181 -0.821899 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.072832 0.531526 
+2.664709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.768206 l.507
+ proba est de 0.122086 l.507
+ proba est de 0.038265 l.507
+ proba est de 0.514936 l.507
+ proba est de 0.399300 l.507
+ proba est de 0.211565 l.507
+ proba est de 0.452650 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 7
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.071546 0.532409 
+2.539709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.160162 l.507
+ proba est de 0.308247 l.507
+ proba est de 0.433758 l.507
+ proba est de 0.005435 l.507
+ proba est de 0.649787 l.507
+ proba est de 0.126222 l.507
+ proba est de 0.461949 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 7
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.070693 0.533168 
+2.414709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+proba est de 0.084185 l.507
+ proba est de 0.780250 l.507
+ proba est de 0.785932 l.507
+ proba est de 0.684677 l.507
+ proba est de 0.910227 l.507
+ proba est de 0.867197 l.507
+ proba est de 0.062674 l.507
+ particule 21 
+-0.485277 1.171523 
+0.062500 
+0.343123 
+particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 7
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.070133 0.533808 
+2.289709 
+cible est :-0.485277 1.171523 
+testtrobot_deplacer
+
+particule 21 eliminee
+mes boules boulic part_destruction l.244
+mise à jour !!!!! simulation.c
+proba est de 0.047183 l.507
+ proba est de 0.527075 l.507
+ proba est de 0.177133 l.507
+ proba est de 0.927866 l.507
+ proba est de 0.109525 l.507
+ proba est de 0.387996 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+0.069714 0.534287 
+2.289709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.596191 l.507
+ proba est de 0.638409 l.507
+ proba est de 0.700340 l.507
+ proba est de 0.539413 l.507
+ proba est de 0.406615 l.507
+ proba est de 0.822426 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.039262 0.631201 
+2.414709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.577678 l.507
+ proba est de 0.921551 l.507
+ proba est de 0.221726 l.507
+ proba est de 0.789244 l.507
+ proba est de 0.374201 l.507
+ proba est de 0.381888 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.890196 -0.724119 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.125630 0.690528 
+2.539709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.097491 l.507
+ proba est de 0.807959 l.507
+ proba est de 0.387323 l.507
+ proba est de 0.747277 l.507
+ proba est de 0.934181 l.507
+ proba est de 0.849272 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.755920 -0.642051 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.194153 0.725931 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.831462 l.507
+ proba est de 0.714432 l.507
+ proba est de 0.635204 l.507
+ proba est de 0.516139 l.507
+ proba est de 0.624658 l.507
+ proba est de 0.502401 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.755920 -0.642051 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.245545 0.752483 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.578813 l.507
+ proba est de 0.671841 l.507
+ proba est de 0.029476 l.507
+ proba est de 0.755946 l.507
+ proba est de 0.599707 l.507
+ proba est de 0.139001 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.655212 -0.580500 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.284090 0.772397 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.143942 l.507
+ proba est de 0.195898 l.507
+ proba est de 0.777410 l.507
+ proba est de 0.844281 l.507
+ proba est de 0.735311 l.507
+ proba est de 0.184025 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.579682 -0.534337 
+0.548603 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.312998 0.787333 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.666707 l.507
+ proba est de 0.312990 l.507
+ proba est de 0.105576 l.507
+ proba est de 0.888433 l.507
+ proba est de 0.102233 l.507
+ proba est de 0.479777 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.579682 -0.534337 
+0.617939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.334679 0.798535 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.270321 l.507
+ proba est de 0.199724 l.507
+ proba est de 0.287736 l.507
+ proba est de 0.657643 l.507
+ proba est de 0.947001 l.507
+ proba est de 0.221918 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.523458 -0.504136 
+0.492939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.350940 0.806936 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.506915 l.507
+ proba est de 0.778463 l.507
+ proba est de 0.936349 l.507
+ proba est de 0.142119 l.507
+ proba est de 0.294601 l.507
+ proba est de 0.561007 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.481291 -0.481485 
+0.492939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.363136 0.813237 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.644520 l.507
+ proba est de 0.873414 l.507
+ proba est de 0.232848 l.507
+ proba est de 0.673996 l.507
+ proba est de 0.629359 l.507
+ proba est de 0.832555 l.507
+ particule 20 
+-1.171523 1.171523 
+0.062500 
+0.343123 
+particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 6
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+0.492939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.372283 0.817963 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+
+particule 20 eliminee
+mes boules boulic part_destruction l.244
+mise à jour !!!!! simulation.c
+proba est de 0.812997 l.507
+ proba est de 0.773301 l.507
+ proba est de 0.028453 l.507
+ proba est de 0.590407 l.507
+ proba est de 0.617582 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+0.367939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.379143 0.821507 
+2.664709 
+cible est :-1.171523 1.171523 
+testtrobot_deplacer
+proba est de 0.763764 l.507
+ proba est de 0.774432 l.507
+ proba est de 0.284289 l.507
+ proba est de 0.076753 l.507
+ proba est de 0.880009 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+0.242939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.385376 0.824727 
+2.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.172722 l.507
+ proba est de 0.178987 l.507
+ proba est de 0.359786 l.507
+ proba est de 0.443043 l.507
+ proba est de 0.378710 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+0.117939 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.385376 0.824727 
+2.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.647522 l.507
+ proba est de 0.100686 l.507
+ proba est de 0.325711 l.507
+ proba est de 0.869440 l.507
+ proba est de 0.607600 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.007061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.389379 0.825651 
+2.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.104174 l.507
+ proba est de 0.805789 l.507
+ proba est de 0.749719 l.507
+ proba est de 0.398775 l.507
+ proba est de 0.366796 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.132061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.392202 0.825940 
+3.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.394239 l.507
+ proba est de 0.272189 l.507
+ proba est de 0.599644 l.507
+ proba est de 0.068235 l.507
+ proba est de 0.901549 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.257061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.394203 0.825894 
+3.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.432199 l.507
+ proba est de 0.881232 l.507
+ proba est de 0.674850 l.507
+ proba est de 0.460652 l.507
+ proba est de 0.471639 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.382061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.395625 0.825681 
+3.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.292432 l.507
+ proba est de 0.224415 l.507
+ proba est de 0.246071 l.507
+ proba est de 0.576721 l.507
+ proba est de 0.301169 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.507061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.396637 0.825398 
+3.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.126080 l.507
+ proba est de 0.749443 l.507
+ proba est de 0.480155 l.507
+ proba est de 0.485866 l.507
+ proba est de 0.192486 l.507
+ particule 19 
+-1.171523 0.485277 
+0.062500 
+0.343123 
+particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 5
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.632061 
+cible est :-0.485277 -0.485277 
+robot 1 
+-0.397357 0.825095 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+
+particule 19 eliminee
+mes boules boulic part_destruction l.244
+mise à jour !!!!! simulation.c
+proba est de 0.858866 l.507
+ proba est de 0.133388 l.507
+ proba est de 0.293171 l.507
+ proba est de 0.184577 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.449665 -0.464496 
+-0.757061 
+cible est :1.171523 -0.485277 
+robot 1 
+-0.397896 0.824868 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.002828 l.507
+ proba est de 0.900772 l.507
+ proba est de 0.288752 l.507
+ proba est de 0.808617 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.426377 -0.481550 
+-0.632061 
+cible est :1.171523 -0.485277 
+robot 1 
+-0.570732 0.752178 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.650491 l.507
+ proba est de 0.687527 l.507
+ proba est de 0.175413 l.507
+ proba est de 0.044729 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.409065 -0.491167 
+-0.507061 
+cible est :1.171523 -0.485277 
+robot 1 
+-0.743569 0.679487 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.959716 l.507
+ proba est de 0.775058 l.507
+ proba est de 0.112964 l.507
+ proba est de 0.861265 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.396155 -0.496354 
+-0.382061 
+cible est :1.171523 -0.485277 
+robot 1 
+-0.916405 0.606797 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.207257 l.507
+ proba est de 0.994196 l.507
+ proba est de 0.536115 l.507
+ proba est de 0.667908 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.386511 -0.498889 
+-0.257061 
+cible est :1.171523 -0.485277 
+robot 1 
+-1.089241 0.534106 
+3.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.465835 l.507
+ proba est de 0.828546 l.507
+ proba est de 0.892324 l.507
+ proba est de 0.711906 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.379300 -0.499847 
+-0.132061 
+cible est :1.171523 -0.485277 
+robot 1 
+-1.251666 0.440434 
+3.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.405267 l.507
+ proba est de 0.193493 l.507
+ proba est de 0.837986 l.507
+ proba est de 0.154711 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.373905 -0.499885 
+-0.007061 
+cible est :1.171523 -0.485277 
+robot 1 
+-1.251666 0.440434 
+3.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.673648 l.507
+ proba est de 0.323852 l.507
+ proba est de 0.347196 l.507
+ proba est de 0.532514 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 16 
+0.485277 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 4
+last numero part est 21
+robot 2 
+-0.369858 -0.499914 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+3.914709 
+cible est :-1.171523 0.485277 
+
+particule 16 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.457240 l.507
+ proba est de 0.640368 l.507
+ proba est de 0.717092 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.366823 -0.499935 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.460067 l.507
+ proba est de 0.541140 l.507
+ proba est de 0.005843 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.282016 -0.500534 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.268684 l.507
+ proba est de 0.191630 l.507
+ proba est de 0.693370 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.218411 -0.500983 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.444097 l.507
+ proba est de 0.236360 l.507
+ proba est de 0.653087 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.170707 -0.501320 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.219155 l.507
+ proba est de 0.349324 l.507
+ proba est de 0.514352 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.134929 -0.501572 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.426412 l.507
+ proba est de 0.343520 l.507
+ proba est de 0.050466 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.108096 -0.501762 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.094320 l.507
+ proba est de 0.809355 l.507
+ proba est de 0.879013 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.087971 -0.501904 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.986644 l.507
+ proba est de 0.521261 l.507
+ proba est de 0.284280 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.072877 -0.502011 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+4.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.180136 l.507
+ proba est de 0.359247 l.507
+ proba est de 0.438990 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.061556 -0.502091 
+-0.007061 
+cible est :0.485277 -0.485277 
+robot 1 
+-1.251666 0.440434 
+5.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.853785 l.507
+ proba est de 0.683098 l.507
+ proba est de 0.786187 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.053066 -0.502151 
+-0.007061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.386299 l.507
+ proba est de 0.140338 l.507
+ proba est de 0.426555 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.053066 -0.502151 
+-0.132061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.103390 l.507
+ proba est de 0.600405 l.507
+ proba est de 0.967694 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.048270 -0.503411 
+-0.257061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.109233 l.507
+ proba est de 0.869090 l.507
+ proba est de 0.159324 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.045094 -0.504687 
+-0.382061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.802604 l.507
+ proba est de 0.313187 l.507
+ proba est de 0.395684 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.042985 -0.505859 
+-0.507061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.455690 l.507
+ proba est de 0.532342 l.507
+ proba est de 0.745008 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.041587 -0.506883 
+-0.632061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.970042 l.507
+ proba est de 0.958753 l.507
+ proba est de 0.088528 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.040667 -0.507752 
+-0.757061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+5.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.020508 l.507
+ proba est de 0.053073 l.507
+ proba est de 0.897883 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 15 
+0.485277 -1.171523 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 3
+last numero part est 21
+robot 2 
+-0.040069 -0.508478 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+6.039709 
+cible est :-1.171523 0.485277 
+
+particule 15 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.899521 l.507
+ proba est de 0.039717 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+-0.039621 -0.509022 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.251666 0.440434 
+6.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.419144 l.507
+ proba est de 0.183801 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.057765 -0.627323 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.219853 l.507
+ proba est de 0.778391 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.130805 -0.716048 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.622791 l.507
+ proba est de 0.073638 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.185585 -0.782593 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.461489 l.507
+ proba est de 0.408978 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.226670 -0.832501 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.459936 l.507
+ proba est de 0.601827 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.257484 -0.869932 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.835533 l.507
+ proba est de 0.563327 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.280594 -0.898005 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+6.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.202232 l.507
+ proba est de 0.803227 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.297927 -0.919060 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.672560 l.507
+ proba est de 0.071322 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.310927 -0.934851 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.164709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.962551 l.507
+ proba est de 0.475164 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.320676 -0.946695 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.384509 l.507
+ proba est de 0.358235 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.327989 -0.955577 
+-0.882061 
+cible est :0.485277 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.930854 l.507
+ proba est de 0.916851 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.333473 -0.962239 
+-0.882061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.103244 l.507
+ proba est de 0.900896 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.337798 -0.966326 
+-0.757061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.875604 l.507
+ proba est de 0.191772 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.341181 -0.968803 
+-0.632061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.921405 l.507
+ proba est de 0.928678 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.343812 -0.970265 
+-0.507061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+7.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.089655 l.507
+ proba est de 0.820926 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.345853 -0.971085 
+-0.382061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+8.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.968395 l.507
+ proba est de 0.508799 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+particule 14 
+1.171523 -1.171523 
+0.062500 
+0.343123 
+non de part totale est 2
+last numero part est 21
+robot 2 
+0.347431 -0.971500 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+8.164709 
+cible est :-1.171523 0.485277 
+
+particule 14 eliminee
+mes boules boulic part_destruction l.257
+testtrobot_deplacer
+mise à jour !!!!! simulation.c
+proba est de 0.004727 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.348615 -0.971811 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.064170 0.441658 
+8.289709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.188248 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.390540 -0.982832 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+8.414709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.287189 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.421983 -0.991098 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+8.539709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.627518 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.445565 -0.997297 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+8.664709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.261886 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.463252 -1.001946 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+8.789709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.748678 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.476517 -1.005433 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+8.914709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.036496 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.486466 -1.008049 
+-0.257061 
+cible est :1.171523 -1.171523 
+robot 1 
+-1.163883 0.600445 
+9.039709 
+cible est :-1.171523 0.485277 
+testtrobot_deplacer
+proba est de 0.721822 l.507
+ particule 17 
+1.171523 -0.485277 
+0.062500 
+0.343123 
+non de part totale est 1
+last numero part est 21
+robot 2 
+0.493927 -1.010010 
+-0.257061 
+cible est :1.171523 -0.485277 
+robot 1 
+-1.163883 0.600445 
+9.164709 
+cible est :-1.171523 0.485277 
+testtrobot_depla

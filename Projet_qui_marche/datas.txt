@@ -1,0 +1,634 @@
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 1 
+0.000000 0.000000 
+1.000000 
+2.000000 
+last numero part est 1
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+mes boules boulic part_destruction l.257
+decompositojn start 
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+mise à jour !!!!! simulation.c
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 5 
+0.828400 0.828400 
+0.250000 
+0.828400 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 4
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+mes boules boulic part_destruction l.257
+decompositojn start 
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+mise à jour !!!!! simulation.c
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 8 
+1.171523 1.171523 
+0.062500 
+0.343123 
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+
+particule 8 eliminee
+mes boules boulic part_destruction l.244
+mise à jour !!!!! simulation.c
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
+particule 7 
+0.485277 1.171523 
+0.062500 
+0.343123 
+particule 6 
+0.485277 0.485277 
+0.062500 
+0.343123 
+particule 5 
+1.171523 0.485277 
+0.062500 
+0.343123 
+particule 4 
+-0.828400 0.828400 
+0.250000 
+0.828400 
+particule 3 
+-0.828400 -0.828400 
+0.250000 
+0.828400 
+particule 2 
+0.828400 -0.828400 
+0.250000 
+0.828400 
+last numero part est 7
+cococooo, fonciton.robot_deplacer
+cococooo, fonciton.robot_deplacer
